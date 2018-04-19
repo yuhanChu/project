@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0
+}
+
+body,
+html {
+    margin: 0;
+    font-family: "微软雅黑";
+    min-height: 100%;
+    background: #fff
+}
+
+input,
+textarea {
+    margin-bottom: 0;
+    box-shadow: none;
+    box-sizing: border-box
+}
+
+input[disabled],
+input[readonly],
+select[disabled],
+select[readonly],
+textarea[disabled],
+textarea[readonly] {
+    background: 0 0;
+    cursor: default
+}
+
+p {
+    margin-bottom: 0
+}
+
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none
+}
+
+a:link {
+    text-decoration: none
+}
+
+i {
+    font-style: normal
+}
+
+.f_left {
+    float: left
+}
+
+label {
+    margin-bottom: 0
+}
+
+.f_right {
+    float: right
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    resize: none;
+    box-shadow: none!important
+}
+
+.uneditable-input,
+input[type=number],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+select,
+textarea {
+    margin-bottom: 0!important
+}
+
+button {
+    border: none!important;
+    background: 0 0!important
+}
+
+@font-face {
+    font-family: iconfont;
+    src: url(//at.alicdn.com/t/font_313597_wzn30i3iycrtfbt9.eot);
+    src: url(//at.alicdn.com/t/font_313597_wzn30i3iycrtfbt9.eot?#iefix) format('embedded-opentype'), url(//at.alicdn.com/t/font_313597_wzn30i3iycrtfbt9.woff) format('woff'), url(//at.alicdn.com/t/font_313597_wzn30i3iycrtfbt9.ttf) format('truetype'), url(//at.alicdn.com/t/font_313597_wzn30i3iycrtfbt9.svg#iconfont) format('svg')
+}
+
+.iconfont {
+    font-family: iconfont!important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.apple_font_r {
+    font-family: apple_font_r!important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.apple_font_b {
+    font-family: apple_font_b!important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.teacher-box {
+    background: #f6f6f6;
+    width: 100%;
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto
+}
+
+.teacher-box .teacher-box-top {
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    font-size: .34rem;
+    color: #333;
+    position: relative;
+    background: #fff
+}
+
+.teacher-box .teacher-box-top .icon-back {
+    position: absolute;
+    top: 0;
+    left: .29rem;
+    font-size: .34rem
+}
+
+.teacher-box .teacher-content {
+    margin-top: .27rem;
+    width: 100%
+}
+
+.teacher-box .teacher-content .teacher-content-top {
+    position: relative;
+    height: 4.3rem;
+    width: 100%
+}
+
+.teacher-box .teacher-content .teacher-content-top>img {
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+    -webkit-filter: blur(3px)
+}
+
+.teacher-box .teacher-content .teacher-content-top .img-mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(18, 19, 20, .3);
+    z-index: 1
+}
+
+.teacher-box .teacher-content .teacher-content-top .teacher-head {
+    position: absolute;
+    top: .76rem;
+    left: 50%;
+    margin-left: -.82rem;
+    width: 1.64rem;
+    height: 1.64rem;
+    border-radius: .82rem;
+    background: #fff;
+    padding: .02rem;
+    z-index: 2
+}
+
+.teacher-box .teacher-content .teacher-content-top .teacher-head>img {
+    width: 100%;
+    height: 100%;
+    border-radius: .82rem
+}
+
+.teacher-box .teacher-content .teacher-content-top .teacher-head>span {
+    width: 1.2rem;
+    height: .36rem;
+    line-height: .36rem;
+    color: #fff;
+    font-size: .22rem;
+    text-align: center;
+    left: 50%;
+    margin-left: -.6rem;
+    bottom: 0;
+    position: absolute;
+    border-radius: .2rem
+}
+
+.teacher-box .teacher-content .teacher-content-top .teacher-head .sp-gree {
+    background: #31a030
+}
+
+.teacher-box .teacher-content .teacher-content-top .teacher-head .sp-blue {
+    background: #58baff
+}
+
+.teacher-box .teacher-content .teacher-content-top .teacher-name {
+    width: 100%;
+    height: .4rem;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    text-align: center
+}
+
+.teacher-box .teacher-content .teacher-content-top .teacher-name>p {
+    font-size: .34rem;
+    color: #fff;
+    margin-top: .5rem;
+    margin-bottom: -.5rem
+}
+
+.teacher-box .teacher-content .teacher-content-top .teacher-name>span {
+    font-size: .24rem;
+    color: #fff
+}
+
+.teacher-box .teacher-content .teacher-content-bottom {
+    margin-top: .7rem;
+    padding: 0 .3rem 1.4rem
+}
+
+.teacher-box .teacher-content .teacher-content-bottom .teacher-breif {
+    padding-top: .58rem;
+    border-top: 1px solid #e9e9e9;
+    position: relative
+}
+
+.teacher-box .teacher-content .teacher-content-bottom .teacher-breif .brief-title {
+    width: 1.76rem;
+    position: absolute;
+    top: -.22rem;
+    left: 50%;
+    margin-left: -.88rem;
+    background: #f6f6f6;
+    font-size: .24rem;
+    color: #999;
+    text-align: center
+}
+
+.teacher-box .teacher-content .teacher-content-bottom .teacher-breif .brief-content {
+    font-size: .28rem;
+    color: #666;
+    line-height: .5rem
+}

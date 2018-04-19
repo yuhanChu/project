@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>普通课程</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+</head>
+
+<body>
+    <!--头部-->
+    <div class="header">
+        <div class="contain header_box">
+            <div class="logo f_left clearfix">
+                <img src="image/logo.jpg" alt="">
+            </div>
+            <ul class="list f_left">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">学院</a></li>
+                <li><a href="#">专业</a></li>
+                <li><a href="#">课程</a></li>
+                <li><a href="#">新闻</a></li>
+                <li class="la"><a href="#">共享课</a><span>Hot</span></li>
+            </ul>
+            <div class="searc f_right">
+                <form action="">
+                    <input type="search" placeholder="课程/老师/学校/企业">
+                    <button></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--主体内容-->
+    <section class="content">
+        <div class="contain content_box clearfix">
+            <div class="content_box_left f_left">
+                <div class="left_top">
+                    <span>| | |</span>
+                </div>
+                <div class="left_center">
+                    <img src="image/Cog-531_03.png" alt="">
+                    <b>已通过认证</b>
+                    <div class="teacher clearfix">
+                        <span class="f_left">海婷</span>
+                        <span class="f_right">讲师</span>
+                    </div>
+                    <div class="school clearfix">
+                        <span class="f_left">清华大学</span>
+                        <span class="f_right">经济学院</span>
+                    </div>
+                </div>
+                <div class="left_bottom">
+                    <h2>我的课程<span></span></h2>
+                    <ul class="me_cla">
+                        <li><span class="one"></span><a href="">专业管理</a></li>
+                        <li><span class="two"></span><a href="">课程管理</a></li>
+                        <li><span class="three"></span><a href="">师资团队</a></li>
+                        <li><span class="four"></span><a href="">学生管理</a></li>
+                        <li><span class="five"></span><a href="">题库管理</a></li>
+                        <li><span class="six"></span><a href="">作业管理</a></li>
+                        <li><span class="seven"></span><a href="">论文管理</a></li>
+                    </ul>
+                    <div class="me_box">
+                        <h2>我的账户<span></span></h2>
+                        <ul class="me_cla">
+                            <li><span class="eight"></span><a href="">账户设置</a></li>
+                            <li><span class="nine"></span><a href="">消息</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <ul class="icon" style='display: none;'>
+                    <li><img src="image/1.png" alt=""></li>
+                    <li><img src="image/2.png" alt=""></li>
+                    <li><img src="image/3.png" alt=""></li>
+                    <li><img src="image/4.png" alt=""></li>
+                    <li><img src="image/5.png" alt=""></li>
+                    <li><img src="image/6.png" alt=""></li>
+                    <li><img src="image/7.png" alt=""></li>
+                    <li><img src="image/8.png" alt=""></li>
+                    <li><img src="image/9.png" alt=""></li>
+                    <span></span>
+                </ul> -->
+            </div>
+            <div class="content_box_right f_left">
+                <div class="right_top">
+                    <div class="bar">
+                        <a href="#">学分证书课</a>
+                        <a href="#" class="change">普通课程</a>
+                        <span>共享课</span>
+                    </div>
+                    <div class="player clearfix">
+                        <div class="player_lu">
+                            <img src="image/lubo.png" alt="">
+                            <a href="javascript:;" data-toggle="modal" data-target="#myModal">创建录播课</a>
+                        </div>
+                        <div class="player_zhi">
+                            <img src="image/zhibo.png" alt="">
+                            <a href="#">创建直播课</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_bottom">
+                    <div class="right_bottom_bar clearfix">
+                        <a href="#">学分证书课</a>
+                        <a href="#" class="change">普通课程</a>
+                        <a href="#">共享课</a>
+                        <div class="line"></div>
+                        <div class="right_bar_search f_right">
+                            <form action="">
+                                <input type="search" placeholder="请输入课程名称"><span><img src="image/search.png" alt=""></span>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab">
+                        <p style='margin-left:18px; margin-right:170px;'>课程编码</p>
+                        <p style='margin-left: 0;'>课程名称</p>
+                        <p>类型</p>
+                        <p>价格</p>
+                        <p>学分</p>
+                        <p>共享课</p>
+                        <p>状态</p>
+                        <p style='margin-left: 100px;'>操作</p>
+                    </div>
+                    <ul>
+                        <li class="green">
+                            <div class="num">
+                                100
+                            </div>
+                            <div class="img">
+                                <img src="image/kecheng.png " alt="">
+                            </div>
+                            <div class="course">
+                                竞争策略的策略分析
+                            </div>
+                            <div class="typ">
+                                MOOC
+                            </div>
+                            <div class="price">免费</div>
+                            <div class="point">否</div>
+                            <div class="com">否</div>
+                            <div class="state">
+                                <p>编辑中</p>
+                                <p>2016-03-01</p>
+                                <p>09:30:10</p>
+                            </div>
+                            <div class="handle">
+                                <div class="see">
+                                    <img src="image/yulan.png" alt="">
+                                </div>
+                                <div class="write">
+                                    <img src="image/bianji.png" alt="">
+                                </div>
+                                <div class="delete">
+                                    <img src="image/no_delete.png" alt="">
+                                </div>
+                                <div class="more z_index">
+                                    <img src="image/more.png" alt="">
+                                </div>
+                                <div class="include">
+                                    <ul class="clearfix">
+                                        <li>申请授权</li>
+                                        <li>章节管理</li>
+                                        <li>考题管理</li>
+                                        <li>新增作业</li>
+                                        <li>讲师团队</li>
+                                        <li>添加学生</li>
+                                        <li>新增语言</li>
+                                        <li>共享课管理</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num">
+                                100
+                            </div>
+                            <div class="img">
+                                <img src="image/kecheng.png " alt="">
+                            </div>
+                            <div class="course">
+                                竞争策略的策略分析
+                            </div>
+                            <div class="typ">
+                                MOOC
+                            </div>
+                            <div class="price">免费</div>
+                            <div class="point">否</div>
+                            <div class="com">否</div>
+                            <div class="state">
+                                <p>编辑中</p>
+                                <p>2016-03-01</p>
+                                <p>09:30:10</p>
+                            </div>
+                            <div class="handle">
+                                <div class="see">
+                                    <img src="image/yulan.png" alt="">
+                                </div>
+                                <div class="write">
+                                    <img src="image/bianji.png" alt="">
+                                </div>
+                                <div class="delete">
+                                    <img src="image/no_delete.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="image/more.png" alt="">
+                                </div>
+                                <!--<div class="include">
+                                    <ul class="clearfix">
+                                        <li>申请授权</li>
+                                        <li>章节管理</li>
+                                        <li>考题管理</li>
+                                        <li>新增作业</li>
+                                        <li>讲师团队</li>
+                                        <li>添加学生</li>
+                                        <li>新增语言</li>
+                                        <li>共享课管理</li>
+                                    </ul>
+                                </div>-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num">
+                                100
+                            </div>
+                            <div class="img">
+                                <img src="image/kecheng.png " alt="">
+                            </div>
+                            <div class="course">
+                                竞争策略的策略分析
+                            </div>
+                            <div class="typ">
+                                MOOC
+                            </div>
+                            <div class="price">免费</div>
+                            <div class="point">否</div>
+                            <div class="com">否</div>
+                            <div class="state">
+                                <p>编辑中</p>
+                                <p>2016-03-01</p>
+                                <p>09:30:10</p>
+                            </div>
+                            <div class="handle">
+                                <div class="see">
+                                    <img src="image/yulan.png" alt="">
+                                </div>
+                                <div class="write">
+                                    <img src="image/bianji.png" alt="">
+                                </div>
+                                <div class="delete">
+                                    <img src="image/no_delete.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="image/more.png" alt="">
+                                </div>
+                                <!--<div class="include">-->
+                                <!--<ul class="clearfix">-->
+                                <!--<li>申请授权</li>-->
+                                <!--<li>章节管理</li>-->
+                                <!--<li>考题管理</li>-->
+                                <!--<li>新增作业</li>-->
+                                <!--<li>讲师团队</li>-->
+                                <!--<li>添加学生</li>-->
+                                <!--<li>新增语言</li>-->
+                                <!--<li>共享课管理</li>-->
+                                <!--</ul>-->
+                                <!--</div>-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num">
+                                100
+                            </div>
+                            <div class="img">
+                                <img src="image/kecheng.png " alt="">
+                            </div>
+                            <div class="course">
+                                竞争策略的策略分析
+                            </div>
+                            <div class="typ">
+                                MOOC
+                            </div>
+                            <div class="price">免费</div>
+                            <div class="point">否</div>
+                            <div class="com">否</div>
+                            <div class="state">
+                                <p>编辑中</p>
+                                <p>2016-03-01</p>
+                                <p>09:30:10</p>
+                            </div>
+                            <div class="handle">
+                                <div class="see">
+                                    <img src="image/yulan.png" alt="">
+                                </div>
+                                <div class="write">
+                                    <img src="image/bianji.png" alt="">
+                                </div>
+                                <div class="delete">
+                                    <img src="image/no_delete.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="image/more.png" alt="">
+                                </div>
+                                <!--<div class="include">-->
+                                <!--<ul class="clearfix">-->
+                                <!--<li>申请授权</li>-->
+                                <!--<li>章节管理</li>-->
+                                <!--<li>考题管理</li>-->
+                                <!--<li>新增作业</li>-->
+                                <!--<li>讲师团队</li>-->
+                                <!--<li>添加学生</li>-->
+                                <!--<li>新增语言</li>-->
+                                <!--<li>共享课管理</li>-->
+                                <!--</ul>-->
+                                <!--</div>-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num">
+                                100
+                            </div>
+                            <div class="img">
+                                <img src="image/kecheng.png " alt="">
+                            </div>
+                            <div class="course">
+                                竞争策略的策略分析
+                            </div>
+                            <div class="typ">
+                                MOOC
+                            </div>
+                            <div class="price">免费</div>
+                            <div class="point">否</div>
+                            <div class="com">否</div>
+                            <div class="state">
+                                <p>编辑中</p>
+                                <p>2016-03-01</p>
+                                <p>09:30:10</p>
+                            </div>
+                            <div class="handle">
+                                <div class="see">
+                                    <img src="image/yulan.png" alt="">
+                                </div>
+                                <div class="write">
+                                    <img src="image/bianji.png" alt="">
+                                </div>
+                                <div class="delete">
+                                    <img src="image/no_delete.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="image/more.png" alt="">
+                                </div>
+                                <!--<div class="include">-->
+                                <!--<ul class="clearfix">-->
+                                <!--<li>申请授权</li>-->
+                                <!--<li>章节管理</li>-->
+                                <!--<li>考题管理</li>-->
+                                <!--<li>新增作业</li>-->
+                                <!--<li>讲师团队</li>-->
+                                <!--<li>添加学生</li>-->
+                                <!--<li>新增语言</li>-->
+                                <!--<li>共享课管理</li>-->
+                                <!--</ul>-->
+                                <!--</div>-->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="num">
+                                100
+                            </div>
+                            <div class="img">
+                                <img src="image/kecheng.png " alt="">
+                            </div>
+                            <div class="course">
+                                竞争策略的策略分析
+                            </div>
+                            <div class="typ">
+                                MOOC
+                            </div>
+                            <div class="price">免费</div>
+                            <div class="point">否</div>
+                            <div class="com">否</div>
+                            <div class="state">
+                                <p>编辑中</p>
+                                <p>2016-03-01</p>
+                                <p>09:30:10</p>
+                            </div>
+                            <div class="handle">
+                                <div class="see">
+                                    <img src="image/yulan.png" alt="">
+                                </div>
+                                <div class="write">
+                                    <img src="image/bianji.png" alt="">
+                                </div>
+                                <div class="delete">
+                                    <img src="image/no_delete.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="image/more.png" alt="">
+                                </div>
+                                <!--<div class="include">-->
+                                <!--<ul class="clearfix">-->
+                                <!--<li>申请授权</li>-->
+                                <!--<li>章节管理</li>-->
+                                <!--<li>考题管理</li>-->
+                                <!--<li>新增作业</li>-->
+                                <!--<li>讲师团队</li>-->
+                                <!--<li>添加学生</li>-->
+                                <!--<li>新增语言</li>-->
+                                <!--<li>共享课管理</li>-->
+                                <!--</ul>-->
+                                <!--</div>-->
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="page">
+                        <ul>
+                            <li><a href="#">&lt;&lt;</a></li>
+                            <li><a href="#" class="current">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="next"><a href="#">&gt;&gt;</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="foot">
+            <div class="foot_content clearfix">
+                <ul class="service">
+                    <span class="ser_one"></span>
+                    <li>客服电话 010-62110299</li>
+                    <span class="ser_two"></span>
+                    <li>客服QQ 3357757074</li>
+                    <span class="ser_three"></span>
+                    <li>客服邮箱 kefu@studybanks.com</li>
+                </ul>
+                <ul class="wechat">
+                    <span class="we_one"></span>
+                    <li class="li_one">+关注</li>
+                    <span class="we_two"></span>
+                    <li class="li_two">+关注</li>
+                    <span class="we_three"></span>
+                    <li class="li_three">+关注</li>
+                </ul>
+            </div>
+            <div class="banquan">
+                <p>Copyright © 2014 - 2016 学分在线（北京）国际数据科技有限公司.版权所有 </p>
+                <p>京ICP备15063355-2号</p>
+            </div>
+        </div>
+    </section>
+    <!--摸态框-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style='width: 400px;padding-top: 337px'>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+                </div>
+                <div class="modal-body">
+                    您正在创建普通录播课程，是否确定？
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    $('.right_bottom>ul>li:even').css('background', '#f9f9f9');
+    $('.btn-primary').on('click', function() {
+        window.location.href = 'http://localhost:8080/corser/Create_a-course.html#MOOC';
+    });
+    $('.player_zhi a').on('click', function() {
+        window.location.href = 'http://localhost:8080/corser/Create_a-course.html#gaokao';
+    });
+    </script>
+</body>
+
+</html>

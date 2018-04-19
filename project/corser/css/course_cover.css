@@ -1,0 +1,132 @@
+.cover {
+  margin-left:111px;
+  position: relative;
+}
+.cover>span {
+  position: absolute;
+  top:0;
+}
+.cover>span:first-child {
+  color: red;
+}
+.cover>span:nth-child(2){
+  left:7px;
+}
+.cover_sc {
+  display: inline-block;
+  margin-left: 110px;
+  width: 320px;
+  height: 178px;
+  border:1px solid #d7d8dc;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 43px;
+  position: relative;
+}
+.cover_sc>img {
+  display: inline-block;
+  z-index: 1;
+}
+.cover_sc>p {
+  margin-top: 20px;
+  color: #909090;
+  z-index: 1;
+}
+.cover_sc>input,
+.short_film_sc>input {
+  width: 320px;
+  height: 178px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.cover_pic,
+.short_film_pic {
+  width: 320px;
+  height: 178px;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left:0;
+}
+.cover>p {
+  margin-left: 110px;
+  margin-top: 14px;
+  color: #909090;
+}
+.cover_tishi {
+  display: inline-block;
+  margin-top: 80px;
+  margin-left: 37px;
+  font-size: 12px;
+  color: #909090;
+}
+.short_film {
+  margin-left: 87px;
+  margin-top: 21px;
+  position: relative;
+}
+.short_film>span {
+  position: absolute;
+  top:0;
+}
+.short_film_sc {
+  display: inline-block;
+  margin-left: 135px;
+  width: 320px;
+  height: 178px;
+  border:1px solid #d7d8dc;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 43px;
+  position: relative;
+}
+.short_film_sc>img {
+  display: inline-block;
+  z-index: 1;
+}
+.short_film_sc>p {
+  margin-top: 20px;
+  color: #909090;
+  z-index: 1;
+}
+.short_film>p {
+  margin-left: 135px;
+  margin-top: 14px;
+  color: #909090;
+}
+.cover_tishi {
+  display: inline-block;
+  margin-top: 80px;
+  margin-left: 37px;
+  font-size: 12px;
+  color: #909090;
+}
+.advantage {
+  margin-left: 119px;
+  margin-top: 21px;
+  position: relative;
+}
+.advantage>span {
+  position: absolute;
+  top:0;
+}
+.advantage>textarea {
+  width: 679px;
+  height: 149px;
+  border:1px solid #d7d8dc;
+  border-radius: 5px;
+  margin-left: 103px;
+  text-indent: 1em;
+}
+.advantage>span:nth-child(3) {
+  top:125px;
+  right:75px;
+  color: #646464;
+}
+.advantage .bottom_btn {
+  margin-left: 200px;
+  padding-top: 60px;
+}

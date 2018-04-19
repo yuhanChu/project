@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>师资管理</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="teacherManagement.css">
+</head>
+
+<body style="background:#f4f4f4">
+    <div class="teacher_management">
+        <div class="teacher_management_title">
+            <h1>师资管理</h1>
+        </div>
+        <ul class="nav nav-tabs clearfix">
+            <li class="active"><a href="#">签约老师</a></li>
+            <li><a href="#">已发申请</a></li>
+            <li><a href="#" style="position: relative;">收到申请<span class="red_num">5</span></a></li>
+            <li><a href="#">解约老师</a></li>
+            <div class="f_right clearfix">
+                <div class="add_teacher f_right">新增老师</div>
+                <div class="management_search f_right">
+                    <span></span>
+                    <input type="text">
+                </div>
+            </div>
+        </ul>
+        <div class="teacher_management_box">
+            <div class="teacher_management_box_content" style="display: block;">
+                <div class="signed_teacher">已签约老师：<span>126</span> 人</div>
+                <ul class="teacher_management_box_ul1 clearfix">
+                    <li class="ul1_li1">编号</li>
+                    <li class="ul1_li2">老师姓名</li>
+                    <li class="ul1_li3">职称</li>
+                    <li class="ul1_li4">所在学校（机构）</li>
+                    <li class="ul1_li5">学院</li>
+                    <li class="ul1_li6">专业</li>
+                    <li class="ul1_li7">签约时间</li>
+                    <li class="ul1_li8">操作</li>
+                </ul>
+                <div id="teacher_management_content">
+                    <div class="content_list">
+                        <ul>
+                            <li class="ul2_li1">1</li>
+                            <li class="ul2_li2">王步高</li>
+                            <li class="ul2_li3">教授</li>
+                            <li class="ul2_li4">清华大学</li>
+                            <li class="ul2_li5">经济管理学院</li>
+                            <li class="ul2_li6">计算机信息技术</li>
+                            <li class="ul2_li7">2016-09-09</li>
+                            <li class="ul2_li8 clearfix">
+                                <div class="f_left look_btn">查看</div>
+                                <div class="f_left unwind_btn">解约</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content_list">
+                        <ul>
+                            <li class="ul2_li1">1</li>
+                            <li class="ul2_li2">王步高</li>
+                            <li class="ul2_li3">教授</li>
+                            <li class="ul2_li4">清华大学</li>
+                            <li class="ul2_li5">经济管理学院</li>
+                            <li class="ul2_li6">计算机信息技术</li>
+                            <li class="ul2_li7">2016-09-09</li>
+                            <li class="ul2_li8 clearfix">
+                                <div class="f_left see_btn">查看</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content_list">
+                        <ul>
+                            <li class="ul2_li1">1</li>
+                            <li class="ul2_li2">王步高</li>
+                            <li class="ul2_li3">教授</li>
+                            <li class="ul2_li4">清华大学</li>
+                            <li class="ul2_li5">经济管理学院</li>
+                            <li class="ul2_li6">计算机信息技术</li>
+                            <li class="ul2_li7">2016-09-09</li>
+                            <li class="ul2_li8 clearfix">
+                                <div class="f_left agree_btn">同意</div>
+                                <div class="f_left refuse_btn">拒绝</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content_list">
+                        <ul>
+                            <li class="ul2_li1">1</li>
+                            <li class="ul2_li2">王步高</li>
+                            <li class="ul2_li3">教授</li>
+                            <li class="ul2_li4">清华大学</li>
+                            <li class="ul2_li5">经济管理学院</li>
+                            <li class="ul2_li6">计算机信息技术</li>
+                            <li class="ul2_li7">2016-09-09</li>
+                            <li class="ul2_li8 clearfix">
+                                <div class="f_left renewal_btn">续约</div>
+                                <div class="f_left remove_btn">删除记录</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content_empty clearfix" style="display: none;">
+                <img src="empty.png" class="f_left">
+                <div class="f_left">
+                    <p>您还没有签约任何老师哦~</p>
+                    <span>输入老师姓名或点击新增来签约老师吧~</span>
+                    <div class="clearfix">
+                        <div class="add_div f_left clearfix">
+                            <input type="text" class="f_left" placeholder="请输入老师姓名/手机/邮箱">
+                            <span class="f_left">确定添加</span>
+                        </div>
+                        <div class="add_teacher f_left">新增老师</div>
+                    </div>
+                </div>
+            </div>
+            <div class="cc_fy"></div>
+        </div>
+    </div>
+    <!-- 查看弹窗 -->
+    <div id="look" style="display: none;">
+        <span class="close_layer"></span>
+        <div class="look_1">
+            <img src="look_img.png">
+            <span class="look_name">王步高</span>
+        </div>
+        <div class="look_2">
+            <p>账号：<span>13600000000</span></p>
+            <p>密码：<span>123456</span></p>
+            <p>学院：<span>经济管理学院</span></p>
+            <p>专业：<span>计算机技术</span></p>
+            <p>职称：<span>教授</span></p>
+        </div>
+        <div class="look_3">
+            <p>简介：
+                <span>
+        					一二三四五六七八九十一二三四五六七
+									八九十一二三四五六七八九十一二三四五六七
+									八九十一二三四五六七八九十一二三四五六七
+									八九十一二三四五六七八九十一二三四五六七
+        				</span>
+            </p>
+        </div>
+        <div class="look_btn">确定</div>
+    </div>
+    <!-- 添加老师弹窗 -->
+    <div id="add_teacher" style="display: none;">
+        <span class="close_layer"></span>
+        <div class="add_teacher_title">
+            创建老师账号
+        </div>
+        <div class="attention">注意：学校创建的老师账号将默认为本校老师，且需要该老师登录学分在线激活并申请认证后才能使用。</div>
+        <div class="add_teacher_content">
+            <div class="add_teacher_content_left f_left">
+                <div class="add_teacher_name clearfix">
+                    <div class="f_left name_left"><span>*</span>姓名：</div>
+                    <div class="f_left name_right">
+                        <input type="text" name="" placeholder="请输入姓名">
+                    </div>
+                </div>
+                <div class="add_teacher_account clearfix">
+                    <div class="f_left name_left"><span>*</span>账号：</div>
+                    <div class="f_left name_right">
+                        <input type="text" name="" placeholder="请输入手机、邮箱">
+                    </div>
+                </div>
+                <div class="add_teacher_password clearfix">
+                    <div class="f_left name_left"><span>*</span>密码：</div>
+                    <div class="f_left name_right">
+                        <input type="text" name="" placeholder="由数字、字母、下划线组成">
+                    </div>
+                </div>
+                <div class="add_teacher_college clearfix">
+                    <div class="f_left name_left"><span>*</span>学院：</div>
+                    <div class="f_left name_right dropdown">
+                        <input type="text" name="" data-toggle="dropdown" readonly>
+                        <span class="caret"></span>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="javascript:;">Action</a></li>
+                            <li><a href="javascript:;">Action</a></li>
+                            <li><a href="javascript:;">Action</a></li>
+                            <li><a href="javascript:;">Action</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="add_teacher_major clearfix">
+                    <div class="f_left name_left"><span>*</span>专业：</div>
+                    <div class="f_left name_right dropdown">
+                        <input type="text" name="" data-toggle="dropdown" readonly>
+                        <span class="caret"></span>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="javascript:;">Action</a></li>
+                            <li><a href="javascript:;">Action</a></li>
+                            <li><a href="javascript:;">Action</a></li>
+                            <li><a href="javascript:;">Action</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="add_teacher_posa clearfix">
+                    <div class="f_left name_left"><span>*</span>职称：</div>
+                    <div class="f_left name_right dropdown">
+                        <input type="text" name="" data-toggle="dropdown" readonly>
+                        <span class="caret"></span>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="javascript:;">Action</a></li>
+                            <li><a href="javascript:;">Action</a></li>
+                            <li><a href="javascript:;">Action</a></li>
+                            <li><a href="javascript:;">Action</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="add_teacher_brief clearfix">
+                    <div class="f_left name_left">简介：</div>
+                    <div class="f_left name_right">
+                        <textarea></textarea>
+                        <span id="brief_sp1">0</span>
+                        <span id="brief_sp2">/100</span>
+                    </div>
+                </div>
+                <div class="add_teacher_remind clearfix">
+                    <input type="checkbox" name="" class="f_left">
+                    <span class="f_left">提醒老师</span>
+                </div>
+                <div class="add_teacher_btn clearfix">
+                    <div class="add_teacher_btn_yes f_left">确定</div>
+                    <div class="add_teacher_btn_no f_left">取消</div>
+                </div>
+            </div>
+            <div class="add_teacher_content_right f_left">
+                <div class="add_teacher_content_right_up">
+                    <div class="upload_img">
+                        <div class="upload_img1">
+                            <input type="file" name="" id="user_upload">
+                            <img src="user.png">
+                        </div>
+                        <div class="upload_img2">
+                            <img>
+                        </div>
+                    </div>
+                </div>
+                <label for="user_upload">上传老师头像</label>
+            </div>
+        </div>
+    </div>
+    <!-- 拒绝申请 -->
+    <div id="relevance_sq" style="display: none;">
+        <span class="relevance_sq_close"></span>
+        <h1>拒绝申请</h1>
+        <div class="relevance_sq_text">
+            <textarea onkeyup="checkt1Lengt(this,500,'relevance_spa_1');"></textarea>
+            <span class="relevance_spa_1" id="relevance_spa_1">0</span>
+            <span class="relevance_spa_2">/500</span>
+        </div>
+        <div class="relevance_sq_btn">确定拒绝</div>
+    </div>
+    <!-- 提示弹窗同意 -->
+    <div id="reminder" style="display: none;">
+        <span class="relevance_sq_close"></span>
+        <h1>提示</h1>
+        <p>确定同意该老师的申请吗？</p>
+        <div class="relevance_ts_btn clearfix">
+            <div class="relevance_ts_btn_yes f_left">同意</div>
+            <div class="relevance_ts_btn_no f_right">拒绝</div>
+        </div>
+    </div>
+    <!-- 提示弹窗同意 -->
+    <div id="signed" style="display: none;">
+        <span class="relevance_sq_close"></span>
+        <h1>提示</h1>
+        <p>确定签约该老师吗？</p>
+        <div class="relevance_ts_btn clearfix">
+            <div class="relevance_ts_btn_yes f_left">确认</div>
+            <div class="relevance_ts_btn_no f_right">取消</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="jquery-1.9.1.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+
+</html>

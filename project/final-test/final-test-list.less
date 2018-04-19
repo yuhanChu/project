@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    -webkit-box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+input,
+textarea {
+    margin-bottom: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+input,
+select {
+    -webkit-appearance: none;
+}
+
+textarea {
+    -webkit-appearance: none;
+}
+
+input[disabled],
+input[readonly],
+select[disabled],
+select[readonly],
+textarea[disabled],
+textarea[readonly] {
+    background: 0 0;
+    cursor: default;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none
+}
+
+a:link {
+    text-decoration: none
+}
+
+i {
+    font-style: normal;
+}
+
+.f_left {
+    float: left
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.f_right {
+    float: right;
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    resize: none;
+    box-shadow: none !important;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    margin-bottom: 0 !important;
+}
+
+button {
+    border: none !important;
+    background: none !important;
+}
+
+.box() {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.btn(@w,
+@h) {
+    width: @w;
+    height: @h;
+    line-height: @h;
+    text-align: center;
+    cursor: pointer;
+    background: #ff7669;
+    color: #fff;
+}
+
+.font(@size,
+@color) {
+    font-size: @size;
+    color: @color;
+}
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#main {
+    height: 100%;
+    background: #f6f6f6;
+    position: relative;
+    .head {
+        width: 100%;
+        height: 1rem;
+        background: #fff;
+        position: fixed;
+        left:0;
+        top: 0;
+        z-index: 2;
+        i {
+            position: absolute;
+            left: 0.3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            .font(0.34rem, #333);
+            font-weight: bold;
+        }
+        p {
+            .font(0.34rem, #333333);
+            text-align: center;
+            max-width: 5.4rem;
+            margin: 0 auto;
+            line-height: 1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    .content {
+        padding:0 0.3rem;
+        position: absolute;
+        top:1rem;
+        bottom: 0;
+        overflow-y: auto;
+        left: 0;
+        width:100%;
+        z-index: 1;
+        .list {
+            margin-top: 0.3rem;
+            background:#fff;
+            padding: 0.3rem;
+            border-radius: 4px;
+            position: relative;
+            .status {
+                font-size:0.22rem;
+                position:absolute;
+                top: 0.3rem;
+                right: 0.3rem;
+                &.green {
+                    color:#45a540;
+                }
+                &.yellow {
+                    color:#fe7601;
+                }
+                &.bla {
+                    color: #999999;
+                }
+            }
+            .title {
+                .font(0.28rem,#333333);
+                line-height:0.28rem;
+            }
+            .info {
+                .font(0.22rem,#999999);
+                line-height: 0.22rem;
+                margin-top: 0.2rem;
+                span {
+                    margin-right: 0.3rem; 
+                }
+            }
+            .time-btn {
+                margin-top:0.53rem;
+                a {
+                    width: 1.79rem;
+                    height: 0.5rem;
+                    line-height: 0.5rem;
+                    text-align: center;
+                    background: #fe7601;
+                    .font(0.28rem,#ffffff);
+                    float:right;
+                    border-radius:5px;
+                }
+                span {
+                    float:left;
+                    .font(0.22rem,#ff0000);
+                    height:0.5rem;
+                    line-height: 0.5rem;
+                    &.score {
+                        .font(0.3rem,#666666);
+                    }
+                }
+            }
+        }
+    }
+}

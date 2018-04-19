@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<title>网站后台</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="网站后台" name="description" />
+	<meta content="" name="author" />
+<!--全局CSS以及框架所需要的样式-->
+	<link href="media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="media/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link rel="stylesheet" type="text/css" href="media/css/colors.css">
+<!--全局CSS以及框架所需要的样式 end-->
+	<link href="media/css/data.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="page-header-fixed c-purple">
+	<!--顶部内容-->
+	<div class="header navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid"> 
+            	<ul class="xfzx-menu">
+                	<li><a href="#" class="i">首页</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">院校</a></li>
+                    <li><a href="#">实习工作</a></li>
+                    <li><a href="#">未来课程</a></li>
+                    <li><a href="#">学分银行</a></li>
+                </ul>
+
+				<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse"><img src="media/image/sidebar-toggler.jpg" alt="" /></a>          
+
+				<ul class="nav pull-right">
+                	<li class="dropdown header_inbox_bar">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <samp class="icon-xz i-ss">&#xe60f;</samp>
+						</a>
+					</li>
+
+					<li class="dropdown header_inbox_bar" style="position:relative;">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <samp class="icon-xz i-xx">&#xe602;</samp>
+						</a>
+                        <span class="yuan" style=""></span>
+					</li>
+
+					<li class="dropdown header_inbox_bar">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <samp class="icon-xz i-wt">&#xe603;</samp>
+						</a>
+					</li>
+
+					<li class="dropdown user">
+						<a href="#" class="dropdown-toggle xfzx-user" data-toggle="dropdown">
+                            <img alt="" src="media/image/avatar1_small.jpg" />
+                            <span class="username">张海霞</span>
+                            <i class="icon-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu user-xfzx">
+							<li>
+                            	<span class="xfzx-top-user">
+                                    签约院校：清华大学<br>
+                                    合同到期时间：2018-08-12
+                                </span>
+                                <samp class="xfzx-tip-list">    
+                                	<a href="index.html" class="i">教学台</a>   
+                                    <a href="points.html">我的积分</a>
+                                    <a href="teaching.html">我的教学</a>
+                                    <a href="contract.html">合同设置</a>
+                                    <a href="student.html">学生管理</a>
+                                    <a href="finance.html">财务设置</a>
+                                    <a href="order.html">我的订单</a>
+                                    <a href="data.html">资料设置</a>
+                                    <a href="#">退出</a>
+                                </samp>
+                            </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <!--顶部内容 end-->
+    
+    <!--左边栏目-->
+	<div class="page-sidebar nav-collapse collapse ">
+        <ul class="page-sidebar-menu">
+        	<li>
+            	<div class="xfzx_logo"></div>
+            	<div class="xfzx_left_top">
+                	<a href="index.html" class="xfzx_left_logo"></a>
+                    <ul class="nav">
+                        <li class="dropdown xfzx_left_cla">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="username">学校</span>
+                            <i class="icon-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="xuesheng.html" class="xuesheng">学生</a></li>
+                                <li><a href="xuexiao.html" class="xuexiao">学校</a></li>
+                                <li><a href="qiye.html" class="qiye">企业</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="sidebar-toggler hidden-phone"></div>
+            </li>
+            <li class="start xfzx_li">
+                <a href="index.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe605;</samp> 
+                    <span class="title"><samp>&#xe601;</samp>教学台</span>
+                </a>
+            </li> 
+            <li class="xfzx_li closed-ul">
+                <a href="teaching.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe606;</samp>  
+                    <span class="title"><samp>&#xe601;</samp>我的教学</span>
+                </a>
+                <ul class="sub-menu">
+                	<li><span>我的教学</span></li>
+                    <li>
+                    	<a href="javascript:;" class="left-link">快速创建课程<samp class="icon-xz">&#xe600;</samp></a>
+                    	<div class="sub-menu2">
+                        	<a href="#">学历证书课程</a>
+                            <a href="#">MOOC公开课</a>
+                            <a href="#">高考辅导</a>
+                            <a href="#">微学位课程</a>
+                            <a href="#">大学预科</a>
+                            <a href="#">留学</a>
+                        </div>
+                    </li>
+                    <li><a href="teaching.html" class="left-link">在教课程</a></li>
+                    <li><a href="qanda.html" class="left-link">问答管理</a></li>
+                    <li><a href="Marking.html" class="left-link">试卷批阅</a></li>
+                    <li><a href="allclass.html" class="left-link">所教班级</a></li>
+                    <li><a href="questions.html" class="left-link">题库管理</a></li>
+                    <li><a href="paper.html" class="left-link">论文管理</a></li>
+                    <li><a href="database.html" class="left-link">教学资料库</a></li>
+                    <li><a href="homework.html" class="left-link">大作业管理</a></li>
+                </ul>
+            </li>
+            <li class="xfzx_li">
+                <a href="student.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe607;</samp>  
+                    <span class="title"><samp>&#xe601;</samp>学生管理</span>
+                </a>
+            </li>
+            <li class="xfzx_li">
+                <a href="order.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe604;</samp>
+                    <span class="title"><samp>&#xe601;</samp>我的订单</span>
+                </a>
+            </li>
+            <li class="xfzx_li">
+                <a href="points.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe60b;</samp> 
+                    <span class="title"><samp>&#xe601;</samp>我的积分</span>
+                </a>
+            </li>
+            <li class="xfzx_li">
+                <a href="contract.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe60c;</samp> 
+                    <span class="title"><samp>&#xe601;</samp>合同设置</span>
+                </a>
+            </li>
+            <li class="xfzx_li">
+                <a href="finance.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe609;</samp> 
+                    <span class="title"><samp>&#xe601;</samp>财务设置</span>
+                </a>
+            </li>
+            <li class="xfzx_li closed-ul">
+                <a href="collection.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe60a;</samp>  
+                    <span class="title"><samp>&#xe601;</samp>我的收藏</span>
+                </a>
+                <ul class="sub-menu">
+                	<li><span>我的收藏</span></li>
+                    <li><a href="collection.html" class="left-link">我的收藏</a></li>
+                    <li><a href="fans.html" class="left-link">关注/粉丝</a></li>
+                </ul>
+            </li>
+            <li class="xfzx_li active closed-ul">
+                <a href="data.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe60d;</samp>
+                    <span class="title"><samp>&#xe601;</samp>资料设置</span>
+                </a>
+                <div class="shrink"><span></span></div>
+                <div class="shrink2"><span></span></div>
+                <ul class="sub-menu">
+                	<li><span>资料设置</span></li>
+                    <li><a href="data.html" class="left-link">基础信息</a></li>
+                    <li><a href="head.html" class="left-link i">头像设置</a></li>
+                    <li><a href="users.html" class="left-link">实名认证</a></li>
+                    <li><a href="security.html" class="left-link">安全设置</a></li>
+                    <li><a href="privacy.html" class="left-link">隐私设置</a></li>
+                    <li><a href="binding.html" class="left-link">第三方绑定</a></li>
+                </ul>
+            </li>
+            <li class="xfzx_li">
+                <a href="coupon.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe60e;</samp>
+                    <span class="title"><samp>&#xe601;</samp>优惠券</span>
+                </a>
+            </li>
+            <li></li>
+        </ul>
+        <div class="map">
+        	<i class="icon-globe"></i>
+            <span>全球</span>
+            <div class="map-cont">
+            	<ul class="map-cont-list clearfix">
+                	<li><a href="">Brasil</a></li>
+                    <li><a href="">Africa - English</a></li>
+                    <li><a href="">English</a></li>
+                    <li><a href="">Canada - English</a></li>
+                    <li><a href="">België - Nederlands</a></li>
+                    <li><a href="">中国</a></li>
+                    <li><a href="">Canada - Français</a></li>
+                    <li><a href="">Belgique - Français</a></li>
+                    <li><a href="">中國香港特別行政區</a></li>
+                    <li><a href="">Latinoamérica</a></li>
+                    <li><a href="">Belgium - English</a></li>
+                    <li><a href="">台灣</a></li>
+                    <li><a href="">México</a></li>
+                    <li><a href="">Česká republika</a></li>
+                    <li><a href="">日本</a></li>
+                    <li><a href="">United States</a></li>
+                    <li><a href="">Cyprus - English</a></li>
+                    <li><a href="">한국</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--左边栏目 end-->
+    
+    <!--主要内容区域-->
+	<div class="page-container">
+        <div class="page-content">
+            <div class="container-fluid">
+            
+                <div class="row-fluid row-fluid-xf">
+
+                        <div class="head">
+							<div class="head_left">
+                            	<span class="head_sp">您上传的图片会自动生成三种尺寸头像，请注意小尺寸头像是否清晰。</span>
+                                <span class="head_sp2">
+                                	<span>
+                                    	<img src="media/image/1.png">
+                                        大尺寸头像，154*154像素
+                                    </span>
+                                </span>
+                                <span class="head_sp3">
+                                	<span class="sp1">
+                                    	<img src="media/image/1.png">
+                                        中尺寸头像<br>48*48像素
+                                    </span>
+                                    <span class="sp2">
+                                    	<img src="media/image/1.png">
+                                        小尺寸头像<br>32*32像素
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="head_right">
+                                <a href="javascript:void(0)" class="upload_img">
+                                	<label for="upload-file">选择照片</label>
+                                </a>
+                                <input type="file" class="" name="upload-file" id="upload-file"/>
+                                仅支持JPG、JPEG、PNG格式（2M以下）。
+                            </div>
+                            <div class="clear"></div>
+                            <input type="button" value="保存" class="head_an">
+                        </div>
+
+                </div>
+
+            </div>
+        </div>
+	</div>
+    <!--主要内容区域 end-->
+    
+<!--全局JS以及框架所需的效果-->
+<script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>   
+<script src="media/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="media/js/app.js" type="text/javascript"></script>
+<script>
+	jQuery(document).ready(function() {    
+	   App.init(); // initlayout and core plugins
+	});
+	
+	$(function () {
+		$(".map").click(function () {
+			$(".map").toggleClass("map-cont-on");
+		});
+		$(".map-cont-on").click(function () {
+			$(".map").toggleClass("map-cont-on");
+		});
+	});
+	
+	$(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+
+		// Variables privadas
+		var links = this.el.find('.left-link');
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+
+		$next.slideToggle();
+		$this.parent().toggleClass('sub-menu2-on');
+
+		if (!e.data.multiple) {
+			$el.find('.sub-menu2').not($next).slideUp().parent().removeClass('sub-menu2-on');
+		};
+	}	
+
+	var accordion = new Accordion($('.sub-menu'), false);
+});
+
+	$(".shrink span").click(function() {
+		$(".active").toggleClass("active-shrink");
+		$(".page-header-fixed").toggleClass("closed-shrink");
+		return false;
+	});
+	$(document).click(function(e) {
+		$(".active").removeClass("active-shrink");
+		$(".page-header-fixed").removeClass("closed-shrink");
+	});
+	
+	$(".shrink2 span").click(function() {
+		$(".active").toggleClass("active-shrink2");
+		$(".page-header-fixed").toggleClass("closed-shrink2");
+		return false;
+	});
+	$(document).click(function(e) {
+		$(".active").removeClass("active-shrink2");
+		$(".page-header-fixed").removeClass("closed-shrink2");
+	});
+</script>
+<!--全局JS以及框架所需的效果 end-->
+
+<script>
+
+</script>
+</body>
+</html>

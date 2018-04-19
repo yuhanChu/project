@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    window.onbeforeunload = function(event) {
+
+            if (event.clientX > document.body.clientWidth && event.clientY < 0 || event.altKey)
+
+            {
+                return "queren";
+            }
+
+        }
+        // window.onbeforeunload =function() {
+        //   return "queren";  
+        // }
+    </script>
+</body>
+
+</html>

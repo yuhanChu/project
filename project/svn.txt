@@ -1,0 +1,5 @@
+svn://192.168.1.53/admin/        chuyuhan = vbeth35
+svn://192.168.1.53/app/			 chuyuhan = h54t35t
+svn://192.168.1.53/lang/		 chuyuhan = f3554r523
+svn://192.168.1.53/m/			 chuyuhan = vfw3rtef
+svn://192.168.1.53/public/       chuyuhan = dfe2rffq

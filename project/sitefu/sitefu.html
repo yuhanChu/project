@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" data-design='750' data-rem='true'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" /> -->
+    <link rel="stylesheet" type="text/css" href="/static/css/sitefu.css">
+    <!-- <script type="text/javascript" src='rem.js'></script> -->
+    <style type="text/css">
+    .wrap,
+    .circle,
+    .percent {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    
+    .wrap {
+        top: 50px;
+        left: 50px;
+        background-color: #e6e6e6;
+    }
+    
+    .circle {
+        box-sizing: border-box;
+        border: 16px solid #ccc;
+        clip: rect(0, 200px, 200px, 100px);
+    }
+    
+    .clip-auto {
+        clip: rect(auto, auto, auto, auto);
+    }
+    
+    .percent {
+        box-sizing: border-box;
+        top: -20px;
+        left: -20px;
+    }
+    
+    .left {
+        transition: transform ease;
+        border: 20px solid blue;
+        clip: rect(0, 100px, 200px, 0);
+    }
+    
+    .right {
+        border: 20px solid blue;
+        clip: rect(0, 200px, 200px, 100px);
+    }
+    
+    .wth0 {
+        width: 0;
+    }
+    
+    .num {
+        position: absolute;
+        box-sizing: border-box;
+        width: 160px;
+        height: 160px;
+        line-height: 160px;
+        text-align: center;
+        font-size: 40px;
+        left: 20px;
+        top: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        z-index: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <section class="layout">
+        <header class="clearfix">
+            <div class="cyh_company_name f_left">
+                <p>学分在线</p>
+                <span>studybanks.com</span>
+            </div>
+            <div class="cyh_company_r f_right">
+                <p class="cyh_company_r_p1">突破世界范围内流行的MOOC和SPOC模式，创造性的</p>
+                <p class="cyh_company_r_p2">提出<span>COOC</span>模式的创新型互联网科技企业</p>
+            </div>
+        </header>
+        <section class="school_banner">
+            <h1>斯特福大学计算机类相关专业毕业生</h1>
+            <h1 class="ma10">获得OPT的就业率高达85%以上！
+            </h1>
+            <div class="clearfix ss_width">
+                <img src="zhuanti_03.png" class="f_left">
+                <div class="f_right">
+                    <img src="zhuanti_06.png">
+                    <div class="dv dv1"><img src="zhuanti_09.png" align="absmiddle"><span>小投入、高回报</span></div>
+                    <div class="dv dv2"><img src="zhuanti_10.png" align="absmiddle"><span>混合式教学模式</span></div>
+                    <div class="dv dv3"><img src="zhuanti_15.png" align="absmiddle"><span>教育部认证高校</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="zhengce">
+            <p>2017年报考政策公布</p>
+            <span>根据相关政策，您报考计算机类相关专业您需要满足以下条件...</span>
+            <div>
+                <div class="dv_box clearfix">
+                    <img src="zhuanti_19.png" class="f_left">
+                    <div class="f_right">
+                        <p>专科以上学历</p>
+                        <span>函授学历、民办大学学历、普通高校、自考、成人高考、网络教育</span>
+                        <div>咨询学历</div>
+                    </div>
+                </div>
+                <div class="dv_box clearfix">
+                    <img src="zhuanti_22.png">
+                    <div>
+                        <p>专业</p>
+                        <span>国家规定必须为经理类或管理类专业，<br>每年很多考生专业不符。</span>
+                        <div>咨询要求</div>
+                    </div>
+                </div>
+                <div class="dv_box clearfix">
+                    <img src="zhuanti_24.png">
+                    <div>
+                        <p>工作经验</p>
+                        <span>每所大学要求不同，一般要求3-5以上<br>工作年限。</span>
+                        <div>咨询工作经验</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="zixun">
+            <p>那备受追捧的国内读美国MBA呢</p>
+            <img src="zhuanti_28.png">
+            <div class="clearfix">
+                <div class="teacher d_box f_left">咨询老师录取条件</div>
+                <div class="phone d_box f_right">电话咨询</div>
+            </div>
+        </section>
+        <section class="banner2">
+            <p>打造高回报的计算机类专业</p>
+            <span>斯特福大学与国内高校联合推出</span>
+            <img src="zhuanti_32.png">
+            <div class="zi_box z_1"><img src="zhuanti_36.png" align="absmiddle"><span>中华人民共和国教育部认证的国外院校</span></div>
+            <div class="zi_box"><img src="zhuanti_36.png" align="absmiddle"><span>社会认可的学历学位证书</span></div>
+            <div class="zi_box"><img src="zhuanti_36.png" align="absmiddle"><span>斯特福大学官网可查验证</span></div>
+            <div class="btn_banner2">电话咨询</div>
+        </section>
+        <section class="hero_change">
+            <p>精英人士共同选择</p>
+            <div class="hero_box">
+                <div class="ddv clearfix">
+                    <div class="dddv f_left">
+                        <div class="dddv1">
+                            35<i>岁</i>
+                            <span>校友平均年龄35岁</span>
+                        </div>
+                        <div class="dddv2">平均年龄</div>
+                    </div>
+                    <div class="dddv f_right">
+                        <div class="dddv1 pad21">
+                            <!-- <div class="cir_out">
+                                <div class="cir_in"></div>
+                            </div> -->
+                            <canvas id="yuan" width="134" height="134" style="width: 67px;height: 67px;"></canvas>
+                            <span class="mar3">企业高管占比高达61.6%</span>
+                        </div>
+                        <div class="dddv2">职业背景</div>
+                    </div>
+                </div>
+                <div class="ddv ddv2 clearfix">
+                    <div class="dddv f_left">
+                        <div class="dddv1">
+                            65.7<i>万/年</i>
+                            <span>校友平均收入65.7万/年</span>
+                        </div>
+                        <div class="dddv2">平均收入</div>
+                    </div>
+                    <div class="dddv f_right">
+                        <div class="dddv1 pad21">
+                            <canvas id="one" width="134" height="134" style="width: 67px;height: 67px;"></canvas>
+                            <span class="mar3">81.2%新生来自校友推荐</span>
+                        </div>
+                        <div class="dddv2">学员推荐</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="xuewei_banner">
+            <img src="zhuanti_40.png">
+            <p>这么好的硕士学位！</p>
+            <div class="btn_read">我也要读</div>
+        </section>
+        <section class="liucheng">
+            <p>报名流程</p>
+            <div class="liucheng_box">
+                <div>
+                    <div class="one_box">在线报名</div>
+                    <img src="8.png">
+                </div>
+            </div>
+            <div class="liucheng_box">
+                <div>
+                    <div class="one_box o_box">参加面试
+                        <br><span>现场/远程</span></div>
+                    <img src="8.png">
+                </div>
+            </div>
+            <div class="liucheng_box">
+                <div>
+                    <div class="one_box">成功录取</div>
+                    <img src="8.png">
+                </div>
+            </div>
+            <div class="liucheng_box">
+                <div>
+                    <div class="one_box">缴纳学费</div>
+                    <img src="8.png">
+                </div>
+            </div>
+            <div class="liucheng_box">
+                <div>
+                    <div class="one_box">入学上课</div>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <p>如需了解斯特福大学更多信息
+                <br>请留下您的联系方式
+                <br>我们的老师会及时与您联系</p>
+            <div class="div_input">
+                <dl class="clearfix">
+                    <dt class="f_left">姓名:</dt>
+                    <dd class="f_left">
+                        <input type="name" placeholder="您的姓名">
+                    </dd>
+                </dl>
+                <dl class="clearfix dl2">
+                    <dt class="f_left">手机号:</dt>
+                    <dd class="f_left">
+                        <label>
+                            <input type="tel" placeholder="请输入您的手机号">
+                        </label>
+                    </dd>
+                </dl>
+                <div>提交资料</div>
+            </div>
+            <div class="zi_div">
+                <p>电话：010-5711 3667
+                    <br>学分在线（北京）国际数据科技有限公司
+                    <br>公司地址：北京市海淀区北三环西路48号院2号楼</p>
+            </div>
+        </section>
+    </section>
+    <script src="/static/js/jquery-2.1.1.min.js"></script>
+    <script>
+    function circleProgress(dom, value, average) {
+        var canvas = document.getElementById(dom);
+        var context = canvas.getContext('2d');
+        var _this = $(canvas),
+            value = Number(value), // 当前百分比,数值
+            average = Number(average), // 平均百分比
+            color = "", // 进度条、文字样式
+            maxpercent = 100, //最大百分比，可设置
+            c_width = 134, // canvas，宽度
+            c_height = 134; // canvas,高度
+        // 判断设置当前显示颜色
+        if (value == maxpercent) {
+            color = "#13227a";
+        } else if (value > average) {
+            color = "#13227a";
+        } else {
+            color = "#13227a";
+        }
+        // 清空画布
+        context.clearRect(0, 0, c_width, c_height);
+        // 画初始圆
+        context.beginPath();
+        // 将起始点移到canvas中心
+        context.moveTo(c_width / 2, c_height / 2);
+        // 绘制一个中心点为（c_width/2, c_height/2），半径为c_height/2，起始点0，终止点为Math.PI * 2的 整圆
+        context.arc(c_width / 2, c_height / 2, c_height / 2, 0, Math.PI * 2, false);
+        context.closePath();
+        context.fillStyle = '#e6e6e6'; //填充颜色
+        context.fill();
+        // 绘制内圆
+        context.beginPath();
+        context.strokeStyle = color;
+        context.lineCap = 'square';
+        context.closePath();
+        context.fill();
+        context.lineWidth = 10.0; //绘制内圆的线宽度
+
+        function draw(cur) {
+            // 画内部空白  
+            context.beginPath();
+            context.moveTo(24, 24);
+            context.arc(c_width / 2, c_height / 2, c_height / 2 - 10, 0, Math.PI * 2, true);
+            context.closePath();
+            context.fillStyle = 'rgba(255,255,255,1)'; // 填充内部颜色
+            context.fill();
+            // 画内圆
+            context.beginPath();
+            // 绘制一个中心点为（c_width/2, c_height/2），半径为c_height/2-5不与外圆重叠，
+            // 起始点-(Math.PI/2)，终止点为((Math.PI*2)*cur)-Math.PI/2的 整圆cur为每一次绘制的距离
+            context.arc(c_width / 2, c_height / 2, c_height / 2 - 5, -(Math.PI / 2), ((Math.PI * 2) * cur) - Math.PI / 2, false);
+            context.stroke();
+            //在中间写字  
+            context.font = "bold 24px Arial"; // 字体大小，样式
+            context.fillStyle = color; // 颜色
+            context.textAlign = 'center'; // 位置
+            context.textBaseline = 'middle';
+            context.moveTo(c_width / 2, c_height / 2); // 文字填充位置
+            context.fillText(value + "%", c_width / 2, c_height / 2);
+            context.fillText("", c_width / 2, c_height / 2);
+        }
+        // 调用定时器实现动态效果
+        var timer = null,
+            n = 0;
+
+        function loadCanvas(nowT) {
+            timer = setInterval(function() {
+                if (n > nowT) {
+                    clearInterval(timer);
+                } else {
+                    draw(n);
+                    n += 0.01;
+                }
+            }, 15);
+        }
+        loadCanvas(value / 100);
+        timer = null;
+    };
+    window.onload = function() {
+        // circleProgress('yuan', 61.6, 100);
+        // circleProgress('one', 81.2, 100);
+    }
+    $('body').bind('touchmove', function(event) {
+        // console.log(event.preventDefault())
+        // event.preventDefault(); //禁用默认滚动行为，需要自己实现滚动
+        // console.log($(this).scrollTop());
+        if ($('body').scrollTop() >1345 && $('body').scrollTop() < 1723) {
+            circleProgress('yuan', 61.6, 100);
+            circleProgress('one', 81.2, 100);
+            $('body').unbind('touchmove');
+        } // 计算你的屏幕高度
+    });
+    </script>
+</body>
+
+</html>

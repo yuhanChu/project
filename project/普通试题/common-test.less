@@ -1,0 +1,555 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    -webkit-box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+input,
+textarea {
+    margin-bottom: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+input[disabled],
+input[readonly],
+select[disabled],
+select[readonly],
+textarea[disabled],
+textarea[readonly] {
+    background: 0 0;
+    cursor: default;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none
+}
+
+a:link {
+    text-decoration: none
+}
+
+i {
+    font-style: normal;
+}
+
+.f_left {
+    float: left
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.f_right {
+    float: right
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    resize: none;
+    box-shadow: none !important;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    margin-bottom: 0 !important;
+}
+
+button {
+    border: none !important;
+    background: none !important;
+}
+
+.box() {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.btn(@w,
+@h) {
+    width: @w;
+    height: @h;
+    line-height: @h;
+    text-align: center;
+    cursor: pointer;
+    background: #ff7669;
+    color: #fff;
+}
+
+.font(@size,
+@color) {
+    font-size: @size;
+    color: @color;
+}
+
+.commen-main {
+    background: #f9f9f9;
+    padding-bottom: 20px;
+    min-height: 100%;
+    .commen-head {
+        width: 100%;
+        height: 100px;
+        background: #fff;
+        overflow: hidden;
+        .commen-title {
+            margin-left: 60px;
+            height: 100%;
+            float: left;
+            padding-top: 26px;
+            padding-right: 40px;
+            position: relative;
+            p {
+                .font(30px, #fe6701);
+                line-height: 30px;
+                font-weight: bold;
+            }
+            span {
+                .font(15px, #fe6701);
+                line-height: 16px;
+            }
+            .line {
+                width: 1px;
+                height: 50px;
+                background: #e9e9e9;
+                position: absolute;
+                top: 26px;
+                right: 0;
+            }
+        }
+        &>h1 {
+            float: left;
+            height: 100%;
+            .font(20px, #333333);
+            margin-left: 40px;
+            font-weight: normal;
+            line-height: 100px;
+        }
+    }
+
+    .commen-content {
+        width: 1240px;
+        margin: 0 auto;
+        margin-top: 18px;
+        background: #fff;
+        padding: 0 20px 18px;
+        overflow: hidden;
+        h1 {
+            .font(24px, #333333);
+            font-weight: normal;
+            margin-top: 23px;
+        }
+        .chapter {
+            margin-top: 13px;
+            margin-bottom: 13px;
+            &>p {
+                .font(12px, #999999);
+            }
+            span {
+                .font(12px, #999999);
+            }
+        }
+
+        .read {
+            width: 100%;
+            padding: 18px;
+            background: #f3f3f3;
+            position: relative;
+            i {
+                .font(16px, #9f9f9f);
+                position: absolute;
+                top: 17px;
+                right: 20px;
+            }
+            .bold {
+                font-weight: bold;
+            }
+            p {
+                .font(12px, #666666);
+                line-height: 25px;
+            }
+        }
+        .explain {
+            margin-top: 20px;
+            position: relative;
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 68px;
+                height: 28px;
+                line-height: 28px;
+                .font(12px, #666666);
+            }
+            textarea {
+                width: 39%;
+                max-width: 467px;
+                min-width: 200px;
+                margin-left: 68px;
+                height: 80px;
+                border: 1px solid #e9e9e9;
+                border-radius: 4px;
+                font-size: 12px;
+                padding: 10px;
+            }
+        }
+        .time {
+            .explain;
+            input {
+                margin-left: 68px;
+                width: 206px;
+                height: 28px;
+                font-size: 12px;
+                border: 1px solid #e9e9e9;
+                border-radius: 4px;
+                padding-left: 10px;
+            }
+            p {
+                .font(12px, #666666);
+                height: 28px;
+                line-height: 28px;
+                margin-left: 10px;
+                display: inline-block;
+            }
+        }
+        .num {
+            .explain;
+            &>div {
+                margin-left: 68px;
+                width: 206px;
+                height: 28px;
+                font-size: 12px;
+                border: 1px solid #e9e9e9;
+                border-radius: 4px;
+                display: inline-block;
+            }
+        }
+    }
+
+    .commen-btn {
+        width: 1240px;
+        margin: 0 auto;
+        padding: 16px 20px;
+        padding-right: 0;
+        background: #fff;
+        margin-top: 20px;
+        &>div {
+            .btn(120px, 28px);
+            background: #ff7669;
+            .font(14px, #ffffff);
+            margin-right: 20px;
+            border-radius: 4px;
+        }
+    }
+    .topic-box {
+        width: 1240px;
+        margin: 0 auto;
+        .single {
+            width: 100%;
+            margin-top: 20px;
+            background: #fff;
+            padding: 20px 0 20px;
+            &>p {
+                .font(12px, #393b3e);
+                margin-left: 29px;
+                margin-bottom: 17px;
+            }
+            .topic-list {
+                margin: 0 40px;
+                border-bottom: 1px solid #e9e9e9;
+                padding: 19px 0;
+                position: relative;
+                .delect {
+                    position: absolute;
+                    top: 19px;
+                    right: 0;
+                    .font(12px, #ff7669);
+                    cursor: pointer;
+                }
+                .tag {
+                    position: absolute;
+                    top: 19px;
+                    right: 65px;
+                    .font(12px, #ff7669);
+                    cursor: pointer;
+                }
+                .tag-about {
+                    padding: 0 12px;
+                    background: #fff;
+                    box-shadow: 0px 0px 15px #ccc;
+                    position: absolute;
+                    width: 110px;
+                    right: 27px;
+                    top: 45px;
+                    &>div {
+                        position: absolute;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border-right: 9px solid transparent;
+                        border-bottom: 9px solid #fff;
+                        border-left: 9px solid transparent;
+                        top: -9px;
+                        right: 50%;
+                        margin-right: -9px;
+                    }
+                    span {
+                        display: block;
+                        border-bottom: 1px solid #e9e9e9;
+                        height: 31px;
+                        line-height: 30px;
+                        .font(12px, #999999);
+                        text-align: center;
+                    }
+                    span:last-child {
+                        border-bottom: 0;
+                    }
+                }
+                &>p {
+                    .font(12px, #666666);
+                    line-height: 20px;
+                    width: 84%;
+                    max-width: 980px;
+                }
+                img {
+                    width: 40px;
+                    height: 40px;
+                    margin-left: 20px;
+                    margin-top: 10px;
+                }
+            }
+            .gx:before {
+                content: '';
+                display: block;
+                width: 39px;
+                height: 29px;
+                position: absolute;
+                top: 19px;
+                left: -46px;
+                background: url('finalexam/gx.png') no-repeat;
+            }
+            .topic-list:last-child {
+                border-bottom: 0;
+            }
+        }
+        .completion {
+            .single;
+        }
+        .answer {
+            .single;
+        }
+        .read-single {
+            width: 100%;
+            margin-top: 20px;
+            background: #fff;
+            padding: 20px 0 20px;
+            &>p {
+                .font(12px,
+                #393b3e);
+                margin-left: 29px;
+            }
+            .topic-list {
+                margin: 0 40px;
+                &>p {
+                    .font(12px,
+                    #666666);
+                    line-height: 20px;
+                    margin-top: 32px;
+                    margin-bottom: 26px;
+                }
+                &>ul {
+                    width: 100%;
+                    padding: 0 19px;
+                    border: 1px solid #e9e9e9;
+                    li {
+                        height: 51px;
+                        line-height: 50px;
+                        width: 100%;
+                        border-bottom: 1px solid #e9e9e9;
+                        position: relative;
+                        p {
+                            .font(12px,
+                            #666666);
+                        }
+                        &>span {
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            .font(12px,
+                            #ff7669);
+                            cursor: pointer;
+                        }
+                        .delect {
+                            right: 0;
+                        }
+                        .tag {
+                            right: 64px;
+                        }
+                        .tag-about {
+                            padding: 0 12px;
+                            background: #fff;
+                            box-shadow: 0px 0px 15px #ccc;
+                            position: absolute;
+                            width: 110px;
+                            right: 27px;
+                            top: 45px;
+                            &>div {
+                                position: absolute;
+                                display: block;
+                                width: 0;
+                                height: 0;
+                                border-right: 9px solid transparent;
+                                border-bottom: 9px solid #fff;
+                                border-left: 9px solid transparent;
+                                top: -9px;
+                                right: 50%;
+                                margin-right: -9px;
+                            }
+                            &>span {
+                                display: block;
+                                border-bottom: 1px solid #e9e9e9;
+                                height: 31px;
+                                line-height: 30px;
+                                .font(12px,
+                                #999999);
+                                text-align: center;
+                            }
+                            &>span:last-child {
+                                border-bottom: 0;
+                            }
+                        }
+                    }
+                    li:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+        .read-completion {
+            width: 100%;
+            margin-top: 20px;
+            background: #fff;
+            padding: 20px 0 20px;
+            &>p {
+                .font(12px,
+                #393b3e);
+                margin-left: 29px;
+            }
+            .topic-list {
+                border: 1px solid #e9e9e9;
+                padding: 14px 20px 38px;
+                margin-left: 29px;
+                margin-right: 20px;
+                margin-top: 20px;
+                border-radius: 4px;
+                position: relative;
+                p {
+                    .font(12px,
+                    #666666);
+                    padding-bottom: 15px;
+                    line-height: 20px;
+                    border-bottom: 1px solid #e9e9e9;
+                }
+                .delect {
+                    display: block;
+                    position: absolute;
+                    bottom: 11px;
+                    right: 20px;
+                    .font(12px,
+                    #ff7669);
+                    cursor: pointer;
+                }
+                .tag {
+                    .delect;
+                    right: 85px;
+                }
+                .tag-about {
+                    padding: 0 12px;
+                    background: #fff;
+                    box-shadow: 0px 0px 15px #ccc;
+                    position: absolute;
+                    width: 110px;
+                    right: 40px;
+                    bottom: -95px;
+                    &>div {
+                        position: absolute;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border-right: 9px solid transparent;
+                        border-bottom: 9px solid #fff;
+                        border-left: 9px solid transparent;
+                        top: -9px;
+                        right: 50%;
+                        margin-right: -9px;
+                    }
+                    &>span {
+                        display: block;
+                        border-bottom: 1px solid #e9e9e9;
+                        height: 31px;
+                        line-height: 30px;
+                        .font(12px,
+                        #999999);
+                        text-align: center;
+                    }
+                    &>span:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

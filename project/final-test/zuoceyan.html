@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="zuoceyan.css">
+</head>
+<script type="text/javascript">
+document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+window.onresize = function() {
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+}
+</script>
+
+<body>
+    <div id="main">
+        <div id="do" v-show="!needKnow">
+            <div class="header">
+                <i class="iconfont"></i>
+                <p>试题 1/5</p>
+                <span>05:00</span>
+            </div>
+            <div class="content">
+                <template>
+                    <type1 v-if="type==1||type==2||type==3"></type1>
+                    <type2 v-if="type==4||type==5||type==8"></type2>
+                    <type3 v-if="type==6||type==7"></type3>
+                </template>
+            </div>
+            <div class="bottom-btn">
+                <div class="before">上一题</div>
+                <!-- <div class="next">下一题</div> -->
+                <div class="send">提交</div>
+            </div>
+        </div>
+        <div id="need-know" v-show="needKnow">
+            <div class="header">
+                <i class="iconfont"></i>
+                <p>章节测验考试须知</p>
+            </div>
+            <div class="content">
+                <p>
+                    1、期末考试分为线上和线下两种，线上考试包含客观题、主观题，客观题由系统自动批阅打分（多选题漏选不给分），主观题由主讲老师批阅打分。线下考试提供考试地点时间，逾期不参加考试视为放弃，记0分处理
+                    <br> 2、线上考试开始后自动计时，超时将自动交卷，请合理安排考试时间和答题顺序。
+                    <br> 3、考试成绩将录入课程总成绩，课程总成绩将决定您是否能获取学分/学位，所以考试时请认真作答。
+                    <br> 4、线上考试批阅后的期末试卷有一次申请重批机会，重批题型仅包括主观题。
+                </p>
+                <a href="javascript:;" @click="needKnow=!needKnow">我已知晓考试须知并开始测验</a>
+            </div>
+        </div>
+        <div id="send-test" v-show="sibmitShow" v-cloak>
+            <div class="bg"></div>
+            <div class="layer">
+                <p>本节测验剩余考试次数1，确认交卷？</p>
+                <div class="cancel-btn">取消</div>
+                <div class="sibmit-btn">确认交卷</div>
+            </div>
+        </div>
+    </div>
+    <!-- 单选多选判断 -->
+    <template id="type1">
+        <div>
+            <div class="question">
+                <span class="score">单选题（20分）</span>
+                <div>
+                    <p>以下艺术方式相比较绘画而言，你认 为哪种更高级？</p>
+                </div>
+                <div class="img-box">
+                </div>
+            </div>
+            <div class="answer">
+                <div class="answer-list clearfix">
+                    <span :class="{'cur':isSelet('A')}" @click="changeAnswer('A',2)">A</span>
+                    <p>行为艺术</p>
+                </div>
+                <div class="answer-list clearfix">
+                    <span :class="{'cur':isSelet('B')}" @click="changeAnswer('B',2)">B</span>
+                    <p>行为艺术</p>
+                </div>
+                <div class="answer-list clearfix">
+                    <span :class="{'cur':isSelet('C')}" @click="changeAnswer('C',2)">C</span>
+                    <p>行为艺术</p>
+                </div>
+                <div class="answer-list clearfix">
+                    <span :class="{'cur':isSelet('D')}" @click="changeAnswer('D',2)">D</span>
+                    <p>行为艺术</p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- 填空 问答 写作 -->
+    <template id="type2">
+        <div>
+            <div class="question">
+                <span class="score">问答题（20分）</span>
+                <div>
+                    <p>下面的诗句节选自戴望舒的《雨巷》， 阅读后合理想象，根据要求写一个面画。 在雨的哀曲里， 消了她的颜色， 散了她的芬芳， 消散了，甚至她的太息般的眼光， 丁香般的惆怅。 要求：①写出“她”的神态，“我”的心理；②运用 比喻、拟人的修辞手法；③语言优美，富有意境；④ 不少于200字。
+                    </p>
+                </div>
+                <div class="img-box">
+                </div>
+            </div>
+            <div>
+                <textarea></textarea>
+            </div>
+        </div>
+    </template>
+    <!-- 阅读 完型 -->
+    <template id="type3">
+        <div>
+            <div class="question">
+                <span class="score">完形填空（20分）</span>
+                <div>
+                    <p>下面的诗句节选自戴望舒的《雨巷》， 阅读后合理想象，根据要求写一个面画。 在雨的哀曲里， 消了她的颜色， 散了她的芬芳， 消散了，甚至她的太息般的眼光， 丁香般的惆怅。 要求：①写出“她”的神态，“我”的心理；②运用 比喻、拟人的修辞手法；③语言优美，富有意境；④ 不少于200字。
+                    </p>
+                </div>
+                <div class="img-box">
+                </div>
+            </div>
+            <div class="answer" style="display: none;">
+                <div class="answer-list clearfix">
+                    <span :class="{'cur':isSelet('A')}" @click="changeAnswer('A',2)">A</span>
+                    <p>行为艺术</p>
+                </div>
+                <div class="answer-list clearfix">
+                    <span :class="{'cur':isSelet('B')}" @click="changeAnswer('B',2)">B</span>
+                    <p>行为艺术</p>
+                </div>
+                <div class="answer-list clearfix">
+                    <span :class="{'cur':isSelet('C')}" @click="changeAnswer('C',2)">C</span>
+                    <p>行为艺术</p>
+                </div>
+                <div class="answer-list clearfix">
+                    <span :class="{'cur':isSelet('D')}" @click="changeAnswer('D',2)">D</span>
+                    <p>行为艺术</p>
+                </div>
+            </div>
+            <div>
+                <textarea></textarea>
+            </div>
+        </div>
+    </template>
+</body>
+<script type="text/javascript" src="vue.min.js"></script>
+<script type="text/javascript" src="vuex.min.js"></script>
+<script type="text/javascript" src="do.js"></script>
+<script type="text/javascript">
+</script>
+
+</html>

@@ -1,0 +1,528 @@
+/*整体盒子*/
+.layout {
+    min-width: 320px;
+    max-width: 750px;
+    height: 100%;
+    margin:0 auto;
+    background: #f9f9f9;
+}
+/*顶部*/
+.mui-bar {
+	z-index: 0;
+}
+.mui-bar-nav
+{
+    height: 3.4rem;
+    background: #013a58;
+    position: relative;
+}
+.mui-bar-nav img {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0.9rem;
+    /*margin-left: 0.5rem;*/
+}
+.mui-bar-nav a {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    line-height: 3.4rem;
+}
+.mui-bar-nav .all {
+	margin-left:3rem;
+	margin-right: 0.5rem;
+}
+.change {
+    margin-left: 2rem;
+    margin-right: 0.5rem;
+}
+/*.mui-bar-nav .f_right.wel {
+    margin-right: 0.5rem;
+}*/
+
+/*导航*/
+.navb {
+    width: 100%;
+}
+.navb {
+    height:7.5rem;
+    background: #FFFFFF;
+    position: relative;	
+   padding-left: 4rem;
+}
+.navb .logo {
+	width: 30%;
+	height: 7.5rem;	
+    padding-top: 2rem;
+}
+.navb h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fe6701;
+    /*position: absolute;
+    left:4rem;
+    top:2.3rem;*/
+}
+.navb p {
+    font-size: 1rem;
+    color: #fe6701;
+    /*position: absolute;
+    left:4rem;
+    top:4rem;*/
+}
+.navb ul {
+    /*position: absolute;
+    top:2.7rem;
+    right:2rem;*/
+   padding-top: 2.7rem;
+   padding-right: 2rem;
+}
+.navb ul li {
+    float: left;
+}
+.navb ul li:nth-child(2) {
+    width: 6rem;
+    padding:0 2rem;
+    margin-right: 2rem;
+    border-right: 0.1rem dashed #ccc;
+    border-left:0.1rem dashed #ccc;
+}
+.navb img {
+	display: block;
+}
+.navb ul li img {
+	width: 2.1rem;
+    height: 2.1rem;
+}
+.navb ul li:nth-child(1) img{
+    /*width: 1.9rem;
+    height: 2rem;*/
+    margin-right: 2rem;
+}
+.navb .search {
+	width: 100%;
+	height:4.2rem;
+	padding-right: 4.8rem;
+	background: #f9f9f9;
+	position: absolute;
+	left: 0;
+	top:6.2rem;
+	z-index: 666;
+	display: none;
+}
+.navb .search input {
+	width: 100%;
+	background: #FFFFFF;
+	height: 3rem;
+	line-height: 4.8rem;
+	margin: 0.6rem 0 0.6rem 0.8rem;
+	border: 1px solid #FFFFFF;
+	border-radius: 3rem;
+}
+.navb .search span {
+	width: 1.65rem;
+	height: 1.45rem;
+	background: url(../images/arrow.jpg) no-repeat;
+	background-size: 1.65rem 1.45rem;
+	-webkit-background-size: 1.65rem 1.45rem;
+	position: absolute;
+	top: 1.5rem;
+	right: 1.6rem;
+}
+/*特色*/
+.feature {
+    width: 100%;
+    background: #f9f9f9;
+    margin-bottom:2rem;
+    position: relative;
+}
+.feature .al {
+    width: 100%;
+    height:9.55rem;
+    background : #ffffff;
+}
+.feature .al li{
+    width: 25%;
+    float: left;
+    padding-top:2.7rem;
+}
+.feature .al li a {
+    display: block;
+    border-right: 0.1rem solid #cfcfcf;
+}
+
+.feature .al li a.no_border {
+    border:none;
+}
+.feature .al li a img {
+    width: 2rem;
+    height: 2rem;
+    margin:0 auto;
+    display: block;
+}
+.feature .al li a  h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 1.1rem;
+}
+.feature .explain {
+	width: 30.5rem;
+	height: 16.65rem;
+	background:#FFFFFF;
+	position: absolute;
+    left:0.85rem;
+    top:11.15rem;
+    padding-left: 2.75rem;
+    padding-top: 2.85rem;
+    text-align: left;
+}
+.feature .explain::before {
+	content: "";
+	width:0;
+    height:0;
+    border-left:2rem solid transparent;
+    border-right:2rem solid transparent;
+    border-bottom:1.9rem solid #ffffff;
+    display: block;
+    position: absolute;
+    top:-1.5rem;
+    left:11rem;
+}
+.feature .explain li {
+	font-size: 1.4rem;
+	color: #74728f;
+	margin-bottom: 1rem;
+	position: relative;
+}
+.feature .explain li:last-child{
+	padding: 0;
+}
+.feature .explain li span{
+	width: 1.8rem;
+	height: 0.75rem;
+	background: url(../images/hot.jpg) no-repeat;
+	background-size: 1.8rem 0.75rem;
+	-webkit-background-size: 1.8rem 0.75rem;
+	position: absolute;
+	top:-0.8rem;
+	
+}
+/*猜你喜欢*/
+.like{
+    width: 100%;
+    background: #ffffff;
+}
+.like .like_top {
+    width: 100%;
+    height:6.3rem;
+    overflow: hidden;
+}
+.like .like_top> span{
+    width: 0.8rem;
+    height: 2.45rem;
+    background: url("../images/orange.jpg") no-repeat;
+    -webkit-background-size: 0.8rem 2.45rem;
+    background-size:0.8rem 2.45rem;
+    float: left;
+    margin-top:2rem;
+    margin-left: -0.4rem;
+}
+.like .like_top h1 {
+    font-size: 1.6rem;
+    line-height: 6.3rem;
+    float: left;
+    margin-left: 1.05rem;
+}
+.like .like_top a {
+    display: inline-block;
+	line-height: 6.3rem;
+    float: right;
+    font-size: 1.1rem;
+    color: #fe6701;
+}
+.like .like_top a span {
+    display:inline-block;
+    width: 1.4rem;
+    height: 1.2rem;
+    background: url("../images/oran.jpg") no-repeat;
+    -webkit-background-size:1.4rem 1.2rem;
+    background-size:1.4rem 1.2rem;
+    margin-right: 1.5rem;
+    margin-left: 1rem;
+}
+.like section {
+    width: 50%;
+    float: left;
+	padding:0 1.5rem;
+	/* margin-bottom: 1.3rem; */
+	padding-top: 1.3rem;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    border-bottom:1px solid #cfcfcf;
+}
+.like section:nth-of-type(1),.like section:nth-of-type(2){
+    padding-top:0;
+}
+.like section:nth-child(2n-1) {
+	padding-left:1.39rem;
+	box-sizing: border-box;
+    border-left:0.5px solid #cfcfcf;
+}
+.like section img{
+    width: 100%;
+}
+.like section p {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    margin-top: 1.5rem;
+    margin-left: 0.2rem;
+    margin-bottom: 0;
+    color: #333333;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow: hidden; 
+}
+.like section>span {
+    font-size:1.2rem;
+    display: block;
+    color:#999999;
+    margin-top:0.5rem;
+    margin-left: 0.2rem;
+}
+.like section div {
+    width: 100%;
+    margin:1rem 0 1.3rem 0.2rem; 
+}
+.like section div .one {
+    font-size: 1.1rem;
+    border:1px solid #cfcfcf;
+    padding:0.1rem 0.3rem;
+    margin:0 0.4rem 0 0;
+    line-height: 1.4rem;
+}
+.like section div .mor{
+    border:0;
+    padding:0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.like section div .bg {
+    border: none;
+    padding:0;
+    background: url("../images/black.jpg") no-repeat;
+    width: 1rem;
+    height: 1rem;
+    background-size: 1rem 1rem;
+    margin-right: 1rem;
+	margin-top: 0.2rem;    
+}
+/*点击查看更多*/
+.tap {
+    width: 100%;
+    background: #FFFFFF;
+	margin-bottom: 2.5rem;
+	height:7rem;
+    overflow: hidden;
+	
+}
+.tap button {
+	width: 21.5rem;
+	height: 3.4rem;
+
+    font-size: 1.6rem;
+    
+    display: block;
+    margin:1.6rem auto;
+    border:1px solid #313544;
+    border-radius: 1.8rem;
+}
+
+/*热门学校*/
+.hot {
+    width: 100%;
+    background: #ffffff;
+}
+.hot .hot_top {
+    width: 100%;
+    height:6.15rem;
+    line-height: 6.15rem;
+    overflow: hidden;
+}
+.hot .hot_top> span{
+    width: 0.8rem;
+    height: 2.45rem;
+    background: url("../images/orange.jpg") no-repeat;
+    -webkit-background-size: 0.8rem 2.45rem;
+    background-size:0.8rem 2.45rem;
+    float: left;
+    margin-top:2rem;
+    margin-left: -0.4rem;
+}
+.hot .hot_top h1 {
+    font-size: 1.6rem;
+    line-height: 6.15rem;
+    float: left;
+    margin-left: 1.05rem;
+}
+.hot .hot_top a {
+    display: inline-block;
+    line-height: 6.15rem;
+    float: right;
+    margin-right: 1.5rem;
+    font-size: 1.1rem;
+    color: #999999;
+}
+.hot  section {
+    width: 100%;
+    margin-bottom:2.4rem;
+    padding:0 1.5rem;
+    border-bottom:0.1rem solid #cfcfcf;
+}
+.hot section div.pic {
+	width: 8rem;
+    padding-bottom: 1.5rem;
+
+}
+.hot  section div img {
+	margin: 0 auto;
+    width: 5.6rem;
+    height:5.5rem;
+}
+.hot  section div p {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 0.9rem;
+    margin-bottom: 0;
+}
+.hot section div.write {
+	margin-left:2.3rem;
+
+}
+.hot section div h1 {
+    font-size:1.4rem;
+    padding-bottom: 1.4rem;
+}
+.hot  section div a {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: #cfcfcf;
+    margin-bottom:1.6rem;	
+}
+.hot  section div:nth-child(2){
+    padding-bottom: 0;
+}
+/*.hot section:nth-child(4) {
+	margin-left: -1.4rem;
+}*/
+/*入住机构*/
+.branch {
+    width: 100%;
+    padding:0 1.5rem;
+    background: #ffffff;
+}
+.branch h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 1.8rem;
+}
+.branch ul {
+    width: 100%;
+    padding-bottom: 3.3rem;
+}
+.branch ul li {
+    width: 25%;
+    text-align: center;
+    margin-top: 3rem;
+    float: left;
+}
+.branch ul li a {
+    font-size: 1.5rem;
+    color: #807e98;
+}
+
+footer {
+    width: 100%;
+    padding: 0 1.5rem;
+}
+footer ul {
+    width: 100%;
+    margin-top: 2.4rem;
+}
+footer ul li {
+    width: 25%;
+    float: left;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #999999;
+    border-right: 1px solid #cfcfcf;
+}
+footer ul li:last-child {
+    border-right: none;
+}
+footer p {
+    font-size: 1.2rem;
+    color: #999999;
+    text-align: center;
+    margin-top: 2rem;
+}
+footer p:nth-child(3){
+    display: block;
+    margin-top: 1.5rem;
+    padding-bottom: 2.8rem;
+}
+
+/*媒体查询*/
+@media screen and (min-width: 320px){
+    html {
+        font-size: 57%!important;
+    }
+    .hot section div.write {
+    	margin-left: 1.4rem !important;
+	}
+	.like section div .one {
+		padding:0;
+	}
+} 
+@media screen and (min-width: 375px) {
+	html {
+		font-size: 62.5% !important;
+	}
+	.like section div .one {
+		padding:0.1rem 0.3rem; 
+	}
+	
+}
+@media screen and (min-width: 480px) {
+	html {
+		font-size: 70.5% !important;
+	}
+	.hot section div.write {
+    	margin-left: 6.4rem !important;
+	}
+	.like section div .one {
+		padding:0.1rem 0.3rem; 
+	}
+	
+}
+@media screen and (min-width: 640px) {
+	html {
+		font-size: 100% !important;
+	}
+	.hot section div.write {
+    	margin-left: 6.4rem !important;
+	}
+	.like section div .one {
+		padding:0.1rem 0.3rem; 
+	}
+}
+@media screen and (min-width: 760px) {
+	html {
+		font-size: 110% !important;
+	}
+	.hot section div.write {
+    	margin-left: 8.4rem !important;
+	}
+	.like section div .one {
+		padding:0.1rem 0.3rem; 
+	}
+}

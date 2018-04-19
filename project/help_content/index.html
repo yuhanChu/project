@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="keywords" content="{{$keywords}}" />
+    <meta name="description" content="{{$description}}" />
+    <!-- 360浏览器 -->
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- 强制竖屏 -->
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-orientation" content="portrait" />
+    <!-- 老式手机优化 -->
+    <meta name="HandheldFriendly" content="true" />
+    <!-- 不识别手机号 -->
+    <meta name="format-detection" content="telephone=no" />
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.53/static/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.53/static/css/bass0118.css" />
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.53/static/css/homepage.css" />
+    <link type="text/css" rel='stylesheet' href='http://192.168.1.53/static/css/send-success.css' />
+    <link rel='stylesheet' href='http://192.168.1.53/static/css/registered.css' />
+    <link rel='stylesheet' href='http://192.168.1.53/static/js/toastr/build/toastr.css' />
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.53/static/css/authenticationCenter.css" />
+    <link rel="stylesheet" type="text/css" href="http://192.168.1.53/static/css/Transaction_process.css" />
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.53/static/css/bootstrap-theme.css" />
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.53/static/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/help_content.css">
+    <style type="text/css">
+    .gs-logo-div:hover,
+    .gs-logo-div:active,
+    .gs-logo-div:link {
+        text-decoration: none;
+        outline: none;
+    }
+    </style>
+    <script type="text/javascript" src="http://192.168.1.53/static/js/jquery-1.9.1.js"></script>
+    <!-- jq 兼容老版本处理 -->
+    <script type="text/javascript">
+    var API = '/api';
+
+    if (typeof $.browser == 'undefined') {
+        var matched, browser;
+
+        ua = navigator.userAgent.toLowerCase();
+
+        var match = /(chrome)[ \/]([\w.]+)/.exec(ua) ||
+            /(webkit)[ \/]([\w.]+)/.exec(ua) ||
+            /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(ua) ||
+            /(msie) ([\w.]+)/.exec(ua) ||
+            ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua) || [];
+
+        matched = {
+            browser: match[1] || "",
+            version: match[2] || "0"
+        };
+
+        browser = {};
+
+        if (matched.browser) {
+            browser[matched.browser] = true;
+            browser.version = matched.version;
+        }
+
+        if (browser.chrome) {
+            browser.webkit = true;
+        } else if (browser.webkit) {
+            browser.safari = true;
+        }
+
+        jQuery.browser = browser;
+    }
+    </script>
+    <!-- <script type='text/javascript' src='/static/js/filters/filters.js'></script>
+    <script type='text/javascript' src='/static/js/filters/init.js'></script>
+ -->
+    <script type="text/javascript" src="/static/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap-datetimepicker.fr.js"></script>
+    <script type='text/javascript' src='/static/js/ueditor/ueditor.all.min.js'></script>
+    <script type='text/javascript' src='/static/js/ueditor/ueditor.config.js'></script>
+    <script type="text/javascript" src="/static/js/bass1.js"></script>
+    <title>{{$title}}</title>
+</head>
+
+<body>
+    <!--顶端-->
+    <section class="header not_selected">
+        <section class="header_top">
+            <section class="header_top_content">
+                <section class="header_top_content_peripheral pull-left">
+                    <div class="pull-left" style="position: relative;height: 100%;">
+                        <span class="{{$locationCode}}_icon pull-left"></span>
+                        <span class="earth_text pull-left dropdown-toggle" data-toggle="dropdown">{{$location}} <span class="caret"></span></span>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu_list" id="0"><span class="global_icon pull-left"></span>Global</li>
+                            <li class="dropdown-menu_list" id="33"><span class="china_icon pull-left"></span>中国</li>
+                            <li class="dropdown-menu_list" id="79"><span class="hongkong_icon pull-left"></span>中国香港</li>
+                            <li class="dropdown-menu_list" id="51"><span class="macau_icon pull-left"></span>中国澳门</li>
+                            <li class="dropdown-menu_list" id="676"><span class="usa_icon pull-left"></span>USA</li>
+                            <li class="dropdown-menu_list" id="659"><span class="england_icon pull-left"></span>England</li>
+                            <li class="dropdown-menu_list" id="628"><span class="norway_icon pull-left"></span>Norway</li>
+                        </ul>
+                    </div>
+                    <div class="pull-left" style="position: relative;height: 100%;">
+                        <span class="select_language_text pull-left dropdown-toggle" data-toggle="dropdown">{{$language}} <span class="caret"></span></span>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu_list">
+                                <a href="{{$baseurl}}?lang=zh-cn">中文简体</a>
+                            </li>
+                            <li class="dropdown-menu_list">
+                                <a href="{{$baseurl}}?lang=zh-tw">中文繁體</a>
+                            </li>
+                            <li class="dropdown-menu_list">
+                                <a href="{{$baseurl}}?lang=en">English</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="header_top_content_peripheral pull-right">
+                    <a class="welcome_statement pull-left" href="/">{{conver str=MainTopRight_0}}</a> {{if $islogin}}
+                    <span class="my_identity pull-left">{{$gs_username}}</span>
+                    <span class="pull-left" style="color: white;cursor: pointer;display: block;font-size: 12px;margin-left: 0;margin-right: 30px;margin-top: 6px;"><a style="color:#fff" href="/userport/center.html">个人中心</a></span>
+                    <a class="registered loginout pull-left" href="javascript:;">退出</a> {{else}}
+                    <span class="my_identity pull-left">{{conver str=MainTopRight_1}}</span>
+                    <span class="landing pull-left" data-toggle="modal" data-target="#myModal">{{conver str=MainTopRight_2}}</span>
+                    <a class="registered pull-left" href="/passport/register.html">{{conver str=MainTopRight_3}}</a> {{/if}}
+                </section>
+            </section>
+        </section>
+        <section class="header_bottom">
+            <section class="header_bottom_content">
+                <section class="header_bottom_content_peripheral pull-left">
+                    <section class="logo_text pull-left">
+                        <a href="/" class="gs-logo-div">
+                            <span class="logo_text_big">{{conver str=MainHeaderLeftLogo_0}}</span>
+                            <span class="logo_text_small">Studybanks.com</span>
+                        </a>
+                    </section>
+                    <section class="introduction_information pull-left">
+                        {{if !isset($logoContent)}}
+                        <span class="introduction_information_text">{{conver str=MainHeaderLeftLogo_1}}</span>
+                        <span class="introduction_information_text">{{conver str=MainHeaderLeftLogo_2}}</span> {{else}}
+                        <section class="introduction_information_text_t">
+                            <div class="introduction_information_text_content">
+                                {{$logoContent}}
+                            </div>
+                        </section>
+                        {{/if}}
+                    </section>
+                </section>
+                <section class="header_bottom_content_peripheral pull-right">
+                    <section class="search pull-left">
+                        <input type="text" class="search_input pull-left" placeholder="课程/老师/学校/企业" style="display: none;" />
+                        <div class="search_input_icon pull-left"></div>
+                    </section>
+                    <!--                     <section class="my_credits pull-left">
+                        <span class="my_credits_icon"></span>
+                        <span class="my_credits_text">{{conver str=MainHeaderRight_0}}</span>
+                    </section>
+                    <section class="study_plan pull-left">
+                        <span class="study_plan_icon"></span>
+                        <span class="study_plan_text">{{conver str=MainHeaderRight_1}}</span>
+                        <div class="study_plan_prompt" style="display: none;">即将开放，敬请期待！</div>
+                    </section> -->
+                </section>
+            </section>
+        </section>
+    </section>
+    <!-- 主体 -->
+    <section class="c_help_content">
+        <section class="c_help_content_banner">
+            <div class="c_help_content_banner_img">
+                <img src="image/pc.png">
+                <div class="c_search">
+                    <input type="text" name="c_search" placeholder="输入问题关键字找答案">
+                </div>
+            </div>
+        </section>
+        <section class="c_help_content_body clearfix">
+            <div class="c_help_content_body_nav f_left">
+                <div class="c_nav_dv1">帮助和支持</div>
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+        <a class="nav_a" data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          用户指南
+        </a>
+      </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <ul>
+                                    <li class="blue">用户注册</li>
+                                    <li>登录及开通服务</li>
+                                    <li>充值</li>
+                                    <li>提现</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+        <a class="nav_a" data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          开发文档
+        </a>
+      </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li class="blue">用户注册</li>
+                                    <li>登录及开通服务</li>
+                                    <li>充值</li>
+                                    <li>提现</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+        <a class="nav_a" data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          技术支持
+        </a>
+      </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <ul>
+                                    <li class="blue">用户注册</li>
+                                    <li>登录及开通服务</li>
+                                    <li>充值</li>
+                                    <li>提现</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c_help_content_body_right f_left">
+                <div class="c_body_right_top clearfix">
+                    <h1 class="f_left">用户注册</h1>
+                    <p class="f_right">首页 > 帮助中心 > 用户指南 > 用户注册</p>
+                </div>
+                <div class="c_body_right_body">
+                    <p class="c_p1">第一步： 点击乐视云首页(http://www.studybanks.com)注册进入注册流程</p>
+                    <p class="c_p2">第二步：请填写注册邮箱、手机号码，及其他信息，并获取短信验证码，完成注册，如图： </p>
+                    <img src="image/ban.png">
+                </div>
+                <div class="c_body_right_bottom">
+                    <span class="f_left">以上内容是否对您有帮助？</span>
+                    <span class="sp1 f_left">是</span>
+                    <span class="sp2 f_left">否</span>
+                </div>
+                <div class="c_no_tap">
+                    <div class="c_dadio">
+                        <span>非常抱歉，您认为以上内容的主要问题是？</span>
+                        <input type="radio" id="no_pp" checked="checked" name="c_dadio" value="搜索结果不匹配">
+                        <label class="checked" for="no_pp">搜索结果不匹配</label>
+                        <input type="radio" id="no_yd" name="c_dadio" value="内容不易懂">
+                        <label for="no_yd">内容不易懂</label>
+                        <input type="radio" id="no_qq" name="c_dadio" value="调理不清晰">
+                        <label for="no_qq">调理不清晰</label>
+                        <input type="radio" id="no_zq" name="c_dadio" value="内容不正确">
+                        <label for="no_zq">内容不正确</label>
+                    </div>
+                    <div class="c_text">
+                        <textarea placeholder="如果您有空，请告诉我们改进以上内容，我们会根据您的建议改进内容，为您提供更好的帮助文档。"></textarea>
+                    </div>
+                    <div class="c_no_tap_btn">提交</div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!--侧边栏-->
+    <section class="sidebar not_selected" style="display: none;">
+        <ul class="sidebar_icon pull-left">
+            <li class="sidebar_icon_list click_sidebar sidebar_icon_first">{{conver str=MainSidebar_0}}</li>
+            <li class="sidebar_icon_list click_sidebar sidebar_icon_second">{{conver str=MainSidebar_1}}</li>
+            <li class="sidebar_icon_list click_sidebar sidebar_icon_third">{{conver str=MainSidebar_2}}</li>
+            <li class="sidebar_icon_list click_sidebar sidebar_icon_fourth">{{conver str=MainSidebar_3}}</li>
+            <li class="sidebar_icon_list click_sidebar sidebar_icon_fifth">{{conver str=MainSidebar_4}}</li>
+            <li class="sidebar_icon_list click_sidebar sidebar_icon_sixth">{{conver str=MainSidebar_5}}</li>
+            <li class="sidebar_icon_list sidebar_icon_seventh" style="display: none;"><a href="#">{{conver str=MainSidebar_6}}</a></li>
+        </ul>
+        <div class="sidebar_show pull-left">
+            <div class="sidebar_show_header"></div>
+            <div class="sidebar_show_content"></div>
+            <div class="sidebar_show_footer"></div>
+        </div>
+    </section>
+    <!-- 底部 -->
+    <footer class="footer not_selected">
+        <section class="footer_scope">
+            <section class="footer_scope_left pull-left">
+                <section class="footer_scope_left_sqare">
+                    <section class="footer_scope_left_title">{{conver str=MainFooterLeft_0}}</section>
+                    <section class="footer_scope_left_subtitle">Studybanks.com</section>
+                </section>
+                <section class="footer_contact_phone">
+                    <span class="footer_contact_icon pull-left"></span>
+                    <span class="footer_contact_text pull-left">400888800</span>
+                </section>
+                <section class="footer_contact_QQ">
+                    <span class="footer_contact_icon pull-left"></span>
+                    <span class="footer_contact_text pull-left">886468888</span>
+                </section>
+                <section class="footer_contact_mail">
+                    <span class="footer_contact_icon pull-left"></span>
+                    <span class="footer_contact_text pull-left">kefu@xuefen.com</span>
+                </section>
+            </section>
+            <section class="footer_scope_right pull-right">
+                <ul class="footer_scope_right_lists pull-left">
+                    <li class="footer_scope_right_title">我是学生</li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何参与直播课程</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何购买课程</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何观看课程录像</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何参与直播课程</a></li>
+                </ul>
+                <ul class="footer_scope_right_lists pull-left">
+                    <li class="footer_scope_right_title">我是老师</li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何成为认证导师</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何在TopU中创建课程</a></li>
+                </ul>
+                <ul class="footer_scope_right_lists pull-left">
+                    <li class="footer_scope_right_title">我是学校</li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何参与直播课程</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何购买课程</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何观看课程录像</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何参与直播课程</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何购买课程</a></li>
+                </ul>
+                <ul class="footer_scope_right_lists pull-left">
+                    <li class="footer_scope_right_title">关于学分在线</li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">联系我们</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">新浪微博</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">腾讯微博</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">人人主页</a></li>
+                </ul>
+            </section>
+        </section>
+    </footer>
+    <section class="footer_bottom not_selected">
+        <p class="footer_bottom_text">Copyright © 2014 - 2015 学分在线（北京）国际数据科技有限公司</p>
+        <p class="footer_bottom_text">版权所有京ICP备京ICP备11008938号号 京公网安备京ICP备11008938号号</p>
+    </section>
+    <!-- PC登录模态框 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog login-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">{{conver str=MainLoginTitle}}</h4>
+                </div>
+                <div class="modal-body login-body">
+                    <form>
+                        <div class="item tel-email">
+                            <label for="login-name" class="name-label"></label>
+                            <input type="text" id="login-name" name="token" class="log-input" placeholder="{{conver str=MainLoginForm_0}}">
+                            <span class="clear-input"></span>
+                            <p class="name-tip"></p>
+                        </div>
+                        <div class="item password">
+                            <label for="login-pass" class="pass-label"></label>
+                            <input type="password" id="login-pass" name="password" class="pas-input" placeholder="{{conver str=MainLoginForm_1}}">
+                            <span class="clear-input"></span>
+                            <p class="password-tip"></p>
+                        </div>
+                        <div class="auto-login">
+                            <input type="checkbox" name="asLogin" id="al-input">
+                            <label for="al-input">{{conver str=MainLoginForm_2}}</label>
+                        </div>
+                        <div class="login">
+                            <input type="submit" class="login-btn" value="{{conver str=MainLoginForm_3}}">
+                            <div class="password-login">
+                                <a href="/passport/forgetpass.html" class="forgetPass">{{conver str=MainLoginBottom_0}}</a>
+                                <a href="/passport/register.html" class="register">{{conver str=MainLoginBottom_1}}</a>
+                            </div>
+                        </div>
+                    </form>
+                    <!--                  <ul class="othersPass">
+                        <li class="item item-li1">
+                            <a href="#">{{conver str=MainLoginBottom_2}}</a>
+                        </li>
+                        <li class="item item-li2">
+                            <a href="#">QQ</a>
+                        </li>
+                        <li class="item item-li3">
+                            <a href="#">{{conver str=MainLoginBottom_3}}</a>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--[if lt IE 9]>
+        <script src="http://192.168.1.53/static/js/json2.js"></script>
+    <![endif]-->
+    <script type='text/javascript' src='http://192.168.1.53/static/js/toastr/toastr.js'></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/jquery-ui.min.js'></script>
+    <script type="text/javascript" src="http://192.168.1.53/static/js/bootstrap.js"></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/html5shiv.js'></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/SkyWalker.js'></script>
+    <script type="text/javascript" src="http://192.168.1.53/static/js/respond.js"></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/sha1.js'></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/Sortable.js'></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/messCheck.js'></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/jquery.lazyload.js'></script>
+    <script type="text/javascript">
+    // $('.my_identity').click(function(){
+    //     toastr.options = {
+    //         "closeButton": true,
+    //         "debug": false,
+    //         "newestOnTop": false,
+    //         "progressBar": false,
+    //         "positionClass": "toast-bottom-right",
+    //         "preventDuplicates": false,
+    //         "onclick": null,
+    //         "showDuration": "300",
+    //         "hideDuration": "1000",
+    //         "timeOut": "5000",
+    //         "extendedTimeOut": "1000",
+    //         "showEasing": "swing",
+    //         "hideEasing": "linear",
+    //         "showMethod": "fadeIn",
+    //         "hideMethod": "fadeOut"
+    //     }
+
+    //     toastr["success"]("My name is Inigo Montoya.")
+    // })
+    $('.loginout').click(function() {
+        $.post('/passport/logout', function(data) {
+            window.location.href = '/'
+        });
+    });
+    $('.sp2').on('click', function() {
+        $(this).parent('.c_body_right_bottom').hide();
+        $('.c_no_tap').show();
+    });
+    $('label').click(function() {
+        var radioId = $(this).attr('name');
+        $(this).addClass('checked').siblings('label').removeAttr('class');
+        $('input[type="radio"]').removeAttr('checked') && $('#' + radioId).attr('checked', 'checked');
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0
+}
+
+.f_left {
+    float: left
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.f_right {
+    float: right
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    resize: none
+}
+p {
+    margin: 0;
+}
+h1,h2,h3 {
+    margin: 0;
+}
+.box() {
+    box-sizing: border-box;
+}

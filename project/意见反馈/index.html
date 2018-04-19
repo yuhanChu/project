@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_jauft616yoef80k9.css">
+</head>
+<script type="text/javascript" charset="utf-8">
+document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+window.onresize = function() {
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+}
+</script>
+<section id="vue-main" class="feedback-main">
+    <section class="feedback-top">
+    	<i class="iconfont icon-xiangzuojiantou"></i>
+    	<span>意见反馈</span>
+    </section>
+    <section class="feedback-content" style="display: none;">
+    	<section class="text">
+    		<p>反馈内容</p>
+    		<textarea placeholder="请详细描述您的意见、建议"></textarea>
+    	</section>
+    	<section class="classify">
+    		<p class="error">*抱歉，您输入的内容包含敏感词汇</p>
+    		<p>问题分类</p>
+    		<ul class="clearfix">
+    			<li>页面报错<img src="g.png"></li>
+    			<li class="cur">报名咨询<img src="g.png"></li>
+    			<li>课程学习<img src="g.png"></li>
+    			<li>成绩证书<img src="g.png"></li>
+    			<li>侵权投诉<img src="g.png"></li>
+    			<li>其他<img src="g.png"></li>
+    		</ul>
+    	</section>
+    	<section class="mobeil">
+
+    		<p>联系方式</p>
+    		<input type="text" name="">
+    		<p class="error">*抱歉，您输入的内容包含敏感词汇</p>
+    	</section>
+    	<section class="send-btn">提交</section>
+    </section>
+    <section class="feedback-success">
+    	<div class="ba"></div>
+    	<img src="success.png">
+    	<p>
+    		我们已经收到了您反馈的意见并安排处理<br>感谢您对学分在线的帮助和支持
+    	</p>
+    	<section class="btn-back">返回用户中心</section>
+    </section>
+</section>
+
+<body>
+</body>
+<script type="text/javascript">
+/***
+ * 控制页面最大宽度
+ ***/
+(function() {
+    var width = 0;
+    if (document.documentElement.clientWidth > 600) {
+        width = 600
+        document.body.style.cssText = "width:600px;margin:0 auto;"
+    } else {
+        width = document.documentElement.clientWidth;
+        document.body.style.cssText = ""
+    }
+    document.documentElement.style.fontSize = width / 7.5 + "px";
+    window.onresize = function() {
+        if (document.documentElement.clientWidth > 600) {
+            width = 600
+            document.body.style.cssText = "width:600px;margin:0 auto;"
+        } else {
+            width = document.documentElement.clientWidth;
+            document.body.style.cssText = ""
+        }
+        document.documentElement.style.fontSize = width / 7.5 + "px";
+    }
+
+})();
+</script>
+
+</html>

@@ -1,0 +1,52 @@
+.order_box {padding-top:20px;}
+
+.finance { width:auto; background:#ffffff; padding:0 20px;}
+.fin-tit { height:49px; line-height:49px; border-bottom:1px solid #e9e9e9; font-size:16px; color:#333333; margin-bottom:20px;}
+.nav { margin-bottom:0;}
+.tab-content { border:1px solid #e9e9e9; border-top:0; margin-bottom:40px;}
+#sydd,#dfk,#ywc,#ygb,#tkz,#ytk { position:relative;} 
+.sydd_menu { width:198px; height:22px; border:1px solid #e9e9e9; border-radius:3px; position:absolute; right:0px; top:-35px; overflow:hidden;}
+.sydd_menu ul { margin:0; list-style:none; margin-left:-1px;}
+.sydd_menu ul li { float:left;}
+.sydd_menu ul li a { display:block; width:65px; height:22px; text-align:center; line-height:22px; font-size:12px; color:#666666; border-left:1px solid #e9e9e9;}
+.sydd_menu ul li a:hover { background:#f4f4f4;}
+.sydd_menu ul li .i{ background:#f4f4f4;}
+
+.bmdsh_choice { padding:20px 0; margin:0 20px; border-bottom:1px solid #e9e9e9; overflow:hidden;}
+.bmdsh_choice .span2 { margin:0; margin-right:15px; font-size:12px; color:#999999}
+.bmdsh_choice .bmdsh_sx { width:100px; height:28px; text-align:center; line-height:28px; color:#ffffff; background:#65c8c9; border-radius:3px; font-size:12px; border:0; margin-right:15px;}
+.bmdsh_choice .bmdsh_cz { width:98px; height:26px; text-align:center; line-height:26px; color:#65c8c9; border:1px solid #65c8c9; border-radius:3px; font-size:12px; background:none;}
+.bmdsh_cont { padding:20px;}
+.bmdsh_cont .order_tit { margin-bottom:0;}
+.bmdsh_cont .order_tit thead { background:#f4f4f4;}
+.bmdsh_cont .order_tit thead th { width:15%; height:30px; line-height:30px; padding-top:0; padding-bottom:0; font-size:12px; color:#666666; font-weight:normal;  text-align:center;}
+.bmdsh_cont .order_tit thead .th12 {width:12%; text-align:left; padding-left:0;}
+.bmdsh_cont .order_tit thead .th28 { width:28%; text-indent:5px;}
+.order_cont { padding:0 ; border:1px solid #e9e9e9; margin:0 20px; margin-bottom:20px;}
+.ord_tit { height:29px;  background:#f5f5f5; overflow:hidden;}
+.ord_tit span { float:left; width:235px; height:29px; line-height:29px; font-size:12px; color:#999999; padding-left:20px; overflow:hidden;}
+.ord_tit samp { float:left; height:29px; line-height:29px; font-size:12px; color:#999999;}
+.order_content { padding:16px 0;}
+.order_1 { float:left; width:40%; height:58px; overflow:hidden;}
+.order_1 img { float:left; width:58px; height:58px; margin-left:16px;}
+.ord_1 { float:left; height:58px; padding-left:16px; overflow:hidden;}
+.ord_1_tit { display:block; font-size:12px; color:#333333; margin-bottom:10px;}
+.ord_1_bk { float:left; color:#999999; font-size:12px; line-height:14px; padding-right:20px;}
+.ord_1_bk .icon-xz { float:left; font-size:16px; padding-right:5px;}
+.order_2 { float:left; width:15%; height:58px; line-height:58px; text-align:center; font-size:12px;}
+.order_3 { float:left; width:15%; height:58px; line-height:58px; text-align:center; font-size:12px;}
+.order_3 a {color:#65c8c9;}
+.order_2 a { display:block; width:100px; height:32px; line-height:32px; text-align:center; font-size:12px; color:#ffffff; background:#65c8c9; margin:auto; border-radius:3px; margin-top:13px;}
+.tit { height:12px; border-left:2px solid #65c8c9; font-size:12px; color:#bbbbbb; line-height:12px; margin-left:16px; padding-left:10px; margin-top:16px;}
+.xian { height:1px; background:#e9e9e9; margin:0 16px;}
+.order_page { margin-right:20px;}
+
+
+.time {}
+.time .all_time { display:block; text-indent:12px; z-index:99; height:30px; line-height:30px; font-size:12px; color:#666666}
+.time .all_time .icon-xz { padding-left:12px;}
+.time .dropdown-menu { border:0px; border-radius:0; padding:10px 0 5px; top:25px; z-index:9;-moz-box-shadow:0px 7px 10px #cccccc; -webkit-box-shadow:0px 7px 10px #cccccc; box-shadow:0px 7px 10px #cccccc; min-width:inherit;}
+.time .dropdown-menu li { padding:0; margin:0; height:30px; line-height:30px; text-indent:12px;}
+.time .dropdown-menu li a { padding:0; margin:0; font-size:12px; color:#666666; line-height:30px;}
+.time .dropdown-menu li a:hover { background:none}
+.open .all_time  {background-color: #ffffff !important;-moz-box-shadow:0px -2px 10px #cccccc; -webkit-box-shadow:0px -2px 10px #cccccc; box-shadow:0px -2px 10px #cccccc;}

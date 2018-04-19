@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="index.css" />
+		<script type="text/javascript" charset="utf-8">
+			document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+			window.onresize = function() {
+				document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="mui-content" style="padding-bottom: 0.97rem;overflow-y: auto;">
+			<!--banner-->
+			<section class="banner" style="background-image: url('./banner.png');">
+				<section class="banner_top clearfix">
+					<span class="mui-icon mui-icon-arrowleft f_left"></span>
+					<span class="mui-icon mui-icon-redo f_right"></span>
+					<span class="mui-icon mui-icon-star f_right"></span>
+				</section>
+				<p class="apple_font_b">学习和思考：大学成功的关键学分学历课程</p>
+				<section class="banner_btn apple_font_r" id="aa">点击播放</section>
+			</section>
+			<section class="tab">
+				<!--选项卡-->
+				<div class="mui-slider">
+					<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<a class="mui-control-item mui-active apple_font_r" href="#item1">概述</a>
+						<a class="mui-control-item apple_font_r" href="#item2">目录</a>
+						<a class="mui-control-item apple_font_r" href="#item3">笔记</a>
+						<a class="mui-control-item apple_font_r" href="#item4">问答</a>
+						<a class="mui-control-item apple_font_r" href="#item5">考核</a>
+					</div>
+					<div id="sliderProgressBar" class="mui-slider-progress-bar"></div>
+					<div class="mui-slider-group">
+						<div id="item1" class="mui-slider-item mui-control-content mui-active">
+							
+						</div>
+						<div id="item2" class="mui-slider-item mui-control-content">
+							<div class="catalogue">
+								<div class="catalogue_list">
+									<div class="line"></div>
+									<div class="catalogue_list_chapter clearfix">
+										<span></span>
+										<p class="apple_font f_left apple_font_b">绪论</p>
+									</div>
+									<div class="catalogue_list_section clearfix">
+										<p class="apple_font f_left apple_font_b">第一节 绪论</p>
+										<span class="free f_left apple_font_r">免费</span>
+										<i class="iconfont f_left"></i>
+									</div>
+									<div class="catalogue_list_section clearfix">
+										<p class="apple_font f_left apple_font_b">第一节 绪论</p>
+										<span class="free f_left apple_font_r">免费</span>
+										<i class="iconfont f_left"></i>
+									</div>
+								</div>
+								<div class="catalogue_list">
+									<div class="line"></div>
+									<div class="catalogue_list_chapter clearfix">
+										<span></span>
+										<p class="apple_font f_left apple_font_b">第一章 如何上大学</p>
+									</div>
+									<div class="catalogue_list_section clearfix">
+										<p class="apple_font f_left apple_font_b">第一节 节名称最多显示十个字放大师傅</p>
+										<span class="free f_left apple_font_r">免费</span>
+										<i class="iconfont f_left"></i>
+									</div>
+									<div class="catalogue_list_section clearfix">
+										<p class="apple_font f_left apple_font_b">第一节 节名称最多显示十个字放大师傅</p>
+										<span class="free f_left apple_font_r">免费</span>
+										<i class="iconfont f_left"></i>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div id="item3" class="mui-slider-item mui-control-content">
+
+						</div>
+						<div id="item4" class="mui-slider-item mui-control-content">
+
+						</div>
+						<div id="item5" class="mui-slider-item mui-control-content">
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+		<section class="bottom" id="bb">
+			<!--等待开课-->
+			<div class="wait_class apple_font_b" style="display: none;">等待开课</div>
+			<!--等待确认学习成果-->
+			<div class="result apple_font_b" style="display: none;">等待确认学习成果</div>
+			<!--继续学习-->
+			<div class="go_on_study apple_font_r" style="display: none;">继续学习</div>
+			<!--开始学习-->
+			<div class="begin_study apple_font_r" style="display: none;">开始学习</div>
+			<!--课程已结束-->
+			<div class="finish" style="display: none;">课程已结束</div>
+			<!--购买 有选课表-->
+			<div class="buy_box clearfix">
+				<p class="apple_font_r">¥ 599999.00</p>
+				<div class="buy_box_btn">
+					<div class="buy_btn apple_font_b">立即购买</div>
+					<div class="add_select apple_font_b">加入选课表</div>
+				</div>
+			</div>
+		</section>
+
+	</body>
+
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		//		document.getElementById('bb').onclick = function() {
+		//			alert(333)
+		//		}
+	</script>
+
+</html>

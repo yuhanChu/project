@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body style="padding: 0 20px;">
+    <div class="must_read">
+        <p>
+            设置前必读：
+            <br> 1、课程考核分为：小测验综合成绩、学习态度综合成绩、大作业综合成绩 3个模块；
+            <br> 2、各课程考核模块比重之和为100%，您可以根据具体情况设置；
+        </p>
+    </div>
+    <div class="cridte">
+        <p class="f_left">学生获得学分或证书条件：各项考核之和 ≥</p>
+        <input type="text" class="f_left" placeholder="60">
+        <span class="f_left">分</span>
+    </div>
+    <!-- 纯线下 第三方 -->
+    <div id="third" style="display: none;">
+        <!-- 小测验综合成绩 -->
+        <div class="third_one kq_p">
+            <p class="f_left">小测验综合成绩</p>
+            <a href="javascript:;">开启此项考核</a>
+            <div class="f_right">
+                <p class="f_left">模块分值权重</p>
+                <input type="text" class="f_left" placeholder="20">
+                <p class="f_left">%</p>
+            </div>
+        </div>
+        <!-- 学习态度综合成绩 -->
+        <div class="third_one">
+            <p class="f_left">学习态度综合成绩</p>
+            <a href="javascript:;">关闭此项考核</a>
+            <div class="f_right">
+                <p class="f_left">模块分值权重</p>
+                <input type="text" class="f_left" placeholder="20">
+                <p class="f_left">%</p>
+            </div>
+        </div>
+        <!-- 大作业综合成绩 -->
+        <div class="third_one">
+            <p class="f_left">大作业综合成绩</p>
+            <a href="javascript:;">关闭此项考核</a>
+            <div class="f_right">
+                <p class="f_left">模块分值权重</p>
+                <input type="text" class="f_left" placeholder="20">
+                <p class="f_left">%</p>
+            </div>
+        </div>
+        <!-- 期末考试成绩 -->
+        <div class="third_one">
+            <p class="f_left">期末考试成绩</p>
+            <a href="javascript:;">关闭此项考核</a>
+            <div class="f_right">
+                <p class="f_left">模块分值权重</p>
+                <input type="text" class="f_left" placeholder="20">
+                <p class="f_left">%</p>
+            </div>
+        </div>
+    </div>
+    <!-- 纯线上 -->
+    <div id="on_line">
+        <!-- 小测验综合成绩 -->
+        <div class="on_line_box">
+            <p class="f_left">小测验综合成绩</p>
+            <div class="f_right">
+                <p class="f_left">模块分值权重</p>
+                <input type="text" class="f_left" placeholder="20">
+                <p class="f_left">%</p>
+            </div>
+        </div>
+        <!-- 学习态度综合成绩 -->
+        <div class="on_line_two_box">
+            <div class="on_line_box">
+                <p class="f_left">学习态度综合成绩</p>
+                <div class="f_right">
+                    <p class="f_left">模块分值权重</p>
+                    <input type="text" class="f_left" placeholder="20">
+                    <p class="f_left">%</p>
+                </div>
+            </div>
+            <div class="on_line_two_content">
+            	<div class="on_line_two_content_box clearfix">
+            		<p>笔记 ≥</p>
+            		<input class="f_left" type="text" placeholder="2">
+            		<p>条，成绩记为满分。否则按单项比例获取12.5%分数。</p>
+            	</div>
+            	<div class="on_line_two_content_box clearfix" style="margin: 20px 0;">
+            		<p>问答 ≥</p>
+            		<input class="f_left" type="text" placeholder="2">
+            		<p>条，成绩记为满分。否则按单项比例获取12.5%分数。</p>
+            	</div>
+            	<div class="on_line_two_content_box clearfix">
+            		<p>视频 ≥</p>
+            		<input class="f_left" type="text" placeholder="100">
+            		<p>%，成绩记为满分。否则按单项比例获取75%分数。</p>
+            	</div>
+            </div>
+        </div>
+        <!-- 大作业综合成绩 -->
+        <div class="on_line_box">
+            <p class="f_left">大作业综合成绩</p>
+            <div class="f_right">
+                <p class="f_left">模块分值权重</p>
+                <input type="text" class="f_left" placeholder="20">
+                <p class="f_left">%</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="finish_btn">完成设置</div>
+</body>
+
+</html>

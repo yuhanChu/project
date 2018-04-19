@@ -1,0 +1,773 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* Firefox */
+    -webkit-box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    max-height: 100%;
+}
+
+input,
+textarea {
+    margin-bottom: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+input[disabled],
+input[readonly],
+select[disabled],
+select[readonly],
+textarea[disabled],
+textarea[readonly] {
+    background: 0 0;
+    cursor: default;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none
+}
+
+a:link {
+    text-decoration: none
+}
+
+i {
+    font-style: normal;
+}
+
+.f_left {
+    float: left
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.f_right {
+    float: right;
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    resize: none;
+    box-shadow: none !important;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    margin-bottom: 0 !important;
+}
+
+button {
+    border: none !important;
+    background: none !important;
+}
+
+// 字体图标
+
+/* @font-face {
+    font-family: 'apple_font_r';
+    src: url('../fonts/PingFangRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'apple_font_b';
+    src: url('../fonts/PingFangMedium.ttf') format('truetype');
+} */
+
+// 字体图标
+@font-face {
+    font-family: 'iconfont';
+    /* project id 313597 */
+    src: url('//at.alicdn.com/t/font_313597_jauft616yoef80k9.eot');
+    src: url('//at.alicdn.com/t/font_313597_jauft616yoef80k9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_313597_jauft616yoef80k9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_313597_jauft616yoef80k9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_313597_jauft616yoef80k9.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.apple_font_r {
+    font-family: "apple_font_r" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.apple_font_b {
+    font-family: "apple_font_b" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.box() {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.btn(@w,
+@h) {
+    width: @w;
+    height: @h;
+    line-height: @h;
+    text-align: center;
+    cursor: pointer;
+    background: #ff7669;
+    color: #fff;
+}
+
+.font(@size,
+@color) {
+    font-size: @size;
+    color: @color;
+}
+
+.brest-main {
+    width: 100%;
+    .brest-banner {
+        width: 100%;
+        height: 5rem;
+        background-image: url('Brest_Business/banner.png');
+        background-size: cover;
+        padding: 0 0.29rem;
+        position: relative;
+        i {
+            .font(0.4rem,
+            #fff);
+            position: absolute;
+            top: 0.3rem;
+        }
+        .icon-xiangzuojiantou {
+            left: 0.29rem;
+        }
+        .icon-fenxiang {
+            right: 0.29rem;
+        }
+        .brest-banner-name {
+            position: absolute;
+            top: 1.25rem;
+            left: 0.29rem;
+            .name-title {
+                img {
+                    width: 1rem;
+                    height: 0.5rem;
+                    float: left;
+                }
+                p {
+                    .font(0.18rem,
+                    #ffffff);
+                    float: left;
+                    margin-top: 0.22rem;
+                    margin-left: 0.1rem;
+                }
+            }
+            .name-big {
+                font-weight: bold;
+                margin-top: 0.29rem;
+                .p1 {
+                    .font(0.47rem,
+                    #ffffff);
+                    margin: 0;
+                    span {
+                        background-image: -webkit-gradient(linear, left bottom, right bottom, from(#fff), color-stop(0.5, #fff), to(#cfcfcf));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+                .p2 {
+                    .p1;
+                    .font(0.3rem,
+                    #fff);
+                    margin-top: 0.1rem;
+                }
+            }
+        }
+    }
+    .mission {
+        padding: 0.64rem 0.2rem 1.02rem;
+        background: #f4f4f4;
+        .mission-title {
+            text-align: center;
+            h1 {
+                .font(0.34rem,
+                #333333);
+                margin-bottom: 0.1rem;
+            }
+            p {
+                .font(0.22rem,
+                #999999);
+            }
+        }
+        .mission-content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.55rem;
+            &>div {
+                text-align: center;
+                img {
+                    width: 1.26rem;
+                    height: 1.41rem;
+                }
+                p {
+                    .font(0.22rem,
+                    #666666);
+                    line-height: 0.4rem;
+                }
+            }
+        }
+    }
+    .about {
+        padding: 0.45rem 0 0.7rem;
+        background: #fff;
+        .about-title {
+            text-align: center;
+            h1 {
+                .font(0.34rem,
+                #333333);
+                margin-bottom: 0.1rem;
+            }
+            p {
+                .font(0.22rem,
+                #999999);
+            }
+        }
+        img {
+            width: 100%;
+            height: 3.56rem;
+            margin-top: .38rem;
+        }
+        &>p {
+            .font(0.28rem,
+            #666666);
+            padding: 0 0.29rem;
+            line-height: 0.5rem;
+            margin-top: 0.2rem;
+        }
+    }
+    .about-two {
+        padding-top: 0.6rem;
+        padding-bottom: 0.7rem; // height: 13.88rem;
+        width: 100%;
+        background-image: url('Brest_Business/about2.png');
+        background-size: cover;
+        .about-two-con:nth-child(1) {
+            margin-top: 0;
+        }
+        .about-two-con {
+            text-align: center;
+            margin-top: 0.7rem;
+            &>div {
+                .font(0.28rem,
+                #ff7900);
+                text-align: center;
+                width: 3.14rem;
+                height: 0.6rem;
+                line-height: 0.6rem;
+                background: #fff;
+                margin: 0 auto;
+                border-radius: 0.4rem;
+            }
+            p {
+                .font(0.22rem,
+                #ffffff);
+                line-height: 0.5rem;
+                margin-top: 0.35rem;
+            }
+        }
+    }
+    .major-1 {
+        width: 100%;
+        padding: 0.48rem 0.3rem 0.7rem;
+        background-color: #f4f4f4;
+        .major-title {
+            text-align: center;
+            h1 {
+                .font(0.34rem,
+                #333333);
+                margin-bottom: 0.1rem;
+            }
+            p {
+                .font(0.22rem,
+                #999999);
+            }
+        }
+        .course {
+            margin-top: 0.4rem;
+            width: 100%;
+            padding-bottom: 0.48rem;
+            background-color: #fff;
+            img {
+                width: 100%;
+                height: 3.3rem;
+                margin: 0;
+            }
+            .course-word {
+                padding: 0 0.38rem;
+                text-align: center;
+                .course-word-title {
+                    text-align: left;
+                    margin: 0.5rem 0 0.7rem;
+                    h1 {
+                        .font(0.3rem,
+                        #333333);
+                    }
+                    p {
+                        .font(0.24rem,
+                        #333333);
+                        line-height: 0.4rem;
+                    }
+                }
+                .course-word-infor {
+                    .line {
+                        padding: 0;
+                        li {
+                            list-style: none;
+                            height: 30px;
+                            width: 100%;
+                            line-height: 30px;
+                            background: url(Brest_Business/line.png) repeat-x 0 center;
+                            color: #666;
+                            .fl {
+                                float: left;
+                                padding-right: 10px;
+                            }
+                            .fr {
+                                float: right;
+                                padding-left: 10px;
+                            }
+                            span {
+                                background: #fff;
+                                font-size: 0.24rem;
+                                color: #666666;
+                            }
+                        }
+                    }
+                }
+                .see-btn {
+                    .font(0.24rem,
+                    #ff7900);
+                    padding: 0.17rem 0.45rem;
+                    border: 1px solid #ff7900;
+                    border-radius: 0.4rem;
+                    text-align: center;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .history {
+        width: 100%;
+        padding: 0.5rem 0 0.98rem;
+        background-image: url(Brest_Business/history.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        .history-title {
+            text-align: center;
+            h1 {
+                .font(0.34rem,
+                #fff);
+                margin-bottom: 0.1rem;
+            }
+            p {
+                .font(0.22rem,
+                #fff);
+            }
+        }
+        .history-list {
+            margin-top: 0.75rem;
+            text-align: center;
+            &>span {
+                display: inline-block;
+                margin: .2rem auto;
+                border-left: 1px dashed #fff;
+                height: .38rem;
+            }
+            &>div {
+                p:first-child {
+                    .font(0.28rem,
+                    #ffffff);
+                    margin-bottom: 0.15rem;
+                }
+                p:last-child {
+                    .font(0.22rem,
+                    #ffffff);
+                }
+            }
+        }
+    }
+
+    .honor {
+        padding: 0.7rem 0 1.04rem;
+        background-color: #fff;
+        width: 100%;
+        .honor-title {
+            text-align: center;
+            h1 {
+                .font(0.34rem,
+                #333333);
+                margin-bottom: 0.1rem;
+            }
+            p {
+                .font(0.22rem,
+                #999999);
+            }
+        }
+        .honor-con {
+            .honor-list {
+                text-align: center;
+                margin-top: 0.44rem;
+                padding: 0 0.35rem 0 0.32rem;
+                img {
+                    width: 0.72rem;
+                    height: 0.72rem;
+                    margin-bottom: 0.2rem;
+                }
+                p {
+                    .font(0.24rem,
+                    #333333);
+                    line-height: 0.4rem;
+                    text-align: left;
+                }
+            }
+        }
+        .cooperative-title {
+            .honor-title;
+            margin-top: 1.35rem;
+        }
+        .cooperative-con {
+            margin-top: 0.7rem;
+            padding: 0 0.3rem;
+            &>div:last-child {
+                margin-top: 0.3rem;
+            }
+            img {
+                width: 3.3rem;
+                height: 1.4rem;
+            }
+        }
+    }
+    .practice {
+        width: 100%;
+        padding: 0.58rem 0.3rem 1.7rem;
+        background-color: #f4f4f4;
+        .practice-title {
+            text-align: center;
+            h1 {
+                .font(0.34rem,
+                #333333);
+                margin-bottom: 0.1rem;
+            }
+            p {
+                .font(0.22rem,
+                #999999);
+            }
+        }
+        .list {
+            margin-top: 0.3rem;
+            img {
+                width: 3.3rem;
+                height: 1.4rem;
+            }
+        }
+    }
+    .bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.96rem;
+        &>div {
+            width: 33.33%;
+            height: 0.96rem;
+            line-height: 0.96rem;
+            background-color: #fff;
+            .font(0.34rem,
+            #333333);
+            text-align: center;
+            float: left;
+            border-top: 1px solid #e9e9e9;
+        }
+        .bm {
+            border-top: 0;
+            background-color: #fe6701;
+            color: #fff;
+        }
+    }
+    .i-top {
+        width: 0.88rem;
+        height: 0.88rem;
+        line-height: 0.88rem;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #e9e9e9;
+        border-radius: 0.44rem;
+        .font(0.5rem,
+        #666666);
+        position: fixed;
+        bottom: 1.38rem;
+        right: 0.3rem;
+    }
+    .i-phone {
+        .i-top;
+        bottom: 2.56rem;
+    }
+
+    .bkyq {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        .bkyq-bg {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .5);
+        }
+        .content {
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 0.3rem;
+            right: 0.3rem;
+            border-radius: 4px;
+            transform: translateY(-50%);
+            padding: 0.45rem 0.3rem 0;
+            p {
+                .font(0.28rem,
+                #999999);
+                line-height: 0.5rem;
+            }
+            &>div {
+                width: 100%;
+                height: 0.88rem;
+                border-top: 1px solid #e9e9e9;
+                line-height: 0.88rem;
+                text-align: center;
+                .font(0.28rem,
+                #ff7900);
+                margin-top: 0.2rem;
+            }
+        }
+    }
+
+    .ssyq {
+        .bkyq;
+    }
+    .zyss {
+        .bkyq;
+    }
+
+    .join-box {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: none;
+        .join-box-bg {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .join-box-content {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            padding-top: 0.55rem;
+
+            h1 {
+                .font(0.3rem,
+                #333333);
+                text-align: center;
+            }
+            .icon-close {
+                position: absolute;
+                top: 0.56rem;
+                right: 0.29rem;
+                .font(0.34rem,
+                #999999);
+            }
+            .div-input {
+                margin-top: 0.28rem;
+                position: relative;
+                line-height: 0;
+                padding-left: 0.29rem;
+                padding-right: 0.29rem;
+                select {
+                    width: 100%;
+                    border: 1px solid #e9e9e9;
+                    height: 1rem;
+                    padding-left: 10px;
+                }
+                input {
+                    width: 100%;
+                    border: 1px solid #e9e9e9;
+                    height: 1rem;
+                    padding-left: 10px;
+                }
+                .yzm {
+                    padding-right: 60%;
+                }
+                .yzm-btn {
+                    // width: 40%;
+                    padding-right: 0.38rem;
+                    height: 1rem;
+                    text-align: center;
+                    line-height: 1rem;
+                    .font(.3rem,
+                    #fe6701);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+            }
+            .send-btn {
+                width: 100%;
+                height: 1rem;
+                text-align: center;
+                line-height: 1rem;
+                .font(0.3rem,
+                #fff);
+                background-color: #fe7601;
+                margin-top: 0.96rem;
+            }
+        }
+    }
+    .joined-box {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: none;
+        .joined-box-bg {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .joined {
+            padding: 0.38rem 0 0.28rem;
+            background: #fff;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            i {
+                position: absolute;
+                top: 0.38rem;
+                right: 0.28rem;
+                .font(0.34rem,
+                #999999);
+            }
+            h1 {
+                .font(0.3rem,
+                #333333);
+                text-align: center;
+            }
+            p {
+                padding-left: 0.28rem;
+                .font(0.24rem,
+                #999999);
+                margin-top: 0.6rem;
+                margin-bottom: 0.6rem;
+            }
+            &>div {
+                width: 100%;
+                border-bottom: 1px solid #e9e9e9;
+                padding: 0.27rem 0.28rem;
+                span {
+                    .font(0.28rem,
+                    #666666);
+                }
+                span:nth-child(1) {
+                    text-align: left;
+                }
+                span:nth-child(2) {
+                    text-align: right;
+                    width: 4.5rem;
+                }
+            }
+            &>div:last-child {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

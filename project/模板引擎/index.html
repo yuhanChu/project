@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="se"></div>
+</body>
+<script type="text/javascript" src="./jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="./template.js"></script>
+<script type="text/html" id="test">
+	<div id="a">
+		<a href="www.baidu.com">{{title}}</a>
+		<ul>
+			{{each list as value i}}
+				<li>索引 {{i}}：{{value}}</li>
+			{{/each}}
+		</ul>
+	</div>
+</script>
+<script type="text/javascript">
+	var data = {
+		'title':'跳转',
+		'list': ['wenyi','shusk','sa']
+	}
+	var html = template('test',data);
+	$('#se').html(html);
+</script>
+
+</html>

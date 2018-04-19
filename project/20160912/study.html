@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<title>我的课程</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="网站后台" name="description" />
+	<meta content="" name="author" />
+<!--全局CSS以及框架所需要的样式-->
+	<link href="./media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="./media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="./media/css/student/reset.css" rel="stylesheet" type="text/css"/>
+	<link href="./media/css/student/common.css" rel="stylesheet" type="text/css"/>
+	<link href="./media/css/student/public.css" rel="stylesheet" type="text/css"/>
+<!--全局CSS以及框架所需要的样式 end-->
+	<link href="./media/css/student/tabpage.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+    .page-header-fixed .page-content { margin-left:300px; }
+	.page-sidebar-closed .page-content {margin-left: 200px !important;}
+	.page-sidebar-closed .page-sidebar-menu li.active .samll_a .title { display:none !important;}
+	.closed-shrink .page-content {margin-left:150px !important;}
+	.closed-shrink2 .page-content {margin-left:50px !important;}
+
+    </style>
+</head>
+
+<body class="page-header-fixed">
+	<!--顶部内容-->
+	<div class="header navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid"> 
+            	<ul class="xfzx-menu">
+                	<li><a href="#" class="i">首页</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">院校</a></li>
+                    <li><a href="#">实习工作</a></li>
+                    <li><a href="#">未来课程</a></li>
+                    <li><a href="#">学分银行</a></li>
+                </ul>
+
+				<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse"><img src="./media/image/sidebar-toggler.jpg" alt="" /></a>          
+
+				<ul class="nav pull-right">
+                	<li class="dropdown header_inbox_bar">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <samp class="icon-xz i-ss">&#xe60f;</samp>
+						</a>
+					</li>
+
+					<li class="dropdown header_inbox_bar ind_notive" style="position:relative;">
+						<a href="#" class="dropdown-toggle ind_notva" data-toggle="dropdown">
+                            <samp class="icon-xz i-xx">&#xe602;</samp>
+						</a>
+                        <span class="yuan" style=""></span>
+                        <ul class="dropdown-menu">
+							<li><span>张海霞<font class="pl10 pr10">给您发送了</font><a class="col_purple" href="#">3条私信</a></span><em>3分钟前</em></li>
+							<li><span>李磊<font class="pl10 pr10">给您发送了</font><a class="col_purple" href="#">1条私信</a></span><em>5分钟前</em></li>
+							<li><span><font class="col_red">系统通知：</font>您已通过实名认证</span><em>3天前</em></li>
+						</ul>
+					</li>
+
+					<li class="dropdown header_inbox_bar">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <samp class="icon-xz i-wt">&#xe603;</samp>
+						</a>
+					</li>
+
+					<li class="dropdown user">
+						<a href="#" class="dropdown-toggle xfzx-user" data-toggle="dropdown">
+                            <img alt="" src="./media/image/5.png" />
+                            <span class="username">张三</span>
+                            <i class="icon-xz">&#xe600;</i>
+                        </a>
+                        <ul class="dropdown-menu user-xfzx">
+                            <li>
+                                <span class="xfzx-top-user">
+                                    正在就读：清华大学●计算机专业<br>
+                                    上次登陆：2018-08-12 21:36
+                                </span>
+                                <samp class="xfzx-tip-list">    
+                                    <a href="index.html" class="i">学习台</a>   
+                                    <a href="course.html">我的课程</a>
+                                    <a href="teaching.html">我的学分</a>
+                                    <a href="contract.html">我的专业</a>
+                                    <a href="student.html">我的测验</a>
+                                    <a href="finance.html">我的作业</a>
+                                    <a href="order.html">我的订单</a>
+                                    <a href="finance.html">我的简历</a>
+                                    <a href="order.html">我的实习</a>
+                                    <a href="data.html">资料设置</a>
+                                    <a href="#">退出</a>
+                                </samp>
+                            </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <!--顶部内容 end-->
+    
+    <!--左边栏目-->
+	<div class="page-sidebar nav-collapse collapse ">
+        <ul class="page-sidebar-menu">
+        	<li>
+            	<div class="xfzx_logo"></div>
+            	<div class="xfzx_left_top">
+                	<a href="index.html" class="xfzx_left_logo"></a>
+                    <ul class="nav">
+                        <li class="dropdown xfzx_left_cla">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="username">学生</span>
+                            <i class="icon-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="xuesheng.html" class="xuesheng">学生</a></li>
+                                <li><a href="xuexiao.html" class="xuexiao">学校</a></li>
+                                <li><a href="qiye.html" class="qiye">企业</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="sidebar-toggler hidden-phone"></div>
+            </li>
+            <li class="start xfzx_li">
+                <a href="index.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe605;</samp> 
+                    <span class="title"><samp>&#xe601;</samp>学习台</span>
+                </a>
+            </li> 
+            <li class="xfzx_li closed-ul active">
+                <a href="study.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe668;</samp> 
+                    <span class="title"><samp>&#xe601;</samp>我的学习</span>
+                </a>
+                <div class="shrink"><span></span></div>
+                <div class="shrink2"><span></span></div>
+                <ul class="sub-menu">
+                	<li><span>我的学习</span></li>
+                    <li><a href="study.html" class="left-link i">我的课程</a></li>
+                    <li><a href="#" class="left-link">我的笔记</a></li>
+                    <li><a href="#" class="left-link">我的问答</a></li>
+                    <li><a href="#" class="left-link">我的讨论</a></li>
+                    <li><a href="#" class="left-link">我的试卷</a></li>
+                    <li><a href="#" class="left-link">我的成绩</a></li>
+                    <li><a href="#" class="left-link">我的班级</a></li>
+                    <li><a href="#" class="left-link">我的大作业</a></li>
+                </ul>
+            </li>
+            <li class="xfzx_li">
+                <a href="score.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe667;</samp>  
+                    <span class="title"><samp>&#xe601;</samp>我的学分</span>
+                </a>
+            </li>
+            <li class="xfzx_li">
+                <a href="certificate.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe658;</samp>
+                    <span class="title"><samp>&#xe601;</samp>我的证书</span>
+                </a>
+            </li>
+            <li class="xfzx_li">
+                <a href="order.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe661;</samp> 
+                    <span class="title"><samp>&#xe601;</samp>我的订单</span>
+                </a>
+            </li>
+            <li class="xfzx_li closed-ul">
+                <a href="follow.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe60a;</samp>  
+                    <span class="title"><samp>&#xe601;</samp>我的关注</span>
+                </a>
+                <ul class="sub-menu">
+                	<li><span>我的关注</span></li>
+                    <li><a href="collection.html" class="left-link">我的收藏</a></li>
+                    <li><a href="follow.html" class="left-link">关注</a></li>
+                    <li><a href="fans.html" class="left-link">粉丝</a></li>
+                </ul>
+            </li>
+            <li class="xfzx_li">
+                <a href="finance.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe609;</samp> 
+                    <span class="title"><samp>&#xe601;</samp>财务设置</span>
+                </a>
+            </li>
+            <li class="xfzx_li closed-ul">
+                <a href="data.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe60d;</samp>
+                    <span class="title"><samp>&#xe601;</samp>资料设置</span>
+                </a>
+                <ul class="sub-menu">
+                	<li><span>资料设置</span></li>
+                    <li><a href="data.html" class="left-link">基础信息</a></li>
+                    <li><a href="head.html" class="left-link">头像设置</a></li>
+                    <li><a href="users.html" class="left-link">实名认证</a></li>
+                    <li><a href="security.html" class="left-link">安全设置</a></li>
+                    <li><a href="otheradmin.html" class="left-link">隐私设置</a></li>
+                    <li><a href="binding.html" class="left-link">第三方绑定</a></li>
+                </ul>
+            </li>
+            <li></li>
+        </ul>
+        <div class="map">
+        	<i class="icon-xz" style="font-size:14px;">&#xe655;</i>
+            <span>全球</span>
+            <div class="map-cont">
+            	<ul class="map-cont-list clearfix">
+                	<li><a href="">Brasil</a></li>
+                    <li><a href="">Africa - English</a></li>
+                    <li><a href="">English</a></li>
+                    <li><a href="">Canada - English</a></li>
+                    <li><a href="">België - Nederlands</a></li>
+                    <li><a href="">中国</a></li>
+                    <li><a href="">Canada - Français</a></li>
+                    <li><a href="">Belgique - Français</a></li>
+                    <li><a href="">中國香港特別行政區</a></li>
+                    <li><a href="">Latinoamérica</a></li>
+                    <li><a href="">Belgium - English</a></li>
+                    <li><a href="">台灣</a></li>
+                    <li><a href="">México</a></li>
+                    <li><a href="">Česká republika</a></li>
+                    <li><a href="">日本</a></li>
+                    <li><a href="">United States</a></li>
+                    <li><a href="">Cyprus - English</a></li>
+                    <li><a href="">한국</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--左边栏目 end-->
+    
+    <!--主要内容区域-->
+	<div class="page-container">
+        <div class="page-content">
+            <div class="container-fluid">
+            
+                <div class="row-fluid row-fluid-xf">
+                    
+                    
+                    <div class="n_box collection">
+                    	<div class="n_tit"><h3 class="fl">我的课程</h3></div>
+                        
+                        
+                        
+                        
+                        
+                        <div class="myclass_container">
+                        
+                        	
+                                <div class="tool_bar_l">
+                                    <div class="dropdown time fl" style="width:112px;">
+                                        <a class="dropdown-toggle all_time" data-toggle="dropdown" href="#">录播<samp class="icon-xz"></samp></a>
+                                        <ul style="width:112px;" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                            <li><a href="">全部</a></li>
+                                            <li><a href="">直播</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown time fl" style="width:112px;">
+                                        <a class="dropdown-toggle all_time" data-toggle="dropdown" href="#">学习中<samp class="icon-xz"></samp></a>
+                                        <ul style="width:112px;" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                            <li><a href="">未学习</a></li>
+                                            <li><a href="">已学完</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        
+                            <ul id="myTab" class="nav nav-tabs">
+                                <li class="active"><a href="#tab_01" data-toggle="tab">学历证书课程</a></li>
+                                <li><a href="#tab_02" data-toggle="tab">普通课程</a></li>
+                                <li><a href="#tab_03" data-toggle="tab">微专业课程</a></li>
+                                <li><a href="#tab_04" data-toggle="tab">大学预科课程</a></li>
+                            </ul>
+                        
+                        
+                        
+                        
+                            <div id="myTabContent" class="tab-content">
+                                <div class="tab-pane fade in active" id="tab_01">
+                                    <!--*******-->
+                                    <div class="class_tab">
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:10%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:50%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">继续学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:20%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">继续学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:40%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">继续学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="xfsp-page">
+                                            <a href="" class="afaot"><samp class="icon-xz"></samp></a>
+                                            <a class="i">1</a>
+                                            <a href="">2</a>
+                                            <a href="">3</a>
+                                            <a href="">...</a>
+                                            <a href="">16</a>
+                                            <a href="" class="afaot"><samp class="icon-xz"></samp></a>
+                                            <div class="fina_so"><input type="text" class="so_inp"><input type="button" value="Go" class="so_an"></div>
+                                        </div>
+                                    </div>
+                                    <!--*******-->
+                                </div>
+                                
+                                
+                                <div class="tab-pane fade" id="tab_02">
+                                    <!--*******-->
+                                    <div class="class_tab">
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:10%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:50%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:20%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:40%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="xfsp-page">
+                                            <a href="" class="afaot"><samp class="icon-xz"></samp></a>
+                                            <a class="i">1</a>
+                                            <a href="">2</a>
+                                            <a href="">3</a>
+                                            <a href="">...</a>
+                                            <a href="">16</a>
+                                            <a href="" class="afaot"><samp class="icon-xz"></samp></a>
+                                            <div class="fina_so"><input type="text" class="so_inp"><input type="button" value="Go" class="so_an"></div>
+                                        </div>
+                                    </div>
+                                    <!--*******-->
+                                </div>
+                                
+                                
+                                <div class="tab-pane fade" id="tab_03">
+                                    <!--*******-->
+                                    <div class="class_tab">
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:10%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:50%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:20%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:40%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="xfsp-page">
+                                            <a href="" class="afaot"><samp class="icon-xz"></samp></a>
+                                            <a class="i">1</a>
+                                            <a href="">2</a>
+                                            <a href="">3</a>
+                                            <a href="">...</a>
+                                            <a href="">16</a>
+                                            <a href="" class="afaot"><samp class="icon-xz"></samp></a>
+                                            <div class="fina_so"><input type="text" class="so_inp"><input type="button" value="Go" class="so_an"></div>
+                                        </div>
+                                    </div>
+                                    <!--*******-->
+                                </div>
+                                
+                                
+                                <div class="tab-pane fade" id="tab_04">
+                                    <!--*******-->
+                                    <div class="class_tab">
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:10%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:50%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:20%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="myclass_box">
+                                            <div class="tab_jd" style="width:40%;"></div>
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="coltn_m">
+                                                                <div class="coltn_img"><img src="./media/image/collection_img.jpg"></div>
+                                                                <div class="coltn_cont">
+                                                                    <h4>中国古代诗词研究</h4>
+                                                                    <p><span>学习至</span><span class="plr10">第3章第3小节</span><span>温庭筠《菩萨蛮》</span></p>
+                                                                    <dl>
+                                                                        <dd>大学选修课</dd><i>|</i><dd>3.0学分</dd><i>|</i><dd>本科证书</dd>
+                                                                    </dl>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td width="112">
+                                                            <a href="#" class="n_btn n_btn_h30 n_btn_purple w100">开始学习</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="xfsp-page">
+                                            <a href="" class="afaot"><samp class="icon-xz"></samp></a>
+                                            <a class="i">1</a>
+                                            <a href="">2</a>
+                                            <a href="">3</a>
+                                            <a href="">...</a>
+                                            <a href="">16</a>
+                                            <a href="" class="afaot"><samp class="icon-xz"></samp></a>
+                                            <div class="fina_so"><input type="text" class="so_inp"><input type="button" value="Go" class="so_an"></div>
+                                        </div>
+                                    </div>
+                                    <!--*******-->
+                                </div>
+                                
+                                
+                            </div>
+						</div>
+                                
+                                
+					</div>
+                    
+                    
+                </div>
+                
+
+            </div>
+        </div>
+	</div>
+    <!--主要内容区域 end-->
+    
+
+    
+<!--全局JS以及框架所需的效果-->
+<script src="./media/js/jquery-1.10.1.min.js" type="text/javascript"></script>   
+<script src="./media/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="./media/js/app.js" type="text/javascript"></script>
+<script>
+	jQuery(document).ready(function() {    
+	   App.init(); // initlayout and core plugins
+	});
+	
+	$(function () {
+		$(".map").click(function () {
+			$(".map").toggleClass("map-cont-on");
+		});
+		$(".map-cont-on").click(function () {
+			$(".map").toggleClass("map-cont-on");
+		});
+	});
+	
+	$(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+
+		// Variables privadas
+		var links = this.el.find('.left-link');
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+
+		$next.slideToggle();
+		$this.parent().toggleClass('sub-menu2-on');
+
+		if (!e.data.multiple) {
+			$el.find('.sub-menu2').not($next).slideUp().parent().removeClass('sub-menu2-on');
+		};
+	}	
+
+	var accordion = new Accordion($('.sub-menu'), false);
+});
+
+	$(".shrink span").click(function() {
+		$(".active").toggleClass("active-shrink");
+		$(".page-header-fixed").toggleClass("closed-shrink");
+		return false;
+	});
+	$(document).click(function(e) {
+		$(".active").removeClass("active-shrink");
+		$(".page-header-fixed").removeClass("closed-shrink");
+	});
+	
+	$(".shrink2 span").click(function() {
+		$(".active").toggleClass("active-shrink2");
+		$(".page-header-fixed").toggleClass("closed-shrink2");
+		return false;
+	});
+	$(document).click(function(e) {
+		$(".active").removeClass("active-shrink2");
+		$(".page-header-fixed").removeClass("closed-shrink2");
+	});
+
+
+</script>
+<!--全局JS以及框架所需的效果 end-->
+<script src="./media/js/layer/layer.js"></script>
+<script>
+
+
+
+</script>
+</body>
+</html>

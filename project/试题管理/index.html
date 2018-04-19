@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>试题管理</title>
+    <link rel="stylesheet" type="text/css" href="test-management.css">
+</head>
+
+<body style="background: #f4f4f4;">
+    <div class="main">
+        <div class="test-title">
+            <h1>试题管理<span>（工程应用数学基础）</span></h1>
+            <a href="javascript:;">&lt;&lt;返回课程管理台</a>
+        </div>
+        <div class="test-content">
+            <div class="test-content-sx clearfix">
+                <div class="sx-course sx-div f_left dropdown">
+                    <a data-toggle="dropdown" href="javascript:;">全部时间</a>
+                    <span class="caret"></span>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li>全部时间</li>
+                        <li>近一个月记录</li>
+                        <li>近三个月记录</li>
+                        <li>近六个月记录</li>
+                        <li>近一年记录</li>
+                    </ul>
+                </div>
+                <div class="sx-type sx-div f_left dropdown">
+                    <a data-toggle="dropdown" href="javascript:;">全部题型</a>
+                    <span class="caret"></span>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        <li>全部题型</li>
+                        <li>单选题</li>
+                        <li>多选题</li>
+                        <li>判断题</li>
+                        <li>填空题</li>
+                        <li>问答题/分析题/证明题</li>
+                        <li>完形填空</li>
+                        <li>阅读理解</li>
+                        <li>写作</li>
+                    </ul>
+                </div>
+                <div class="sx-status sx-div f_left dropdown"></div>
+                <div class="add-btn f_right">新增试题</div>
+            </div>
+            <!-- 我的试题 -->
+            <div class="test-content-list">
+                <div class="list">
+                    <i class="iconfont"></i>
+                    <i class="iconfont"></i>
+                    <div class="list-about" style="display: none;">
+                        <span></span>
+                        <p>发布老师：王步高</p>
+                        <p>试题难度：三级</p>
+                        <p>使用人数：23人</p>
+                        <p>使用次数：1680次</p>
+                        <p>共享时间：2017-09-09 12:30:16</p>
+                    </div>
+                    <div class="list-course" style="display: none;">
+                        <span></span>
+                        <div>艺术概论</div>
+                        <div>艺术概论</div>
+                        <div>艺术概论</div>
+                    </div>
+                    <div class="list-top">
+                        <p class="p1">1、单选题（10分）关联的课程分类</p>
+                        <p class="p2">
+                            艺术起源于情感变现学说的代表人物是
+                        </p>
+                    </div>
+                    <div class="list-bottom clearfix">
+                        <p class="f_left">已共享</p>
+                        <a href="javascript:;" class="f_right list-delect">删除</a>
+                        <span class="line"></span>
+                        <a href="javascript:;" class="f_right list-bj">编辑</a>
+                        <span class="line"></span>
+                        <a href="javascript:;" class="f_right list-gx">共享试题</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 我的试卷 -->
+            <div class="exam-content-list">
+                <div class="list clearfix">
+                    <span class="no-pi">未批</span>
+                    <div class="f_left list-left">
+                        <p class="p1">第1章 第1节 艺术的起源 章节测验<span class="green">【已发布】</span></p>
+                        <p class="p2"><span>创建时间：2017-09-09</span><span>题库数：36</span><span>考题数：5</span><span>已做人数：26</span></p>
+                    </div>
+                    <div class="list-right f_right">
+                        <a href="javascript:;" class="delect">删除</a>
+                        <a href="javascript:;" class="bj">编辑</a>
+                        <a href="javascript:;" class="look">查看成绩</a>
+                        <a href="javascript:;" class="go-py">去批阅</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

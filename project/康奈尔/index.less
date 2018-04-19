@@ -1,0 +1,428 @@
+/*公用的css*/
+
+body {
+    font-family: "MicroSoft YaHei";
+    /*如果没有微软雅黑 就使用移动端默认的字体*/
+    font-size: 14px;
+    color: #333;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #333;
+}
+
+body {
+    margin: 0;
+}
+
+
+/*清楚移动端浏览器对表单的默认样式*/
+
+input[type="search"],
+input[type="tel"],
+textarea {
+    border: 0;
+    resize: none;
+    outline: none;
+    /*清除移动浏览默认的样式*/
+    -webkit-appearance: none;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+/*清除浮动*/
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.img {
+    display: block;
+}
+
+.no_l_border {
+    border-left: none !important;
+}
+
+.no_b_border {
+    border-bottom: none !important;
+}
+
+.no_b_border img {
+    margin-top: 45px;
+}
+
+.content_box {
+    background-color: #f5f5f5;
+    min-width: 1580px;
+    .cc_banner {
+        width: 100%;
+        text-align: center;
+        height: 548px;
+        background-color: #9b3a3e;
+        background-image: url(banner.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        p {
+            padding-top: 168px;
+            font-size: 45px;
+            color: #fff;
+            line-height: 70px;
+        }
+        .cyh_banner_btn {
+            line-height: 50px;
+            width: 176px;
+            height: 50px;
+            background: url('bottom.png') no-repeat;
+            margin: 0 auto;
+            margin-top: 3%;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+    .cc_dir {
+        padding: 112px 0 134px 0;
+        .cc_dir_box {
+            width: 765px;
+            margin: 0 auto;
+            p {
+                font-size: 24px;
+                color: #646464;
+                text-align: center;
+                line-height: 38px;
+            }
+            span {
+                display: block;
+                width: 60px;
+                height: 2px;
+                margin: 0 auto;
+                background: #bb3636;
+                margin-top: 32px;
+            }
+            &>div {
+                margin-top: 95px;
+                ul {
+                    li {
+                        float: left;
+                        border-left: 1px solid #ded1d1;
+                        padding-bottom: 60px;
+                        border-bottom: 1px solid #ded1d1;
+                        box-sizing: border-box;
+                        height: 103px;
+                        p {
+                            font-size: 16px;
+                            color: #646464;
+                            width: 240px;
+                            line-height: 25px;
+                            display: inline-block;
+                            text-align: left;
+                            margin-left: 40px;
+                        }
+                    }
+                    .li_1 {
+                        width: 369px;
+                        border-left: none;
+                    }
+                    .li_2 {
+                        width: 391px;
+                        padding-left: 58px;
+                    }
+                    .pad_50 {
+                        padding-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+    .cc_jihua {
+        &>div {
+            width: 50%;
+            height: 555px;
+        }
+        .ji_f {
+            background: #a52628;
+            text-align: center;
+            h1 {
+                font-size: 24px;
+                color: #fec5c6;
+                font-weight: normal;
+                padding-top: 40px;
+            }
+            span {
+                display: block;
+                width: 60px;
+                height: 2px;
+                margin: 0 auto;
+                background: #f4babb;
+                margin-top: 32px;
+            }
+            div {
+                width: 560px;
+                margin: 0 auto;
+                p {
+                    margin-top: 35px;
+                    line-height: 27px;
+                    color: #f4babb;
+                    font-size: 16px;
+                    text-align: left;
+                }
+            }
+        }
+        .ji_r {
+            background: url('banner2.jpg') no-repeat;
+            background-size: cover;
+        }
+    }
+    .c_cou {
+        padding-top: 80px;
+        text-align: center;
+        &>h1 {
+            font-size: 24px;
+            color: #323232;
+        }
+        &>span {
+            display: block;
+            width: 60px;
+            height: 2px;
+            margin: 0 auto;
+            background: #bb3636;
+            margin-top: 32px;
+            margin-bottom: 18px;
+        }
+        .cou_box {
+            width: 1048px;
+            padding-left: 89px;
+            margin: 0 auto;
+            &>div {
+                width: 1048px;
+                height: 240px;
+                background: #fff;
+                margin-bottom: 27px;
+                padding-left: 146px;
+                padding-right: 40px;
+                position: relative;
+                div {
+                    padding-top: 47px;
+                    h1 {
+                        font-size: 20px;
+                        color: #323232;
+                        font-weight: normal;
+                    }
+                    span {
+                        font-size: 14px;
+                        color: #323232;
+                        padding-top: 5px;
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    color: #646464;
+                    margin-top: 30px;
+                    text-align: left;
+                    line-height: 27px;
+                }
+                a {
+                    font-size: 14px;
+                    color: #458fff;
+                    position: absolute;
+                    bottom: 30px;
+                    right: 35px;
+                }
+                img {
+                    position: absolute;
+                    top: 30px;
+                    left: -95px;
+                }
+            }
+        }
+    }
+    .cc_chi {
+        height: 500px;
+        background: url('banner3.jpg') no-repeat;
+        background-size: cover;
+        position: relative;
+        h1 {
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            padding-top: 52px;
+        }
+        span {
+            display: block;
+            width: 60px;
+            height: 2px;
+            margin: 0 auto;
+            background: #e1e1e1;
+            margin-top: 32px;
+        }
+        p {
+            font-size: 14px;
+            color: #fff;
+            width: 255px;
+            line-height: 25px;
+            position: absolute;
+            line-height: 20px;
+        }
+        .p1 {
+            top: 177px;
+            left: 170px;
+        }
+        .p2 {
+            top: 351px;
+            left: 553px;
+        }
+        .p3 {
+            top: 225px;
+            left: 955px;
+        }
+        .p4 {
+            top: 316px;
+            left: 1433px;
+        }
+    }
+    .cc_last {
+        background: #fff;
+        h1 {
+            font-size: 24px;
+            color: #323232;
+            text-align: center;
+            padding-top: 52px;
+        }
+        span {
+            display: block;
+            width: 60px;
+            height: 2px;
+            margin: 0 auto;
+            background: #bb3636;
+            margin-top: 32px;
+        }
+        &>div {
+            width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 135px;
+            &>div {
+                float: left;
+                width: 333px;
+                margin-top: 77px;
+                margin-left: 100px;
+                &>div {
+                    width: 70px;
+                    height: 70px;
+                    line-height: 70px;
+                    border-radius: 35px;
+                    background-color: #bc4446;
+                    margin: 0 auto;
+                    text-align: center;
+                    &>div {
+                        font-size: 22px;
+                        color: #fff;
+                        border-bottom: 1px solid #fff;
+                        display: inline;
+                    }
+                }
+                p {
+                    padding-top: 50px;
+                    font-size: 16px;
+                    color: #323232;
+                    line-height: 25px;
+                    position: relative;
+                    margin-bottom: 28px;
+                }
+                p::before {
+                    content: "";
+                    position: absolute;
+                    width: 16px;
+                    height: 12px;
+                    background: url('icon(6).png') no-repeat;
+                    top: 23px;
+                    left: 158px;
+                }
+            }
+        }
+    }
+}
+
+#phone {
+    display: none;
+    width: 563px;
+    height: 293px;
+    position: relative;
+    background: rgba(3, 3, 8, 0.5);
+    text-align: center;
+    padding-top: 35px;
+}
+
+#phone h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #fefefe;
+}
+
+.phone_in {
+    width: 387px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    padding-left: 80px;
+    margin-top: 35px;
+    background-image: url('/static/images/des/phone11.png');
+    background-repeat: no-repeat;
+    background-position: 36px 15px;
+    text-align: left;
+    border: 1px solid #fff;
+}
+
+.phone_in p {
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#cc_close {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: url('/static/images/des/cc.png') no-repeat;
+}
+
+.layui-layer {
+    background-color: transparent !important;
+}

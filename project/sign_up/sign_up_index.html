@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta name="keywords" content="{{$keywords}}" />
+    <meta name="description" content="{{$description}}" />
+    <!-- 360浏览器 -->
+    <meta name="renderer" content="webkit" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- 强制竖屏 -->
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-orientation" content="portrait"/>
+    <!-- 老式手机优化 -->
+    <meta name="HandheldFriendly" content="true"/>
+    <!-- 不识别手机号 -->
+    <meta name="format-detection" content="telephone=no" />
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.53/static/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.53/static/css/bass0118.css"/>
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.53/static/css/homepage.css"/>
+    <link type="text/css" rel='stylesheet' href='http://192.168.1.53/static/css/send-success.css'/>
+    <link rel='stylesheet' href='http://192.168.1.53/static/css/registered.css'/>
+    <link rel='stylesheet' href='http://192.168.1.53/static/js/toastr/build/toastr.css'/>
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.53/static/css/authenticationCenter.css"/>
+    <link rel="stylesheet" type="text/css" href="http://192.168.1.53/static/css/Transaction_process.css"/>
+
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.53/static/css/bootstrap-theme.css"/>
+    <link type="text/css" rel="stylesheet" href="http://192.168.1.53/static/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sign_up.css">
+    <style type="text/css">
+        .gs-logo-div:hover, .gs-logo-div:active, .gs-logo-div:link{
+            text-decoration: none;
+            outline: none;
+        }
+    </style>
+    <script type="text/javascript" src="http://192.168.1.53/static/js/jquery-1.9.1.js"></script>
+    <!-- jq 兼容老版本处理 -->
+    <script type="text/javascript">
+        var API = '/api';
+
+        if(typeof $.browser == 'undefined') {
+            var matched, browser;
+
+            ua = navigator.userAgent.toLowerCase();
+
+            var match = /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
+                /(webkit)[ \/]([\w.]+)/.exec( ua ) ||
+                /(opera)(?:.*version|)[ \/]([\w.]+)/.exec( ua ) ||
+                /(msie) ([\w.]+)/.exec( ua ) ||
+                ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec( ua ) ||
+                [];
+
+            matched = {
+                    browser: match[ 1 ] || "",
+                    version: match[ 2 ] || "0"
+                };
+
+            browser = {};
+
+            if ( matched.browser ) {
+                browser[ matched.browser ] = true;
+                browser.version = matched.version;
+            }
+
+            if ( browser.chrome ) {
+                browser.webkit = true;
+            } else if ( browser.webkit ) {
+                browser.safari = true;
+            }
+
+            jQuery.browser = browser;
+        }
+    </script>
+    <!-- <script type='text/javascript' src='/static/js/filters/filters.js'></script>
+    <script type='text/javascript' src='/static/js/filters/init.js'></script>
+ -->
+    <script type="text/javascript" src="/static/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap-datetimepicker.fr.js"></script>
+    <script type='text/javascript' src='/static/js/ueditor/ueditor.all.min.js'></script>
+    <script type='text/javascript' src='/static/js/ueditor/ueditor.config.js'></script>
+    <script type="text/javascript" src="/static/js/bass1.js"></script>
+    <title>{{$title}}</title>
+</head>
+<body>
+    <!--顶端-->
+    <section class="header not_selected">
+        <section class="header_top">
+            <section class="header_top_content">
+                <section class="header_top_content_peripheral pull-left">
+                    <div class="pull-left" style="position: relative;height: 100%;">
+                        <span class="{{$locationCode}}_icon pull-left"></span>
+                        <span class="earth_text pull-left dropdown-toggle" data-toggle="dropdown">{{$location}} <span class="caret"></span></span>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu_list" id="0"><span class="global_icon pull-left"></span>Global</li>
+                            <li class="dropdown-menu_list" id="33"><span class="china_icon pull-left"></span>中国</li>
+                            <li class="dropdown-menu_list" id="79"><span class="hongkong_icon pull-left"></span>中国香港</li>
+                            <li class="dropdown-menu_list" id="51"><span class="macau_icon pull-left"></span>中国澳门</li>
+                            <li class="dropdown-menu_list" id="676"><span class="usa_icon pull-left"></span>USA</li>
+                            <li class="dropdown-menu_list" id="659"><span class="england_icon pull-left"></span>England</li>
+                            <li class="dropdown-menu_list" id="628"><span class="norway_icon pull-left"></span>Norway</li>
+                        </ul>
+                    </div>
+                    <div class="pull-left" style="position: relative;height: 100%;">
+                        <span class="select_language_text pull-left dropdown-toggle" data-toggle="dropdown">{{$language}} <span class="caret"></span></span>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-menu_list">
+                                <a href="{{$baseurl}}?lang=zh-cn">中文简体</a>
+                            </li>
+                            <li class="dropdown-menu_list">
+                                <a href="{{$baseurl}}?lang=zh-tw">中文繁體</a>
+                            </li>
+                            <li class="dropdown-menu_list">
+                                <a href="{{$baseurl}}?lang=en">English</a>
+                            </li> 
+                        </ul>
+                    </div>
+                </section>
+                <section class="header_top_content_peripheral pull-right">
+                    <a class="welcome_statement pull-left" href="/">{{conver str=MainTopRight_0}}</a>
+                    {{if $islogin}}
+                        <span class="my_identity pull-left">{{$gs_username}}</span>
+                        <span class="pull-left" style="color: white;cursor: pointer;display: block;font-size: 12px;margin-left: 0;margin-right: 30px;margin-top: 6px;"><a style="color:#fff" href="/userport/center.html">个人中心</a></span>
+                        <a class="registered loginout pull-left" href="javascript:;">退出</a>
+                    {{else}}
+                        <span class="my_identity pull-left">{{conver str=MainTopRight_1}}</span>
+                        <span class="landing pull-left" data-toggle="modal" data-target="#myModal">{{conver str=MainTopRight_2}}</span>
+                        <a class="registered pull-left" href="/passport/register.html">{{conver str=MainTopRight_3}}</a>
+                    {{/if}}
+                </section>
+            </section>
+        </section>
+        <section class="header_bottom">
+            <section class="header_bottom_content">
+                <section class="header_bottom_content_peripheral pull-left">
+                    <section class="logo_text pull-left">
+                        <a href="/" class="gs-logo-div">
+                            <span class="logo_text_big">{{conver str=MainHeaderLeftLogo_0}}</span>
+                            <span class="logo_text_small">Studybanks.com</span>
+                        </a>
+                    </section>
+                    <section class="introduction_information pull-left">
+                        {{if !isset($logoContent)}}
+                            <span class="introduction_information_text">{{conver str=MainHeaderLeftLogo_1}}</span>
+                            <span class="introduction_information_text">{{conver str=MainHeaderLeftLogo_2}}</span>
+                        {{else}}
+                            <section class="introduction_information_text_t">
+                                <div class="introduction_information_text_content">
+                                    {{$logoContent}}
+                                </div>
+                            </section>
+                        {{/if}}
+                    </section>
+                </section>
+                <section class="header_bottom_content_peripheral pull-right">
+                    <section class="search pull-left">
+                        <input type="text" class="search_input pull-left" placeholder="课程/老师/学校/企业" style="display: none;" />
+                        <div class="search_input_icon pull-left"></div>
+                    </section>
+<!--                     <section class="my_credits pull-left">
+                        <span class="my_credits_icon"></span>
+                        <span class="my_credits_text">{{conver str=MainHeaderRight_0}}</span>
+                    </section>
+                    <section class="study_plan pull-left">
+                        <span class="study_plan_icon"></span>
+                        <span class="study_plan_text">{{conver str=MainHeaderRight_1}}</span>
+                        <div class="study_plan_prompt" style="display: none;">即将开放，敬请期待！</div>
+                    </section> -->
+                </section>
+            </section>
+        </section>
+    </section>
+
+  
+    <!-- 主体 -->
+    <section class="sign_up_body">
+      <section class="contain">
+        <div class="nav_div"><span>{{conver str=up01}}</span><span>》</span><span>{{conver str=up02}}</span><span>》</span><span>{{conver str=up03}}</span></div>
+        <section class="major">
+          <div class="major_top clearfix">
+            <div class="information f_left">{{conver str=up04}}</div>
+            <div class="summary f_left">{{conver str=up05}}</div>
+          </div>
+          <div class="major_content clearfix">
+            <div class="major_content_left f_left">
+                <img src="image/major_infor.png">
+                <p>{{conver str=up005}}</p>
+            </div>
+            <div class="major_content_right f_left">
+              <p style="width: 853px;line-height: 22px;">{{conver str=up06}}
+              </p>
+              <ul class="clearfix">
+                <li class="major_icon1">{{conver str=up07}}</li>
+                <li class="major_icon2">{{conver str=up08}}</li>
+                <li class="major_icon3">{{conver str=up09}}</li>
+                <li class="major_icon4">{{conver str=up10}}</li>
+                <li class="major_icon5">{{conver str=up11}}</li>
+              </ul>
+            </div>
+          </div> 
+        </section>
+        <section class="application">
+          <p>{{conver str=up12}}<span>{{conver str=up13}}</span></p>
+          <div class="p_border"></div>
+        </section>
+        <div class="personal_data">{{conver str=up15}}</div>
+        <form id="personal_data">
+        <section class="personal_data_box">
+          <div class="personal_data_content clearfix">
+            <div class="personal_data_content_left f_left">
+              <div class="name clearfix">
+                <div style="width:280px;" id="name">
+                  <p>
+                    {{conver str=up16}}<br />
+                    {{conver str=up17}}
+                  </p>
+                </div>
+                <div>
+                  <input type="text" name="name">
+                  <span></span>
+                </div>
+                
+              </div>
+              <div id="english" class="english clearfix">
+                <div style="width:280px;">
+                  <p>
+                    {{conver str=up18}}<br />
+                    {{conver str=up19}}
+                  </p>
+                </div>
+                <div>
+                  <input type="text" name="english">
+                  <span></span>
+                </div>
+              </div>
+              <div class="gender clearfix">
+                <div style="width:280px;">
+                  <p>
+                    {{conver str=up20}}<br />
+                    {{conver str=up21}}
+                  </p>
+                </div>
+                <div class="gender_radio">
+                  <input type="radio" id="man" name="gender" value="">
+                  <label for="man" class="checked">{{conver str=up22}}</label>
+                  <input type="radio" id="women" name="gender" value="">
+                  <label for="sf" id="women">{{conver str=up23}}</label>
+                </div>
+              </div>
+              <div class="nationality clearfix">
+                <div style="width:280px;">
+                  <p>
+                    {{conver str=up24}}<br />
+                    {{conver str=up25}}
+                  </p>
+                </div>
+                <div>
+                  <select name="nationality" id="">
+                    <option value="{{conver str=up26}}">{{conver str=up26}}</option>
+                    <option value="{{conver str=up27}}">{{conver str=up27}}</option>
+                  </select>
+                </div>
+                
+              </div>
+              <div id="citizen" class="citizen clearfix">
+                <div style="width:280px;">
+                  <p>
+                    {{conver str=up29}}<br>
+                    {{conver str=up30}}
+                  </p>
+                </div>
+                <div class="citizen_input">
+                  <select name="type" id="card">
+                    <option value="{{conver str=up31}}">{{conver str=up31}}</option>
+                    <option value="{{conver str=up32}}">{{conver str=up32}}</option>
+                  </select>
+                  <input type="text" name="citizen_id">
+                  <span></span>
+                </div>
+              </div>
+              <div id="mobile" class="mobile clearfix">
+                <div style="width:280px;">
+                  <p>
+                    {{conver str=up33}}<br />
+                    {{conver str=up34}}
+                  </p>
+                </div>
+                <div>
+                  <input type="text" name="mobile">
+                  <span></span>
+                </div>
+              </div>
+              <div id="birthdate" class="birthdate clearfix">
+                <div style="width:280px;">
+                  <p>
+                    {{conver str=up35}}<br />
+                    {{conver str=up36}}
+                  </p>
+                </div>
+                <div>
+                  <input type="text" placeholder="{{conver str=up37}}" name="birthdate">
+                  <span></span>
+                </div>
+              </div>
+              <div id="education" class="education  clearfix">
+                <div style="width:280px;">
+                  <p>
+                    {{conver str=up38}}<br />
+                    {{conver str=up39}}
+                  </p>
+                </div>
+                <div>
+                  <select name="education" id="" placeholder="{{conver str=up40}}">
+                    <option value="{{conver str=up40}}">{{conver str=up40}}</option>
+                    <option value="{{conver str=up41}}">{{conver str=up41}}</option>
+                  </select>
+                </div>
+              </div>
+              <div id="e-mail" class="e-mail clearfix">
+                <div style="width:280px;">
+                  <p>
+                    {{conver str=up42}}<br />
+                    {{conver str=up43}}
+                  </p>
+                </div>
+                <div>
+                  <input type="e-mail" name="e-mail">
+                  <span></span>
+                </div>
+              </div>
+              <div id="address" class="address clearfix">
+                <div style="width:280px;">
+                  <p>
+                    {{conver str=up44}}<br />
+                    {{conver str=up45}}
+                  </p>
+                </div>
+                <div>
+                  <input type="text" name="mailing">
+                  <span></span>
+                </div>
+              </div>
+              <div id="code" class="code clearfix">
+                <div style="width:280px;">
+                  <p>
+                    {{conver str=up46}}<br />
+                    {{conver str=up47}}
+                  </p>
+                </div>
+                <div>
+                  <input type="text" name="postal">
+                  <span></span>
+                </div>
+              </div>
+                
+            </div>
+
+            <div class="personal_data_content_right f_right">
+              <div class="file_img">
+                <img src="image/person_img.png">
+              </div>
+              <span>
+                {{conver str=up48}}<br>
+                {{conver str=up49}}<br>
+                {{conver str=up50}}<br>
+                {{conver str=up51}}<br>
+              </span>
+              <div class="personal_data_button">
+                <span>{{conver str=up52}}</span>
+                <input type="file" name="personal_img" id="personal_img">
+              </div>
+            </div>
+          
+          </div>
+        </section>
+      </form>  
+      <form id="application_form">
+        <div class="application_materials">{{conver str=up53}}</div>
+        <section class="application_materials_box">
+          <div class="application_materials_content">
+            <!-- 毕业证 -->
+            <div class="certificate">
+              
+              <div class="certificate_top">
+                <p>{{conver str=up54}}<br><span>{{conver str=up55}}</span></p>
+                
+              </div>
+              <div class="certificate_add" style="display: block;">
+                <span>{{conver str=up56}}</span>
+              </div>
+              
+              <div class="certificate_add_box clearfix" style="display: none;">
+                <div class="certificate_add_box_left f_left">
+                  <div class="Graduate_School clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up57}}<br>
+                        {{conver str=up58}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <input type="text" name="certificate_school">
+                    </div>
+                  </div>
+                  <div class="Certificate_No clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up59}}<br>
+                        {{conver str=up60}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <input type="text" name="certificate_certificate">
+                    </div>
+                  </div>
+                  <div class="Obtain_time clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up61}}<br>
+                        {{conver str=up62}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <div class="Obtain_time_data f_left">
+                        <input class="datainp" id="datebut" type="text" placeholder="{{conver str=up63}}" readonly name="certificate_time">
+                        <span onClick="jeDate({dateCell:'#datebut',isTime:false,format:'YYYY-MM-DD'})"></span>
+                      </div>
+                      <div class="Obtain_time_data f_left">
+                        <input class="datainp" id="datebut" type="text" placeholder="{{conver str=up63}}" readonly name="certificate_date">
+                        <span onClick="jeDate({dateCell:'#datebut',isTime:false,format:'YYYY-MM-DD'})"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="Major clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up64}}<br>
+                        {{conver str=up65}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <input type="text" name="certificate_major">
+                    </div>
+                  </div>
+                </div>
+                <div class="certificate_add_box_right f_left">
+                  <div class="sc_certificate_box">
+                    <div class="sc_certificate">
+                      <div class="sc_tap">
+                        <img src="image/sc_tap.png" alt="">
+                        <p>{{conver str=up66}}</p>
+                      </div>
+                      <input id="certificate_file" type="file" name="certificate_img">
+                      <div class="show_certificate">
+                        <img>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="certificate_add_button f_left">
+                  <button type="button">{{conver str=up67}}</button>
+                  <span>{{conver str=up68}}</span>
+                </div>
+              </div>
+              <div class="certificate_list" style="display: none;">
+                <ul class="clearfix">
+                  <li class="certificate_list_img">
+                    <img src="image/certificate_list_img.png" alt="">
+                  </li>
+                  <li class="certificate_list_school">
+                    <p>{{conver str=up110}}</p>
+                    <p>{{conver str=up111}}</p>
+                  </li>
+                  <li class="certificate_list_code">
+                    <p>{{conver str=up112}}</p>
+                    <p>{{conver str=up113}}</p>
+                  </li>
+                  <li class="certificate_list_time">
+                    <p>{{conver str=up114}}</p>
+                    <p>{{conver str=up115}}</p>
+                  </li>
+                  <li class="certificate_list_overtime">
+                    <p>{{conver str=up116}}</p>
+                    <p>{{conver str=up117}}</p>
+                  </li>
+                </ul>
+                <span>{{conver str=up69}}</span>
+              </div>
+            </div>
+            <!-- 学位证 -->
+            <div class="certificate">
+
+              <div class="certificate_top">
+                <p>{{conver str=up70}}<br><span>{{conver str=up71}}</span></p>
+                
+              </div>
+              <div class="certificate_add" style="display: block;">
+                <span>{{conver str=up72}}</span>
+              </div>
+              
+              <div class="certificate_add_box clearfix" style="display: none;">
+                <div class="certificate_add_box_left f_left">
+                  <div class="Graduate_School clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up57}}<br>
+                        {{conver str=up58}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <input type="text" name="diploma_school">
+                    </div>
+                  </div>
+                  <div class="Certificate_No clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up59}}<br>
+                        {{conver str=up60}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <input type="text" name="diploma_certificate">
+                    </div>
+                  </div>
+                  <div class="Obtain_time clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up61}}<br>
+                        {{conver str=up62}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <div class="Obtain_time_data f_left">
+                        <input class="datainp" id="datebut" type="text" placeholder="{{conver str=up63}}" readonly name="diploma_time">
+                        <span onClick="jeDate({dateCell:'#datebut',isTime:false,format:'YYYY-MM-DD'})"></span>
+                      </div>
+                      <div class="Obtain_time_data f_left">
+                        <input class="datainp" id="datebut" type="text" placeholder="{{conver str=up63}}" readonly name="diploma_date">
+                        <span onClick="jeDate({dateCell:'#datebut',isTime:false,format:'YYYY-MM-DD'})"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="Major clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up64}}<br>
+                        {{conver str=up65}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <input type="text" name="diploma_major">
+                    </div>
+                  </div>
+                </div>
+                <div class="certificate_add_box_right f_left">
+                  <div class="sc_certificate_box">
+                    <div class="sc_certificate">
+                      <div class="sc_tap">
+                        <img src="image/sc_tap.png" alt="">
+                        <p>{{conver str=up88}}</p>
+                      </div>
+                      <input id="diploma_file" type="file" name="diploma_img">
+                      <div class="show_certificate">
+                        <img>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="certificate_add_button f_left">
+                  <button type="button">{{conver str=up67}}</button>
+                  <span>{{conver str=up68}}</span>
+                </div>
+              </div>
+              <div class="certificate_list" style="display: none;">
+                <ul class="clearfix">
+                  <li class="certificate_list_img">
+                    <img src="image/certificate_list_img.png" alt="">
+                  </li>
+                 <li class="certificate_list_school">
+                    <p>{{conver str=up110}}</p>
+                    <p>{{conver str=up111}}</p>
+                  </li>
+                  <li class="certificate_list_code">
+                    <p>{{conver str=up112}}</p>
+                    <p>{{conver str=up113}}</p>
+                  </li>
+                  <li class="certificate_list_time">
+                    <p>{{conver str=up114}}</p>
+                    <p>{{conver str=up115}}</p>
+                  </li>
+                  <li class="certificate_list_overtime">
+                    <p>{{conver str=up116}}</p>
+                    <p>{{conver str=up117}}</p>
+                  </li>
+                </ul>
+                <span>{{conver str=up69}}</span>
+              </div>
+            </div>
+            <!-- 英语四级 -->
+            <div class="certificate">
+
+              <div class="certificate_top">
+                <p>{{conver str=up73}}<br><span>{{conver str=up90}}</span></p>
+                
+              </div>
+              <div class="certificate_add" style="display: block;">
+                <span>添加英语四级证书</span>
+              </div>
+              
+              <div class="certificate_add_box clearfix" style="display: none;">
+                <div class="certificate_add_box_left f_left">
+                  <div class="Graduate_School clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up57}}<br>
+                        {{conver str=up58}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <input type="text" name="CET4_school">
+                    </div>
+                  </div>
+                  <div class="Certificate_No clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up59}}<br>
+                        {{conver str=up60}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <input type="text" name="CET4_certificate">
+                    </div>
+                  </div>
+                  <div class="Obtain_time clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up61}}<br>
+                        {{conver str=up62}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <div class="Obtain_time_data f_left">
+                        <input class="datainp" id="datebut" type="text" placeholder="{{conver str=up63}}" readonly name="CET4_time">
+                        <span onClick="jeDate({dateCell:'#datebut',isTime:false,format:'YYYY-MM-DD'})"></span>
+                      </div>
+                      <div class="Obtain_time_data f_left">
+                        <input class="datainp" id="datebut" type="text" placeholder="{{conver str=up63}}" readonly name="CET4_date">
+                        <span onClick="jeDate({dateCell:'#datebut',isTime:false,format:'YYYY-MM-DD'})"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="Major clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up64}}<br>
+                        {{conver str=up65}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <input type="text" name="CET4_major">
+                    </div>
+                  </div>
+                </div>
+                <div class="certificate_add_box_right f_left">
+                  <div class="sc_certificate_box">
+                    <div class="sc_certificate">
+                      <div class="sc_tap">
+                        <img src="image/sc_tap.png" alt="">
+                        <p>{{conver str=up77}}</p>
+                      </div>
+                      <input id="CET4_file" type="file" name="CET4_img">
+                      <div class="show_certificate">
+                        <img>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="certificate_add_button f_left">
+                  <button type="button">{{conver str=up67}}</button>
+                  <span>{{conver str=up68}}</span>
+                </div>
+              </div>
+              <div class="certificate_list" style="display: none;">
+                <ul class="clearfix">
+                  <li class="certificate_list_img">
+                    <img src="image/certificate_list_img.png" alt="">
+                  </li>
+                  <li class="certificate_list_school">
+                    <p>{{conver str=up110}}</p>
+                    <p>{{conver str=up111}}</p>
+                  </li>
+                  <li class="certificate_list_code">
+                    <p>{{conver str=up112}}</p>
+                    <p>{{conver str=up113}}</p>
+                  </li>
+                  <li class="certificate_list_time">
+                    <p>{{conver str=up114}}</p>
+                    <p>{{conver str=up115}}</p>
+                  </li>
+                  <li class="certificate_list_overtime">
+                    <p>{{conver str=up116}}</p>
+                    <p>{{conver str=up117}}</p>
+                  </li>
+                </ul>
+                <span>{{conver str=up69}}</span>
+              </div>
+            </div>
+            <!-- 计算机证书 -->
+            <div class="certificate">
+
+              <div class="certificate_top">
+                <p>{{conver str=up69}}<br><span>{{conver str=up74}}</span></p>
+                
+              </div>
+              <div class="certificate_add" style="display: block;">
+                <span>{{conver str=up75}}</span>
+              </div>
+              
+              <div class="certificate_add_box clearfix" style="display: none;">
+                <div class="certificate_add_box_left f_left">
+                  <div class="Graduate_School clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up87}}<br>
+                        {{conver str=up58}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <input type="text" name="machine_school">
+                    </div>
+                  </div>
+                  <div class="Certificate_No clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up59}}<br>
+                        {{conver str=up60}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <input type="text" name="machine_certificate">
+                    </div>
+                  </div>
+                  <div class="Obtain_time clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up61}}<br>
+                        {{conver str=up62}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <div class="Obtain_time_data f_left">
+                        <input class="datainp" id="datebut" type="text" placeholder="{{conver str=up63}}" readonly name="machine_time">
+                        <span onClick="jeDate({dateCell:'#datebut',isTime:false,format:'YYYY-MM-DD'})"></span>
+                      </div>
+                      <div class="Obtain_time_data f_left">
+                        <input class="datainp" id="datebut" type="text" placeholder="{{conver str=up63}}" readonly name="machine_date">
+                        <span onClick="jeDate({dateCell:'#datebut',isTime:false,format:'YYYY-MM-DD'})"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="Major clearfix">
+                    <div class="f_left" style="width: 150px;">
+                      <p>
+                        {{conver str=up64}}<br>
+                        {{conver str=up65}}
+                      </p>
+                    </div>
+                    <div class="f_left">
+                      <input type="text" name="machine_major">
+                    </div>
+                  </div>
+                </div>
+                <div class="certificate_add_box_right f_left">
+                  <div class="sc_certificate_box">
+                    <div class="sc_certificate">
+                      <div class="sc_tap">
+                        <img src="image/sc_tap.png" alt="">
+                        <p>{{conver str=up76}}</p>
+                      </div>
+                      <input id="machine_file" type="file" name="machine_img">
+                      <div class="show_certificate">
+                        <img>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="certificate_add_button f_left">
+                  <button type="button">{{conver str=up67}}</button>
+                  <span>{{conver str=up68}}</span>
+                </div>
+              </div>
+              <div class="certificate_list" style="display: none;">
+                <ul class="clearfix">
+                  <li class="certificate_list_img">
+                    <img src="image/certificate_list_img.png" alt="">
+                  </li>
+                  <li class="certificate_list_school">
+                    <p>{{conver str=up110}}</p>
+                    <p>{{conver str=up111}}</p>
+                  </li>
+                  <li class="certificate_list_code">
+                    <p>{{conver str=up112}}</p>
+                    <p>{{conver str=up113}}</p>
+                  </li>
+                  <li class="certificate_list_time">
+                    <p>{{conver str=up114}}</p>
+                    <p>{{conver str=up115}}</p>
+                  </li>
+                  <li class="certificate_list_overtime">
+                    <p>{{conver str=up116}}</p>
+                    <p>{{conver str=up117}}</p>
+                  </li>
+                </ul>
+                <span>{{conver str=up69}}</span>
+              </div>
+            </div>
+          </div>
+        </section>
+       </form> 
+        <div class="recommendation">{{conver str=up78}}</div>
+        <section class="recommendation_box">
+          <div class="academic_reference clearfix">
+            <div class="academic_reference_p">
+              <p>
+                {{conver str=up79}}<br>
+                {{conver str=up80}}
+              </p>
+            </div>
+            <div class="academic_reference_input"> 
+               <input type="text" name="man1"> 
+            </div>
+            <div class="academic_reference_file">
+              <span>{{conver str=up81}}</span>
+              <i class="icon_cademic"></i>
+            </div>
+          </div>
+          <div class="academic_reference clearfix">
+            <div class="academic_reference_p">
+              <p>
+                {{conver str=up79}}<br>
+                {{conver str=up80}}
+              </p>
+            </div>
+            <div class="academic_reference_input"> 
+               <input type="text" name="man2"> 
+            </div>
+            <div class="academic_reference_file">
+              <span>{{conver str=up81}}</span>
+              <i class="icon_cademic"></i>
+            </div>
+          </div>
+          <div class="academic_reference clearfix" style="margin-bottom:55px;">
+            <div class="academic_reference_p">
+              <p>
+                {{conver str=up79}}<br>
+                {{conver str=up80}}
+              </p>
+            </div>
+            <div class="academic_reference_input"> 
+               <input type="text" name="man3"> 
+            </div>
+            <div class="academic_reference_file">
+              <span>{{conver str=up81}}</span>
+              <i class="icon_cademic"></i>
+            </div>
+          </div>
+          <div class="kindergarten clearfix">
+            <div class="kindergarten_p">
+              <p>
+                {{conver str=up82}}<br>
+                {{conver str=up83}}<br>
+                {{conver str=up84}}
+              </p>
+            </div>
+            <div class="kindergarten_input"> 
+               <textarea name="comments"></textarea>
+            </div>
+          </div>
+        </section>
+        <div class="signature">
+          <div class="signature_top clearfix">
+            <div>
+              <p>{{conver str=up85}}<br>
+                {{conver str=up86}}
+              </p>
+            </div>
+            <div class="signature_input">
+              <input type="text" placeholder="{{conver str=up87}}" name="applicant">
+            </div>
+          </div>
+      
+          <div class="signature_bottom">
+            <ul class="clearfix">
+              <li>{{conver str=up100}}</li>
+              <li style="margin-left:123px;">{{conver str=up101}}</li>
+              <li style="margin-left:95px;">{{conver str=up102}}</li>
+              <li style="margin-left:25px;">{{conver str=up103}}</li>
+              <li style="margin-left:153px;">{{conver str=up104}}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="subit">
+          <button>{{conver str=up105}}</button>
+        </div>
+        
+      </section>
+      <div id="academic_reference_task" class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" >
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+              <h4 class="modal-title" id="gridSystemModalLabel">{{conver str=up106}}</h4>
+            </div>
+            <div class="modal-body">
+              <div class="modal-body_file">
+                <span>{{conver str=up107}}</span>
+                <input type="file" name="letter">
+              </div>
+              <p>{{conver str=up108}}<br>
+                {{conver str=up109}}
+              </p>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+    </section>
+
+
+    <!--侧边栏-->
+    <section class="sidebar not_selected" style="display: none;">
+        <ul class="sidebar_icon pull-left">
+            <li class="sidebar_icon_list click_sidebar sidebar_icon_first">{{conver str=MainSidebar_0}}</li>
+            <li class="sidebar_icon_list click_sidebar sidebar_icon_second">{{conver str=MainSidebar_1}}</li>
+            <li class="sidebar_icon_list click_sidebar sidebar_icon_third">{{conver str=MainSidebar_2}}</li>
+            <li class="sidebar_icon_list click_sidebar sidebar_icon_fourth">{{conver str=MainSidebar_3}}</li>
+            <li class="sidebar_icon_list click_sidebar sidebar_icon_fifth">{{conver str=MainSidebar_4}}</li>
+            <li class="sidebar_icon_list click_sidebar sidebar_icon_sixth">{{conver str=MainSidebar_5}}</li>
+            <li class="sidebar_icon_list sidebar_icon_seventh" style="display: none;"><a href="#">{{conver str=MainSidebar_6}}</a></li>
+        </ul>
+        <div class="sidebar_show pull-left">
+            <div class="sidebar_show_header"></div>
+            <div class="sidebar_show_content"></div>
+            <div class="sidebar_show_footer"></div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer not_selected">
+        <section class="footer_scope">
+            <section class="footer_scope_left pull-left">
+                <section class="footer_scope_left_sqare">
+                    <section class="footer_scope_left_title">{{conver str=MainFooterLeft_0}}</section>
+                    <section class="footer_scope_left_subtitle">Studybanks.com</section>
+                </section>
+                <section class="footer_contact_phone">
+                    <span class="footer_contact_icon pull-left"></span>
+                    <span class="footer_contact_text pull-left">400888800</span>
+                </section>
+                <section class="footer_contact_QQ">
+                    <span class="footer_contact_icon pull-left"></span>
+                    <span class="footer_contact_text pull-left">886468888</span>
+                </section>
+                <section class="footer_contact_mail">
+                    <span class="footer_contact_icon pull-left"></span>
+                    <span class="footer_contact_text pull-left">kefu@xuefen.com</span>
+                </section>
+            </section>
+            <section class="footer_scope_right pull-right">
+                <ul class="footer_scope_right_lists pull-left">
+                    <li class="footer_scope_right_title">我是学生</li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何参与直播课程</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何购买课程</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何观看课程录像</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何参与直播课程</a></li>
+                </ul>
+                <ul class="footer_scope_right_lists pull-left">
+                    <li class="footer_scope_right_title">我是老师</li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何成为认证导师</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何在TopU中创建课程</a></li>
+                </ul>
+                <ul class="footer_scope_right_lists pull-left">
+                    <li class="footer_scope_right_title">我是学校</li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何参与直播课程</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何购买课程</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何观看课程录像</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何参与直播课程</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">如何购买课程</a></li>
+                </ul>
+                <ul class="footer_scope_right_lists pull-left">
+                    <li class="footer_scope_right_title">关于学分在线</li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">联系我们</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">新浪微博</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">腾讯微博</a></li>
+                    <li class="footer_scope_right_menu"><a class="footer_link" href="#">人人主页</a></li>
+                </ul>
+            </section>
+        </section>
+    </footer>
+    <section class="footer_bottom not_selected">
+        <p class="footer_bottom_text">Copyright © 2014 - 2015 学分在线（北京）国际数据科技有限公司</p>
+        <p class="footer_bottom_text">版权所有京ICP备京ICP备11008938号号 京公网安备京ICP备11008938号号</p>
+    </section>
+
+    <!-- PC登录模态框 -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog login-modal" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">{{conver str=MainLoginTitle}}</h4>
+                </div>
+                <div class="modal-body login-body">
+                    <form>
+                        <div class="item tel-email">
+                            <label for="login-name" class="name-label"></label>
+                            <input type="text" id="login-name" name="token" class="log-input" placeholder="{{conver str=MainLoginForm_0}}">
+                            <span class="clear-input"></span>
+                            <p class="name-tip"></p>
+                        </div>
+                        <div class="item password">
+                            <label for="login-pass" class="pass-label"></label>
+                            <input type="password" id="login-pass" name="password" class="pas-input" placeholder="{{conver str=MainLoginForm_1}}">
+                            <span class="clear-input"></span>
+                            <p class="password-tip"></p>
+                        </div>
+                        <div class="auto-login">
+                            <input type="checkbox" name="asLogin" id="al-input">
+                            <label for="al-input">{{conver str=MainLoginForm_2}}</label>
+                        </div>
+                        <div class="login">
+                            <input type="submit" class="login-btn" value="{{conver str=MainLoginForm_3}}">
+                            <div class="password-login">
+                                <a href="/passport/forgetpass.html" class="forgetPass">{{conver str=MainLoginBottom_0}}</a>
+                                <a href="/passport/register.html" class="register">{{conver str=MainLoginBottom_1}}</a>
+                            </div>
+                        </div>
+                    </form>
+   <!--                  <ul class="othersPass">
+                        <li class="item item-li1">
+                            <a href="#">{{conver str=MainLoginBottom_2}}</a>
+                        </li>
+                        <li class="item item-li2">
+                            <a href="#">QQ</a>
+                        </li>
+                        <li class="item item-li3">
+                            <a href="#">{{conver str=MainLoginBottom_3}}</a>
+                        </li>
+                    </ul> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--[if lt IE 9]>
+        <script src="http://192.168.1.53/static/js/json2.js"></script>
+    <![endif]-->
+    <script type='text/javascript' src='http://192.168.1.53/static/js/toastr/toastr.js'></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/jquery-ui.min.js'></script>
+    <script type="text/javascript" src="http://192.168.1.53/static/js/bootstrap.js"></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/html5shiv.js'></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/SkyWalker.js'></script>
+    <script type="text/javascript" src="http://192.168.1.53/static/js/respond.js"></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/sha1.js'></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/Sortable.js'></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/messCheck.js'></script>
+    <script type='text/javascript' src='http://192.168.1.53/static/js/jquery.lazyload.js'></script>
+    <script type='text/javascript' src='js/ajaxfileupload.js'></script>
+    <script type='text/javascript' src='js/sign_up.js'></script>
+
+    <script type="text/javascript">
+        
+        // $('.my_identity').click(function(){
+        //     toastr.options = {
+        //         "closeButton": true,
+        //         "debug": false,
+        //         "newestOnTop": false,
+        //         "progressBar": false,
+        //         "positionClass": "toast-bottom-right",
+        //         "preventDuplicates": false,
+        //         "onclick": null,
+        //         "showDuration": "300",
+        //         "hideDuration": "1000",
+        //         "timeOut": "5000",
+        //         "extendedTimeOut": "1000",
+        //         "showEasing": "swing",
+        //         "hideEasing": "linear",
+        //         "showMethod": "fadeIn",
+        //         "hideMethod": "fadeOut"
+        //     }
+
+        //     toastr["success"]("My name is Inigo Montoya.")
+        // })
+        $('.loginout').click(function(){
+            $.post('/passport/logout',function(data){
+                window.location.href='/'
+            });
+        })
+        window.onload = function () {
+          $('.academic_reference_file>span').on('click',function(){
+           $('#academic_reference_task').modal('show');
+         }); 
+        sign_up();
+
+        }
+        
+    </script>
+    </body>
+</html>

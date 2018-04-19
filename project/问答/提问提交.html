@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="wd.css">
+</head>
+
+<body>
+    <div class="sgin_wd">
+        <div class="div1 clearfix">
+            <span class="f_left">标题：</span>
+            <input class="f_left" type="text" name="title" placeholder="请用一句话描述问题，用问号结尾">
+            <div class="ms_mess">标题不能少于5个字</div>
+        </div>
+        <div class="div2 clearfix">
+            <span class="f_left">描述：</span>
+            <div class="f_left">
+                <script type="text/javascript" id="container"></script>
+            </div>
+
+        </div>
+        <div class="btn clearfix">
+            <div class="btn_y f_left">提交</div>
+            <span class="f_left btn_qx">取消</span>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<script type="text/javascript" src="ueditor/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="ueditor/ueditor.all.min.js"></script>
+<!-- 实例化编辑器 -->
+<script type="text/javascript">
+var ue = UE.getEditor('container', {
+    initialFrameWidth: 550,
+    initialFrameHeight: 238
+});
+</script>
+<script type="text/javascript" src="wd.js">
+	
+</script>
+
+</html>

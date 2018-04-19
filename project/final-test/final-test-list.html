@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>期末考试列表</title>
+	<link rel="stylesheet" type="text/css" href="final-test-list.css">
+</head>
+<script type="text/javascript">
+document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+window.onresize = function() {
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+}
+</script>
+
+<body>
+	<div id="main">
+		<div class="head">
+			<i class="iconfont icon-xiangzuojiantou"></i>
+			<p>学习和思考：大学成功学习的关键的开发可</p>
+		</div>
+		<div class="content">
+			<div class="list">
+				<span class="status green">已交卷</span>
+				<p class="title">期末考试</p>
+				<p class="info"><span>考试时间：20分钟</span><span>考试题数：10</span></p>
+				<div class="time-btn clearfix">
+					<a href="javascript:;">开始考试</a>
+					<span>23天后逾期</span>
+					<!-- <span class="score">80 分</span> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="final-test-list.js"></script>
+
+</html>

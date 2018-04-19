@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="answer.css">
+</head>
+
+<body style="background: #f9f9f9;">
+    <div class="answer_box">
+        <h1>问答管理</h1>
+        <div class="filtrate_box clearfix">
+            <div class="dropdown f_left">
+                <a data-toggle="dropdown" href="#">全部课程</a>
+                <span class="caret"></span>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                    <li>1</li>
+                </ul>
+            </div>
+            <div class="f_left search">
+                <input type="text" name="">
+                <i class="iconfont">&#xe6a4;</i>
+            </div>
+            <div class="f_right checkbox_box">
+                <label for="whd" class="clearfix cc_label f_left">
+                    <input type="radio" checked="checked" id="whd">
+                    <span class="dianji"></span>
+                    <span>未回答（30）</span>
+                </label>
+                <label for="whd" class="clearfix cc_label f_left">
+                    <input type="radio" checked="checked" id="whd">
+                    <span class="dianji"></span>
+                    <span>已回答（10）</span>
+                </label>
+                <label for="whd" class="clearfix cc_label f_left">
+                    <input type="radio" checked="checked" id="whd">
+                    <span class="dianji"></span>
+                    <span>优质问题（100）</span>
+                </label>
+                <a href="javascript:;">同问最多 ↑</a>
+            </div>
+        </div>
+
+        <div id="answer_list_box" style="display: block;">
+        	<!-- 正常列表 -->
+        	<div class="answer_list">
+        		<p>用某种颜色给b c e s中的4个字染色有几种染色方法？</p>
+        		<div class="answer_list_two_line clearfix">
+        			<img src="head.png">
+        			<span>李磊</span>
+        			<span>来自 唐诗宋词十九讲</span>
+        			<span>2016-06-22  14:25</span>
+        			<span>同问（99+）</span>
+        		</div>
+        	</div>
+        	<!-- 未回答回答 -->
+        	<div class="answer_list au_height">
+        		<img src="good.png" class="good" title="优质问题">
+        		<img src="i_answer.png" class="i_answer"  title="已回答">
+        		<p>用某种颜色给b c e s中的4个字染色有几种染色方法？</p>
+        		<div class="answer_list_two_line clearfix">
+        			<img src="head.png">
+        			<span>李磊</span>
+        			<span>来自 唐诗宋词十九讲</span>
+        			<span>2016-06-22  14:25</span>
+        			<span>同问（99+）</span>
+        		</div>
+        		<div class="white_answer" style="display: none;">
+        			<textarea></textarea>
+        			<div class="white_answer_btn clearfix">
+        				<div class="white_answer_btn_yes">确定</div>
+        				<label for="nice1" class="clearfix cc_label f_left">
+                    <input type="checkbox" checked="checked" id="nice1">
+                    <span class="dianji"></span>
+                    <span>设为优质问题</span>
+                </label>
+        			</div>
+        		</div>
+        		<div class="result_box">
+        			<span>老师回答：</span>
+        			<p class="result">
+        				关键在于区域3是否与区域1相邻?\x0d原解答把区域1,2,3当做相邻的,使相邻区域不同色,有p(4,3)种的着色方法,给区域4着色有3法,给4个区域任意着色有4^4法,故所求概率=3*p(4,3)/4^
+								4=9/32.\x0d，而您把区域3看成与区域1不相邻.
+        			</p>
+        			<div class="white_result_btn clearfix">
+        				<div class="white_result_btn_yes">编辑</div>
+        				<label for="nice1" class="clearfix cc_label f_left">
+                    <input type="checkbox" checked="checked" id="nice1">
+                    <span class="dianji"></span>
+                    <span>设为优质问题</span>
+                </label>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <div class="empty_box" style="display: none;">
+        	<img src="empty.png">
+        	<p>还没有学生提问哦~</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+
+</html>

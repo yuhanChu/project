@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="wd.css">
+</head>
+
+<body>
+    <div class="teacher_qa">
+        <div class="teacher_qa_head">
+            <h1>我的问答</h1></div>
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active cc_cur" data-cou="0"><a style="cursor: pointer;" data-toggle="tab">提问</a></li>
+        </ul>
+        <div class="tab-pane fade in active" style="padding:0 20px;border: 1px solid #e9e9e9;border-top: none;">
+            <div class="teacher_qa_nav clearfix">
+                <div class="f_left">
+                    <div class="dropdown select">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                            <input type="text" readonly value="全部课程">
+                            <samp class="icon-xz select_icon"></samp>
+                        </a>
+                        <ul class="select_ul dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="javascript:void(0);">30</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="f_left" style="margin-left: 20px">
+                    <div class="dropdown select" style="width: 145px;">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                            <input type="text" readonly value="排序方式">
+                            <samp class="icon-xz select_icon"></samp>
+                        </a>
+                        <ul class="select_ul dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="javascript:void(0);">30</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="f_right clearfix">
+                    <li>
+                        <label class="checked_wd">
+                            <input type="checkbox">
+                        </label>
+                        没有评论（0）
+                    </li>
+                </ul>
+            </div>
+            <!-- 数据盒子 -->
+            <div class="teacher_qa_list_box" style="display: block;">
+                <!-- <div class="teacher_qa_list clearfix">
+                    <span></span>
+                    <div class="dv1 f_left">
+                        <img src="xq_tx.png">
+                        <p>王小海</p>
+                    </div>
+                    <div class="dv2 f_left">
+                        <p>用某种颜色给b c e s中的4个字染色有几种染色方法？</p>
+                        <div><span>2016-06-22  14:25</span><span>来自 唐诗宋词十九讲</span></div>
+                    </div>
+                    <ul class="f_left clearfix">
+                        <li class="li_1">浏览 50</li>
+                        <li class="li_2">同问 10</li>
+                        <li class="li_3">评论0</li>
+                    </ul>
+                </div>
+                <div class="teacher_qa_list clearfix">
+                    <span></span>
+                    <div class="dv1 f_left">
+                        <img src="xq_tx.png">
+                        <p>王小海</p>
+                    </div>
+                    <div class="dv2 f_left">
+                        <p>用某种颜色给b c e s中的4个字染色有几种染色方法？</p>
+                        <div><span>2016-06-22  14:25</span><span>来自 唐诗宋词十九讲</span></div>
+                    </div>
+                    <ul class="f_left clearfix">
+                        <li class="li_1">浏览 50</li>
+                        <li class="li_2">同问 10</li>
+                        <li class="li_3">评论0</li>
+                    </ul>
+                </div>
+                <div class="teacher_qa_list clearfix">
+                    <span></span>
+                    <div class="dv1 f_left">
+                        <img src="xq_tx.png">
+                        <p>王小海</p>
+                    </div>
+                    <div class="dv2 f_left">
+                        <p>用某种颜色给b c e s中的4个字染色有几种染色方法？</p>
+                        <div><span>2016-06-22  14:25</span><span>来自 唐诗宋词十九讲</span></div>
+                    </div>
+                    <ul class="f_left clearfix">
+                        <li class="li_1">浏览 50</li>
+                        <li class="li_2">同问 10</li>
+                        <li class="li_3">评论0</li>
+                    </ul>
+                </div> -->
+            </div>
+            <div class="cc_fy"></div>
+            <!-- 无数据 -->
+            <div class="teacher_qa_nolist" style="display: none;">
+                <img src="no_list.png">
+                <p>暂无符合条件的记录</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript">
+/*加载数据*/
+load_answer();
+$('.checked_wd').click(function(){
+    console.log($('.checked_wd input:checked').length);
+})
+
+/* 加载数据函数 */
+function load_answer() {
+    $('.teacher_qa_list_box').html(student_answer());
+}
+/* 渲染页面函数 */
+function student_answer() {
+    var html = "";
+
+    for (var i = 0; i < 4; i++) {
+        html += '<div class="teacher_qa_list clearfix">';
+        html += '<span></span>';
+        html += '<div class="dv1 f_left">';
+        html += '<img src="xq_tx.png">';
+        html += '<p>王小海</p>';
+        html += '</div>';
+        html += '<div class="dv2 f_left">';
+        html += '<p>用某种颜色给b c e s中的4个字染色有几种染色方法？</p>';
+        html += '<div><span>2016-06-22  14:25</span><span>来自 唐诗宋词十九讲</span></div>';
+        html += '</div>';
+        html += '<ul class="f_left clearfix">';
+        html += '<li class="li_1">浏览 50</li>';
+        html += '<li class="li_2">同问 10</li>';
+        html += '<li class="li_3">评论0</li>';
+        html += '</ul>';
+        html += '</div>';
+    }
+
+    return html;
+}
+</script>
+
+</html>

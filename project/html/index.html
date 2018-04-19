@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<title>网站后台</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="网站后台" name="description" />
+	<meta content="" name="author" />
+<!--全局CSS以及框架所需要的样式-->
+	<link href="media/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="media/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+	<link href="media/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="media/css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="media/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="media/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link rel="stylesheet" type="text/css" href="media/css/colors.css">
+<!--全局CSS以及框架所需要的样式 end-->
+	<link href="media/css/index.css" rel="stylesheet" type="text/css" />
+    <link href="media/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="page-header-fixed c-purple">
+	<!--顶部内容-->
+	<div class="header navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid"> 
+            	<ul class="xfzx-menu">
+                	<li><a href="#" class="i">首页</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">院校</a></li>
+                    <li><a href="#">实习工作</a></li>
+                    <li><a href="#">未来课程</a></li>
+                    <li><a href="#">学分银行</a></li>
+                </ul>
+
+				<a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse"><img src="media/image/sidebar-toggler.jpg" alt="" /></a>          
+
+				<ul class="nav pull-right">
+                	<li class="dropdown header_inbox_bar">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <samp class="icon-xz i-ss">&#xe60f;</samp>
+						</a>
+					</li>
+
+					<li class="dropdown header_inbox_bar" style="position:relative;">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <samp class="icon-xz i-xx">&#xe602;</samp>
+						</a>
+                        <span class="yuan" style=""></span>
+					</li>
+
+					<li class="dropdown header_inbox_bar">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <samp class="icon-xz i-wt">&#xe603;</samp>
+						</a>
+					</li>
+
+					<li class="dropdown user">
+						<a href="#" class="dropdown-toggle xfzx-user" data-toggle="dropdown">
+                            <img alt="" src="media/image/avatar1_small.jpg" />
+                            <span class="username">张海霞</span>
+                            <i class="icon-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu user-xfzx">
+							<li>
+                            	<span class="xfzx-top-user">
+                                    签约院校：清华大学<br>
+                                    合同到期时间：2018-08-12
+                                </span>
+                                <samp class="xfzx-tip-list">    
+                                	<a href="index.html" class="i">教学台</a>   
+                                    <a href="points.html">我的积分</a>
+                                    <a href="teaching.html">我的教学</a>
+                                    <a href="contract.html">合同设置</a>
+                                    <a href="student.html">学生管理</a>
+                                    <a href="finance.html">财务设置</a>
+                                    <a href="order.html">我的订单</a>
+                                    <a href="data.html">资料设置</a>
+                                    <a href="#">退出</a>
+                                </samp>
+                            </li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <!--顶部内容 end-->
+    
+    <!--左边栏目-->
+	<div class="page-sidebar nav-collapse collapse ">
+        <ul class="page-sidebar-menu">
+        	<li>
+            	<div class="xfzx_logo"></div>
+            	<div class="xfzx_left_top">
+                	<a href="index.html" class="xfzx_left_logo"></a>
+                    <ul class="nav">
+                        <li class="dropdown xfzx_left_cla">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="username">学校</span>
+                            <i class="icon-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="xuesheng.html" class="xuesheng">学生</a></li>
+                                <li><a href="xuexiao.html" class="xuexiao">学校</a></li>
+                                <li><a href="qiye.html" class="qiye">企业</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="sidebar-toggler hidden-phone"></div>
+            </li>
+            <li class="start active xfzx_li">
+                <a href="index.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe605;</samp> 
+                    <span class="title"><samp>&#xe601;</samp>教学台</span>
+                </a>
+            </li> 
+            <li class="xfzx_li closed-ul">
+                <a href="teaching.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe606;</samp>  
+                    <span class="title"><samp>&#xe601;</samp>我的教学</span>
+                </a>
+                <ul class="sub-menu">
+                	<li><span>我的教学</span></li>
+                    <li>
+                    	<a href="javascript:;" class="left-link">快速创建课程<samp class="icon-xz">&#xe600;</samp></a>
+                    	<div class="sub-menu2">
+                        	<a href="#">学历证书课程</a>
+                            <a href="#">MOOC公开课</a>
+                            <a href="#">高考辅导</a>
+                            <a href="#">微学位课程</a>
+                            <a href="#">大学预科</a>
+                            <a href="#">留学</a>
+                        </div>
+                    </li>
+                    <li><a href="teaching.html" class="left-link">在教课程</a></li>
+                    <li><a href="qanda.html" class="left-link">问答管理</a></li>
+                    <li><a href="Marking.html" class="left-link">试卷批阅</a></li>
+                    <li><a href="allclass.html" class="left-link">所教班级</a></li>
+                    <li><a href="questions.html" class="left-link">题库管理</a></li>
+                    <li><a href="paper.html" class="left-link">论文管理</a></li>
+                    <li><a href="database.html" class="left-link">教学资料库</a></li>
+                    <li><a href="homework.html" class="left-link">大作业管理</a></li>
+                </ul>
+            </li>
+            <li class="xfzx_li">
+                <a href="student.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe607;</samp>  
+                    <span class="title"><samp>&#xe601;</samp>学生管理</span>
+                </a>
+            </li>
+            <li class="xfzx_li">
+                <a href="order.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe604;</samp>
+                    <span class="title"><samp>&#xe601;</samp>我的订单</span>
+                </a>
+            </li>
+            <li class="xfzx_li">
+                <a href="points.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe60b;</samp> 
+                    <span class="title"><samp>&#xe601;</samp>我的积分</span>
+                </a>
+            </li>
+            <li class="xfzx_li">
+                <a href="contract.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe60c;</samp> 
+                    <span class="title"><samp>&#xe601;</samp>合同设置</span>
+                </a>
+            </li>
+            <li class="xfzx_li">
+                <a href="finance.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe609;</samp> 
+                    <span class="title"><samp>&#xe601;</samp>财务设置</span>
+                </a>
+            </li>
+            <li class="xfzx_li closed-ul">
+                <a href="collection.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe60a;</samp>  
+                    <span class="title"><samp>&#xe601;</samp>我的收藏</span>
+                </a>
+                <ul class="sub-menu">
+                	<li><span>我的收藏</span></li>
+                    <li><a href="collection.html" class="left-link">我的收藏</a></li>
+                    <li><a href="fans.html" class="left-link">关注/粉丝</a></li>
+                </ul>
+            </li>
+            <li class="xfzx_li closed-ul">
+                <a href="data.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe60d;</samp>
+                    <span class="title"><samp>&#xe601;</samp>资料设置</span>
+                </a>
+                <ul class="sub-menu">
+                	<li><span>资料设置</span></li>
+                    <li><a href="data.html" class="left-link">基础信息</a></li>
+                    <li><a href="head.html" class="left-link">头像设置</a></li>
+                    <li><a href="users.html" class="left-link">实名认证</a></li>
+                    <li><a href="security.html" class="left-link">安全设置</a></li>
+                    <li><a href="privacy.html" class="left-link">隐私设置</a></li>
+                    <li><a href="binding.html" class="left-link">第三方绑定</a></li>
+                </ul>
+            </li>
+            <li class="xfzx_li">
+                <a href="coupon.html" class="samll_a">
+                    <samp class="icon-xz i-jxt">&#xe60e;</samp>
+                    <span class="title"><samp>&#xe601;</samp>优惠券</span>
+                </a>
+            </li>
+            <li></li>
+        </ul>
+        <div class="map">
+        	<i class="icon-globe"></i>
+            <span>全球</span>
+            <div class="map-cont">
+            	<ul class="map-cont-list clearfix">
+                	<li><a href="">Brasil</a></li>
+                    <li><a href="">Africa - English</a></li>
+                    <li><a href="">English</a></li>
+                    <li><a href="">Canada - English</a></li>
+                    <li><a href="">België - Nederlands</a></li>
+                    <li><a href="">中国</a></li>
+                    <li><a href="">Canada - Français</a></li>
+                    <li><a href="">Belgique - Français</a></li>
+                    <li><a href="">中國香港特別行政區</a></li>
+                    <li><a href="">Latinoamérica</a></li>
+                    <li><a href="">Belgium - English</a></li>
+                    <li><a href="">台灣</a></li>
+                    <li><a href="">México</a></li>
+                    <li><a href="">Česká republika</a></li>
+                    <li><a href="">日本</a></li>
+                    <li><a href="">United States</a></li>
+                    <li><a href="">Cyprus - English</a></li>
+                    <li><a href="">한국</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--左边栏目 end-->
+    
+    <!--主要内容区域-->
+	<div class="page-container">
+        <div class="page-content">
+            <div class="container-fluid">
+            
+                <div class="row-fluid row-fluid-xf">
+                    <div class="span10">
+                        <div class="index-left-top">
+                            <table class="table">
+                                <tr>
+                                    <td><b>4</b><br>在授课程</td>
+                                    <td><b>36</b><br>未批作业</td>
+                                    <td><b>42</b><br>未批试卷</td>
+                                    <td><b>12</b><br>学生提问</td>
+                                    <td><b>4</b><br>在授班级</td>
+                                    <td class="xfbg"><b>500</b><br>学生人数</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="span2">
+                    	<a href="javascript:;" class="index-fbkc fbkc">发布课程</a>
+                    </div>
+                </div>
+                
+                <div class="row-fluid">
+                	<div class="span10">
+                        <div class="index-xfsp">
+                            <div class="xfsp-tit">
+                                <span>学分审批</span>
+                            </div>
+                            <div class="xfsp-list">
+                                <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>学生姓名</th>
+                                        <th>申请学分</th>
+                                        <th>最高成绩</th>
+                                        <th class="xfsp17">在修课程</th>
+                                        <th class="xfsp23">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>李磊</td>
+                                        <td>3.0</td>
+                                        <td>98</td>
+                                        <td>领导力-行动中的团队和领导者</td>
+                                        <td>
+                                        	<a href="" class="xfsp-a">同意</a>
+                                            <a href="" class="xfsp-a">拒绝</a>
+                                            <a href="" class="xfsp-a">查看成绩单</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>李磊</td>
+                                        <td>3.0</td>
+                                        <td>98</td>
+                                        <td>领导力-行动中的团队和领导者</td>
+                                        <td>
+                                        	<a href="" class="xfsp-a">同意</a>
+                                            <a href="" class="xfsp-a">拒绝</a>
+                                            <a href="" class="xfsp-a">查看成绩单</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>李磊</td>
+                                        <td>3.0</td>
+                                        <td>98</td>
+                                        <td>领导力-行动中的团队和领导者</td>
+                                        <td>
+                                        	<a href="" class="xfsp-a">同意</a>
+                                            <a href="" class="xfsp-a">拒绝</a>
+                                            <a href="" class="xfsp-a">查看成绩单</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>李磊</td>
+                                        <td>3.0</td>
+                                        <td>98</td>
+                                        <td>领导力-行动中的团队和领导者</td>
+                                        <td>
+                                        	<a href="" class="xfsp-a">同意</a>
+                                            <a href="" class="xfsp-a">拒绝</a>
+                                            <a href="" class="xfsp-a">查看成绩单</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>李磊</td>
+                                        <td>3.0</td>
+                                        <td>98</td>
+                                        <td>领导力-行动中的团队和领导者</td>
+                                        <td>
+                                        	<a href="" class="xfsp-a">同意</a>
+                                            <a href="" class="xfsp-a">拒绝</a>
+                                            <a href="" class="xfsp-a">查看成绩单</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            	<div class="xfsp-page">
+                                	<a href="" class="afaot">上一页</a>
+                                    <a class="i">1</a>
+                                    <a href="">2</a>
+                                    <a href="">3</a>
+                                    <a href="">...</a>
+                                    <a href="">16</a>
+                                    <a href="" class="afaot">下一页</a>
+                                </div>
+                                <div class="clear"></div>
+                        	</div>
+                        </div>
+                        <div class="index-kcjd">
+                            <div class="xfsp-tit">
+                                <span>课程进度</span>
+                            </div>
+                            <div class="kcjd-tita">
+                            	<a href="" class="kejd-bor">一周内</a>
+                                <a href="" class="i">更早</a>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="kcjd-listbig">
+                                <div class="kcjd-list">
+                                    <div class="kcjd-time">6-12<samp></samp></div>
+                                    <div class="kcjd-content">
+                                        <img src="media/image/index-2.jpg">
+                                        <div class="kcjd-cont">
+                                            <span><b>领导力－行动中的团队和领导者</b><br>更新至  3-4 团队协作的基本方法</span>
+                                        </div>
+                                        <a href="" class="kcjd-gx">更新课程</a>
+                                    </div>
+                                </div>
+                                <div class="kcjd-list">
+                                    <div class="kcjd-time">6-12<samp></samp></div>
+                                    <div class="kcjd-content">
+                                        <img src="media/image/index-2.jpg">
+                                        <div class="kcjd-cont">
+                                            <span><b>领导力－行动中的团队和领导者</b><br>更新至  3-4 团队协作的基本方法</span>
+                                        </div>
+                                        <a class="kcjd-gx ygx">已更新60%</a>
+                                    </div>
+                                </div>
+                                <div class="kcjd-list">
+                                    <div class="kcjd-time">6-12<samp></samp></div>
+                                    <div class="kcjd-content">
+                                        <img src="media/image/index-2.jpg">
+                                        <div class="kcjd-cont">
+                                            <span><b>领导力－行动中的团队和领导者</b><br>更新至  3-4 团队协作的基本方法</span>
+                                        </div>
+                                        <a href="" class="kcjd-gx">更新课程</a>
+                                    </div>
+                                </div>
+                                <div class="kcjd-list">
+                                    <div class="kcjd-time">6-12<samp></samp></div>
+                                    <div class="kcjd-content">
+                                        <img src="media/image/index-2.jpg">
+                                        <div class="kcjd-cont">
+                                            <span><b>领导力－行动中的团队和领导者</b><br>更新至  3-4 团队协作的基本方法</span>
+                                        </div>
+                                        <a href="" class="kcjd-gx">更新课程</a>
+                                    </div>
+                                </div>
+                                <div class="kcjd-list">
+                                    <div class="kcjd-time">6-12<samp></samp></div>
+                                    <div class="kcjd-content">
+                                        <img src="media/image/index-2.jpg">
+                                        <div class="kcjd-cont">
+                                            <span><b>领导力－行动中的团队和领导者</b><br>更新至  3-4 团队协作的基本方法</span>
+                                        </div>
+                                        <a href="" class="kcjd-gx">更新课程</a>
+                                    </div>
+                                </div>
+                                <div class="kcjd-list">
+                                    <div class="kcjd-time">6-12<samp></samp></div>
+                                    <div class="kcjd-content">
+                                        <img src="media/image/index-2.jpg">
+                                        <div class="kcjd-cont">
+                                            <span><b>领导力－行动中的团队和领导者</b><br>更新至  3-4 团队协作的基本方法</span>
+                                        </div>
+                                        <a href="" class="kcjd-gx">更新课程</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="javascript:;" class="kcjd-xs"><samp class="icon-xz">&#xe610;</samp>显示全部</a>
+                            <a href="javascript:;" class="kcjd-xs2"><samp class="icon-xz">&#xe611;</samp>收起</a>
+                        </div>
+                    </div>
+                    <div class="span2">
+                    	<div class="index-dbsx">
+                        	<div class="xfsp-tit">
+                                <span>待办事项</span>
+                            </div>
+                            <a href="javascript:;" class="dbsx-add"><samp class="icon-xz">&#xe612;</samp></a>
+                            <div class="clear"></div>
+                            <div class="content">
+                            	<div class="dbsx-new clearfix">
+                                	<span><textarea></textarea></span>
+                                    <input type="button" class="dbsx-an" value="确定">
+                                    <a href="javascript:;" class="col-new">取消</a>
+                                </div>
+								<dl class="foldpanel" id="my-foldpanel">
+                                    <dt>3月15号进行期中考试。</dt>
+                                    <dd>
+                                    	<span>宏观经济教材选定为《宏观经济学》 第十版作者:多恩布什，费希尔，斯塔兹 著，王志伟 译 出版社:中国人民大学出版社 出版时间:2010年1月</span> 
+										<a href=""><samp class="icon-xz">&#xe613;</samp>编辑</a>
+                                        <a href=""><samp class="icon-xz">&#xe614;</samp>删除</a>
+                                        <div class="clear"></div>
+                                    </dd>
+                                    <dt>宏观经济课上半年大作业未批 </dt>
+                                    <dd>
+                                    	<span>宏观经济教材选定为《宏观经济学》 第十版作者:多恩布什，费希尔，斯塔兹 著，王志伟 译 出版社:中国人民大学出版社 出版时间:2010年1月</span> 
+										<a href=""><samp class="icon-xz">&#xe613;</samp>编辑</a>
+                                        <a href=""><samp class="icon-xz">&#xe614;</samp>删除</a>
+                                        <div class="clear"></div>
+                                    </dd>
+                                    <dt>领导力课程4月之前需更新完毕。</dt>
+                                    <dd>
+                                    	<span>宏观经济教材选定为《宏观经济学》 第十版作者:多恩布什，费希尔，斯塔兹 著，王志伟 译 出版社:中国人民大学出版社 出版时间:2010年1月</span> 
+										<a href=""><samp class="icon-xz">&#xe613;</samp>编辑</a>
+                                        <a href=""><samp class="icon-xz">&#xe614;</samp>删除</a>
+                                        <div class="clear"></div>
+                                    </dd>
+                                    <dt>月底之前完成论文查重工作。</dt>
+                                    <dd>
+                                    	<span>宏观经济教材选定为《宏观经济学》 第十版作者:多恩布什，费希尔，斯塔兹 著，王志伟 译 出版社:中国人民大学出版社 出版时间:2010年1月</span> 
+										<a href=""><samp class="icon-xz">&#xe613;</samp>编辑</a>
+                                        <a href=""><samp class="icon-xz">&#xe614;</samp>删除</a>
+                                        <div class="clear"></div>
+                                    </dd>
+                                   	<dt>公民生态学教材选定为《持续发展与...</dt>
+                                    <dd>
+                                    	<span>宏观经济教材选定为《宏观经济学》 第十版作者:多恩布什，费希尔，斯塔兹 著，王志伟 译 出版社:中国人民大学出版社 出版时间:2010年1月</span> 
+										<a href=""><samp class="icon-xz">&#xe613;</samp>编辑</a>
+                                        <a href=""><samp class="icon-xz">&#xe614;</samp>删除</a>
+                                        <div class="clear"></div>
+                                    </dd>
+                                    <dt>2月进行两次章节测验</dt>
+                                    <dd>
+                                    	<span>宏观经济教材选定为《宏观经济学》 第十版作者:多恩布什，费希尔，斯塔兹 著，王志伟 译 出版社:中国人民大学出版社 出版时间:2010年1月</span> 
+										<a href=""><samp class="icon-xz">&#xe613;</samp>编辑</a>
+                                        <a href=""><samp class="icon-xz">&#xe614;</samp>删除</a>
+                                        <div class="clear"></div>
+                                    </dd>
+                                    <dt>完成章节测验判卷。</dt>
+                                    <dd>
+                                    	<span>宏观经济教材选定为《宏观经济学》 第十版作者:多恩布什，费希尔，斯塔兹 著，王志伟 译 出版社:中国人民大学出版社 出版时间:2010年1月</span> 
+										<a href=""><samp class="icon-xz">&#xe613;</samp>编辑</a>
+                                        <a href=""><samp class="icon-xz">&#xe614;</samp>删除</a>
+                                        <div class="clear"></div>
+                                    </dd>
+                                    <dt>领导力课程4月之前需更新完毕。</dt>
+                                    <dd>
+                                    	<span>宏观经济教材选定为《宏观经济学》 第十版作者:多恩布什，费希尔，斯塔兹 著，王志伟 译 出版社:中国人民大学出版社 出版时间:2010年1月</span> 
+										<a href=""><samp class="icon-xz">&#xe613;</samp>编辑</a>
+                                        <a href=""><samp class="icon-xz">&#xe614;</samp>删除</a>
+                                        <div class="clear"></div>
+                                    </dd>
+                                    <dt>月底之前完成论文查重工作。</dt>
+                                    <dd>
+                                    	<span>宏观经济教材选定为《宏观经济学》 第十版作者:多恩布什，费希尔，斯塔兹 著，王志伟 译 出版社:中国人民大学出版社 出版时间:2010年1月</span> 
+										<a href=""><samp class="icon-xz">&#xe613;</samp>编辑</a>
+                                        <a href=""><samp class="icon-xz">&#xe614;</samp>删除</a>
+                                        <div class="clear"></div>
+                                    </dd>
+                                   	<dt>公民生态学教材选定为《持续发展与...</dt>
+                                    <dd>
+                                    	<span>宏观经济教材选定为《宏观经济学》 第十版作者:多恩布什，费希尔，斯塔兹 著，王志伟 译 出版社:中国人民大学出版社 出版时间:2010年1月</span> 
+										<a href=""><samp class="icon-xz">&#xe613;</samp>编辑</a>
+                                        <a href=""><samp class="icon-xz">&#xe614;</samp>删除</a>
+                                        <div class="clear"></div>
+                                    </dd>
+                                    <dt>2月进行两次章节测验</dt>
+                                    <dd>
+                                    	<span>宏观经济教材选定为《宏观经济学》 第十版作者:多恩布什，费希尔，斯塔兹 著，王志伟 译 出版社:中国人民大学出版社 出版时间:2010年1月</span> 
+										<a href=""><samp class="icon-xz">&#xe613;</samp>编辑</a>
+                                        <a href=""><samp class="icon-xz">&#xe614;</samp>删除</a>
+                                        <div class="clear"></div>
+                                    </dd>
+                                    <dt>完成章节测验判卷。</dt>
+                                    <dd>
+                                    	<span>宏观经济教材选定为《宏观经济学》 第十版作者:多恩布什，费希尔，斯塔兹 著，王志伟 译 出版社:中国人民大学出版社 出版时间:2010年1月</span> 
+										<a href=""><samp class="icon-xz">&#xe613;</samp>编辑</a>
+                                        <a href=""><samp class="icon-xz">&#xe614;</samp>删除</a>
+                                        <div class="clear"></div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+	</div>
+    <!--主要内容区域 end-->
+    
+<!--弹窗-->
+<div id="main" class="fbkc_main">
+	<span class="fbkc_tit">请选择发布课程的类型</span>
+    <a href="javascript:;" id="pagebtn" class="coll_pagebtn"><samp>&#xe615;</samp></a>
+    <div class="clear"></div>
+    <div class="fbkc_left">
+    	<a href="" class="i">录播</a>
+        <a href="">直播</a>
+    </div>
+    <ul class="fbkc_right">
+    	<li><a href="" class="i">学历证书课程</a></li>
+        <li><a href="" class="c">微学位课程</a></li>
+        <li><a href="">MOOC公开课</a></li>
+        <li><a href="" class="c">大学预科</a></li>
+        <li><a href="">高考辅导</a></li>
+        <li><a href="" class="c">留学</a></li>
+        <li><a href="">职业教育</a></li>
+    </ul>
+    <div class="clear"></div>
+    <a href="" class="fbkc_an">确认并开始创建课程</a>
+</div>
+    
+<!--全局JS以及框架所需的效果-->
+<script src="media/js/jquery-1.10.1.min.js" type="text/javascript"></script>   
+<script src="media/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="media/js/app.js" type="text/javascript"></script>
+<script>
+	jQuery(document).ready(function() {    
+	   App.init(); // initlayout and core plugins
+	});
+	
+	$(function () {
+		$(".map").click(function () {
+			$(".map").toggleClass("map-cont-on");
+		});
+		$(".map-cont-on").click(function () {
+			$(".map").toggleClass("map-cont-on");
+		});
+	});
+	
+	$(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+
+		// Variables privadas
+		var links = this.el.find('.left-link');
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+
+		$next.slideToggle();
+		$this.parent().toggleClass('sub-menu2-on');
+
+		if (!e.data.multiple) {
+			$el.find('.sub-menu2').not($next).slideUp().parent().removeClass('sub-menu2-on');
+		};
+	}	
+
+	var accordion = new Accordion($('.sub-menu'), false);
+});
+
+</script>
+<!--全局JS以及框架所需的效果 end-->
+<script src="media/js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript"></script>
+<script src="media/js/foldpanel.min.js" type="text/javascript"></script>
+<script src="media/js/layer/layer.js"></script>
+<script>
+//课程进度展开收起
+$(".kcjd-xs").click(function() {
+	$(".kcjd-listbig").toggleClass("kcjd-listbig-no");
+	$(".kcjd-xs").css('display', 'none');
+	$(".kcjd-xs2").css('display', 'block');
+	return false;
+});
+$(".kcjd-xs2").click(function() {
+	$(".kcjd-listbig").toggleClass("kcjd-listbig-no");
+	$(".kcjd-xs").css('display', 'block');
+	$(".kcjd-xs2").css('display', 'none');
+});
+
+//待办事项-滚动条
+(function($){
+	$(window).load(function(){
+		$(".content").mCustomScrollbar();
+	});
+})(jQuery);
+
+//待办事项-点击下拉
+$(function(){
+	$('dl#my-foldpanel').foldpanel({
+		init: true,			// 初始第一个展开, 默认为 true
+		time: 100,			// panel展开动画时间, 默认为 100ms
+		dbclose: true,		// 在此点击关闭, 默认为 true
+	});
+})
+
+//待办事项-点击展开新增
+$(".dbsx-add").click(function() {
+	$(".dbsx-new").toggleClass("dbsx-new-no");
+	return false;
+	});
+$(".col-new").click(function() {
+	$(".dbsx-new").toggleClass("dbsx-new-no");
+});
+
+//弹窗
+$('.fbkc').on('click', function(){
+    layer1 = layer.open({
+		type: 1,
+		area: ['517px', '323px'],   //定义弹窗大小
+		closeBtn: false,  // 去除关闭按钮
+		title: false,   //去除标题
+		shade: [0.7, '#000'],   //遮罩层颜色与透明度
+		skin: '', //加上边框 layui-layer-rim
+		shadeClose: false, //点击遮罩关闭
+		shift: 1, //0-6的动画形式，-1不开启
+		content: $('#main') //这里content是一个DOM
+	});
+});
+//自设关闭按钮 
+$('#pagebtn').on('click', function(){  
+    layer.close(layer1);  //关闭弹窗1
+}); 
+
+</script>
+</body>
+</html>

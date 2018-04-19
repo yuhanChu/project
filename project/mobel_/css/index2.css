@@ -1,0 +1,451 @@
+/*媒体查询*/
+
+
+/*整体盒子*/
+.layout {
+    min-width: 300px;
+    max-width: 750px;
+    margin:0 auto;
+    background: #f9f9f9;
+}
+/*顶部*/
+.mui-bar-nav
+{
+    height: 3.4rem;
+    background: #013a58;
+    position: relative;
+}
+.mui-bar-nav img {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0.9rem;
+    margin-left: 0.5rem;
+}
+.mui-bar-nav a {
+    font-size: 1.1rem;
+    color: #ffffff;
+    line-height: 3.4rem;
+}
+.mui-bar-nav .all {
+	margin-left:3.5rem;
+	margin-right: 1rem;
+}
+.change {
+    margin-left: 2.3rem;
+    margin-right: 0.8rem;
+}
+.mui-bar-nav .f_right.wel {
+    margin-right: 0.5rem;
+}
+
+
+/*导航*/
+.nav {
+    width: 100%;
+    height:75px;
+    background: #ffffff;
+    position: relative;
+}
+.nav h2 {
+    font-size: 17.98px;
+    font-family: "MicroSoft YaHei";
+    font-weight: bold;
+    color: #fe6701;
+    position: absolute;
+    left:15px;
+    top:23px;
+}
+.nav p {
+    font-size: 8.85px;
+    font-family: "Microsoft YaHei Regular";
+    color: #fe6701;
+    position: absolute;
+    left:15px;
+    top:43px;
+}
+.nav ul {
+    position: absolute;
+    top:27px;
+    right:20.5px;
+}
+.nav ul li {
+    float: left;
+}
+.nav ul li:nth-child(2) {
+    width: 60px;
+    padding:0 20.5px;
+    margin-right: 20.5px;
+    border-right: 1px dashed #ccc;
+    border-left:1px dashed #ccc;
+}
+.nav img {
+	display: block;
+}
+.nav ul li:nth-child(1) img{
+    width: 19px;
+    height: 20px;
+    // padding-right: 20.5px;
+    margin-right: 20.5px;
+}
+.nav ul li:nth-child(2) img {
+    width: 19px;
+    height: 20px;
+}
+.nav ul li:nth-child(3) img {
+    width: 19px;
+    height: 20px;
+}
+
+/*banner*/
+.banner {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.banner .pic {
+    width: 500%;
+}
+.banner .pic li {
+    width: 20%;
+    float: left;
+}
+.banner .pic li img {
+    width: 100%;
+    display: block;
+}
+.banner .point {
+    position: absolute;
+    left:50%;
+    margin-left: -10.5px;
+    bottom:10px;
+}
+.banner .point li {
+    float: left;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: #4d4d4d;
+}
+.banner .point li:nth-child(2) {
+    margin-left: 3px;
+    margin-right:3px;
+}
+.banner .point .current {
+    background: #fff;
+}
+/*特色*/
+.feature {
+    width: 100%;
+    height: 116px;
+    background: #f9f9f9;
+}
+.feature ul {
+    width: 100%;
+    height:95.5px;
+    background : #ffffff;
+}
+.feature ul li{
+    width: 25%;
+    float: left;
+    padding-top:27px;
+}
+.feature ul li a {
+    display: block;
+    border-right: 1px solid #cfcfcf;
+}
+.feature .no_border {
+    border:none;
+}
+.feature ul li a img {
+    width: 20px;
+    height: 20px;
+    margin:0 auto;
+    display: block;
+}
+.feature ul li a  h2 {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 11px;
+}
+/*猜你喜欢*/
+.like{
+    width: 100%;
+    background: #ffffff;
+}
+.like .like_top {
+    width: 100%;
+    height:61.5px;
+}
+.like .like_top> span{
+    width: 8px;
+    height: 24.5px;
+    background: url("../images/orange.jpg") no-repeat;
+    -webkit-background-size: 8px 24.5px;
+    background-size:8px 24.5px;
+    float: left;
+    margin-top:20px;
+    margin-left: -4px;
+}
+.like .like_top h1 {
+    font-size: 16px;
+    line-height: 61.5px;
+    float: left;
+    margin-left: 10.5px;
+}
+.like .like_top a {
+    display: inline-block;
+    line-height: 61.5px;
+    float: right;
+    font-size: 11px;
+    color: #fe6701;
+}
+.like .like_top a span {
+    display:inline-block;
+    width: 14px;
+    height: 12px;
+    background: url("../images/oran.jpg") no-repeat;
+    -webkit-background-size:14px 12px;
+    background-size:14px 12px;
+    margin-right: 15px;
+    margin-left: 10px;
+}
+.like section {
+    width: 50%;
+    float: left;
+    padding:0 1.5rem 0 1.35rem;
+    margin-top: 15px;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    border-bottom:1px solid #cfcfcf;
+}
+.like section:nth-child(2),
+.like section:nth-child(3) {
+    margin-top: 0;
+}
+/*.like section:nth-child(2n-1) {*/
+    /*border-left:1px solid #cfcfcf;*/
+/*}*/
+.like section img{
+    width: 100%;
+    display: block;
+}
+.like section p {
+    font-size: 14px;
+    margin-top: 23px;
+    margin-left: 2px;
+}
+.like section>span {
+    font-size:12px;
+    display: block;
+    color:#999999;
+    margin: 23px 0;
+    margin-left: 2px;
+}
+.like section div {
+    width: 100%;
+    margin:12px 2px;
+}
+/*.like section div .one {*/
+    /*width: 23px;*/
+    /*padding:2px 4px;*/
+    /*font-size: 10px;*/
+    /*margin-left: 4px;*/
+    /*box-sizing: border-box;*/
+    /*border: 1px solid #cccccc;*/
+/*}*/
+.like section div .one {
+    margin-top: 0;
+    font-size: 1rem;
+    // padding:2px 4px;
+    border:1px solid #cfcfcf;
+    margin: 0 4px;
+}
+.like section div .one:first-child {
+    margin-left: 0;
+}
+.like section div .mor{
+    border:0;
+    padding:0;
+    font-size: 0.9rem;
+}
+.like section div .bg {
+    border: none;
+    padding:0;
+    background: url("../images/black.jpg") no-repeat;
+    width: 1rem;
+    height: 1rem;
+    background-size: 10px 10px;
+    margin-right: 5px;
+    margin-top: 2px;
+}
+
+/*点击查看更多*/
+.tap {
+    width: 100%;
+    background: #f9f9f9;
+    height:96px;
+}
+.tap_box {
+    width: 100%;
+    height:69px;
+    background: #ffffff;
+    position: relative;
+}
+.tap a {
+    border:1px solid #313544;
+    font-size: 10px;
+    padding:10px 45px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-top: -18px;
+    margin-left: -94px;
+    border-radius: 18px;
+}
+
+/*热门学校*/
+.hot {
+    width: 100%;
+    background: #ffffff;
+}
+.hot .hot_top {
+    width: 100%;
+    height:61.5px;
+    line-height: 61.5px;
+}
+.hot .hot_top> span{
+    width: 8px;
+    height: 24.5px;
+    background: url("../images/orange.jpg") no-repeat;
+    -webkit-background-size: 8px 24.5px;
+    background-size:8px 24.5px;
+    float: left;
+    margin-top:20px;
+    margin-left: -4px;
+}
+.hot .hot_top h1 {
+    font-size: 16px;
+    line-height: 61.5px;
+    float: left;
+    margin-left: 10.5px;
+}
+.hot .hot_top a {
+    display: inline-block;
+    line-height: 61.5px;
+    float: right;
+    margin-right: 15px;
+    font-size: 11px;
+    color: #999999;
+}
+.hot  section {
+    width: 100%;
+    margin-bottom:25px;
+    padding:0 15px;
+    border-bottom:1px solid #cfcfcf;
+}
+.hot  section div {
+    padding-left:13px;
+    padding-bottom: 15px;
+
+}
+.hot  section div img {
+    width: 75px;
+    height: 54px;
+}
+.hot  section div p {
+    font-size: 14px;
+    text-align: center;
+}
+.hot  section div h1 {
+    font-size:14px;
+}
+.hot  section div a {
+    display: inline-block;
+    font-size: 15px;
+    color: #cfcfcf;
+    line-height: 30px;
+}
+.hot  section div:nth-child(2){
+    padding-bottom: 0;
+}
+/*入住机构*/
+.branch {
+    width: 100%;
+    padding:0 15px;
+    background: #ffffff;
+}
+.branch h1 {
+    font-size: 12px;
+    text-align: center;
+    padding-top: 18px;
+}
+.branch ul {
+    width: 100%;
+    padding-bottom: 33px;
+}
+.branch ul li {
+    width: 25%;
+    text-align: center;
+    margin-top: 30px;
+    float: left;
+}
+.branch ul li a {
+    font-size: 15px;
+    color: #807e98;
+}
+
+footer {
+    width: 100%;
+    padding: 0 15px;
+}
+footer ul {
+    width: 100%;
+    margin-top: 24px;
+}
+footer ul li {
+    width: 25%;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+    border-right: 1px solid #cfcfcf;
+}
+footer ul li:last-child {
+    border-right: none;
+}
+footer p {
+    font-size: 12px;
+    color: #999999;
+    text-align: center;
+    margin-top: 20px;
+}
+footer p:nth-child(3){
+    display: block;
+    margin-top: 15px;
+    padding-bottom: 28px;
+}
+
+
+
+/*媒体查询*/
+@media screen and (max-width:320px) {
+    .top_bar_box img {
+        margin-left: 7px;
+    }
+    .top_bar_box .all {
+        margin-left: 30px;
+    }
+    .top_bar_box .change {
+        margin-left: 11px;
+    }
+    .top_bar_box .wel {
+        margin-right: 9px;
+    }
+    .hot  section div {
+        padding-left:0px;
+        padding-bottom: 15px;
+    }
+
+}

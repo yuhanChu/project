@@ -1,0 +1,9 @@
+function proving() {
+	
+	
+
+		
+		
+	
+}
+proving();

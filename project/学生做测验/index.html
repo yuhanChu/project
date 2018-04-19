@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="main-top">
+            <p class="title">第1章 第1节 现代艺术与古典艺术起源 测验</p>
+            <p class="other">课程名称：艺术概论</p>
+            <p class="other">总分数：100 及格分数：60 考试时间：90分钟</p>
+            <ul class="clearfix">
+                <li class="bg-green">1</li>
+                <li class="bd-green">2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+            <div class="time clearfix">
+                <span class="info">倒计时：</span>
+                <span class="minute">05</span>
+                <span class="fh">:</span>
+                <span class="second">00</span>
+            </div>
+        </div>
+        <p class="hint">提示： 本章节测验考试次数已用完，交卷不影响本节测验成绩</p>
+        <div class="content">
+            <img class="before" src="index/brfore.png">
+            <img class="after" src="index/after.png">
+            <div class="test">
+                <p class="type">单选题</p>
+                <div class="question">
+                    <p>1、（10分）苏轼、黄庭坚、米芾、蔡襄是我国（ ）代四大书法家</p>
+                </div>
+                <div class="answer">
+                    <div class="answer-list clearfix">
+                        <label for="answer1" class="clearfix">
+                            <input type="radio" name="answer" id="answer1">
+                            <span class="dianji"></span>
+                        </label>
+                        <p>A． 汉</p>
+                    </div>
+                    <div class="answer-list clearfix">
+                        <label for="answer2" class="clearfix">
+                            <input type="radio" name="answer" id="answer2">
+                            <span class="dianji"></span>
+                        </label>
+                        <p>B． 汉</p>
+                    </div>
+                    <div class="answer-list clearfix">
+                        <label for="answer3" class="clearfix">
+                            <input type="radio" name="answer" id="answer3">
+                            <span class="dianji"></span>
+                        </label>
+                        <p>C． 汉</p>
+                    </div>
+                    <div class="answer-list clearfix">
+                        <label for="answer4" class="clearfix">
+                            <input type="radio" name="answer" id="answer4">
+                            <span class="dianji"></span>
+                        </label>
+                        <p>D． 汉</p>
+                    </div>
+                </div>
+            </div>
+            <div class="test-btn clearfix">
+                <div class="next-btn">确定并进入下一题</div>
+                <div class="send-btn">交卷</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+var list = ['1', '2', '3', '4', '5'];
+window.onload = function() {
+    var m = 0; //分
+    var s = 10; //秒
+    var countdown = document.getElementById("title");
+    getCountdown();
+    setInterval(function() { getCountdown() }, 1000);
+
+    function getCountdown() {
+        countdown.innerHTML = "<span>" + m + "</span> ：<span>" + s + "</span>";
+        if (m == 0 && s == 0) {
+            // alert("倒计时结束");
+            // m = 00;
+            // s = 00;
+        } else if (m >= 0) {
+            if (s > 0) {
+                s--;
+            } else if (s == 0) {
+                m--;
+                s = 59;
+            }
+        }
+    }
+}
+</script>
+
+</html>

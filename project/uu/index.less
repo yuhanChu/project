@@ -1,0 +1,625 @@
+/*公用的css*/
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    /*我们要去除在所有的浏览器当中点击过后有一个高亮的效果*/
+    /*击*/
+    -webkit-tap-highlight-color: transparent;
+    /*我们把他设置透明*/
+    tap-highlight-color: transparent;
+    /*我们需要设置所有的元素宽度以边框开始计算*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "MicroSoft YaHei", sans-serif;
+    /*如果没有微软雅黑 就使用移动端默认的字体*/
+    font-size: 14px;
+    color: #333;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #333;
+}
+
+
+/*清楚移动端浏览器对表单的默认样式*/
+
+input[type="search"],
+input[type="tel"],
+textarea {
+    border: 0;
+    resize: none;
+    outline: none;
+    /*清除移动浏览默认的样式*/
+    -webkit-appearance: none;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+
+/*清除浮动*/
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+/* html {
+    font-size: 62.5%;
+} */
+
+
+body {
+    background: #F9F9F9;
+}
+
+h1,
+h2,
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*公用的css*/
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    /*我们要去除在所有的浏览器当中点击过后有一个高亮的效果*/
+    /*击*/
+    -webkit-tap-highlight-color: transparent;
+    /*我们把他设置透明*/
+    tap-highlight-color: transparent;
+    /*我们需要设置所有的元素宽度以边框开始计算*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "MicroSoft YaHei", sans-serif;
+    /*如果没有微软雅黑 就使用移动端默认的字体*/
+    font-size: 14px;
+    color: #333;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #333;
+}
+
+
+/*清楚移动端浏览器对表单的默认样式*/
+
+input[type="search"],
+input[type="tel"],
+textarea {
+    border: 0;
+    resize: none;
+    outline: none;
+    /*清除移动浏览默认的样式*/
+    -webkit-appearance: none;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+
+/*清除浮动*/
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+.img {
+    display: block;
+}
+
+body {
+    background: #F9F9F9;
+}
+
+h1,
+h2,
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*整体盒子*/
+
+.layout {
+    min-width: 300px;
+    max-width: 768px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    .cyh_head {
+        height: 4.4rem;
+        background: gradient(linear, 90 top, 0 100%, from(#c13cd7), to(#7f43f1));
+        background: -webkit-gradient(linear, 90 top, 50% 100%, from(#c13cd7), to(#7f43f1));
+        &>div {
+            height: 100%;
+            line-height: 4.4rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            span {
+                display: inline-block;
+                width: 1.4rem;
+                height: 1.4rem;
+                background: url('jiantou.png');
+                background-size: cover;
+            }
+            p {
+                display: inline-block;
+                font-size: 1.6rem;
+                color: #fff;
+                padding-left: 3.3rem;
+            }
+            i {
+                display: inline-block;
+                width: 1.4rem;
+                height: 1.4rem;
+                background: url('head_r.png');
+                background-size: cover;
+                margin-top: 1.2rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+    .c_banner {
+        height: 35rem;
+        background: url(c_banner.png) no-repeat;
+        background-size: cover;
+        padding-top: 3.25rem;
+        .banner_zi {
+            height: 10rem;
+            width: 26.8rem;
+            background: url(banner_zi.png) no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2.1rem;
+            p {
+                font-size: 1.3rem;
+                color: #c3cfff;
+                font-weight: bold;
+            }
+            .ma_19 {
+                margin-top: 1.9rem;
+                margin-bottom: 1rem;
+            }
+            .p {
+                font-size: 1.3rem;
+                color: #c3cfff;
+                font-weight: normal;
+                line-height: 2.7rem;
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+        .img {
+            width: 3.5rem;
+            height: 2.8rem;
+            margin: 0 auto;
+            margin-top: 10rem;
+        }
+        #cyh_bao {
+            height: 4rem;
+            margin: 0 auto;
+            width: 14.15rem;
+            background: url('baoming.png') no-repeat;
+            background-size: cover;
+            text-align: center;
+            line-height: 4rem;
+            color: #323232;
+            margin-top: 2.5rem;
+            font-size: 1.2rem;
+        }
+    }
+    .cc_why {
+        padding-top: 3.2rem;
+        padding-bottom: 3.9rem;
+        background-color: #f4eeee;
+        text-align: center;
+        &>h1 {
+            font-size: 1.4rem;
+        }
+        &>span {
+            font-size: 0.7rem;
+            color: #888888;
+        }
+        ul {
+            li {
+                margin-top: 3.2rem;
+                .img1 {
+                    width: 5rem;
+                    height: 4.7rem;
+                }
+                .img2 {
+                    width: 5.4rem;
+                    height: 7.25rem;
+                }
+                .img3 {
+                    width: 6.1rem;
+                    height: 5.75rem;
+                }
+                p {
+                    font-size: 1.3rem;
+                    color: #323232;
+                    font-weight: bold;
+                    margin-top: 1rem;
+                    line-height: 2.5rem;
+                }
+            }
+        }
+    }
+    .cyh_school {
+        height: 40.2rem;
+        background: url(banner2.png) no-repeat;
+        background-size: cover;
+        text-align: center;
+        padding-top: 1.4rem;
+        h2 {
+            font-size: 1.4rem;
+            color: #cfd9ff;
+        }
+        span {
+            font-size: 0.7rem;
+            color: #cfd9ff;
+        }
+        div {
+            width: 25.25rem;
+            height: 17.25rem;
+            background: url('cc_school.png') no-repeat;
+            background-size: cover;
+            margin: 0 auto;
+            margin-top: 1.9rem;
+            margin-bottom: 1.5rem;
+        }
+        h1 {
+            font-size: 1.3rem;
+            color: #cfd9ff;
+            text-align: left;
+            padding-left: 2.4rem;
+        }
+        p {
+            font-size: 1.1rem;
+            padding-left: 2.4rem;
+            text-align: left;
+            color: #cfd9ff;
+            margin-top: 1rem;
+            width: 29.4rem;
+            line-height: 2rem;
+        }
+    }
+    .cc_major {
+        padding: 3rem 0 1.1rem;
+        padding-left: 4rem;
+        background-color: #ecf4f7;
+        text-align: center;
+        &>h2 {
+            font-size: 1.4rem;
+            color: #323232;
+            margin-left: -4rem;
+        }
+        &>span {
+            font-size: 0.7rem;
+            color: #888888;
+            margin-left: -4rem;
+        }
+        .major1 {
+            background-color: #fff;
+            padding: 1.5rem 1rem 2.5rem;
+            width: 26rem;
+            margin: 0 auto;
+            margin-top: 2.2rem;
+            .major1_h {
+                padding-left: 4.8rem;
+                text-align: left;
+                position: relative;
+                h1 {
+                    font-size: 1.5rem;
+                    color: #323232;
+                    margin-bottom: 1.6rem;
+                }
+                span {
+                    font-size: 1.5rem;
+                    color: #323232;
+                }
+                p {
+                    font-size: 1rem;
+                    margin-top: 2.4rem;
+                }
+                img {
+                    position: absolute;
+                    width: 9rem;
+                    height: 9.45rem;
+                    top: .3rem;
+                    left: -5rem;
+                }
+            }
+            .major_p {
+                position: relative;
+                p {
+                    font-size: 1.1rem;
+                    color: #323232;
+                    margin-top: 3.1rem;
+                    text-align: left;
+                    line-height: 2rem;
+                }
+                span {
+                    position: absolute;
+                    bottom: -2rem;
+                    right: 1rem;
+                    color: #3b8aff;
+                    font-size: 1.2rem;
+                }
+                span::after {
+                    display: inline-block;
+                    content: "";
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    background: url('bl.png');
+                    background-size: cover;
+                    margin-left: .5rem;
+                    margin-bottom: -0.25rem;
+                }
+                .cc_span::after {
+                    background: url('bll.png');
+                    background-size: cover;
+                }
+            }
+            .majon_box {
+                margin-top: 3.2rem;
+                text-align: left;
+                h1 {
+                    font-size: 1.2rem;
+                    color: #646464;
+                }
+                &>div {
+                    margin-top: 1.5rem;
+                    p {
+                        font-size: 1rem;
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    .cyh_job {
+        background: url('banner3.png') no-repeat;
+        background-size: cover;
+        padding-top: 1.1rem;
+        padding-bottom: 1.25rem;
+        text-align: center;
+        h1 {
+            font-size: 1.4rem;
+            color: #cfd9ff;
+        }
+        span {
+            font-size: 0.7rem;
+            color: #cfd9ff;
+        }
+        .job_box {
+            margin-top: .8rem;
+        }
+        .job_c {
+            width: 29.7rem;
+            margin: 0 auto;
+            background: rgba(67, 170, 123, .6);
+            padding-top: 1.3rem;
+            padding-left: 1.8rem;
+            padding-bottom: 1.3rem;
+            text-align: left;
+            p {
+                font-size: 1.2rem;
+                color: #fff;
+                line-height: 2rem;
+                font-weight: bold;
+            }
+            ul {
+                margin-top: 1.25rem;
+                li:before {
+                    content: '';
+                    width: .6rem;
+                    height: .6rem;
+                    border-radius: 50%;
+                    background: #fff;
+                    display: inline-block;
+                    margin-right: 0.5rem;
+                    vertical-align: middle;
+                    margin-top: -2.3rem;
+                }
+                p {
+                    font-size: 1.1rem;
+                    font-weight: normal;
+                    display: inline-block;
+                }
+            }
+        }
+        .job_l {
+            width: 29.7rem;
+            margin: 0 auto;
+            text-align: left;
+            padding-top: 1.3rem;
+            padding-left: 1.8rem;
+            padding-bottom: 1.3rem;
+            background: rgba(202, 84, 70, .6);
+            p {
+                font-size: 1.2rem;
+                color: #fff;
+                line-height: 2rem;
+                font-weight: bold;
+            }
+            ul {
+                margin-top: 1.25rem;
+                li:before {
+                    content: '';
+                    width: .6rem;
+                    height: .6rem;
+                    border-radius: 50%;
+                    background: #fff;
+                    display: inline-block;
+                    margin-right: 0.5rem;
+                    vertical-align: middle;
+                    margin-top: -2.3rem;
+                }
+                p {
+                    font-size: 1.1rem;
+                    font-weight: normal;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .cyh_ry {
+        height: 53.8rem;
+        background: url('banner4.png');
+        background-size: cover;
+        text-align: center;
+        h1 {
+            padding-top: 4.7rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #323232;
+        }
+        span {
+            font-size: .7rem;
+            color: #888;
+        }
+        .cc_div1 {
+            text-align: left;
+            position: absolute;
+            font-size: 1.1rem;
+            width: 14rem;
+            color: #646464;
+            padding-left: 2.5rem;
+            background: url(icon3.png) no-repeat;
+            background-size: 2rem;
+            
+        }
+    }
+    .cyh_foot {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        background: #ffb22d;
+        color: #fff;
+        height: 5rem;
+        line-height: 5rem;
+        text-align: center;
+        font-size: 1.6rem;
+        max-width: 768px;
+    }
+}
+
+/* @media screen and (min-width:320px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+@media (min-width:324px) and (max-width:360px) {
+    html {
+        font-size: 67.5%;
+    }
+}
+@media (min-width:361px) and (max-width:390px) {
+    html {
+        font-size: 73.5%;
+    }
+}
+@media (min-width:391px) and (max-width:426px) {
+    html {
+        font-size: 81.5%;
+    }
+}
+@media (min-width:427px) and (max-width:450px) {
+    html {
+        font-size: 85.5%;
+    }
+}
+@media (min-width:451px) and (max-width:481px) {
+    html {
+        font-size: 91.5%;
+    }
+}
+@media (min-width:482px) and (max-width:510px) {
+    html {
+        font-size: 97.5%;
+    }
+}
+@media (min-width:511px) and (max-width:530px) {
+    html {
+        font-size: 102.5%;
+    }
+}
+@media (min-width:512px) and (max-width:px) {
+    html {
+        font-size: 97.5%;
+    }
+} */
+@media screen and ( min-width: 320px){html{font-size: 62.5%}/*320px显示屏样式 苹果4/4S/5C/5S黑莓Z30 */}
+@media screen and ( min-width: 360px){html{font-size: 69.5%}/*360px显示屏样式 索尼Z1*/}
+@media screen and ( min-width: 375px){html{font-size: 73.5%}/*360px显示屏样式 索尼Z1*/}
+@media screen and ( min-width: 384px){html{font-size: 74.5%}/*384px显示屏样式 黑莓Z10 谷歌 Nexus 6 LG Optimus G*/}
+@media screen and ( min-width: 400px){html{font-size: 79.5%}/*399px显示屏样式 三星galaxyNote*/}
+@media screen and ( min-width: 414px){html{font-size: 81.5%}/*414px显示屏样式 苹果6plus*/}
+@media screen and ( min-width: 424px){html{font-size: 84.5%}/*424px显示屏样式 LG 4X */}
+@media screen and ( min-width: 480px){html{font-size: 91.5%}/*480px显示屏样式 索尼MT27i Xperia sola*/}
+@media screen and ( min-width: 540px){html{font-size: 120.5%}/*640px显示屏样式 摩托罗拉Droid3/4/Razr Atrix 4g*/}
+@media screen and ( min-width: 640px){html{font-size: 155.5%}/*640px以上显示屏样式*/}

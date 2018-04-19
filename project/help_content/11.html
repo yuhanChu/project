@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <link rel="stylesheet" type="text/css" href='css/bootstrap.css'>
+  <style type="text/css">
+    .dv {
+      width: 360px;
+      height: 500px;
+      margin: 100px auto;
+      border: 1px solid #d7d8dc;
+    }
+    .panel-default > .panel-heading {
+      background: #fff;
+    }
+    .panel {
+      border: none;
+    }
+    .panel-group .panel-heading + .panel-collapse > .panel-body, .panel-group .panel-heading + .panel-collapse > .list-group {
+      border: none;
+    }
+  </style>
+</head>
+<body>
+	<div class="dv">
+     <div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          用户指南
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+          开发文档
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+      <div class="panel-body">
+        
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+          技术支持
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+      <div class="panel-body">
+        
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <script type="text/javascript" src='js/jquery-1.9.1.js'></script>
+  <script type="text/javascript" src='js/bootstrap.min.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,694 @@
+
+.sign_up_body {
+	width: 100%;
+	background-color:#f5f5f5;
+}
+.nav_div {
+	height: 58px;
+	line-height: 58px;
+	font-size: 14px;
+	color:#909090;
+}
+/* 专业信息 */
+.major {
+	padding:20px 0 16px 10px;
+	background: #ffffff;
+}
+.information {
+	font-size: 18px;
+	color:#fe6701;
+	border-left: 4px solid #ff8736;
+	padding:0 50px 0 30px;
+}
+.summary {
+	font-size: 16px;
+	color:#646464;
+	border-left: 1px solid #d7d8dc;
+	padding-left: 50px
+}
+.major_content {
+	padding: 32px 0 0 34px;
+}
+.major_content_left {
+	margin-right: 62px;
+}
+.major_content_left>img {
+	height: 150px;
+	width: 275px;
+}
+.major_content_left>p {
+	font-size: 16px;
+	color:#323232;
+	margin-top: 20px;
+}
+.major_content_right>p {
+	font-size: 14px;
+	color:#323232;
+}
+.major_content_right>ul {
+	width: 715px;
+}
+.major_content_right>ul>li {
+	float: left;
+	margin-top: 25px;
+	padding-left: 36px;
+	background:url('../image/major_sprit.png') no-repeat;
+}
+.major_icon1 {
+	background-position: left top !important;
+	margin-left: 0;
+}
+.major_icon2 {
+	background-position: left -28px !important;
+	margin-left: 130px;
+}
+.major_icon3 {
+	background-position: left -60px !important;
+	margin-left: 130px;
+}
+.major_icon4 {
+	background-position: left -92px !important;
+}
+.major_icon5 {
+	background-position: left -124px !important;
+	margin-left: 157px;
+}
+
+/* 申请 */
+.application {
+	margin-top: 25px;
+	padding: 19px 40px 37px 10px;
+	background: #ffffff;
+}
+.application>p {
+	padding-left: 34px;
+	font-size: 18px;
+	border-left: 4px solid #fe6701;
+}
+.application>p>span {
+	font-size: 12px;
+	color: #909090;
+	display: inline-block;
+	margin-left: 25px;
+}
+.p_border {
+	margin: 15px 0 0 30px;
+	border-bottom: 1px solid #d7d8dc;
+}
+
+/* 个人资料 */
+.personal_data,.application_materials,.recommendation {
+	background: #ffffff;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 45px;
+	font-size: 16px;
+}
+.personal_data_box {
+	padding: 50px 40px 33px;
+	background: #ffffff;
+}
+.personal_data_content {
+	border-bottom:1px dashed #e0e0e0;
+	padding-bottom: 58px;
+}
+.name>div,
+.english>div,
+.gender>div,
+.nationality>div,
+.citizen>div,
+.mobile>div,
+.birthdate>div,
+.education>div,
+.e-mail>div,
+.address>div,
+.code>div{
+	float: left;
+}
+.name>div>p,
+.english>div>p,
+.gender>div>p,
+.nationality>div>p,
+.citizen>div>p,
+.mobile>div>p,
+.birthdate>div>p,
+.education>div>p,
+.e-mail>div>p,
+.address>div>p,
+.code>div>p{
+	text-align: right;
+}
+.name>div>input,
+.english>div>input,
+.nationality>div>select,
+.mobile>div>input,
+.birthdate>div>input,
+.education>div>select,
+.e-mail>div>input,
+.address>div>input,
+.code>div>input{
+	width: 298px;
+	height: 38px;
+	border:1px solid #d7d8dc;
+	border-radius: 5px;
+	padding-left: 10px;
+	margin-left: 28px;
+}
+select {
+	color:#909090;
+}
+.name>span {
+	display: inline-block;
+	background: url('../image/personal_data_sprit.png') no-repeat;
+	background-position: left top;
+	width: 20px;
+	height: 20px;
+	margin-left: 20px;
+	margin-bottom: -12px;
+}
+.english {
+	margin-top: 30px;
+}
+.gender {
+	margin-top: 30px;
+}
+.gender_radio {
+	margin-left: 22px;
+	margin-top: 10px;
+}
+input[type="radio"] {
+    margin: 3px 3px 0px 5px;
+    display: none !important;
+}
+label {
+	padding-left: 30px;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	margin-left: 7px;
+	margin-top: 5px;
+	background: url(../image/personal_data_sprit.png) no-repeat left -108px !important;
+	font-size: 16px;
+}
+label.checked {
+    background: none;
+    width: 16px;
+	height: 16px;
+    background: url(../image/personal_data_sprit.png) no-repeat left -73px !important;
+}
+.nationality {
+	margin-top: 30px;
+}
+.nationality>span {
+	display: inline-block;
+	background: url('../image/personal_data_sprit.png') no-repeat;
+	background-position: left -35px;
+	width: 20px;
+	height: 20px;
+	margin-left: 20px;
+	margin-bottom: -12px;
+}
+.citizen {
+	margin-top: 30px;
+}
+.citizen_input {
+	margin-left: 30px;
+}
+.citizen_input select {
+	width: 91px;
+	height: 38px;
+	border:1px solid #d7d8dc;
+	border-radius: 5px;
+	text-align: center;
+	padding: 0 10px;
+}
+.citizen_input input {
+	width: 191px;
+	height: 38px;
+	border: 1px solid #d7d8dc;
+	border-radius: 5px;
+	margin-left: 10px;
+	padding-left: 10px;
+}
+.mobile {
+	margin-top: 30px;
+}
+.birthdate {
+	margin-top: 30px;
+}
+.education {
+	margin-top: 30px;
+}
+.e-mail {
+	margin-top: 30px;
+}
+.address {
+	margin-top: 30px;
+}
+.code {
+	margin-top: 30px;
+}
+.personal_data_content_right {
+	margin-right: 200px;
+	position: relative;
+}
+.personal_data_content_right > .file_img {
+	width: 134px;
+	height: 163px;
+	border: 1px solid #ededed;
+	text-align: center;
+	padding-top: 10px;
+}
+.personal_data_content_right > .file_img > img {
+	display: inline-block;
+}
+.personal_data_content_right > span {
+    position: absolute;
+    right: -165px;
+    top: 80px;
+    font-size: 12px;
+    color:#909090;
+    line-height: 22px;
+}
+.personal_data_button {
+	width: 136px;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	background: #fe802b;
+	text-align: center;
+	margin-top: 12px;
+}
+.personal_data_button > span{
+	color:#ffffff;
+	z-index: 2;
+}
+input[type = "file"] {
+	z-index: 3;
+	width: 136px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left:0;
+	opacity: 0;
+}
+
+.application_materials_box {
+	padding: 35px 40px 33px ;
+	background:#ffffff;
+}
+.application_materials_content {
+	border-bottom: 1px dashed #e0e0e0;
+}
+.application_materials_content {
+	padding: 0 82px;
+}
+.certificate {
+	border-top: 1px solid #d7d8dc;
+	position: relative;
+	margin-bottom: 45px;
+}
+.certificate_top {
+	width: 154px;
+	height: 41px;
+	background: #eeeeee;
+	border-radius: 80px;
+	padding-top: 7px;
+	margin:-20px auto;
+}
+.certificate_top > p {
+	font-size: 16px;
+	text-align: center;
+	line-height: 15px;
+}
+.certificate_top > p > span {
+	font-size: 12px;
+}
+.certificate_add {
+	width: 928px;
+	height: 118px;
+	border: 1px dashed #d7d8dc;
+	margin:0 auto;
+	text-align: center;
+	line-height: 118px;
+	margin-top: 45px;
+}
+.certificate_add > span {
+	color:#ea8215;
+	font-size: 20px;
+	padding-left: 32px;
+	background: url('../image/personal_data_sprit.png') no-repeat -31px 4px;
+	cursor: pointer;
+}
+
+.recommendation_box {
+	padding: 72px 258px 65px 193px;
+	background: #ffffff; 
+}
+.academic_reference {
+	margin-bottom: 30px;
+}
+.academic_reference > div ,
+.kindergarten > div{
+	float: left;
+}
+.academic_reference_p > p 
+,.kindergarten_p > p{
+	text-align: right;
+}
+.academic_reference_input
+ {
+	margin-left: 30px;
+}
+.kindergarten_input {
+	margin-left: 15px;
+}
+.academic_reference_input input {
+	width: 353px;
+	height: 38px;
+	border: 1px solid #d7d8dc;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+.academic_reference_file {
+	margin-left: 20px;
+	border: 1px solid #d7d8dc;
+	border-radius: 4px;
+	width: 273px;
+	height: 38px;
+	text-align: center;
+	line-height: 38px;
+	cursor: pointer;
+	position: relative;
+}
+.academic_reference_file > span {
+	color:#323232;
+	font-size: 14px;
+	padding-left: 24px;
+	background: url('../image/personal_data_sprit.png') no-repeat -31px -38px;
+}
+.icon_cademic {
+	position: absolute;
+	top: 50%;
+	right:10px;
+	margin-top: -6px;
+	width: 12px;
+	height: 12px;
+	background: url(../image/personal_data_sprit.png) no-repeat -64px -113px;
+	display: none;
+}
+.sc_background {
+	background: #f7f7f7 !important;
+}
+.kindergarten_input > textarea {
+	width: 647px;
+	height: 136px;
+	border: 1px solid #d7d8dc;
+	padding-top: 10px;
+	text-indent: 2em;
+}
+.signature {
+	height: 195px;
+	padding: 0 40px;
+}
+.signature_top {
+	border-top: 1px dashed #e0e0e0;
+	border-bottom: 1px dashed #e0e0e0;
+	padding: 30px 0 17px 136px;
+}
+.signature_top > div {
+	float: left;
+}
+.signature_top > div > p {
+	text-align: right;
+}
+.signature_input {
+	margin-left: 30px;
+}
+.signature_input input {
+	width: 342px;
+	height: 38px;
+	border:1px solid #d7d8dc;
+	border-radius: 5px;
+	background: #f5f5f5;
+	padding-left: 20px;
+}
+.signature_bottom {
+	padding: 12px 173px 0;
+}
+.signature_bottom ul li {
+	float: left;
+	font-size: 14px;
+	margin-bottom: 26px;
+}
+.subit {
+	padding:40px 0 30px;
+	background:#ffffff;
+	text-align: center;
+}
+.subit > button {
+	width: 170px;
+	height: 40px;
+	background: #fe802b;
+	color:#ffffff;
+	border: none;
+	border-radius: 4px;
+}
+
+.modal-header {
+	min-height: 16.428571429px;
+	padding: 12px 27px;
+	border-bottom: 1px solid #e5e5e5;
+	background: #f4f4f4;
+	position: relative;
+}
+.modal-body_file {
+	width: 160px;
+	height: 40px;
+	margin: 0 auto;
+	background: #fe802b;
+	line-height: 	40px;
+	text-align: center;
+	position: relative;
+	color: 	#ffffff;
+}
+.modal-body_file > input {
+	width: 160px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	opacity: 0;
+}
+.modal-body {
+	position: relative;
+	padding-top: 37px;
+	padding-bottom: 58px;
+}
+.modal-body > p {
+	margin-top: 60px;
+	line-height: 30px;
+}
+.modal-body_file>span {
+	color:#ffffff;
+}
+.modal-dialog {
+	margin: 200px auto;
+	background: #a6a6a6;
+	width: 550px;
+	height: 300px;
+	position: relative;
+}
+.modal-content{
+    width: 530px;
+    height: 280px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    margin-top: -140px;
+    left: 50%;
+    margin-left: -265px;
+    box-shadow: none;
+
+}
+.modal-header .close {
+    margin-top: -2px;
+    position: absolute;
+    top: -23px;
+    right: -23px;
+    opacity: 0.7;
+}
+.close > span {
+	display: inline-block;
+	background: url('../image/xxx.png') no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+/* 添加毕业证 */
+.certificate_add_box {
+	width: 928px;
+	height: 324px;
+	background: #fefef2;
+	margin:0 auto;
+	border: 1px solid #d7d8dc;
+	margin-top: 45px;
+}
+.certificate_add_box_left>div {
+	margin-top: 24px;
+}
+.Graduate_School>div>p,
+.Certificate_No>div>p,
+.Obtain_time>div>p,
+.Major>div>p {
+	text-align: right;
+}
+.Graduate_School>div>input,
+.Certificate_No>div>input,
+.Major>div>input {
+	width: 268px;
+	height: 38px;
+	border: 1px solid #d7d8dc;
+	border-radius: 5px;
+	margin-left: 15px;
+	padding-left: 10px;
+}
+.Obtain_time_data input {
+	height: 38px;
+	width: 117px;
+	border: 1px solid #d7d8dc;
+	border-radius: 5px;
+	margin-left: 15px;
+	padding-left: 10px;
+} 
+.Obtain_time_data input[name="certificate_date"] {
+	margin-left: 20px;
+}
+.Obtain_time_data {
+	position: relative;
+}
+.Obtain_time_data>span {
+	width:8px;
+	height: 4px;
+	background: url('../image/down.png') no-repeat;
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	margin-top: -2px;
+}
+.sc_certificate_box {
+	margin-left: 104px;
+	margin-top: 24px;
+}
+.sc_certificate {
+	width: 286px;
+	height: 158px;
+	background: #ffffff;
+	border: 1px solid #d7d8dc;
+	text-align: center;
+}
+.sc_tap {
+	margin-top: 42px;
+	z-index: 1;
+}
+.sc_tap img {
+	display: inline-block;
+}
+.sc_tap p {
+	margin-top: 28px;
+}
+.sc_certificate {
+	position: relative;
+	
+}
+.sc_certificate>input {
+	width: 286px;
+	height: 158px;
+}
+.show_certificate {
+	height: 158px;
+	width: 286px;
+	position: absolute;
+	top: 0;
+	left:0;
+	z-index:2;
+}
+.certificate_add_button  {
+	width: 600px;
+	margin-left: 380px;
+	margin-top: 12px
+}
+.certificate_add_button>button {
+	width: 104px;
+	height: 38px;
+	color:#ffffff;
+	background: #fe802b;
+	margin-right: 38px;
+	border: none;
+}
+.certificate_add_button>span {
+	color:#fe802b;
+	font-size: 14px;
+	cursor: pointer;
+}
+.certificate_list {
+	width: 952px;
+	height: 92px;
+	margin:0 auto;
+	margin-top: 45px;
+	position: relative;
+}
+.certificate_list ul {
+
+}
+.certificate_list li{
+ float: left;
+ padding-top: 30px;
+	text-align: center;
+	margin-left: 140px;
+	color:#646464;
+}
+.certificate_list .certificate_list_img {
+	padding-top: 0;
+	margin-left: 0;
+}
+li.certificate_list_school {
+	margin-left: 39px;
+	text-align: left;
+}
+.certificate_list>span {
+	position: absolute;
+	top: -57px;
+	right:-100px;
+	background: url('../image/bj.png') no-repeat;
+	padding-left: 24px;
+	color:#ea8010;
+	font-size:14px;
+	cursor: pointer;
+}
+form input {
+	display: inline-block;
+}
+.name div span,
+.english div span,
+.citizen_input  span,
+.mobile div span,
+.birthdate div span,
+.education  div span,
+.address div span,
+.e-mail div span,
+.code div span {
+	padding-left: 25px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	color:#909090;
+	display: inline-block;
+}
+.yes {
+	background: url('../image/yes.png') no-repeat;
+}
+.no {
+	background: url('../image/no.png') no-repeat;
+}

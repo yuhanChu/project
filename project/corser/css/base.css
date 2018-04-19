@@ -1,0 +1,65 @@
+html,body,* {
+    padding:0;
+    margin:0;
+    font-family: "Microsoft Sans Serif";
+}
+ol,ul{
+    list-style: none;
+    margin-bottom: 0;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+a:hover{
+    color: #333;
+}
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+/*清除浮动*/
+.clearfix::after,
+.clearfix::before{
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+
+    clear: both;
+}
+img {
+    display: block;
+}
+a:hover {
+    text-decoration: none;
+}
+.contain {
+    width: 1280px;
+    margin: 0 auto;
+}
+p {
+    margin:0;
+}
+input,button,textarea,select {
+    outline: none;
+    resize: none;
+}
+.red {
+    color: red;
+}
+input[type="radio"], input[type="checkbox"] {
+    margin:0;
+}
+label {
+    font-weight: normal;
+    display: inline;
+    vertical-align: inherit !important; 
+}
+
+.Ordinary_class_lists_bottom_zeo,.Ordinary_class_lists_bottom_one {
+    background-color: #ffffff;
+}

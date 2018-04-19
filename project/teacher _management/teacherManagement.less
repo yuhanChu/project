@@ -1,0 +1,716 @@
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0
+}
+
+.f_left {
+    float: left
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.f_right {
+    float: right
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+.btn(@w, @h) {
+    width: @w;
+    height: @h;
+    line-height: @h;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    resize: none
+}
+
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+.teacher_management a {
+    color: #333;
+}
+
+.teacher_management a:hover {
+    color: #333;
+}
+
+.teacher_management .nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    border-top-color: #815dc7;
+}
+li.active .red_num {
+    display: none;
+}
+.box() {
+    box-sizing: border-box;
+}
+
+.teacher_management {
+    .box();
+    padding: 0 20px;
+    padding-bottom: 25px;
+    width: 1090px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #fff;
+    .teacher_management_title {
+        height: 49px;
+        line-height: 49px;
+        border-bottom: 1px solid #e9e9e9;
+        &>h1 {
+            font-size: 16px;
+            color: #333;
+            line-height: 49px;
+        }
+    }
+    &>ul {
+        margin-top: 20px;
+        .active {
+            a {
+                border-top-color: #815dc7;
+            }
+        }
+        &>div {
+            .add_teacher {
+                .btn(90px, 28px);
+                background: #815dc7;
+                color: #fff;
+                font-size: 12px;
+                margin-top: 7px;
+            }
+            .management_search {
+                width: 210px;
+                margin-right: 20px;
+                border-left: 1px solid #e9e9e9;
+                border-right: 1px solid #e9e9e9;
+                height: 28px;
+                margin-top: 7px;
+                position: relative;
+                &>span {
+                    position: absolute;
+                    width: 18px;
+                    height: 18px;
+                    top: 5px;
+                    right: 10px;
+                    background: url('search.png') no-repeat;
+                    cursor: pointer;
+                }
+                input {
+                    border: none;
+                    outline: none;
+                    height: 100%;
+                    width: 85%;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+    .teacher_management_box {
+        padding: 20px 20px 25px 20px;
+        .box();
+        border: 1px solid #e9e9e9;
+        border-top: none;
+        .signed_teacher {
+            margin-bottom: 20px;
+            height: 40px;
+            line-height: 40px;
+            background: #f4f4f4;
+            color: #815dc7;
+            padding-left: 20px;
+        }
+        .teacher_management_box_ul1 {
+            padding-left: 20px;
+            height: 34px;
+            line-height: 34px;
+            background: #f4f4f4;
+            li {
+                float: left;
+                font-size: 12px;
+            }
+            .ul1_li1 {
+                width: 9%;
+            }
+            .ul1_li2 {
+                width: 11%;
+            }
+            .ul1_li3 {
+                width: 9%;
+            }
+            .ul1_li4 {
+                width: 14%;
+            }
+            .ul1_li5 {
+                width: 12%;
+            }
+            .ul1_li6 {
+                width: 14%;
+            }
+            .ul1_li7 {
+                width: 13%;
+            }
+            .ul1_li8 {
+                width: 17%;
+            }
+        }
+        #teacher_management_content {
+            .content_list {
+                height: 50px;
+                border-bottom: 1px solid #e9e9e9;
+                &>ul {
+                    padding-left: 20px;
+                    height: 50px;
+                    line-height: 50px;
+                    li {
+                        float: left;
+                        font-size: 12px;
+                    }
+                    .ul2_li1 {
+                        width: 9%;
+                    }
+                    .ul2_li2 {
+                        width: 11%;
+                    }
+                    .ul2_li3 {
+                        width: 9%;
+                    }
+                    .ul2_li4 {
+                        width: 14%;
+                    }
+                    .ul2_li5 {
+                        width: 12%;
+                    }
+                    .ul2_li6 {
+                        width: 14%;
+                    }
+                    .ul2_li7 {
+                        width: 13%;
+                    }
+                    .ul2_li8 {
+                        width: 17%;
+                        div {
+                            .btn(70px,
+                            24px);
+                            font-size: 12px;
+                            color: #fff;
+                            border-radius: 14px;
+                            margin-top: 13px;
+                            padding-left: 12px;
+                        }
+                        .look_btn {
+                            margin-right: 20px;
+                            background: url('look.png') no-repeat 8px center;
+                            background-color: #815dc7;
+                        }
+                        .unwind_btn {
+                            background: url('unmind.png') no-repeat 10px center;
+                            background-color: #815dc7;
+                        }
+                        .see_btn {
+                            .btn(50px,
+                            20px);
+                            color: #fff;
+                            background: #815dc7;
+                            padding-left: 0;
+                            margin-top: 15px;
+                        }
+                        .agree_btn {
+                            .btn(50px,
+                            20px);
+                            color: #fff;
+                            background: #815dc7;
+                            padding-left: 0;
+                            margin-top: 15px;
+                            margin-right: 20px;
+                        }
+                        .refuse_btn {
+                            .btn(50px,
+                            20px);
+                            color: #815dc7;
+                            border: 1px solid #815dc7;
+                            padding-left: 0;
+                            margin-top: 15px;
+                        }
+                        .renewal_btn {
+                            .agree_btn;
+                        }
+                        .remove_btn {
+                            .refuse_btn;
+                            width: 70px;
+                        }
+                    }
+                }
+            }
+        }
+        .content_empty {
+            width: 60%;
+            margin: 0 auto;
+            padding: 97px 0 287px 0;
+            &>div {
+                margin-left: 70px;
+                &>p {
+                    margin-top: 25px;
+                    font-size: 16px;
+                    color: #666666;
+                    margin-bottom: 13px;
+                }
+                &>span {
+                    font-size: 12px;
+                    color: #999999;
+                }
+                .add_div {
+                    margin-top: 23px;
+                    input {
+                        width: 200px;
+                        height: 28px;
+                        border: 1px solid #e9e9e9;
+                        border-right: none;
+                        padding-left: 10px;
+                        font-size: 12px;
+                        border-radius: 4px 0 0 4px;
+                    }
+                    span {
+                        .btn(70px,
+                        28px);
+                        background: #815dc7;
+                        font-size: 12px;
+                        color: #fff;
+                        border-radius: 0 4px 4px 0;
+                    }
+                }
+                .add_teacher {
+                    .btn(90px,
+                    28px);
+                    background: #815dc7;
+                    color: #fff;
+                    font-size: 12px;
+                    margin-left: 20px;
+                    margin-top: 23px;
+                }
+            }
+        }
+    }
+}
+
+#look {
+    width: 362px;
+    height: 432px;
+    padding: 0 36px;
+    position: relative;
+    background: #fff;
+    .box();
+    .close_layer {
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        top: 20px;
+        right: 20px;
+        background: url('close_layer.png');
+    }
+    .look_1 {
+        padding: 25px 0 20px 0;
+        .box();
+        line-height: 48px;
+        img {
+            width: 48px;
+            height: 48px;
+            margin-right: 18px;
+        }
+        .look_name {
+            font-size: 14px;
+            color: #666666;
+        }
+    }
+    .look_2 {
+        padding-top: 14px;
+        padding-bottom: 10px;
+        border-top: 1px solid #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
+        p {
+            font-size: 12px;
+            color: #666666;
+            line-height: 26px;
+        }
+    }
+    .look_3 {
+        padding-top: 18px;
+        p {
+            font-size: 12px;
+            color: #666666;
+            line-height: 20px;
+            height: 100px;
+        }
+    }
+    .look_btn {
+        .btn(100px,
+        28px);
+        background: #815dc7;
+        color: #fff;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+}
+
+#add_teacher {
+    width: 682px;
+    height: 566px;
+    padding: 0 20px;
+    background: #fff;
+    position: relative;
+    .box();
+    .close_layer {
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        top: 20px;
+        right: 20px;
+        background: url('close_layer.png');
+    }
+    .add_teacher_title {
+        line-height: 50px;
+        height: 50px;
+        font-size: 14px;
+        color: #666;
+    }
+    .attention {
+        font-size: 12px;
+        color: #999999;
+        padding-left: 20px;
+        height: 28px;
+        line-height: 28px;
+        background: #f4f4f4;
+    }
+    .add_teacher_content {
+        .add_teacher_content_left {
+            width: 427px;
+            .add_teacher_name {
+                margin-top: 20px;
+                font-size: 12px;
+                .name_left {
+                    color: #666;
+                    width: 77px;
+                    text-align: right;
+                    height: 28px;
+                    line-height: 28px;
+                    span {
+                        color: #ff0000;
+                    }
+                }
+                .name_right {
+                    margin-left: 5px;
+                    input {
+                        padding-left: 10px;
+                        width: 182px;
+                        height: 26px;
+                        border: 1px solid #e9e9e9;
+                        border-radius: 4px;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .add_teacher_account {
+                .add_teacher_name;
+            }
+            .add_teacher_password {
+                .add_teacher_name;
+            }
+            .add_teacher_college {
+                .add_teacher_name;
+                .name_right {
+                    width: 182px;
+                    border: 1px solid #e9e9e9;
+                    border-radius: 4px;
+                    input {
+                        width: 100%;
+                        border: none;
+                    }
+                }
+            }
+            .add_teacher_major {
+                .add_teacher_college;
+            }
+            .add_teacher_posa {
+                .add_teacher_college;
+            }
+            .add_teacher_brief {
+                .add_teacher_college;
+                .name_right {
+                    width: 292px;
+                    height: 72px;
+                    position: relative;
+                    border: none;
+                    textarea {
+                        width: 100%;
+                        height: 100%;
+                        border: 1px solid #e9e9e9;
+                        font-size: 12px;
+                        border-radius: 4px;
+                        padding-bottom: 20px;
+                    }
+                    span {
+                        position: absolute;
+                        font-size: 12px;
+                        color: #999;
+                        bottom: 0;
+                    }
+                    #brief_sp1 {
+                        right: 30px;
+                    }
+                    #brief_sp2 {
+                        right: 4px;
+                    }
+                }
+            }
+            .add_teacher_remind {
+                width: 80px;
+                margin-left: 82px;
+                margin-top: 20px;
+                input {
+                    margin-top: 0;
+                    margin-right: 10px;
+                }
+                span {
+                    font-size: 12px;
+                    color: #666;
+                }
+            }
+            .add_teacher_btn {
+                margin-top: 20px;
+                width: 165px;
+                margin-left: 82px;
+                .add_teacher_btn_yes {
+                    .btn(100px,
+                    28px);
+                    background: #815dc7;
+                    color: #fff;
+                    margin-right: 20px;
+                    font-size: 12px;
+                }
+                .add_teacher_btn_no {
+                    height: 28px;
+                    line-height: 28px;
+                    cursor: pointer;
+                    color: #999999;
+                }
+            }
+        }
+        .add_teacher_content_right {
+            margin-top: 20px;
+            .add_teacher_content_right_up {
+                padding-left: 38px;
+                border-left: 1px solid #e9e9e9;
+                .upload_img {
+                    position: relative;
+                    width: 154px;
+                    height: 154px;
+                    .upload_img1 {
+                        img {
+                            width: 154px;
+                            height: 154px;
+                        }
+                        input {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            opacity: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .upload_img2 {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            label {
+                text-align: center;
+                margin-top: 20px;
+                font-size: 12px;
+                font-weight: normal;
+                color: #815dc7;
+                margin-left: 74px;
+            }
+        }
+    }
+}
+
+#relevance_sq {
+    width: 512px;
+    height: 220px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px 20px 25px;
+    box-sizing: border-box;
+    position: relative;
+    .relevance_sq_close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 13px;
+        height: 13px;
+        background: url('close_layer.png');
+    }
+    &>h1 {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 20px;
+        line-height: 20px;
+        margin-top: 0;
+    }
+    &>p {
+        font-size: 12px;
+        color: #999999;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .spa_red {
+        color: #ff0000;
+        font-size: 12px;
+        display: block;
+    }
+    .relevance_sq_text {
+        position: relative;
+        margin-top: 20px;
+        textarea {
+            height: 87px;
+            width: 468px;
+            border: 1px solid #e9e9e9;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 0;
+            padding-bottom: 27px;
+        }
+        &>span {
+            font-size: 12px;
+            color: #cccccc;
+            position: absolute;
+            bottom: 4px;
+        }
+        .relevance_spa_1 {
+            right: 33px;
+        }
+        .relevance_spa_2 {
+            right: 8px;
+        }
+    }
+    .relevance_sq_btn {
+        margin-top: 18px;
+        background: #815dc7;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 4px;
+        width: 83px;
+        height: 24px;
+        line-height: 24px;
+    }
+}
+
+#reminder {
+    position: relative;
+    width: 254px;
+    height: 160px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 0 20px;
+    .relevance_sq_close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 13px;
+        height: 13px;
+        background: url('close_layer.png');
+    }
+    &>h1 {
+        font-size: 14px;
+        padding-top: 20px;
+        color: #333;
+        margin-top: 0;
+        margin-bottom: 23px;
+        line-height: 16px;
+    }
+    &>p {
+        font-size: 14px;
+        color: #666;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .relevance_ts_btn {
+        margin: 0 auto;
+        margin-top: 28px;
+        width: 198px;
+        &>div {
+            width: 83px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 12px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .relevance_ts_btn_yes {
+            background: #815dc7;
+            color: #fff;
+        }
+        .relevance_ts_btn_no {
+            color: #815dc7;
+            border: 1px solid #815dc7;
+        }
+    }
+}
+
+#signed {
+    #reminder;
+}
+
+.caret {
+    position: absolute;
+    top: 11px;
+    right: 10px;
+}
+
+.red_num {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    color: #fff;
+    background: #ff0000;
+    font-size: 8px;
+    text-align: center;
+    line-height: 14px;
+    top: 5px;
+    right: 3px;
+    display: block;
+}

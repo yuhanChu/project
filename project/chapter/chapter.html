@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="chapter.css">
+</head>
+
+<body style="background: #f9f9f9">
+    <div class="chapter_box">
+        <!-- 顶部标题 -->
+        <div class="chapter_title">
+            <h1 class="f_left">章节管理</h1>
+            <div class="f_left">（<span>工程应用数学基础</span>）</div>
+            <a href="javascript:;" class="f_right">
+                <<返回课程管理台</a>
+        </div>
+        <!-- 主体内容 -->
+        <div class="chapter_main">
+            <div class="chapter_main_p clearfix">
+                <p class="f_left">请在下面创建课程的章节，内容不少于1节，而且每章至少有1节的视频。</p>
+                <div class="f_right">
+                    <label class="clearfix">
+                        <input type="checkbox" class="f_left input_no_checked">
+                        <span class="f_left">添加绪论</span>
+                    </label>
+                </div>
+            </div>
+            <div class="chapter_main_top clearfix">
+                <div class="f_left chapter_main_top_status">已通过审核：0节</div>
+                <div class="f_left chapter_main_top_status">未通过审核：0节</div>
+                <div class="f_left chapter_main_top_status">编辑中：0节</div>
+                <div class="f_right chapter_main_top_alter clearfix">
+                    <span class="f_left">小节总数：</span>
+                    <div class="alter_content f_left">
+                        <span>70</span>
+                        <input type="text">
+                    </div>
+                    <span class="alter_btn f_left">修改</span>
+                </div>
+            </div>
+            <div id="chapter_main_content">
+            		<div class="chapter_content">
+                    <div class="chapter_content_section clearfix">
+                        <div class="f_left chapter_content_section_word">绪论</div>
+                        <div class="f_left chapter_content_section_input">
+                            <input type="text" name="" placeholder="请输入本章标题">
+                            <span class="limit_sp limit_sp1">0</span>
+                            <span class="limit_sp limit_sp2">/20</span>
+                        </div>
+                        <a href="javascript:;" class="f_left">删除本章</a>
+                        <i class="f_left zk"></i>
+                    </div>
+                    <div class="chapter_content_bottom">
+                        <div class="clearfix" style="border-bottom: 1px dashed #e9e9e9;padding-top: 20px;">
+                            <div class="chapter_content_bottom_left f_left">第1节</div>
+                            <div class="chapter_content_bottom_center f_left">
+                                <div class="chapter_content_title">
+                                    <input type="text" name="" placeholder="请输入本节标题">
+                                    <span class="limit_sp limit_sp1">0</span>
+                                    <span class="limit_sp limit_sp2">/30</span>
+                                </div>
+                                <div class="chapter_content_brie">
+                                    <span>本节简介：</span>
+                                    <textarea></textarea>
+                                    <span class="limit_sp limit_sp1">0</span>
+                                    <span class="limit_sp limit_sp2">/30</span>
+                                </div>
+                                <div class="chapter_content_video">
+                                    <div class="add_file" style="display: none;">
+                                        <span>+ 本节视频</span>
+                                    </div>
+                                    <div class="added_file clearfix">
+                                        <span class="f_left">本节视频：</span>
+                                        <div class="f_left">
+                                            <div class="clearfix">
+                                                <span class="f_left">1</span>
+                                                <i class="f_right"></i>
+                                                <i class="f_right"></i>
+                                                <div class="f_right">
+                                                    <label class="clearfix">
+                                                        <input type="checkbox" class="f_left input_no_checked">
+                                                        <span class="f_left">免费试听</span>
+                                                    </label>    
+                                                </div>
+                                            </div>
+                                            <div>1</div>
+                                            <div>1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chapter_content_save">保存</div>
+                            </div>
+                            <div class="chapter_content_bottom_right f_left">
+                                
+                                <a href="javascript:;">删除本节</a>
+                                <div class="no_pass">
+                                	审核未通过（<span>查看</span>）
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix" style="border-bottom: 1px dashed #e9e9e9;padding-top: 20px;">
+                            <div class="chapter_content_bottom_left f_left">第1节</div>
+                            <div class="chapter_content_bottom_center f_left">
+                                <div class="chapter_content_title">
+                                    <input type="text" name="" placeholder="请输入本节标题">
+                                    <span class="limit_sp limit_sp1">0</span>
+                                    <span class="limit_sp limit_sp2">/30</span>
+                                </div>
+                                <div class="chapter_content_brie">
+                                    <span>本节简介：</span>
+                                    <textarea></textarea>
+                                    <span class="limit_sp limit_sp1">0</span>
+                                    <span class="limit_sp limit_sp2">/30</span>
+                                </div>
+                                <div class="chapter_content_video">
+                                    <div class="add_file" style="display: none;">
+                                        <span>+ 本节视频</span>
+                                    </div>
+                                    <div class="added_file clearfix">
+                                        <span class="f_left">本节视频：</span>
+                                        <div class="f_left">
+                                            <div class="clearfix">
+                                                <span class="f_left">1</span>
+                                                <i class="f_right"></i>
+                                                <i class="f_right"></i>
+                                                <div class="f_right">
+                                                    <label class="clearfix">
+                                                        <input type="checkbox" class="f_left input_no_checked">
+                                                        <span class="f_left">免费试听</span>
+                                                    </label>    
+                                                </div>
+                                            </div>
+                                            <div>1</div>
+                                            <div>1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chapter_content_save">保存</div>
+                            </div>
+                            <div class="chapter_content_bottom_right f_left">
+                                
+                                <a href="javascript:;">删除本节</a>
+                                <div class="no_pass">
+                                	审核未通过（<span>查看</span>）
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add_minutia"><span>+添加节</span></div>
+                    </div>
+                </div>
+                <div class="chapter_content">
+                    <div class="chapter_content_section clearfix">
+                        <div class="f_left chapter_content_section_word">第1章</div>
+                        <div class="f_left chapter_content_section_input">
+                            <input type="text" name="" placeholder="请输入本章标题">
+                            <span class="limit_sp limit_sp1">0</span>
+                            <span class="limit_sp limit_sp2">/20</span>
+                        </div>
+                        <a href="javascript:;" class="f_left">删除本章</a>
+                        <i class="f_left zk"></i>
+                    </div>
+                    <div class="chapter_content_bottom">
+                        <div class="clearfix" style="border-bottom: 1px dashed #e9e9e9;padding-top: 20px;">
+                            <div class="chapter_content_bottom_left f_left">第1节</div>
+                            <div class="chapter_content_bottom_center f_left">
+                                <div class="chapter_content_title">
+                                    <input type="text" name="" placeholder="请输入本节标题">
+                                    <span class="limit_sp limit_sp1">0</span>
+                                    <span class="limit_sp limit_sp2">/30</span>
+                                </div>
+                                <div class="chapter_content_brie">
+                                    <span>本节简介：</span>
+                                    <textarea></textarea>
+                                    <span class="limit_sp limit_sp1">0</span>
+                                    <span class="limit_sp limit_sp2">/30</span>
+                                </div>
+                                <div class="chapter_content_video">
+                                    <div class="add_file" style="display: none;">
+                                        <span>+ 本节视频</span>
+                                    </div>
+                                    <div class="added_file clearfix">
+                                        <span class="f_left">本节视频：</span>
+                                        <div class="f_left">
+                                            <div class="clearfix">
+                                                <span class="f_left">1</span>
+                                                <i class="f_right"></i>
+                                                <i class="f_right"></i>
+                                                <div class="f_right">
+                                                    <label class="clearfix">
+                                                        <input type="checkbox" class="f_left input_no_checked">
+                                                        <span class="f_left">免费试听</span>
+                                                    </label>    
+                                                </div>
+                                            </div>
+                                            <div>1</div>
+                                            <div>1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chapter_content_e_book">
+                                    <div class="add_file" style="display: none;">
+                                        <span>+ 电子资源<span>（选填项）</span></span>
+                                    </div>
+                                    <div class="added_file clearfix">
+                                        <span class="f_left">电子资源：</span>
+                                        <div class="f_left">
+                                            <div class="clearfix">
+                                                <span class="f_left">电子书.SWF</span>
+                                                <i class="f_right"></i>
+                                                <i class="f_right"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chapter_content_test">
+                                    <div class="add_file">
+                                        <span>+ 测验<span>（选填项）</span></span>
+                                    </div>
+                                </div>
+                                <div class="chapter_content_hangout">
+                                    <div class="add_file">
+                                        <span>+ 讲义<span>（选填项）</span></span>
+                                    </div>
+                                </div>
+                                <div class="chapter_content_save">保存</div>
+                            </div>
+                            <div class="chapter_content_bottom_right f_left">
+                                <label class="clearfix">
+                                    <input type="checkbox" class="f_left input_no_checked">
+                                    <span class="f_left">设为见面课</span>
+                                </label>
+                                <a href="javascript:;">删除本节</a>
+                                <div class="no_pass">
+                                	审核未通过（<span>查看</span>）
+                                </div>
+                            </div>
+                        </div>
+                        <div class="add_minutia"><span>+添加节</span></div>
+                    </div>
+                </div>
+                <div class="add_section"><span>+添加章</span></div>
+            </div>
+            <div class="line"></div>
+            <div class="submit_btn clearfix">
+                <div class="submit">提交审核</div>
+                <div class="preview">预览</div>
+            </div>
+        </div>
+    </div>
+    <!-- 编辑未保存离开弹窗 -->
+    <div id="back_save">
+        <span class="close_layer"></span>
+        <i></i>
+        <p>编辑的内容尚未保存，是否关闭页面？</p>
+        <div class="back_save_btn clearfix">
+            <div class="back_save_cancel">取消</div>
+            <div class="back_save_yes">确定</div>
+        </div>
+    </div>
+    <!-- 上传讲义 -->
+    <div id="handouts_upload">
+        <h1>上传讲义</h1>
+        <i></i>
+        <div class="handouts_upload_div1">
+            <p>大文件请稍后到课程管理台“讲义管理”中新增关联。</p>
+            <p>请确保上传文件内容原创，若遇版权投诉，平台将直接删除。</p>
+            <p>暂时支持JPG、PNG、WORD、EXCEL、PDF、MP4等格式，文件大小不超过500MB</p>
+        </div>
+        <div class="handouts_upload_div2 clearfix">
+            <input type="text" name="" placeholder="请选择文件" readonly="readonly">
+            <input type="file" name="" id="handouts_file">
+            <label for="handouts_file">预览</label>
+        </div>
+        <div class="handouts_upload_btn">
+            <div class="handouts_upload_btn_yes">立即上传</div>
+        </div>
+    </div>
+    <!-- 添加电子资源 -->
+    <div id="add_e_book">
+        <h1>上传讲义</h1>
+        <i></i>
+        <div class="handouts_upload_div1">
+            <p>支持：Flash、jpg、png、bmp、pdf、doc、docx、ppt、pptx、txt等。</p>
+        </div>
+        <div class="handouts_upload_div2 clearfix">
+            <input type="text" name="" placeholder="请选择文件" readonly="readonly">
+            <input type="file" name="" id="e_book_file">
+            <label for="e_book_file">预览</label>
+        </div>
+        <div class="handouts_upload_btn">
+            <div class="handouts_upload_btn_yes">立即上传</div>
+        </div>
+    </div>
+    <!-- 添加视频弹窗 -->
+    <div id="add_video">
+        <i></i>
+        <div class="add_video_top clearfix">
+            <h1 class="f_left">视频</h1>
+            <div class="local_uplod_btn clearfix f_left">本地上传</div>
+            <span class="f_left">从视频库批量上传选择</span>
+        </div>
+        <div class="add_video_center">
+            <!-- 视频为空 -->
+            <div class="video_empty" style="display: none;">
+                <img src="/static/images/chapter/video_empty.png">
+                <p>暂无视频</p>
+            </div>
+            <!-- 正在上传 -->
+            <div class="video_uploading" style="display: none;">
+            </div>
+            <!-- 上传成功 差删除 -->
+            <div class="video_success" style="display: none;">
+                <img src="/static/images/chapter/video_success.png">
+                <p>上传成功！</p>
+                <i></i>
+            </div>
+            <!-- 转码中 -->
+            <div class="video_transcoding">
+                <img src="/static/images/chapter/video_zhuanma.png">
+                <p>视频正在转码中...</p>
+                <i></i>
+            </div>
+        </div>
+        <div class="add_video_subtitles">
+            <div class="add_video_subtitles_p">
+                添加字幕<span style="display: none;"> > </span> <span> < </span>
+            </div>
+            <div class="add_subtitles_box">
+                <div class="add_subtitles_box_btn clearfix">
+                    <div>中文简体</div>
+                    <div class="add_subtitles_box_btn_tw">中文繁体</div>
+                    <div>英文</div>
+                </div>
+                <div class="add_subtitles_box_file">
+                    <ul class="add_subtitles_box_file clearfix">
+                        <li class="add_subtitles_box_file_typeface">中文简体</li>
+                        <li class="add_subtitles_box_file_word"></li>
+                        <li class="add_subtitles_box_file_remove"><i></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="add_video_btn clearfix">
+            <div class="add_video_btn_yes">确定</div>
+            <div class="add_video_btn_no">取消</div>
+        </div>
+    </div>
+    <!-- 上传组件 -->
+    <div id="uploading_progress">
+        <div class="uploading_progress_top clearfix">
+            <p class="f_left">学分在线传组件(文档请勿使用WPS软件编辑,可能会导致无法预览.)</p>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+        <div class="uploading_progress_content">
+            <ul>
+                <li class="uploading_progress_content_img"><img src="/static/images/chapter/mp3.png"></li>
+                <li class="uploading_progress_content_main clearfix">
+                    <div class="clearfix progress_content_main_top">
+                        <p class="f_left">行动中的团队和领导者 第1章第1小节.MP4</p>
+                        <span class="f_left">13.61M-152KB/S</span>
+                        <span class="f_right">00:17:03</span>
+                    </div>
+                    <div class="progress_content_main_bottom">
+                        <div class="content_main_bottom_in">
+                        </div>
+                        <div class="content_main_bottom_out"></div>
+                    </div>
+                </li>
+                <li class="uploading_progress_content_remove">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 覆盖提示 -->
+    <div id="cover_reminder">
+        <h1>提示</h1>
+        <i></i>
+        <p>此操作会覆盖之前文件，您确定覆盖该文件吗?</p>
+        <div class="cover_reminder_btn clearfix">
+            <div class="cover_reminder_yes">确定</div>
+            <div class="cover_reminder_no">取消</div>
+        </div>
+    </div>
+    <!--  -->
+    <!-- 删除视频提示提示 -->
+    <div id="remove_video">
+        <h1>提示</h1>
+        <i></i>
+        <p>您确定删除该内容吗？</p>
+        <div class="cover_reminder_btn clearfix">
+            <div class="cover_reminder_yes">确定</div>
+            <div class="cover_reminder_no">取消</div>
+        </div>
+    </div>
+    <!-- 删除字幕提示 -->
+    <div id="remove_word">
+        <h1>提示</h1>
+        <i></i>
+        <p>确定删除该字幕?</p>
+        <div class="cover_reminder_btn clearfix">
+            <div class="cover_reminder_yes">确定</div>
+            <div class="cover_reminder_no">取消</div>
+        </div>
+    </div>
+    <!-- 创建见面课 -->
+    <div id="face_class">
+        <h1>创建见面课</h1>
+        <i></i>
+        <div class="face_class_content">
+            <!-- 见面课主题 -->
+            <div class="face_class_theme clearfix">
+                <span class="f_left">见面课主题：</span>
+                <div class="f_left">
+                    <input type="text" name="">
+                </div>
+            </div>
+            <!-- 见面课类型： -->
+            <div class="face_class_type clearfix">
+                <span class="f_left">见面课类型：</span>
+                <div class="f_left">
+                    <!-- 下拉框 -->
+                </div>
+            </div>
+            <!-- 教学要求： -->
+            <div class="face_class_require clearfix">
+                <span class="f_left">教学要求：</span>
+                <div class="f_left">
+                    <textarea></textarea>
+                    <span class="sp_1">0</span>
+                    <span class="sp_2">/200</span>
+                </div>
+            </div>
+            <div class="teacher_box clearfix">
+                <div class="clearfix f_left" style="width: 290px;">
+                    <div class="face_class_teacher clearfix f_left">
+                        <span class="f_left">主讲老师：</span>
+                        <div class="f_left">
+                            <input type="text" name="">
+                        </div>
+                    </div>
+                    <div class="face_class_zhujiao clearfix f_left">
+                        <span class="f_left">助教：</span>
+                        <div class="f_left">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="f_left" style="margin-left: 10px;width: 120px;height: 120px;background: #f4f4f4;border: 1px solid #e9e9e9;">
+                </div>
+            </div>
+            <!-- 主讲老师简介： -->
+            <div class="face_class_teacher_infor clearfix">
+                <span class="f_left">主讲老师简介：</span>
+                <div class="f_left">
+                    <textarea></textarea>
+                    <span class="sp_1">0</span>
+                    <span class="sp_2">/200</span>
+                </div>
+            </div>
+            <!-- 授课时间： -->
+            <div class="face_class_time clearfix">
+                <span class="f_left">授课时间：</span>
+                <div class="f_left clearfix">
+                </div>
+            </div>
+            <!-- 授课地址： -->
+            <div class="face_class_address clearfix">
+                <span class="f_left">授课地址：</span>
+                <div class="f_left clearfix">
+                    <div class="pro"></div>
+                    <div></div>
+                </div>
+            </div>
+            <!-- 联系人： -->
+            <div class="face_class_contact clearfix">
+                <span class="f_left">联系人：</span>
+                <div class="f_left">
+                    <input type="text" name="">
+                </div>
+            </div>
+            <!-- 联系电话： -->
+            <div class="face_class_moble clearfix">
+                <span class="f_left">联系电话：</span>
+                <div class="f_left">
+                    <input type="text" name="">
+                </div>
+            </div>
+            <div class="face_class_yes">确定</div>
+        </div>
+    </div>
+
+    <!-- 设定见面课 -->
+    <div id="face_layer">
+    	<i></i>
+    	<p>此操作将删除已上传的资料内容，确定设为见面课吗？</p>
+    	<div class="face_layer_btn">知道了</div>
+    </div>
+    <!-- 未通过审核原因 -->
+    <div id="no_pass_reason">
+    	<h1>未通过审核原因</h1>
+    	<i></i>
+    	<div id="no_pass_reason_content">
+    		<div class="no_pass_reason1">
+    			<p class="no_pass_reason1_seaction">第1章 第1节</p>
+    			<span>a. 电子资源内容不符合教学大纲要求。</span>
+    			<span>b. 见面课内容不符合教学大纲要求不符合教学大纲要求。</span>
+    			<div class="no_pass_reason1_btn">去修改</div>
+    		</div>
+    		<div class="no_pass_reason1">
+    			<p class="no_pass_reason1_seaction">第1章 第2节</p>
+    			<span>a. 电子资源内容不符合教学大纲要求。</span>
+    			<span>b. 见面课内容不符合教学大纲要求不符合教学大纲要求。</span>
+    			<div class="no_pass_reason1_btn">去修改</div>
+    		</div>
+    	</div>
+    </div>
+
+    <!-- 学生正在学习该章节，不能删除。 -->
+    <div id="can_not_remove">
+    	<i></i>
+    	<p>学生正在学习该章节，不能删除。</p>
+    	<div class="face_layer_btn">知道了</div>
+    </div>
+    <!-- 章节内容正在审核中。 -->
+    <div id="under_review">
+    	<p>章节内容正在审核中。</p>
+    	<div class="clearfix under_review_btn">
+    		<div style="margin-left: 0;"><a href="#">发布作业</a></div>
+    		<div><a href="#">发布测验</a></div>
+    		<div><a href="#">去课程管理台</a></div>
+    	</div>
+    </div>
+</body>
+<script type="text/javascript">
+	
+</script>
+</html>

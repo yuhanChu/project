@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>申请重批</title>
+	<link rel="stylesheet" type="text/css" href="apply-again.css">
+</head>
+<script type="text/javascript">
+document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+window.onresize = function() {
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+}
+</script>
+
+<body>
+	<div id="main">
+		<div class="head">
+			<i class="iconfont icon-xiangzuojiantou"></i>
+			<p>申请重批</p>
+		</div>
+		<div class="content">
+			<div class="list-box">
+				<div class="list">
+					<span class="dianji cur"></span>
+					<div class="all">
+						<div class="all-top clearfix">
+							<p class="score">阅读题（20分）</p>
+							<p class="num">6/10</p>
+						</div>
+						<p>阅读《再别康桥》 “金柳”“青荇”等意象打开了放假拉的屎会计法</p>
+					</div>
+				</div>
+				<div class="list">
+					<span class="dianji"></span>
+					<div class="all">
+						<div class="all-top clearfix">
+							<p class="score">阅读题（20分）</p>
+							<p class="num">6/10</p>
+						</div>
+						<p>阅读《再别康桥》 “金柳”“青荇”等意象打开了放假拉的屎会计法</p>
+					</div>
+				</div>
+			</div>
+			<div class="apply-btn">
+				<div class="next" @click="layerShow=!layerShow">下一步</div>
+			</div>
+		</div>
+		<div id="apply" v-cloak v-show="layerShow">
+			<div class="top">
+				<i class="iconfont icon-xiangzuojiantou" @click="layerShow=!layerShow"></i>
+				<p>申请重批</p>
+			</div>
+			<textarea placeholder="请输入重批理由..."></textarea>
+			<div class="apply-btn">
+				<div class="submit">申请重批</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="vue.min.js"></script>
+<script type="text/javascript" src="apply-again.js"></script>
+
+</html>

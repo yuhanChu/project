@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    	div {
+    		width: 100px;
+    		height: 100px;
+    		background: blue;
+    	}
+    </style>
+</head>
+
+<body>
+    <!-- <div class="ddLeft">
+        <span class="sub-span">{{trans str='school_djsc'}}</span>
+        <input type="file" id="schoolBadge" onchange="upPic(this)" name="slogo" class="sub-input">
+        <div class="sub-pic">
+            <img class="sub-img" />
+        </div>
+        <div class="sub-bigPic">
+			<img class="sub-img"/>
+		</div>
+    </div> -->
+    <div id="dv">
+    	
+    </div>
+    <script src="js/jquery-1.9.1.js"></script>
+    <script>
+    /*function upPic(str, url){
+    			var ImgObj = new Image();
+    			var allImg = ".jpg|.jpeg|.gif|.bmp|.png|"; //图片格式
+    			var type = str.value.substr(str.value.lastIndexOf(".")).toLowerCase();
+    			var fso = new ActiveXObject("Scripting.FileSystemObject");
+    			alert(fso.getFile(str.value).size); 
+    			if(allImg.indexOf(type+"|") ==-1) {
+    				alert("请上传格式为.jpg.jpeg.gif.bmp.png的图片");
+    	            	return false;
+    			} 				
+    			var _src = $(str).siblings('.sub-pic').find('.sub-img')[0];
+    				var localName = $(str).parents('form').parent().attr('id');
+    				var _thisId = $(str).attr('id');
+    				var _subPic = $(str).siblings('.sub-pic').find('.loading-pic');
+    				$(str).siblings('.sub-pic').css('background', '#f4f4f4').find('.loading-pic').css('display', 'block');
+    				$.ajaxFileUpload({
+    					url: url,
+    					type: "POST",
+    					secureuri: false,
+    					fileElementId: str.id,
+    					dataType: "json",
+    					success: function (data) {
+    	            //console.log(data);
+    	            if(data.code == 1){
+    	            	var imgUrl = data.data.thisUrl;
+    	            	var imgKey = data.data.urlKey;
+    	            	$(_src).attr({'src': imgUrl, 'urlKey': imgKey}).css({'width': '100%', 'opacity': 1, 'filter': 'alpha(opacity=100);'});
+    	            	$(_subPic).css('display', 'none');
+    	            	var as = window.LS.get(localName);
+    	            	var _as = as ? JSON.parse(as): {};
+    	            	_as[_thisId] = imgUrl;
+    	            	_as[_thisId + 'Key'] = imgKey;
+    	            	window.LS.set(localName, JSON.stringify(_as), 24);
+    	            } else {
+    	            	alert(data.message);
+    	            }
+    	          }
+    	        });			
+    		}*/
+    		var str  = $('#dv');
+    		$('#dv').click(function(){
+    			console.log(str);
+    		});
+    function img_sc(str, url) {
+        var src = $(str).siblings('.show_certificate').find('img')[0];
+        var localName = $(str).partans('form').partant().attr('id');
+        var _thisId = $(str).attr('id');
+        $.ajaxFileUpload({
+            url: url,
+            type: 'POST',
+            secureuri: false,
+            fileElementId: str.id,
+            dataType: 'json',
+            success: function(data) {
+                if (data.code == 1) {
+                    var imgUrl = data.data.thisUrl;
+                    var imgKey = data.data.urlKey;
+                    $(src).attr({
+                        'src': imgUrl,
+                        'urlKey': imgKey
+                    }).css({
+                        'width' :'100%',
+                        'opacity' :1,
+                        'filter': 'alpha(opacity=100)'
+                    });
+                } else {
+                    alert(data.message);
+                }
+            }
+        });
+    }
+    </script>
+</body>
+
+</html>

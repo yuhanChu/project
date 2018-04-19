@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/bass.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+    <div class="layout">
+        <!--顶部-->
+        <header class="mui-bar mui-bar-nav">
+	    <div class="f_left">
+                    <img src="images/earth1.png">
+                    <a href="#" class="all">全球</a>
+                    <div class="arrow-down">
+                    <!--向下的三角-->
+                    </div>
+                    <a href="#" class="change">语言</a>
+                    <div class="arrow-down">
+                    <!--向下的三角-->
+                    </div>
+            </div>
+            <a href="#" class="wel f_right">欢迎来到学分在线COOC</a>
+	   </header>
+        
+        
+        <!--导航-->
+        <div class="navb">
+            <div class="navb_box clearfix">
+            	<div class="f_left logo">
+            		<h2>学分在线</h2>
+            		<p>Studybanks.com</p>
+            	</div>
+
+            <ul class="f_right">
+                <li><img src="images/btn_login.jpg" alt=""></li>
+                <li id="btn_search"><img src="images/btn_search.jpg" alt=""></li>
+                <li><img src="images/btn_course.jpg" alt=""></li>
+            </ul>
+
+            </div>
+            <div class="search hide" id="search">
+            	<input type="search" class=".mui-input-speech" placeholder="请输入搜索内容"/><span class="f_right"></span>
+            </div>
+        </div>
+        
+        	
+        <!--banner-->
+        <!--<div class="banner">
+            <ul class="pic">
+                <li><img src="images/banner.jpg" alt=""></li>
+                <li><img src="images/banner.jpg" alt=""></li>
+                <li><img src="images/banner.jpg" alt=""></li>
+                <li><img src="images/banner.jpg" alt=""></li>
+                <li><img src="images/banner.jpg" alt=""></li>
+            </ul>
+            <ul class="point">
+                <li></li>
+                <li class="current"></li>
+                <li></li>
+            </ul>
+        </div>-->
+        
+		<div class="mui-slider">
+			  <div class="mui-slider-group mui-slider-loop">
+			    <!--支持循环，需要重复图片节点-->
+			    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/banner.jpg" alt=""></a></div>
+			    <div class="mui-slider-item"><a href="#"><img src="images/banner.jpg" alt=""></a></div>
+			    <div class="mui-slider-item"><a href="#"><img src="images/banner.jpg" alt=""></a></div>
+			    <div class="mui-slider-item"><a href="#"><img src="images/banner.jpg" alt=""></div>
+			    <div class="mui-slider-item"><a href="#"><img src="images/banner.jpg" alt=""></div>
+			  </div>
+			  <div class="mui-slider-indicator">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+				<div class="mui-indicator"></div>
+			</div>
+		</div>
+        
+        	
+        <!--特色-->
+        <div class="feature">
+            <ul class="al">
+                <li>
+                    <a href="#">
+                        <img src="images/book.jpg" alt="">
+                        <h2>拿证书</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/study.jpg" alt="">
+                        <h2>修学分</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/job.jpg" alt="">
+                        <h2>找工作</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="no_border">
+                        <img src="images/fly.jpg" alt="">
+                        <h2>去留学</h2>
+                    </a>
+                </li>
+            </ul>
+            <ul class="explain" style="display: none;">
+            	<li>领导力-行动中的团队和领导者<span></span></li>
+            	<li>可持续性发展与社区：公民生态学导论</li>
+            	<li>学习和思考：大学成功的关键</li>
+            	<li>Uber的那些事儿-关于共享经济和大数据<span></span></li>
+            </ul>
+        </div>
+        
+        	
+        <!--猜你喜欢-->
+        <div class="like clearfix">
+            <div class="like_top">
+                <span></span>
+                <h1>猜你喜欢</h1>
+                <a href="#">
+                    换一换
+                    <span></span>
+                </a>
+            </div>
+            <section>
+                <img src="images/desk.jpg" alt="">
+                <p>轻松学会几本乐理轻松 你好点附近的开始接完</p>
+                <span>已开 2/21 节</span>
+                <div class="clearfix">
+                    <p class="b f_left one">证书</p>
+                    <p class="g f_left one">学分</p>
+                    <p class="o f_left one">实习</p>
+                    <span class="f_right mor">多语言</span>
+                    <span class="bg f_right"></span>
+                </div>
+            </section>
+            <section>
+                <img src="images/morebook.jpg" alt="">
+                <p>轻松学会几本乐理轻松欢迎听</p>
+                <span>已开 2/21 节</span>
+                <div class="clearfix">
+                    <p class="b f_left one">证书</p>
+                    <p class="g f_left one">学分</p>
+                    <p class="o f_left one">实习</p>
+                    <span class="f_right mor">多语言</span>
+                    <span class="bg f_right"></span>
+                </div>
+            </section>
+            <section>
+                <img src="images/ball.jpg" alt="">
+                <p>轻松学会几本乐理轻松 ...</p>
+                <span>已开 2/21 节</span>
+                <div class="clearfix">
+                    <p class="b f_left one">证书</p>
+                    <p class="g f_left one">学分</p>
+                    <p class="o f_left one">实习</p>
+                    <span class="f_right mor">多语言</span>
+                    <span class="bg f_right"></span>
+                </div>
+            </section>
+            <section>
+                <img src="images/studybanks.jpg" alt="">
+                <p>轻松学会几本乐理轻松 ...</p>
+                <span>已开 2/21 节</span>
+                <div class="clearfix">
+                    <p class="b f_left one">证书</p>
+                    <p class="g f_left one">学分</p>
+                    <p class="o f_left one">实习</p>
+                    <span class="f_right mor">多语言</span>
+                    <span class="bg f_right"></span>
+                </div>
+            </section>
+        </div>
+        
+        	
+        <!--更多-->
+		<div class="tap">
+        	<button>点击查看更多课程</button>
+        </div>
+        
+        	
+        <!--热门学校-->
+        <div class="hot">
+            <div class="hot_top clearfix">
+                <span></span>
+                <h1>热门学校</h1>
+                <a href="#">MORE&gt;&gt;</a>
+            </div>
+            <section class="clearfix">
+                <div class="f_left pic">
+                    <img src="images/qinghua.jpg" alt="">
+                    <p>清华大学</p>
+                </div>
+                <div class="f_left write">
+                    <h1>热门专业 ：</h1>
+                    <a href="#">建筑环境与设备工程</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#">机械工程</a> <br>
+                    <a href="#">计算机科学与技术</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#">海洋工程</a>
+                </div>
+            </section>
+            <section class="clearfix">
+                <div class="f_left pic">
+                    <img src="images/jiagnnan.jpg" alt="">
+                    <p>江南大学</p>
+                </div>
+                <div class="f_left write">
+                    <h1>热门专业 ：</h1>
+                    <a href="#">建筑环境与设备工程</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#">机械工程</a> <br>
+                    <a href="#">计算机科学与技术</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#">海洋工程</a>
+                </div>
+            </section>
+            <section class="clearfix">
+                <div class="f_left pic">
+                    <img src="images/kang.jpg" alt="">
+                    <p>康内尔大学</p>
+                </div>
+                <div class="f_left write">
+                    <h1>热门专业 ：</h1>
+                    <a href="#">建筑环境与设备工程</a>&nbsp;&nbsp;
+                    <a href="#">机械工程</a> <br>
+                    <a href="#">计算机科学与技术</a>&nbsp;&nbsp;
+                    <a href="#">海洋工程</a>
+                </div>
+            </section>
+            <section class="clearfix">
+                <div class="f_left pic">
+                    <img src="images/beijing.jpg" alt="">
+                    <p>北京大学</p>
+                </div>
+                <div class="f_left write">
+                    <h1>热门专业 ：</h1>
+                    <a href="#">建筑环境与设备工程</a>&nbsp;&nbsp;
+                    <a href="#">机械工程</a> <br>
+                    <a href="#">计算机科学与技术</a>&nbsp;&nbsp;
+                    <a href="#">海洋工程</a>
+                </div>
+            </section>
+            <section class="clearfix">
+                <div class="f_left pic">
+                   <img src="images/renmin.jpg" alt="">
+                    <p>人民大学</p>
+                </div>
+                <div class="f_left write">
+                    <h1>热门专业 ：</h1>                
+	                <a href="#">建筑环境与设备工程</a>&nbsp;&nbsp;
+	                <a href="#">机械工程</a> <br>
+	                <a href="#">计算机科学与技术</a>&nbsp;&nbsp;
+	                <a href="#">海洋工程</a>                    
+               </div>
+            </section>
+        </div>
+        <!--入住机构-->
+        <div class="branch">
+            <h1>入住机构</h1>
+            <ul class="clearfix">
+                <li><a href="#">迷你课堂</a></li>
+                <li><a href="#">腾讯课堂</a></li>
+                <li><a href="#">微课</a></li>
+                <li><a href="#">iversity</a></li>
+                <li><a href="#">慕课网</a></li>
+                <li><a href="#">coursera</a></li>
+                <li><a href="#">EDX</a></li>
+            </ul>
+        </div>
+        
+        	
+        <!--底部-->
+        <footer>
+            <ul class="clearfix">
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">常见问题</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">电脑版</a></li>
+            </ul>
+            <p>学分在线（北京）国际数据科技有限公司</p>
+            <p>Copyright © 2014 - 2016</p>
+        </footer>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>

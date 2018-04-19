@@ -1,0 +1,419 @@
+html,
+body,
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Microsoft YaHei" !important;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #333;
+}
+
+.f_left {
+    float: left;
+}
+
+.f_right {
+    float: right;
+}
+
+
+/*清除浮动*/
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+img {
+    display: block;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.contain {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0;
+}
+
+input,
+button,
+textarea,
+select {
+    outline: none;
+    resize: none;
+}
+
+.pad120 {
+    padding-left: 120px;
+}
+
+.cyh_banner_box {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    background: url('images/banner.jpg') no-repeat;
+    .cyh_banner_zi {
+        margin: 0 auto;
+        width: 714px;
+        padding-top: 122px;
+        img {
+            width: 714px;
+            height: 203px;
+        }
+    }
+    .cyh_sanjiao {
+        width: 46px;
+        height: 36px;
+        background: url('images/icon.png') no-repeat;
+        margin: 0 auto;
+        margin-top: 45px;
+    }
+    .cyh_banner_btn {
+        line-height: 50px;
+        width: 176px;
+        height: 50px;
+        background: url('images/bottom.png') no-repeat;
+        margin: 0 auto;
+        margin-top: 38px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+.cyh_nav {
+    height: 620px;
+    background: #f6f1f1;
+    .nav_zi {
+        width: 150px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 85px;
+        h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        span {
+            font-size: 14px;
+            color: #888;
+        }
+    }
+    .nav_ul {
+        margin-top: 80px;
+        ul {
+            width: 1045px;
+            margin: 0 auto;
+            li {
+                float: left;
+                width: 33.33%;
+                text-align: center;
+                cursor: pointer;
+                img {
+                    margin: 0 auto;
+                    margin-bottom: 40px;
+                }
+                p {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+.cyh_infor {
+    height: 600px;
+    background: url(images/banner2.jpg) no-repeat;
+    .infor_zi {
+        width: 545px;
+        text-align: center;
+        margin: 0 auto;
+        padding-top: 60px;
+        h2 {
+            font-size: 22px;
+            color: #cfd9ff;
+            margin-bottom: 20px;
+        }
+        span {
+            font-size: 14px;
+            color: #cfd9ff;
+        }
+    }
+    .infr_con {
+        width: 1216px;
+        margin: 0 auto;
+        margin-top: 90px;
+        img {
+            width: 505px;
+            height: 340px;
+        }
+        div {
+            h2 {
+                font-size: 22px;
+                color: #cfd9ff;
+            }
+            p {
+                margin-top: 30px;
+                font-size: 16px;
+                width: 575px;
+                color: #cfd9ff;
+                line-height: 27px;
+            }
+        }
+    }
+}
+
+.cyh_major {
+    padding: 60px 0;
+    background: #ecf4f7;
+    .major_zi {
+        width: 145px;
+        margin: 0 auto;
+        text-align: center;
+        h2 {
+            font-size: 22px;
+        }
+        span {
+            font-size: 14px;
+            color: #888;
+        }
+    }
+    .major_con {
+        width: 1043px;
+        margin: 0 auto;
+        padding-left: 100px;
+        .major_infor {
+            width: 1043px;
+            height: 585px;
+            background: #fff;
+            margin-top: 40px;
+            padding-top: 30px;
+            position: relative;
+            padding-bottom: 40px;
+            .major_img {
+                position: absolute;
+                left: -90px;
+            }
+            .major_ri {
+                margin-left: 145px;
+                .major_dv1 {
+                    h2 {
+                        font-size: 20px;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                    }
+                    span {
+                        font-size: 14px;
+                        line-height: 22px;
+                        color: #646464;
+                    }
+                }
+                .major_dv2 {
+                    margin-top: 90px;
+                    h2 {
+                        font-size: 16px;
+                        margin-bottom: 30px;
+                    }
+                    p {
+                        line-height: 22px;
+                        font-size: 14px;
+                    }
+                    .ma20 {
+                        margin-bottom: 25px;
+                    }
+                    div {
+                        color: #646464;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cyh_job {
+    height: 613px;
+    background: url('images/banner3.jpg') no-repeat;
+    .job_zi {
+        width: 130px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 50px;
+        h2 {
+            font-size: 20px;
+            color: #cfd9ff;
+            margin-bottom: 15px;
+        }
+        span {
+            font-size: 14px;
+            color: #cfd9ff;
+        }
+    }
+    img {
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+}
+
+.ma0 {
+    margin-right: 0 !important;
+}
+
+.cyh_school {
+    height: 777px;
+    background: #fff;
+    .school_zi {
+        width: 210px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 70px;
+        h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        span {
+            font-size: 14px;
+            color: #888888;
+        }
+    }
+    .school_con {
+        width: 1280px;
+        margin: 0 auto;
+        padding-top: 70px;
+        div {
+            width: 315px;
+            color: #646464;
+            line-height: 22px;
+            padding-left: 53px;
+            margin-right: 165px;
+            box-sizing: border-box;
+            background: url('images/icon3.png') no-repeat;
+        }
+    }
+    img {
+        margin: 0 auto;
+    }
+}
+
+.cyh_bottom {
+    height: 78px;
+    margin-top: 110px;
+    background: #333333;
+    padding: 20px 0;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    .bottom_con {
+        margin: 0 auto;
+        width: 1140px;
+        .dv1 {
+            font-size: 12px;
+            text-align: center;
+            span {
+                display: block;
+                color: #fff;
+            }
+            margin-right: 18px;
+        }
+        .dv2 {
+            color: #fff;
+            font-size: 20px;
+            padding-left: 18px;
+            border-left: 2px solid #fff;
+            padding-top: 3px;
+            margin-right: 160px;
+        }
+        .dv3 {
+            font-size: 16px;
+            color: #fff;
+        }
+        .dv4 {
+            width: 140px;
+            height: 40px;
+            margin-left: 115px;
+            background: #ffa71c;
+            text-align: center;
+            line-height: 40px;
+            color: #fff;
+            border-radius: 26px;
+            cursor: pointer;
+        }
+    }
+    #cyh_close {
+        position: absolute;
+    }
+}
+
+#baoming {
+    width: 450px;
+    height: 467px;
+    background: black;
+    opacity: .5;
+    padding: 0 20px;
+    box-sizing: border-box;
+    .dv_h2 {
+        width: 363px;
+        font-size: 16px;
+        margin: 0 auto;
+        padding-top: 35px;
+        color: #fff;
+    }
+    .dv_2 {
+        padding-top: 37px;
+        width: 387px;
+        height: 54px;
+        margin: 0 auto;
+        input {
+            width: 387px;
+            height: 50px;
+            padding-left: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+    }
+    .dv_3 {
+        color: #fff;
+        margin-top: 20px;
+        .c_1 {
+            padding-left: 10px;
+        }
+        .c_2 {
+            ul {
+                padding-left: 15px;
+                li {
+                    float: left;
+                    width: 40px;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
