@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_6as4qk5zjzvt2o6r.css">
+	<link rel="stylesheet" type="text/css" href="iview.css">
+	<link rel="stylesheet" type="text/css" href="student.css">
+</head>
+
+<body>
+	<div id="app" class="main">
+		<div class="student-info clearfix">
+			<div class="photo" style="background-image: url(index/head.jpg);"></div>
+			<div class="info-content">
+				<div class="name">
+					<p>HelloKitty</p>
+					<div class="card iconfont">
+						<div class="id-card">
+							<i class="iconfont icon-shangjiantou"></i>
+							<p>身份证号：110101**********1234</p>
+							<p>驳回申请时间：2018-4-13 15:14:06</p>
+						</div>
+					</div>
+					<div class="info-status">未学习</div>
+				</div>
+				<p>课程名称：英语的基础训练课程<span>学历学分课程</span><span>线下教学</span></p>
+				<p>所属院校：中国人民大学-计算机学院-软件工程专业</p>
+				<ul class="grade clearfix">
+					<li>
+						<p>应获学分</p>
+						<span>2.0</span>
+					</li>
+					<li>
+						<p>综合成绩</p>
+						<span>65.00</span>
+					</li>
+					<li>
+						<p>期末成绩</p>
+						<span>89.00</span>
+					</li>
+					<li>
+						<p>大作业成绩</p>
+						<span>79.00</span>
+					</li>
+					<li>
+						<p>学习态度综合成绩</p>
+						<span>68.00</span>
+					</li>
+				</ul>
+			</div>
+			<!-- 状态 -->
+			<img v-show="false" v-cloak class="bohui" src="index/bohui.png">
+			<div v-show="true" v-cloak class="jieye-btn" @click="">课程结业</div>
+			<img v-show="false" v-cloak class="huodexuefen" src="index/pass.png">
+			<img v-show="false" v-cloak class="tuifei" src="index/tuifei.png">
+		</div>
+		<situation :show="dd"></situation>
+	</div>
+</body>
+<template id="situation">
+	<div>
+		<div class="study-situation">
+			<p>学习情况明细</p>
+			<div class="study-empty" v-if="!showdata.ocs_id&&!showdata.tup_id">暂无学习进度</div>
+			<div v-else class="study-situation-main">
+				<p class="clearfix"><span>档案编号：</span><span v-text="showdata.ocs_number||'——'">1566452200251545</span></p>
+				<p class="clearfix"><span>更新时间：</span><span v-text="showdata.ocs_utime">2018-4-16 14:25:20</span></p>
+				<p class="clearfix"><span>备注/评语：</span><span v-text="showdata.ocs_evaluation_study||'——'"></span></p>
+				<p class="clearfix"><span>存放地址：</span><span v-text="archive_area"></span></p>
+				<p v-if="showdata.ocs_imgs_study&&JSON.parse(showdata.ocs_imgs_study).length>0">成绩扫描件：</p>
+				<ul v-if="showdata.ocs_imgs_study&&JSON.parse(showdata.ocs_imgs_study).length>0" class="img-box clearfix">
+					<li v-for="img in JSON.parse(showdata.ocs_imgs_study)" @click="bigClick(img)"><img :src="img"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bigs-box" v-show="bigsShow" v-cloak>
+			<i class="iconfont icon-close" @click="bigsShow=false;"></i>
+			<img :src="bigsSrc?bigsSrc:'./index/loading.gif'">
+		</div>
+	</div>
+</template>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript">
+var situation = Vue.component('situation', {
+	template: '#situation',
+	props: ['show'],
+	data: function() {
+		return {
+			bigsShow: false,
+			bigsSrc: '',
+		};
+	},
+	computed: {
+		showdata: function() {
+			return this.show.learning_info;
+		},
+		archive_area: function() {
+			var str = this.showdata.ocs_area_explain + this.showdata.ocs_address;
+			if (str) {
+				return str.replace(/<[^>]+>/g, "");
+			} else {
+				return '——';
+			}
+		}
+	},
+	methods: {
+		bigClick: function(s) {
+			this.bigsSrc = s;
+			this.bigsShow = true;
+		},
+	},
+	mounted: function() {
+		// console.log(this.showdata);
+	}
+});
+var app = new Vue({
+	el: '#app',
+	data: {
+		dd: {
+			learning_info: {
+				ocs_address: "详细地址",
+				ocs_area_explain: '亚洲<span style="padding: 0 px 4 px;"></span>中国<span style="padding: 0 px 4 px;"></span>北京<span style=""></span>海淀',
+				ocs_area_id: "35",
+				ocs_begins: "0000-00-00 00:00:00",
+				ocs_card_no: "",
+				ocs_course_id: "1265",
+				ocs_ctime: "2018-05-18 14:47:49",
+				ocs_evaluation: "",
+				ocs_evaluation_study: "评语评语",
+				ocs_exam_status: "2",
+				ocs_id: "142",
+				ocs_number: "12312332",
+				ocs_ol_address: "啊萨达萨达撒大是",
+				ocs_ol_area_explain: '亚洲<span style="padding: 0 px 4 px;"></span>中国<span style="padding: 0 px 4 px;"></span>北京<span style=""></span>海淀',
+				ocs_ol_area_id: "35",
+				ocs_ol_paper_id: "17",
+				ocs_ol_test_address: "中国北京朝阳hjgjgjhj 2018-05-18 09:15至09:15",
+				ocs_over: "0000-00-00 00:00:00",
+				ocs_score: "100.00",
+				ocs_score_study: "80.00",
+				ocs_score_thesis: "-1.00",
+				ocs_score_total: "88.00",
+				ocs_status: "2",
+				ocs_study_status: "2",
+				ocs_teacher_uid: "786",
+				ocs_teachers: "",
+				ocs_title: "",
+				ocs_uid: "843",
+				ocs_user_name: "",
+				ocs_utime: "2018-05-18 15:04:55",
+				ocs_imgs_study: '["http:\/\/img.coocbank.com\/61b4a64be663682e8cb037d9719ad8cd\/file1526626035686\/d14fb3bfd2db8b73f028ea9fd15e2a55.jpg","http:\/\/img.coocbank.com\/61b4a64be663682e8cb037d9719ad8cd\/file1526627062348\/2cc1d504ad9fdbc5b76875d8cda1d266.jpg","http:\/\/img.coocbank.com\/61b4a64be663682e8cb037d9719ad8cd\/file1526627062348\/65466981e7c6a9c748cfa2fb42ca16b5.jpg"]',
+				tup_id:'',
+			}
+		}
+	}
+});
+</script>
+
+</html>
