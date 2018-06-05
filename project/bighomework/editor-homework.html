@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>大作业列表</title>
+    <link rel="stylesheet" type="text/css" href="editor-homework.css">
+</head>
+<script type="text/javascript">
+document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+window.onresize = function() {
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+}
+</script>
+
+<body>
+    <div id="main">
+        <div class="head">
+            <i class="iconfont"></i>
+            <p>编辑大作业</p>
+            <span>作业要求</span>
+        </div>
+        <p class="time">自动保存：2017-06-12 12:23:50</p>
+        <div class="content">
+            <input type="text" name="title" placeholder="大作业标题">
+            <textarea placeholder="正文..."></textarea>
+        </div>
+        <div class="edtor-btn">
+            <div class="submit">交作业</div>
+            <div class="save">保存草稿</div>
+        </div>
+    </div>
+    <div id="yaoqiu" style="display: none;">
+        <div class="bg"></div>
+        <div class="layer">
+            <i class="iconfont"></i>
+            <p class="title">西方艺术史发展历程</p>
+            <div>
+                <p>
+                    同学们根据课上所讲内容，结合现实中的名人事迹，从“艺术和美学”对人生的意义和影响两个方面，输出一份论文，截止日期：2018-02-18
+                    <br> 论文要求：
+                    <br> 8W-10W字
+                    <br> 要求至少结合5位名人/学者等有较强影响力的人物
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+/***
+ * 控制页面最大宽度
+ ***/
+(function() {
+    var width = document.documentElement.clientWidth;
+    if (width > 414) {
+        width = 414
+    }
+    document.documentElement.style.fontSize = width / 7.5 + "px";
+    window.onresize = function() {
+        var width = document.documentElement.clientWidth;
+        if (width > 414) {
+            width = 414
+        }
+        document.documentElement.style.fontSize = width / 7.5 + "px";
+    }
+})();
+</script>
+
+</html>

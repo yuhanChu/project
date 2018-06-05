@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>试卷历史</title>
+    <link rel="stylesheet" type="text/css" href="exam-history.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="header">
+            <i class="iconfont"></i>
+            <p>第一节 现代艺术起源</p>
+        </div>
+        <div class="content">
+            <div class="list">
+                <p class="score">80分</p>
+                <p class="info">正确率：4/5（80%）</p>
+                <p class="info">2017-09-09  12:12:13</p>
+                <a href="javascript:;">查看试卷</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+/***
+ * 控制页面最大宽度
+ ***/
+(function() {
+    var width = 0;
+    if (document.documentElement.clientWidth > 600) {
+        width = 600
+        document.body.style.cssText = "width:600px;margin:0 auto;"
+    } else {
+        width = document.documentElement.clientWidth;
+        document.body.style.cssText = ""
+    }
+    document.documentElement.style.fontSize = width / 7.5 + "px";
+    window.onresize = function() {
+        if (document.documentElement.clientWidth > 600) {
+            width = 600
+            document.body.style.cssText = "width:600px;margin:0 auto;"
+        } else {
+            width = document.documentElement.clientWidth;
+            document.body.style.cssText = ""
+        }
+        document.documentElement.style.fontSize = width / 7.5 + "px";
+    }
+
+})();
+</script>
+
+</html>

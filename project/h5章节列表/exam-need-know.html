@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>考试须知</title>
+    <link rel="stylesheet" type="text/css" href="exam-need-know.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="header">
+            <i class="iconfont"></i>
+            <p>章节测验考试须知</p>
+        </div>
+        <div class="content">
+            <p>
+                1、章节测验默认最多3次考试机会，取最高成绩为最终成绩。
+                <br> 2、未学习的章节，不可以参与做题。
+                <br> 3、章节测验题型均为客观题，交卷后自动批阅（多选题漏选不给分）。
+                <br> 4、开始考试后自动计时，超时将自动交卷，请合理安排考试时间和答题顺序。
+            </p>
+            <a href="javascript:;">我已知晓考试须知并开始测验</a>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript">
+/***
+ * 控制页面最大宽度
+ ***/
+(function() {
+    var width = 0;
+    if (document.documentElement.clientWidth > 600) {
+        width = 600
+        document.body.style.cssText = "width:600px;margin:0 auto;"
+    } else {
+        width = document.documentElement.clientWidth;
+        document.body.style.cssText = ""
+    }
+    document.documentElement.style.fontSize = width / 7.5 + "px";
+    window.onresize = function() {
+        if (document.documentElement.clientWidth > 600) {
+            width = 600
+            document.body.style.cssText = "width:600px;margin:0 auto;"
+        } else {
+            width = document.documentElement.clientWidth;
+            document.body.style.cssText = ""
+        }
+        document.documentElement.style.fontSize = width / 7.5 + "px";
+    }
+
+})();
+</script>
+
+</html>

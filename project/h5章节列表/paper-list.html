@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>试卷列表</title>
+    <link rel="stylesheet" type="text/css" href="paper-list.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="header">
+            <i class="iconfont"></i>
+            <p>学习和思考：大学成功学习的关键fdkasjlkfkdasklfjadslfk</p>
+        </div>
+        <div class="content">
+            <div class="chapter-list">
+                <p class="chapter-title">第一章：走进现代艺术与古典艺术殿堂</p>
+                <div class="section-list">
+                    <p class="section-title">第一节：现代艺术起源</p>
+                    <p class="exam-info">
+                        <span>考试时间：20分钟</span>
+                        <span>考试次数：1/3(<a href="javascript:;">查看</a>)</span>
+                    </p>
+                    <div class="section-list-bottom clearfix">
+                        <span class="score f_left">0分</span>
+                        <a class="f_right" href="javascript:void(0);">开始测验</a>
+                    </div>
+                </div>
+                <div class="section-list">
+                    <p class="section-title">第一节：现代艺术起源</p>
+                    <p class="exam-info">
+                        <span>考试时间：20分钟</span>
+                        <span>考试次数：1/3(<a href="javascript:;">查看</a>)</span>
+                    </p>
+                    <div class="section-list-bottom clearfix">
+                        <span class="score f_left">80分</span>
+                        <a class="f_right" href="javascript:void(0);">开始测验</a>
+                    </div>
+                </div>
+            </div>
+            <div class="chapter-list">
+                <p class="chapter-title">第一章：走进现代艺术与古典艺术殿堂</p>
+                <div class="section-list">
+                    <p class="section-title">第一节：现代艺术起源</p>
+                    <p class="exam-info">
+                        <span>考试时间：20分钟</span>
+                        <span>考试次数：1/3(<a href="javascript:;">查看</a>)</span>
+                    </p>
+                    <div class="section-list-bottom clearfix">
+                        <span class="score f_left">0分</span>
+                        <a class="f_right" href="javascript:void(0);">开始测验</a>
+                    </div>
+                </div>
+                <div class="section-list">
+                    <p class="section-title">第一节：现代艺术起源</p>
+                    <p class="exam-info">
+                        <span>考试时间：20分钟</span>
+                        <span>考试次数：1/3(<a href="javascript:;">查看</a>)</span>
+                    </p>
+                    <div class="section-list-bottom clearfix">
+                        <span class="score f_left">80分</span>
+                        <a class="f_right" href="javascript:void(0);">开始测验</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="exam-ts">
+    	<div class="exam-ts-bg"></div>
+    	<div class="exam-layer">
+    		<p>测验次数已满3次，继续测验将不记录成绩</p>
+    		<a class="exam-btn" href="javascript:void(0);">继续测验</a>
+    		<div class="exam-btn canel">取消</div>
+    	</div>
+    </div>
+</body>
+<script type="text/javascript">
+/***
+ * 控制页面最大宽度
+ ***/
+(function() {
+    var width = 0;
+    if (document.documentElement.clientWidth > 600) {
+        width = 600
+        document.body.style.cssText = "width:600px;margin:0 auto;"
+    } else {
+        width = document.documentElement.clientWidth;
+        document.body.style.cssText = ""
+    }
+    document.documentElement.style.fontSize = width / 7.5 + "px";
+    window.onresize = function() {
+        if (document.documentElement.clientWidth > 600) {
+            width = 600
+            document.body.style.cssText = "width:600px;margin:0 auto;"
+        } else {
+            width = document.documentElement.clientWidth;
+            document.body.style.cssText = ""
+        }
+        document.documentElement.style.fontSize = width / 7.5 + "px";
+    }
+
+})();
+</script>
+
+</html>

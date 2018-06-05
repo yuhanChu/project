@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="zuoceyan.css">
+</head>
+<script type="text/javascript">
+document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+window.onresize = function() {
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+}
+</script>
+
+<body>
+    <div id="main">
+        <div class="header">
+            <i class="iconfont"></i>
+            <p>试题 1/5</p>
+            <span>05:00</span>
+        </div>
+        <div class="content">
+            <div class="question">
+                <span class="score">单选题（20分）</span>
+                <div>
+                    <p>以下艺术方式相比较绘画而言，你认 为哪种更高级？</p>
+                </div>
+                <div class="img-box">
+                </div>
+            </div>
+            <div class="answer">
+                <div class="answer-list clearfix">
+                    <span :class="{'cur':isSelet('A')}" @click="changeAnswer('A',2)">A</span>
+                    <p>行为艺术</p>
+                </div>
+                <div class="answer-list clearfix">
+                    <span :class="{'cur':isSelet('B')}" @click="changeAnswer('B',2)">B</span>
+                    <p>行为艺术</p>
+                </div>
+                <div class="answer-list clearfix">
+                    <span :class="{'cur':isSelet('C')}" @click="changeAnswer('C',2)">C</span>
+                    <p>行为艺术</p>
+                </div>
+                <div class="answer-list clearfix">
+                    <span :class="{'cur':isSelet('D')}" @click="changeAnswer('D',2)">D</span>
+                    <p>行为艺术</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-btn">
+            <div class="before">上一题</div>
+            <!-- <div class="next">下一题</div> -->
+            <div class="send">提交</div>
+        </div>
+
+        <div id="send-test" v-show="sibmitShow" v-cloak>
+        	<div class="bg"></div>
+        	<div class="layer">
+        		<p>本节测验剩余考试次数1，确认交卷？</p>
+        		<div class="cancel-btn">取消</div>
+        		<div class="sibmit-btn">确认交卷</div>
+        	</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="vue.min.js"></script>
+<script type="text/javascript">
+/***
+ * 控制页面最大宽度
+ ***/
+(function() {
+    var width = 0;
+    if (document.documentElement.clientWidth > 600) {
+        width = 600
+        document.body.style.cssText = "width:600px;margin:0 auto;"
+    } else {
+        width = document.documentElement.clientWidth;
+        document.body.style.cssText = ""
+    }
+    document.documentElement.style.fontSize = width / 7.5 + "px";
+    window.onresize = function() {
+        if (document.documentElement.clientWidth > 600) {
+            width = 600
+            document.body.style.cssText = "width:600px;margin:0 auto;"
+        } else {
+            width = document.documentElement.clientWidth;
+            document.body.style.cssText = ""
+        }
+        document.documentElement.style.fontSize = width / 7.5 + "px";
+    }
+
+})();
+var app = new Vue({
+    el: '#main',
+    data: {
+        uanswer: '',
+        sibmitShow:false,
+    },
+    methods: {
+        changeAnswer: function(a, type) {
+            if (type != 2) {
+                this.uanswer = a;
+            } else {
+            	if (this.uanswer.indexOf(a) > -1) {
+            		this.uanswer = this.uanswer.replace(a,'');
+            	} else {
+            		this.uanswer += a;
+            	} 
+            }
+        },
+        isSelet: function(a) {
+            if (this.uanswer) {
+                return this.uanswer.indexOf(a) > -1 ? true : false;
+            }
+        },
+    },
+    mounted: function() {
+
+    }
+});
+</script>
+
+</html>

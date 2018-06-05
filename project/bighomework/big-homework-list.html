@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>大作业列表</title>
+    <link rel="stylesheet" type="text/css" href="big-homework-list.css">
+</head>
+<script type="text/javascript">
+document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+window.onresize = function() {
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+}
+</script>
+
+<body>
+    <div id="main">
+        <div class="head">
+            <i class="iconfont"></i>
+            <p>学习和思考：大学成功学习的关键大学成功学习的关键</p>
+        </div>
+        <div class="content">
+            <div class="info">
+                <div class="demand">
+                    <p class="title">西方艺术史发展历程</p>
+                    <div>
+                        <p>
+                            同学们根据课上所讲内容，结合现实中的名人事迹，从“艺术和美学”对人生的意义和影响两个方面，输出一份论文，截止日期：2018-02-18
+                            <br> 论文要求：
+                            <br> 8W-10W字
+                            <br> 要求至少结合5位名人/学者等有较强影响力的人物
+                        </p>
+                    </div>
+                </div>
+                <div class="time">
+                    <!-- 被打回 -->
+                    <p class="clearfix" style="display: none;">
+                        <span class="left reason">打回原因：</span>
+                        <span class="right reason">
+                        	论点清晰，但个别语句有问题，希望能够再接再..论点清晰，但个别语句有问题，希望能够
+													再接再...论点清晰，但个别语句有问
+												</span>
+                    </p>
+                    <!-- 已批阅 -->
+                    <p class="clearfix">
+                        <span class="left">分数：</span>
+                        <span class="right score">89</span>
+                    </p>
+                    <p class="clearfix">
+                        <span class="left reason">评语：</span>
+                        <span class="right reason">
+                        	论点清晰，但个别语句有问题，希望能够再接再..论点清晰，但个别语句有问题，希望能够
+													再接再...论点清晰，但个别语句有问
+												</span>
+                    </p>
+                    <p class="clearfix">
+                        <span class="left">发布时间：</span>
+                        <span class="right">2017-09-09 12:12:13</span>
+                    </p>
+                    <p class="clearfix">
+                        <span class="left">截止日期：</span>
+                        <span class="right">2017-09-09 12:12:13</span>
+                    </p>
+                    <p class="clearfix">
+                        <span class="left">最新保存：</span>
+                        <span class="right">2017-09-09 12:12:13</span>
+                    </p>
+                </div>
+                <!-- 申请重批 -->
+                <div class="excuse">
+                    <p class="clearfix">
+                        <span class="left reason">重批理由：</span>
+                        <span class="right reason">
+                        	论点清晰，但个别语句有问题，希望能够再接再..论点清晰，但个别语句有问题，希望能够
+													再接再...论点清晰，但个别语句有问
+												</span>
+                    </p>
+                    <p class="clearfix">
+                        <span class="left">申请日期：</span>
+                        <span class="right">2017-09-09 12:12:13</span>
+                    </p>
+                </div>
+                <!-- 重批驳回 -->
+                <div class="excuse">
+                    <p class="clearfix">
+                        <span class="left reason">驳回理由：</span>
+                        <span class="right reason">
+                        	论点清晰，但个别语句有问题，希望能够再接再..论点清晰，但个别语句有问题，希望能够
+													再接再...论点清晰，但个别语句有问
+												</span>
+                    </p>
+                    <p class="clearfix">
+                        <span class="left">驳回日期：</span>
+                        <span class="right">2017-09-09 12:12:13</span>
+                    </p>
+                </div>
+                <p class="clearfix status">
+                    <span class="right status">重批驳回</span>
+                </p>
+            </div>
+        </div>
+        <div class="btn-box" style="display: none;">
+            <a href="javascript:;" class="butt">编辑大作业</a>
+        </div>
+        <div class="btn-box">
+            <a href="javascript:;" class="butt apply">申请重批</a>
+            <a href="javascript:;" class="butt">查看大作业</a>
+        </div>
+    </div>
+    <div id="apply-layer" style="display: none;">
+        <div class="bg"></div>
+        <div class="layer">
+            <i class="iconfont"></i>
+            <p>申请重批</p>
+            <textarea placeholder="请输入申请重批理由..."></textarea>
+            <span>*大作业仅有一次申请重批机会</span>
+            <div class="layer-btn">申请重批</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+/***
+ * 控制页面最大宽度
+ ***/
+(function() {
+    var width = document.documentElement.clientWidth;
+    if (width > 414) {
+        width = 414
+    }
+    document.documentElement.style.fontSize = width / 7.5 + "px";
+    window.onresize = function() {
+        var width = document.documentElement.clientWidth;
+        if (width > 414) {
+            width = 414
+        }
+        document.documentElement.style.fontSize = width / 7.5 + "px";
+    }
+})();
+</script>
+
+</html>

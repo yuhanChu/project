@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>章节测验列表</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_v5ba96f6sc1y8pvi.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/mint-ui/lib/style.css">
+    <link rel="stylesheet" type="text/css" href="section-exam-list.css">
+</head>
+<script type="text/javascript" charset="utf-8">
+document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+window.onresize = function() {
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + "px";
+}
+</script>
+
+<body>
+    <div id="main">
+        <div class="top-fix">
+            <div class="title">
+                <i class="iconfont icon-xiangzuojiantou"></i>
+                <p>测验&作业</p>
+            </div>
+            <ul class="nav clearfix">
+                <li :class="cur=='1'?'cur':''" v-on:click="navTab(1)">章节测验</li>
+                <li :class="cur=='2'?'cur':''" v-on:click="navTab(2)">期末考试</li>
+                <li :class="cur=='3'?'cur':''" v-on:click="navTab(3)">大作业</li>
+            </ul>
+        </div>
+        <div class="content">
+            <!-- 章节测验列表 -->
+            <sectiom-list></sectiom-list>
+        </div>
+    </div>
+</body>
+<template id="section-exam-list">
+    <!-- :bottom-all-loaded="allLoaded" ref="loadmore" -->
+    <mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" ref="loadmore">
+        <ul class="section-exam-list-ul">
+            <li class="section-exam-list" v-for="it in list">
+                <div class="section-exam-list-top clearfix">
+                    <img src="sectionexamlist/list.png">
+                    <div>
+                        <p class="course-name">学习和思考：大学成功学习和思考：大学成功学习和思考：大学成功</p>
+                        <p class="c-time">2017-09-09 12:02:13</p>
+                        <span>3节可做</span>
+                    </div>
+                </div>
+                <div class="section-exam-list-bottom clearfix">
+                    <span>学分学历课程</span>
+                    <span>混合式教学</span>
+                    <span>3.0学分</span>
+                    <span>王步高教授</span>
+                </div>
+            </li>
+        </ul>
+    </mt-loadmore>
+</template>
+<script type="text/javascript" src="vue.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/mint-ui/lib/index.js"></script>
+<script type="text/javascript">
+/***
+ * 控制页面最大宽度
+ ***/
+(function() {
+    var width = 0;
+    if (document.documentElement.clientWidth > 600) {
+        width = 600
+        document.body.style.cssText = "width:600px;margin:0 auto;"
+    } else {
+        width = document.documentElement.clientWidth;
+        document.body.style.cssText = ""
+    }
+    document.documentElement.style.fontSize = width / 7.5 + "px";
+    window.onresize = function() {
+        if (document.documentElement.clientWidth > 600) {
+            width = 600
+            document.body.style.cssText = "width:600px;margin:0 auto;"
+        } else {
+            width = document.documentElement.clientWidth;
+            document.body.style.cssText = ""
+        }
+        document.documentElement.style.fontSize = width / 7.5 + "px";
+    }
+
+})();
+var sectionList = Vue.component('sectiom-list', {
+    template: '#section-exam-list',
+    data: function() {
+        return {
+            allLoaded: false,
+            topStatus: '',
+            list:[1],
+        };
+    },
+    methods: {
+
+        loadTop: function() {
+            var that = this;
+            setTimeout(function(){
+                that.$refs.loadmore.onTopLoaded();
+            },1000)
+        },
+        loadBottom: function() {
+            var that = this;
+            setTimeout(function(){
+                that.$refs.loadmore.onBottomLoaded();
+                if (that.allLoaded == false) {
+                    that.list.push(1)
+                }
+                
+            },1000)
+            
+        },
+        loadmore: function() {
+            console.log(4444)
+        },
+        onTopLoaded: function() {
+            alert(333)
+        },
+    },
+    mounted: function() {
+
+    }
+});
+var app = new Vue({
+    el: '#main',
+    data: {
+        cur: 1,
+    },
+    methods: {
+        navTab: function(cur) {
+            this.cur = cur;
+        },
+
+    },
+    mounted: function() {
+
+    }
+});
+</script>
+
+</html>
