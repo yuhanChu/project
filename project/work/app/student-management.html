@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生管理</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_wwk28b9up.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" href="css/student-management.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="major-title clearfix">学生管理 <a href="javascript:void(0);">&lt;&lt;返回专业管理</a></div>
+        <div class="student-sx clearfix">
+            <div class="year f_left">
+                <template>
+                    <i-select style="width:153px;height: 28px;">
+                        <i-option v-for="item in tList" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                </template>
+            </div>
+            <div class="classes f_left">
+                <template>
+                    <i-select style="width:153px;height: 28px;">
+                        <i-option v-for="item in tList" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                </template>
+            </div>
+            <div class="f_left date clearfix">
+                <span>报名时间：</span>
+                <div class="f_left">
+                    <input class="Wdate" type="text" id="d234" onclick="WdatePicker({startDate:'%y-%M-01',readOnly:true})" />
+                    <span>至</span>
+                    <input class="Wdate" type="text" id="d235" onclick="WdatePicker({startDate:'%y-%M-01',readOnly:true})" />
+                </div>
+            </div>
+            <div class="f_right search">
+                <input type="text" name="search" placeholder="老师姓名">
+                <i class="iconfont icon-search"></i>
+            </div>
+        </div>
+        <div class="student-btn clearfix">
+            <div class="up-load" style="display: none;">下载模板</div>
+            <div class="daoru" style="display: none;">导入学生</div>
+            <div class="add" v-show="yd">手动添加</div>
+            <div class="yidong" v-show="yd" @click="yidongClick">批量移动</div>
+            <div class="ydto" v-show="!yd" v-cloak>移动到</div>
+            <div class="cancel" v-show="!yd" v-cloak @click="cancelClick">取消</div>
+            <div class="che">
+                <template>
+                    <Checkbox v-model="single" @on-change="cheChange">只显示未分班的学生</Checkbox>
+                </template>
+            </div>
+        </div>
+        <div class="student-main">
+            <ul class="title-ul clearfix">
+                <li class="li0" v-cloak v-show="!yd">
+                    <template>
+                        <Checkbox v-model="all"></Checkbox>
+                    </template>
+                </li>
+                <li class="li1">序号</li>
+                <li class="li2">姓名</li>
+                <li class="li3">身份证号码</li>
+                <li class="li4">联系方式</li>
+                <li class="li5">所在班级</li>
+                <li class="li6">报名时间</li>
+                <li class="li7">添加时间</li>
+                <li class="li8" v-show="yd">操作</li>
+            </ul>
+            <student-list :yidong="yd"></student-list>
+        </div>
+        <div id="add-student" v-cloak v-show="addShow">
+            <div class="bg"></div>
+            <div class="layer">
+                <i class="iconfont icon-close" @click="addShow=!addShow"></i>
+                <div class="name clearfix">
+                    <span>学生姓名：</span>
+                    <input type="text" name="nn">
+                </div>
+                <div class="name clearfix">
+                    <span>身份证号码：</span>
+                    <input type="text" name="cc">
+                </div>
+                <div class="name clearfix">
+                    <span>手机号码：</span>
+                    <input type="text" name="ii">
+                </div>
+                <div class="name clearfix">
+                    <span>邮箱账号：</span>
+                    <input type="text" name="ee">
+                </div>
+                <div class="name clearfix">
+                    <span>报名时间：</span>
+                    <div class="clearfix f_left">
+                        <template>
+                            <i-select style="width:100px;height: 28px;" placeholder="月份">
+                                <i-option v-for="item in tList" :value="item.value">{{ item.label }}</i-option>
+                            </i-select>
+                        </template>
+                        <template>
+                            <i-select style="width:100px;height: 28px;margin-left: 20px;" placeholder="日">
+                                <i-option v-for="item in tList" :value="item.value">{{ item.label }}</i-option>
+                            </i-select>
+                        </template>
+                    </div>
+                </div>
+                <div class="add-btn">添加</div>
+            </div>
+        </div>
+        <div id="moveto" v-cloak v-show="moveShow">
+            <div class="bg"></div>
+            <div class="layer">
+                <i class="iconfont icon-close" @click="moveShow=!moveShow"></i>
+                <div class="title">移动到班级</div>
+                <div class="class-list cur">一班<img src="images/major/cur.png"></div>
+                <div class="class-list">一班<img src="images/major/cur.png"></div>
+                <div class="move-btn">移动</div>
+            </div>
+        </div>
+        <div id="moveall" v-cloak v-show="moveAllShow">
+            <div class="bg"></div>
+            <div class="layer">
+                <i class="iconfont icon-close" @click="moveAllShow=!moveAllShow"></i>
+                <template>
+                    <i-select style="width:270px;height: 28px;" placeholder="月份">
+                        <i-option v-for="item in tList" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                </template>
+                <p>*所选学生中，有已分班的学生，请谨慎操作</p>
+                <div class="moveall-btn">移动</div>
+            </div>
+        </div>
+    </div>
+</body>
+<template id="list">
+    <div class="list-content">
+        <ul class="list-ul clearfix">
+            <li class="li0" v-cloak v-show="!yidong">
+                <Checkbox-group v-model="social" @on-change="ccc">
+                    <Checkbox label="11"></Checkbox>
+                </Checkbox-group>
+            </li>
+            <li class="li1">1</li>
+            <li class="li2">
+                <p>李磊</p>
+            </li>
+            <li class="li3">
+                <p>412220199309233365</p>
+            </li>
+            <li class="li4">
+                <p><span>13664589542</span><span>554545233@qq.com</span></p>
+            </li>
+            <li class="li5">
+                <p>2018届第3期-2班</p>
+            </li>
+            <li class="li6">
+                <p>2017-02-1216:12:12</p>
+            </li>
+            <li class="li7">
+                <p>2017-02-1216:12:12</p>
+            </li>
+            <li class="li8" v-show="yidong">
+                <p>
+                    <a href="javascript:;">学习情况</a>
+                    <a href="javascript:;">移动</a>
+                    <a href="javascript:;">删除</a>
+                </p>
+            </li>
+        </ul>
+        <div class="page">
+            <template>
+                <Page :total="100" size="small" show-elevator></Page>
+            </template>
+        </div>
+    </div>
+</template>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript" src="js/wdatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+var sTemp = Vue.component('student-list', {
+    template: "#list",
+    props: ['yidong'],
+    data: function() {
+        return {
+            social: [],
+        };
+    },
+    methods: {
+        ccc: function(res) {
+            console.log(this.social);
+        }
+    },
+    mounted: function() {
+        // console.log(this.social)
+    }
+});
+var app = new Vue({
+    el: '#app',
+    data: {
+        tList: [{
+                value: '0',
+                label: '全部'
+            },
+            {
+                value: '1',
+                label: '教授'
+            },
+            {
+                value: '2',
+                label: '副教授'
+            },
+            {
+                value: '3',
+                label: '讲师'
+            },
+            {
+                value: '4',
+                label: '助教'
+            },
+        ],
+        single: false,
+        all: false,
+        yd: true,
+        addShow: false,
+        moveShow: false,
+        moveAllShow: false,
+    },
+    methods: {
+        cheChange: function(res) {
+            console.log(res)
+        },
+        yidongClick: function() {
+            this.yd = false;
+        },
+        cancelClick: function() {
+            this.yd = true;
+        },
+    }
+});
+</script>
+
+</html>

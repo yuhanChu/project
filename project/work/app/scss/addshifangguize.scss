@@ -1,0 +1,287 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0
+}
+
+input,
+textarea {
+    margin-bottom: 0;
+    box-shadow: none;
+    box-sizing: border-box
+}
+
+input[disabled],
+input[readonly],
+select[disabled],
+select[readonly],
+textarea[disabled],
+textarea[readonly] {
+    background: 0 0;
+    cursor: default
+}
+
+p {
+    margin-bottom: 0
+}
+
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none
+}
+
+a:link {
+    text-decoration: none
+}
+
+i {
+    font-style: normal
+}
+
+.f_left {
+    float: left
+}
+
+label {
+    margin-bottom: 0
+}
+
+.f_right {
+    float: right
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    resize: none;
+    box-shadow: none!important
+}
+
+.uneditable-input,
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=number],
+select,
+textarea {
+    margin-bottom: 0!important
+}
+
+button {
+    border: none!important;
+    background: 0 0!important
+}
+
+body {
+    background: #f8f8f8
+}
+
+@mixin font($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+@mixin btn($w, $h, $bg:#ff7669) {
+    width: $w;
+    height: $h;
+    line-height: $h;
+    text-align: center;
+    background-color: $bg;
+    cursor: pointer;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+#app {
+    width: 1170px;
+    margin: 0 auto;
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box; // will-change:unset !important;
+    }
+}
+
+.head {
+    padding: 27px 0 30px 20px;
+    @include font(28px, #3c3c3c);
+    background: #ffffff;
+    border-bottom: 1px solid #d1d1d1;
+    position: relative;
+    .back {
+        @include font(14px, #3c3c3c);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+    }
+}
+
+.add-rule-content {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    background: #fff;
+    border-top: 1px solid #d1d1d1;
+    .ts {
+        height: 30px;
+        line-height: 30px;
+        background: #f4f4f4;
+        @include font(14px, #999999);
+        text-align: center;
+    }
+
+    .table-box {
+        padding-top: 12px;
+        .list {
+            margin-top: 14px;
+            .f_left {
+                width: 145px;
+                height: 30px;
+                line-height: 30px;
+                @include font(14px, #3c3c3c);
+                text-align: right;
+                margin-right: 4px;
+            }
+            &>input {
+                width: 220px;
+                height: 30px;
+                font-size: 12px;
+                float: left;
+                padding-left: 10px;
+                border: 1px solid #d1d1d1;
+            }
+            .unit {
+                height: 30px;
+                line-height: 30px;
+                @include font(14px, #3c3c3c);
+                margin-left: 10px;
+                float: left;
+            }
+            &>textarea {
+                width: 550px;
+                height: 150px;
+                border: 1px solid #d1d1d1;
+                padding: 10px 5px;
+                float: left;
+                font-size: 14px;
+            }
+
+            .manual-add {
+                margin-top: 10px;
+                &:first-child {
+                    margin-top: 0;
+                }
+                input {
+                    width: 120px;
+                    height: 30px;
+                    font-size: 12px;
+                    float: left;
+                    padding-left: 10px;
+                    border: 1px solid #d1d1d1;
+                    float:left;
+                }
+                /* .unit {
+                    height: 30px;
+                    line-height: 30px;
+                    @include font(14px, #3c3c3c);
+                    margin-left: 10px;
+                    float: left;
+                } */
+            }
+            .manual-btn {
+                position: absolute;
+                right:-65px;
+                bottom:24px;
+                @include btn(53px, 30px, #f5f5f5);
+                @include font(14px, #3c3c3c);
+                border: 1px solid #dcdcdc;
+                border-radius: 4px;
+            }
+            .manual-p {
+                @include font(12px,#999999);
+                line-height: 20px;
+                margin-top:4px;
+                span {
+                    color:#ff0000;
+                }
+            }
+        }
+        .add-btn {
+            margin-top: 20px;
+            padding-left: 149px;
+            &>div {
+                @include btn(90px, 30px, #f5f5f5);
+                @include font(14px, #3c3c3c);
+                border: 1px solid #dcdcdc;
+                border-radius: 4px;
+                margin-right: 20px;
+                float: left;
+            }
+        }
+        .num-ts {
+            @include font(12px, #999999);
+            line-height: 20px;
+            margin-top: 4px;
+            padding-left: 149px;
+            span {
+                color: #ff0000;
+            }
+        }
+    }
+}
+
+#prompt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 1000;
+    .layer {
+        background: #fff;
+        padding: 30px 60px;
+        @include font(14px, #3c3c3c);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}

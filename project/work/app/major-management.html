@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>专业管理台</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_z7iqhm7i5wc.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" type="text/css" href="css/major-management.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="major-title clearfix">建筑艺术专业管理台 <a href="javascript:void(0);">&lt;&lt;返回专业管理</a></div>
+        <div class="major-content clearfix">
+            <div class="major-cover f_left">
+                <img src="images/major/management-cover.png">
+                <span>工学学士</span>
+            </div>
+            <ul class="major-ul1 f_left">
+                <li>所在大学：北京大学</li>
+                <li>专业代码：-</li>
+                <li>专业类型：高等教育</li>
+                <li>所在院系：建筑与艺术学院</li>
+                <li>招生状态：招生中</li>
+            </ul>
+            <ul class="major-ul1 f_left">
+                <li>创办模式：联合创办</li>
+                <li>费<span>费用</span>用：－</li>
+                <li>创建时间：2017-12-19 23:12:43</li>
+                <li>专业状态：申请下线</li>
+                <li>设置状态：重新审核中</li>
+            </ul>
+            <div class="major-btn f_right">
+                <div>专业设置</div>
+                <div>申请下线</div>
+                <div>停止招生</div>
+                <div>取消审核</div>
+            </div>
+        </div>
+        <p class="status pass clearfix">您的专业介绍已通过审批~ <i class="iconfont icon-close"></i></p>
+        <div class="management-main clearfix">
+            <a href="javascript:;">
+                <i class="iconfont icon-shengyin"></i>
+                <span>公告管理</span>
+            </a>
+            <a href="javascript:;">
+                <i class="iconfont icon-xueshengguanli"></i>
+                <span>师资管理</span>
+            </a>
+            <a href="javascript:;">
+                <i class="iconfont icon-zhengshu"></i>
+                <span>证书审批</span>
+            </a>
+            <a href="javascript:;">
+                <i class="iconfont icon-xuefen"></i>
+                <span>学分授权</span>
+            </a>
+        </div>
+        <div class="major-jie">
+            <div class="major-jie-title clearfix">
+                <p>专业各届管理</p>
+                <div class="major-jie-title-btn">新增届</div>
+            </div>
+            <div class="major-jie-content">
+                <ul class="ul1 clearfix">
+                    <li class="li1">专业届数</li>
+                    <li class="li2">专业期数</li>
+                    <li class="li3">审核状态</li>
+                    <li class="li4">招生状态</li>
+                    <li class="li5">上线状态</li>
+                    <li class="li6">操作</li>
+                </ul>
+                <div class="list-box">
+                    <ul class="list clearfix">
+                        <li class="li1">2018届</li>
+                        <li class="li2">第1期</li>
+                        <li class="li3">编辑中</li>
+                        <li class="li4">不需要招生</li>
+                        <li class="li5">已上线</li>
+                        <li class="li6">
+                            <a href="javascript:void(0);">专业设置</a>
+                            <a href="javascript:void(0);">班级管理</a>
+                            <a href="javascript:void(0);">学生列表</a>
+                            <a href="javascript:void(0);">删除</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fy clearfix">
+                    <span class="all">共10期专业</span>
+                    <template>
+                        <Page :total="100" size="small" show-elevator></Page>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div id="set-layer" v-cloak v-show="setShow">
+            <div class="bg"></div>
+            <div class="layer">
+                <i class="iconfont icon-close" @click="setShow=!setShow"></i>
+                <p>请您设置新增的专业届数：</p>
+                <span>新增专业届数</span>
+                <div class="set-main clearfix">
+                    <template>
+                        <i-select style="width:163px;float:left">
+                            <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                    <template>
+                        <i-select style="width:163px;float:right">
+                            <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                </div>
+                <div class="set-btn">新增</div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="my-layer" style="width: 365px;">
+        <img src="images/major/close.png" class="close" alt="关闭">
+        <p style="text-align: center;">停止招生后，对未报名学生不可见</p>
+        <div class="my-layer-btn">
+            <div class="true">确定</div>
+            <div class="cancel">取消</div>
+        </div>
+    </div> -->
+</body>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript">
+var myLayer = {
+    promit: function(width, align, p, t, c, trueFn, canFn) {
+        var html = '<div id="my-layer" style="width: ' + width + 'px;">' +
+            '<img src="images/major/close.png" class="close" alt="关闭">' +
+            '<p style="text-align: ' + align + ';">' + p + '</p>' +
+            '<div class="my-layer-btn">' +
+            '<div class="true">' + t + '</div>' +
+            '<div class="cancel">' + c + '</div>' +
+            '</div>' +
+            '</div>';
+        var obj = $('<div style="position:fixed;z-index:1000;top:0;left:0;background:rgba(0,0,0,.6);width:100%;height:100%;"></div>');
+        obj.html(html);
+        obj.appendTo($('body'));
+        obj.on('click', '.close', function() {
+            obj.remove();
+            if (canFn) {
+                canFn();
+            }
+        });
+        obj.on('click', '.cancel', function() {
+            obj.remove();
+            if (canFn) {
+                canFn();
+            }
+        });
+        obj.on('click', '.true', function() {
+            obj.remove();
+            if (trueFn) {
+                trueFn();
+            }
+
+        });
+    },
+};
+var app = new Vue({
+    el: '#app',
+    data: {
+        setShow: false,
+        cityList: [{
+                value: 'beijing',
+                label: '北京市'
+            },
+            {
+                value: 'shanghai',
+                label: '上海市'
+            },
+            {
+                value: 'shenzhen',
+                label: '深圳市'
+            },
+            {
+                value: 'hangzhou',
+                label: '杭州市'
+            },
+            {
+                value: 'nanjing',
+                label: '南京市'
+            },
+
+            {
+                value: 'chongqing',
+                label: '重庆市'
+            }
+        ],
+    }
+});
+
+// myLayer.promit(365,'left','取消审核后您仅可对专业基本信息进行修改，是否取消审核','确定','取消');
+</script>
+
+</html>

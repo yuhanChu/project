@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_wwk28b9up.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" type="text/css" href="css/xueshengxinxi.css">
+</head>
+
+<body>
+    <div id="app" class="main">
+        <div class="main-content">
+            <div class="info-top">
+                <div class="info-top-name clearfix">
+                    <img src="images/major/info-ava.png">
+                    <span class="name">张壮士</span>
+                    <span class="status">审核通过</span>
+                </div>
+                <ul class="info-top-ul clearfix">
+                    <li>
+                        <div>性别：男</div>
+                        <div>民族：汉</div>
+                        <div>婚否：否</div>
+                        <div>出生日期：1999年9月9日</div>
+                    </li>
+                    <li>
+                        <div>手机号：13600000000</div>
+                        <div>邮箱：zhangzhuangshi@qq.com</div>
+                        <div>身份证号：110104199909091111</div>
+                        <div>籍贯：中国 北京市 宣武区</div>
+                    </li>
+                    <li>
+                        <div>所在届数：2018届第3期</div>
+                        <div>所在班级：2班</div>
+                        <div>报名时间：2018年8月8日 08:08:08</div>
+                        <div>添加时间：2018年8月8日 08:08:08</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-bottom">
+                <div class="bottom-btn clearfix">
+                    <span class="jiaofei f_left" :class="cur==1?'cur':''" @click="cur=1">缴费信息</span>
+                    <span class="xuexi f_left" :class="cur==2?'cur':''" @click="cur=2">学习情况</span>
+                    <div class="f_right baoming">报名信息</div>
+                </div>
+                <div class="bottom-content">
+                    <payment v-show="cur==1" v-cloak></payment>
+                    <learn v-show="cur==2" v-cloak></learn>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<template id="payment">
+    <div class="payment-box">
+        <div class="payment-list">
+            <div class="list-box">
+                <ul class="payment-ul clearfix" v-for="it in list">
+                    <li class="payment-li1">专业学费</li>
+                    <li class="payment-li2">￥16212.00</li>
+                    <li class="payment-li3">已缴费</li>
+                    <li class="payment-li4 clearfix">
+                        <a class="f_right" href="javascript:;">操作记录</a>
+                        <a class="f_right" href="javascript:;" @click="changeOpen">修改状态</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fy clearfix">
+                <div class="f_right">
+                    <template>
+                        <Page :total="total" size="small" show-elevator></Page>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div class="empty" v-show="emptyShow">
+            <img src="/static/images/major/no_major.jpg">
+            <p>暂时没有数据~</p>
+        </div>
+        <div id="confirm" v-cloak v-show="confirmShow">
+            <div class="layer">
+                <i class="iconfont icon-close"></i>
+                <p>确认修改吗？</p>
+                <div class="confirm-btn clearfix">
+                    <div class="f_left cancel">取消</div>
+                    <div class="f_left true">确定（<span>5</span>s）</div>
+                </div>
+            </div>
+        </div>
+        <div id="records" v-cloak v-show="recordShow">
+            <div class="layer">
+                <i class="iconfont icon-close"></i>
+                <p>操作记录</p>
+                <div class="records-content">
+                    <div class="records-list" v-for="it in list">
+                        <p>将 张三 学费 “未交费” 修改为 “已缴费”</p>
+                        <span>2018-6-21 15:44:29   136166165@qq.com</span>
+                    </div>
+                </div>
+                <div class="records-btn">关闭</div>
+            </div>
+        </div>
+        <div id="change" v-cloak v-show="changeShow">
+            <div class="layer">
+                <i class="iconfont icon-close" @click="changeClose"></i>
+                <div class="clearfix selec">
+                    <span class="f_left">选择状态：</span>
+                    <template>
+                        <i-select style="width:113px;height: 28px;margin-left: 4px">
+                            <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                </div>
+                <div class="txt">
+                    <textarea maxlength="100" @keyup="num" v-model="ttttt"></textarea>
+                    <p class="word-num"><span v-text="remnant">0</span>/100</p>
+                </div>
+                <p>您的操作记录将会被保存，请慎重操作</p>
+                <div class="change-btn clearfix">
+                    <div class="f_left" @click="changeClose">取消</div>
+                    <div class="f_right">确定</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<template id="learning">
+    <div class="learn-box">
+        <div class="learn-list-box">
+            <div class="list-box">
+                <ul class="learn-ul clearfix" v-for="it in list">
+                    <li class="learn-li1">课程一</li>
+                    <li class="learn-li2">学习中</li>
+                    <li class="learn-li3">
+                        <a href="javascript:;">查看详情</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fy clearfix">
+                <div class="f_right">
+                    <template>
+                        <Page :total="total" size="small" show-elevator></Page>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div class="empty" v-show="emptyShow">
+            <img src="/static/images/major/no_major.jpg">
+            <p>暂时没有数据~</p>
+        </div>
+    </div>
+</template>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript">
+var pay = Vue.component('learn', {
+    template: '#learning',
+    data: function() {
+        return {
+            total: 100,
+            list: [1, 2, 3, 4, 5],
+            emptyShow: false,
+        }
+    },
+    methods: {
+
+    },
+    created: function() {
+
+    }
+});
+var pay = Vue.component('payment', {
+    template: '#payment',
+    data: function() {
+        return {
+            total: 100,
+            list: [1, 2, 3, 4, 5],
+            emptyShow: false,
+            confirmShow: false,
+            recordShow: false,
+            list: [1, 2, 3, 4, 5],
+            remnant: 0,
+            ttttt: '',
+            changeShow: false,
+        }
+    },
+    methods: {
+        num: function() {
+            var txtVal = this.ttttt.length;
+            this.remnant = txtVal;
+        },
+        changeClose() {
+            this.changeShow = false;
+            this.ttttt = '';
+            this.remnant = 0;
+        },
+        changeOpen() {
+            this.changeShow = true;
+        }
+    },
+    created: function() {
+
+    }
+});
+var app = new Vue({
+    el: '#app',
+    data: {
+        list: [{
+                value: 'beijing',
+                label: '北京市'
+            },
+            {
+                value: 'shanghai',
+                label: '上海市'
+            },
+            {
+                value: 'shenzhen',
+                label: '深圳市'
+            },
+            {
+                value: 'hangzhou',
+                label: '杭州市'
+            },
+            {
+                value: 'nanjing',
+                label: '南京市'
+            },
+            {
+                value: 'chongqing',
+                label: '重庆市'
+            }
+        ],
+        emptyShow: false,
+        total: 100,
+        bBbacShow: false,
+        cur: 1,
+    },
+    methods: {
+        page: function(res) {
+            console.log(res)
+        }
+    },
+    created: function() {
+
+    }
+});
+</script>
+
+</html>

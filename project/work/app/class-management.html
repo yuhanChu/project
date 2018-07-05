@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>班级管理</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_wwk28b9up.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" href="css/class-management.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="major-title clearfix">班级管理 <a href="javascript:void(0);">&lt;&lt;返回专业管理</a></div>
+        <div class="class-sx clearfix">
+            <a href="javascript:;" class="add-class" @click="addClick">+ 新增班级</a>
+        </div>
+        <div class="class-main clearfix">
+            <div>
+                <span>一班</span>
+                <div class="caozuo-btn">
+                    <a href="javascript:;">学生名单</a>
+                    <a href="javascript:;">编辑</a>
+                    <a href="javascript:;">删除</a>
+                </div>
+            </div>
+            <div>
+                <span>一班</span>
+                <div class="caozuo-btn">
+                    <a href="javascript:;">学生名单</a>
+                    <a href="javascript:;">编辑</a>
+                    <a href="javascript:;">删除</a>
+                </div>
+            </div>
+            <div>
+                <span>一班</span>
+                <div class="caozuo-btn">
+                    <a href="javascript:;">学生名单</a>
+                    <a href="javascript:;">编辑</a>
+                    <a href="javascript:;">删除</a>
+                </div>
+            </div>
+            <div>
+                <span>一班</span>
+                <div class="caozuo-btn">
+                    <a href="javascript:;">学生名单</a>
+                    <a href="javascript:;">编辑</a>
+                    <a href="javascript:;">删除</a>
+                </div>
+            </div>
+            <div>
+                <span>一班</span>
+                <div class="caozuo-btn">
+                    <a href="javascript:;">学生名单</a>
+                    <a href="javascript:;">编辑</a>
+                    <a href="javascript:;">删除</a>
+                </div>
+            </div>
+        </div>
+        <div id="ed-class-layer" v-cloak v-show="edShow">
+            <div class="bg"></div>
+            <div class="layer">
+                <i class="iconfont icon-close" @click="edClose"></i>
+                <div class="layer-main">
+                    <div class="clearfix" v-if="add==1">
+                        <span class="f_left">新增班级数：</span>
+                        <template>
+                            <i-select ref="classSet" clearable="true" style="width:200px" @on-change="numChange">
+                                <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                            </i-select>
+                        </template>
+                    </div>
+                    <div class="clearfix" v-if="add==2">
+                        <span class="f_left">班级名称：</span>
+                        <input type="text" name="className">
+                    </div>
+                    <div class="clearfix">
+                        <span class="f_left">班级人数：</span>
+                        <input type="text" name="className">
+                        <template>
+                            <Checkbox v-model="single" @on-change="cheChange">不设置人数</Checkbox>
+                        </template>
+                    </div>
+                </div>
+                <div class="ed-btn">
+                    <div class="add">新增</div>
+                    <div class="cancel" @click="edClose">取消</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+        single: 'false',
+        edShow: false,
+        add: 1,
+        cityList: [{
+                value: 'beijing',
+                label: '北京市'
+            },
+            {
+                value: 'shanghai',
+                label: '上海市'
+            },
+            {
+                value: 'shenzhen',
+                label: '深圳市'
+            },
+            {
+                value: 'hangzhou',
+                label: '杭州市'
+            },
+            {
+                value: 'nanjing',
+                label: '南京市'
+            },
+            {
+                value: 'chongqing',
+                label: '重庆市'
+            }
+        ],
+        model1: '123'
+    },
+    methods: {
+        cheChange: function() {
+            console.log(this.single)
+        },
+        numChange: function(res) {
+            console.log(res)
+        },
+        addClick:function() {
+            this.add == 1;
+            this.edShow = true;
+        },
+        edClose:function() {
+            this.edShow = false;
+            this.$refs['classSet'].clearSingleSelect();
+        }
+    }
+});
+</script>
+
+</html>

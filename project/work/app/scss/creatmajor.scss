@@ -1,0 +1,396 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0
+}
+
+input,
+textarea {
+    margin-bottom: 0;
+    box-shadow: none;
+    box-sizing: border-box
+}
+
+input[disabled],
+input[readonly],
+select[disabled],
+select[readonly],
+textarea[disabled],
+textarea[readonly] {
+    background: 0 0;
+    cursor: default
+}
+
+p {
+    margin-bottom: 0
+}
+
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none
+}
+
+a:link {
+    text-decoration: none
+}
+
+i {
+    font-style: normal
+}
+
+.f_left {
+    float: left
+}
+
+label {
+    margin-bottom: 0
+}
+
+.f_right {
+    float: right
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    resize: none;
+    box-shadow: none!important
+}
+
+.uneditable-input,
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=number],
+select,
+textarea {
+    margin-bottom: 0!important
+}
+
+button {
+    border: none!important;
+    background: 0 0!important
+}
+
+body {
+    background: #f8f8f8
+}
+
+@mixin font($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+@mixin btn($w, $h, $bg:#ff7669) {
+    width: $w;
+    height: $h;
+    line-height: $h;
+    text-align: center;
+    background-color: $bg;
+    cursor: pointer;
+}
+
+body {
+    background: #f8f8f8
+}
+
+[v-cloak] {
+    display: none;
+}
+
+#app {
+    width: 1090px;
+    background: #fff;
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 118px;
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    .creat-major-title {
+        @include font(16px, #333333);
+        line-height: 20px;
+        padding: 18px 0 16px;
+        border-bottom: 1px solid #e9e9e9;
+        a {
+            @include font(12px, #999999);
+            float: right;
+        }
+    }
+
+    .creat-major-main {
+        &>div {
+            margin-top: 20px;
+            .p-left {
+                @include font(12px, #666666);
+                height: 28px;
+                line-height: 28px;
+                width: 102px;
+                text-align: right;
+                span {
+                    color: #ff0000;
+                }
+            }
+
+            .box-right {
+                margin-left: 8px;
+                float: left;
+                position: relative;
+                input {
+
+                    height: 28px;
+                    font-size: 12px;
+                    border: 1px solid #e9e9e9;
+                    border-radius: 4px;
+                    padding-left: 10px;
+                    padding-right: 35px;
+                }
+                .word-num {
+                    position: absolute;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    @include font(12px, #cccccc);
+                }
+            }
+            &.major-name input {
+                width: 492px;
+            }
+            &.major-code input {
+                width: 270px;
+            }
+            &.major-code .code-ico {
+                float: left;
+                height: 28px;
+                background: url('../images/major/code-icon.png') no-repeat left center;
+                margin-left: 10px;
+                position: relative;
+            }
+            &.major-code .code-info {
+                @include font(12px,
+                #999999);
+                line-height: 24px;
+                margin-left: 28px;
+                transform: translateY(-10px);
+            }
+            &.major-school .creat-p {
+                @include font(12px,
+                #666666);
+                margin-left: 10px;
+                height: 28px;
+                line-height: 28px;
+                float: left;
+                a {
+                    color: #815dc7;
+                }
+            }
+            &.major-leixing .leixing-list {
+                display: inline-block;
+                margin-right: 20px;
+                border: 1px solid #e9e9e9;
+                height: 28px;
+                width: 125px;
+                text-align: center;
+                line-height: 28px;
+                @include font(12px,
+                #666666);
+                cursor: pointer;
+                border-radius: 4px;
+                &.cur {
+                    background-color: #815dc7;
+                    color: #fff;
+                    border-color: #815dc7;
+                }
+            }
+            &.major-xueli .xueli-list {
+                display: inline-block;
+                margin-right: 20px;
+                border: 1px solid #e9e9e9;
+                height: 28px;
+                width: 52px;
+                text-align: center;
+                line-height: 28px;
+                @include font(12px,
+                #666666);
+                cursor: pointer;
+                border-radius: 4px;
+                &.cur {
+                    background-color: #815dc7;
+                    color: #fff;
+                    border-color: #815dc7;
+                }
+            }
+            &.major-year input {
+                width: 125px;
+            }
+            &.major-year span {
+                height: 28px;
+                line-height: 28px;
+                @include font(12px,
+                #666666);
+                margin-left: 10px;
+                float: left;
+            }
+            &.major-baoming input {
+                height: auto;
+            }
+        }
+    }
+    .major-btn {
+        margin-top: 20px;
+        padding-left: 110px;
+        a {
+            display: inline-block;
+            margin-right: 20px;
+            width: 90px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+        .save {
+            color: #815dc7;
+            border: 1px solid #815dc7;
+        }
+        .sibmit {
+            color: #fff;
+            background-color: #815dc7;
+        }
+    }
+}
+
+.ivu-select-single .ivu-select-selection {
+    height: 28px;
+}
+
+.ivu-radio-group {
+    height: 28px;
+    line-height: 28px;
+}
+
+.ivu-radio-checked .ivu-radio-inner {
+    border-color: #815dc7;
+}
+
+.ivu-radio-inner:after {
+    background-color: #815dc7;
+}
+
+#creat-layer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    .bg {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+    .layer {
+        width: 450px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 20px 20px 40px;
+        border-radius:4px;
+        &>p {
+            @include font(14px,#666666);
+        }
+        &>i {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            @include font(20px,#666);
+            cursor: pointer;
+        }
+        .layer-main {
+            width: 368px;
+            margin: 0 auto;
+            &>div {
+                margin-top:20px;
+                &>p {
+                    float: left;
+                    height: 28px;
+                    line-height: 28px;
+                    @include font(12px,#666);
+                    &+input {
+                        float: left;
+                        height: 28px;
+                        border-radius:4px;
+                        border: 1px solid #e9e9e9;
+                        width: 300px;
+                        font-size:12px;
+                        margin-left: 5px;
+                        padding-left:10px;
+                    }
+                }
+
+            }
+        }
+
+        .layer-btn {
+            width: 220px;
+            margin: 0 auto;
+            margin-top:20px;
+            .true {
+                display:inline-block;
+                margin-right:20px;
+                width: 98px;
+                height: 28px;
+                line-height: 28px;
+                text-align: center;
+                background: #815dc7;
+                border-radius:4px;
+                cursor:pointer;
+                @include font(12px,#fff);
+            }
+            .cancel {
+                @extend .true;
+                margin-right:0;
+                background: #acacac;
+            }
+        }
+    }
+}

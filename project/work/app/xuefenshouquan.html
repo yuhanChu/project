@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学分授权-课程列表</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_wwk28b9up.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" type="text/css" href="css/xuefenshouquan.css">
+</head>
+
+<body>
+    <div id="app" class="main">
+        <div class="major-title clearfix">学分授权-课程列表<span>（XXXX专业）</span> <a href="javascript:void(0);">&lt;&lt;返回专业管理</a></div>
+        <div class="filter-box clearfix">
+            <div class="f_left">
+                <template>
+                    <i-select style="width:153px;height: 28px;" placeholder="届数" clearable @on-change="jieChange">
+                        <i-option v-for="item in jieList" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                    <i-select style="width:153px;height: 28px;margin-left: 15px" clearable placeholder="期数" @on-change="qiChange">
+                        <i-option v-for="(item,key) in qiList" :value="key">{{ item }}</i-option>
+                    </i-select>
+                    <i-select style="width:153px;height: 28px;margin-left: 15px" clearable placeholder="课程">
+                        <i-option v-for="item in clist" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                </template>
+            </div>
+            <div class="search-box f_right">
+                <input type="text" placeholder="学生姓名" v-model="inptTxt" @keyup.13="search" @keyup.delete="search">
+                <i class="iconfont icon-search" @click="search"></i>
+            </div>
+        </div>
+        <div class="list-main">
+            <ul class="list-ul clearfix">
+                <li class="list-li1">课程名称</li>
+                <li class="list-li2">申请学分人数</li>
+                <li class="list-li3">
+                    <p>操作</p>
+                </li>
+            </ul>
+            <div class="list-box">
+                <ul class="list-ul clearfix" v-for="it in list">
+                    <li class="list-li1">课程一</li>
+                    <li class="list-li2">215</li>
+                    <li class="list-li3">
+                        <a href="javascript:void(0);">学生名单</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fy clearfix">
+                <span class="f_left">共<span v-text="dataNum"></span>门课程</span>
+                <div class="f_right">
+                    <template>
+                        <Page :total="total" size="small" show-elevator @on-change="page"></Page>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div class="empty" v-cloak v-show="emptyShow">
+            <img src="/static/images/major/no_major.jpg">
+            <p>暂时没有数据~</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+        jieList: [{
+                value: '2018',
+                label: '2018届'
+            },
+            {
+                value: '2019',
+                label: '2019届'
+            },
+            {
+                value: '2020',
+                label: '2020届'
+            },
+            {
+                value: '2021',
+                label: '2021届'
+            },
+            {
+                value: '2022',
+                label: '2022届'
+            },
+            {
+                value: '2023',
+                label: '2023届'
+            }
+        ],
+        qiList:['第1期','第2期','第3期','第4期','第5期','第6期','第7期','第8期','第9期','第10期','第11期','第12期'],
+        clist:[],
+        list:['1','2','5'],
+        emptyShow: false,
+        total: 100,
+        bBbacShow: false,
+        inptTxt:'',
+        dataNum:0,
+    },
+    methods: {
+        page: function(res) {
+            console.log(res)
+        },
+        jieChange:function(res) {
+        	console.log(res)
+        },
+        qiChange:function(res) {
+        	console.log(res)
+        },
+        search:function() {
+        	console.log(this.inptTxt)
+        },
+    },
+    created: function() {
+
+    }
+});
+</script>
+
+</html>

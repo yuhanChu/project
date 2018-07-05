@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>新增释放规则</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_z7iqhm7i5wc.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" type="text/css" href="css/addshifangguize.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="head">合作账户管理>>>新增释放规则设置 <a href="javascript:;" class="back">&lt;&lt;返回</a></div>
+        <div class="add-rule-content">
+            <p class="ts">请根据折线图合理设置释放规则</p>
+            <div class="table-box">
+                <div class="list clearfix">
+                    <span class="f_left">名称：</span>
+                    <input type="text">
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">适用类型：</span>
+                    <template>
+                        <i-select style="width:220px;float: left;border-color: #d1d1d1">
+                            <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">释放依据：</span>
+                    <template>
+                        <i-select style="width:220px;float: left;border-color: #d1d1d1">
+                            <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">释放方式：</span>
+                    <template>
+                        <i-select style="width:220px;float: left;border-color: #d1d1d1">
+                            <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                </div>
+                <div class="list clearfix" v-if="cur==1">
+                    <span class="f_left">设置比例/数量：</span>
+                    <input type="text">
+                    <span class="unit">%/个</span>
+                </div>
+                <p class="num-ts" v-if="cur==1">提示：前<span>9个</span>周期<span>11%</span>释放，第<span>10个</span>周期<span>8%</span>释放</p>
+                <div class="list clearfix" v-if="cur==2">
+                    <span class="f_left">设置比例：</span>
+                    <div style="float:left;position: relative;">
+                    	<div class="manual-add clearfix">
+                    		<input type="text">
+                    		<span class="unit">%</span>
+                    	</div>
+                    	<div class="manual-add clearfix">
+                    		<input type="text">
+                    		<span class="unit">%</span>
+                    	</div>
+                    	<div class="manual-add clearfix">
+                    		<input type="text">
+                    		<span class="unit">%</span>
+                    	</div>
+                    	<div class="manual-btn">+</div>
+                    	<p class="manual-p">提示：当前<span>28%</span>，剩余<span>72%</span></p>
+                    </div>
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">开始时间：</span>
+                    <input id="d411" class="Wdate" type="text" onclick="WdatePicker({skin:'whyGreen',dateFmt:'yyyy年M月',})" />
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">释放周期单位：</span>
+                    <template>
+                        <i-select style="width:220px;float: left;border-color: #d1d1d1">
+                            <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                    <span class="unit">总周期？？？日</span>
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">适用范围：</span>
+                    <template>
+                        <i-select style="width:220px;float: left;border-color: #d1d1d1">
+                            <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">规则简介：</span>
+                    <textarea placeholder="简述释放比例/释放量，释放周期，适用范围等重要信息，以供参考"></textarea>
+                </div>
+                <div class="add-btn clearfix">
+                    <div>生成折线图</div>
+                    <div>提交</div>
+                </div>
+            </div>
+        </div>
+        <!-- 弹窗提示 -->
+        <div id="prompt" v-cloak v-show="promptShow">
+            <div class="layer">新建成功</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/wdatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.min.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+        list: [{ value: '1', label: 'ETH' }, { value: '2', label: 'RMB' }],
+        dataList: [1, 2, 3, 4, 5],
+        introduceShow: false,
+        promptShow: false,
+        cur: 2
+    }
+});
+</script>
+
+</html>

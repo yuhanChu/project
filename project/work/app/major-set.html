@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>专业设置</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_wwk28b9up.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" href="css/major-set.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="banner">
+            <img src="images/major/major-set-banner.png">
+            <h1>新闻学专业（本科）</h1>
+            <div class="school"><span>北京大学</span><span>建艺学院</span></div>
+            <div class="banner-btn">
+                <div>预览</div>
+                <div>编辑专业</div>
+                <div>管理专业</div>
+            </div>
+        </div>
+        <div class="main clearfix">
+            <div class="main-left">
+                <ul class="main-nav">
+                    <li class="cur">专业介绍</li>
+                    <li>课程设置</li>
+                    <li>毕业设置</li>
+                    <li>费用设置</li>
+                    <li>报名设置</li>
+                    <li>论文设置</li>
+                    <li>证书设置</li>
+                    <li>常见问题设置</li>
+                </ul>
+                <div class="sibmit">提交审核</div>
+            </div>
+            <div class="main-right">
+                <major-introduce></major-introduce>
+            </div>
+        </div>
+    </div>
+</body>
+<template id="up-load">
+    <div class="up-div">
+        <div class="first-show" v-show="!upSuccess&&!upLoading">
+            <img src="images/major/add.png">
+            <p v-if="type==1">上传封面图片</p>
+            <p v-if="type==2">上传视频</p>
+        </div>
+        <div class="up-loading" v-show="upLoading">
+            <img src="images/major/uploading.gif">
+        </div>
+        <div class="up-box" v-show="!upLoading">
+            <input type="file" name="cover">
+        </div>
+        <div class="img-box" v-show="upSuccess">
+            <img>
+        </div>
+    </div>
+</template>
+<template id="major-introduce">
+    <div class="major-introduce">
+        <h1>专业介绍</h1>
+        <div class="ts">
+            <i class="iconfont icon-close"></i> 有内容未通过审核，请修改后重新提交
+            <br> 专业介绍　描述中涉及政治等敏感词汇
+            <br> 专业介绍　描述中涉及政治等敏感词汇
+            <br> 专业介绍　描述中涉及政治等敏感词汇
+        </div>
+        <div class="introduce-main">
+            <div class="major-cover clearfix">
+                <span class="f_left"><span>*</span>专业封面：</span>
+                <div class="f_left">
+                    <up-load :type="1"></up-load>
+                </div>
+                <div class="f_left">
+                    <p class="zy">
+                        建议尺寸230*160 px
+                        <br> 支持jpg、png格式，大小不超过3MB
+                    </p>
+                </div>
+            </div>
+            <div class="major-cover clearfix">
+                <span class="f_left">宣传短片：</span>
+                <div class="f_left">
+                    <up-load :type="2"></up-load>
+                </div>
+                <div class="f_left">
+                    <p class="zy">
+                        建议时长5分钟
+                        <br> 支持MP4格式，大小不超过500MB
+                    </p>
+                </div>
+            </div>
+            <div class="major-cover clearfix">
+                <span class="f_left"><span>*</span>专业简介：</span>
+                <div class="f_left ed">
+                </div>
+            </div>
+            <div class="major-cover clearfix">
+                <span class="f_left">专业介绍：</span>
+                <div class="f_left ed">
+                </div>
+            </div>
+            <div class="major-cover clearfix">
+                <span class="f_left">培养目标：</span>
+                <div class="f_left ed">
+                </div>
+            </div>
+            <div class="major-cover clearfix">
+                <span class="f_left">奖学金介绍：</span>
+                <div class="f_left ed">
+                </div>
+            </div>
+            <div class="">
+                <span class="f_left">招生简章：</span>
+                <div class="f_left">
+                	
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript" src="js/wdatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+var up = Vue.component('up-load', {
+    template: '#up-load',
+    props: ['type'],
+    data: function() {
+        return {
+            upSuccess: false,
+            upLoading: false,
+        }
+    },
+    methods: {
+
+    },
+})
+var introduce = Vue.component('major-introduce', {
+    template: '#major-introduce',
+    data: function() {
+        return {
+
+        }
+    },
+    methods: {
+
+    }
+});
+var app = new Vue({
+    el: '#app',
+    data: {
+        tList: [{
+                value: '0',
+                label: '全部'
+            },
+            {
+                value: '1',
+                label: '教授'
+            },
+            {
+                value: '2',
+                label: '副教授'
+            },
+            {
+                value: '3',
+                label: '讲师'
+            },
+            {
+                value: '4',
+                label: '助教'
+            },
+        ],
+        single: false,
+        all: false,
+        yd: true,
+        addShow: false,
+        moveShow: false,
+        moveAllShow: false,
+    },
+    methods: {
+        cheChange: function(res) {
+            console.log(res)
+        },
+        yidongClick: function() {
+            this.yd = false;
+        },
+        cancelClick: function() {
+            this.yd = true;
+        },
+    }
+});
+</script>
+
+</html>

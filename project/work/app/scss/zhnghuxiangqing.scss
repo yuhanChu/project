@@ -1,0 +1,760 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0
+}
+
+input,
+textarea {
+    margin-bottom: 0;
+    box-shadow: none;
+    box-sizing: border-box
+}
+
+input[disabled],
+input[readonly],
+select[disabled],
+select[readonly],
+textarea[disabled],
+textarea[readonly] {
+    background: 0 0;
+    cursor: default
+}
+
+p {
+    margin-bottom: 0
+}
+
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none
+}
+
+a:link {
+    text-decoration: none
+}
+
+i {
+    font-style: normal
+}
+
+.f_left {
+    float: left
+}
+
+label {
+    margin-bottom: 0
+}
+
+.f_right {
+    float: right
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    resize: none;
+    box-shadow: none!important
+}
+
+.uneditable-input,
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=number],
+select,
+textarea {
+    margin-bottom: 0!important
+}
+
+button {
+    border: none!important;
+    background: 0 0!important
+}
+
+body {
+    background: #f8f8f8
+}
+
+@mixin font($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+@mixin btn($w, $h, $bg:#ff7669) {
+    width: $w;
+    height: $h;
+    line-height: $h;
+    text-align: center;
+    background-color: $bg;
+    cursor: pointer;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+#app {
+    width: 1170px;
+    margin: 0 auto;
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box; // will-change:unset !important;
+    }
+}
+
+.account-details-head {
+    padding: 27px 0 30px 20px;
+    @include font(28px, #3c3c3c);
+    background: #ffffff;
+    border-bottom: 1px solid #d1d1d1;
+    position: relative;
+    .back {
+        @include font(14px,#3c3c3c);
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        right:120px;
+    }
+}
+
+.account-details-content {
+    margin-top: 20px;
+    .operation-btn {
+        padding: 20px 18px;
+        background: #fff;
+        border: 1px solid #d1d1d1;
+        border-left: 0;
+        border-right: 0;
+        &>div {
+            @include btn(84px, 30px, #f5f5f5);
+            @include font(14px, #3c3c3c);
+            margin-left: 10px;
+            float: left;
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .account-details-main {
+        padding: 20px;
+        background: #fff;
+        .info-left {
+            border: 1px solid #d0d0d0;
+            padding: 0 20px 20px;
+            float: left;
+            width: 49.5%;
+            .info-top {
+                border-bottom: 1px solid #d0d0d0;
+                padding: 29px 35px 21px 14px;
+                &>span {
+                    font-size: 18px;
+                    &.zh {
+                        color: #3c3c3c;
+                    }
+                    &.status-zh {
+                        color: #3ac8d3
+                    }
+                    ;
+                    &.status-jy {
+                        color: #cccccc
+                    }
+                    ;
+                    &.status-no {
+                        color: #ff0000
+                    }
+                    ;
+                }
+            }
+
+            .account-information {
+                text-align: center;
+                li {
+                    padding: 14px 32px 14px 40px;
+                    font-size: 14px;
+                    line-height: 14px;
+                    text-align: left;
+                    display: flex;
+                    align-items: center;
+                    &:nth-child(2n+2) {
+                        background: #f7f9fb;
+                    }
+                    .f_left {
+                        color: #999999;
+                        width: 40%;
+                    }
+                    .f_right {
+                        color: #3c3c3c;
+                        width: 55%;
+                        margin-left: 5%;
+                        text-align: right;
+                    }
+                }
+
+                .account-information-btn {
+                    margin-top: 20px;
+                    display: inline-block;
+                    &>div {
+                        @include btn(84px, 30px, #f5f5f5);
+                        @include font(14px, #3c3c3c);
+                        margin-left: 10px;
+                        float: left;
+                        border: 1px solid #dcdcdc;
+                        border-radius: 4px;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            .personal-information {
+                @extend .account-information;
+            }
+            .trading-information {
+                &>li {
+                    padding: 14px 0;
+                    font-size: 14px;
+                    line-height: 14px;
+                    display: flex;
+                    align-items: center;
+                    color: #3c3c3c;
+                    .first-li {
+                        color: #999999;
+                    }
+                    &:nth-child(2n+2) {
+                        background: #f7f9fb;
+                    }
+                    span {
+                        width: 33.33%;
+                        float: left;
+                        text-align: center;
+                        padding: 0 1%;
+                    }
+                }
+                .fy {
+                    span {
+                        @include font(14px, #999999);
+                    }
+                    margin-top: 20px;
+                    &>div {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        .info-right {
+            border: 1px solid #d0d0d0;
+            padding: 0 0 20px 20px;
+            width: 48%;
+            float: right;
+            .info-right-top {
+                padding: 19px 0 15px 0;
+                border-bottom: 1px solid #d0d0d0;
+                &>span {
+                    float: left;
+                    height: 30px;
+                    line-height: 30px;
+                    @include font(18px, #3c3c3c);
+                }
+                &>div {
+                    @include btn(82px, 30px, #f5f5f5);
+                    @include font(14px, #3c3c3c);
+                    float: right;
+                    border: 1px solid #d1d1d1;
+                    border-radius: 4px;
+                }
+            }
+
+            .info-right-content {
+                height: 355px;
+                overflow-y: auto;
+                padding-top: 20px;
+                padding-right: 25px;
+                .remark-empty {
+                    @include font(14px, #999999);
+                    line-height: 24px;
+                }
+                .remark-box {
+                    .remark-list {
+                        margin-top: 20px;
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        span {
+                            @include font(14px, #3c3c3c);
+                        }
+                        p {
+                            @include font(14px, #3c3c3c);
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.trading-box {
+    background: #fff;
+    .sx-box {
+        .ivu-select-selection .ivu-select-arrow:nth-of-type(1) {
+            display: block;
+        }
+        &>div {
+            margin-left: 10px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &>input {
+                height: 30px;
+                width: 190px;
+                border: 1px solid #d1d1d1;
+            }
+            .z {
+                height: 30px;
+                line-height: 32px;
+                margin: 0 12px;
+                @include font(14px, #3c3c3c);
+            }
+        }
+    }
+
+    .trading-list-box {
+        margin-top: 20px;
+        border: 1px solid #d0d0d0;
+        .trading-nav {
+            padding: 8px 0 7px;
+            li {
+                display: flex;
+                align-items: center;
+                float: left;
+                @include font(12px, #3c3c3c);
+                line-height: 20px;
+            }
+            .li1 {
+                width: 16.3%;
+                padding-left: 1%
+            }
+            .li2 {
+                width: 8.4%;
+                padding-left: 1%
+            }
+            .li3 {
+                width: 10.7%;
+                padding-left: 1%
+            }
+            .li4 {
+                width: 15.1%;
+                padding-left: 1%
+            }
+            .li5 {
+                width: 15%;
+                padding-left: 1%
+            }
+            .li6 {
+                width: 13.1%;
+                padding-left: 1%
+            }
+            .li7 {
+                width: 10.5%;
+                padding-left: 1%
+            }
+            .li8 {
+                width: 10.4%;
+                padding-left: 1%
+            }
+        }
+        .list {
+            @extend .trading-nav;
+            border-top: 1px solid #d0d0d0;
+            &:nth-child(2n+1) {
+                background: #f9f9f9;
+            }
+            li {
+                .succ {
+                    color: #0478d2;
+                }
+                .final {
+                    color: #ff0000;
+                }
+            }
+        }
+    }
+    .fy {
+        &>span {
+            @include font(14px, #999999);
+        }
+        text-align: center;
+        margin-top: 18px;
+    }
+}
+
+
+.change-box {
+    background: #fff;
+    .change-list-box {
+        border: 1px solid #d0d0d0;
+        .change-nav {
+            padding: 8px 0 7px;
+            li {
+                display: flex;
+                align-items: center;
+                float: left;
+                @include font(12px, #3c3c3c);
+                line-height: 20px;
+            }
+            .li1 {
+                width: 24%;
+                padding-left: 2%
+            }
+            .li2 {
+                width: 14.3%;
+                padding-left: 1%
+            }
+            .li3 {
+                width: 17.4%;
+                padding-left: 1%
+            }
+            .li4 {
+                width: 21.2%;
+                padding-left: 1%
+            }
+            .li5 {
+                width: 23%;
+                padding-left: 1%
+            }
+        }
+        .list {
+            @extend .change-nav;
+            border-top: 1px solid #d0d0d0;
+            &:nth-child(2n+1) {
+                background: #f9f9f9;
+            }
+            li {
+                .succ {
+                    color: #0478d2;
+                }
+                .final {
+                    color: #ff0000;
+                }
+            }
+        }
+    }
+    .fy {
+        &>span {
+            @include font(14px, #999999);
+        }
+        text-align: center;
+        margin-top: 18px;
+    }
+}
+
+
+
+
+
+/* 分页样式修改 */
+
+.ivu-page {
+    // text-align: right
+}
+
+.ivu-page-item {
+    min-width: 25px;
+    height: 25px;
+    line-height: 25px
+}
+
+.ivu-page-item-jump-next,
+.ivu-page-item-jump-prev,
+.ivu-page-next,
+.ivu-page-prev {
+    min-width: 25px;
+    height: 25px;
+    line-height: 25px
+}
+
+.ivu-page-options-elevator input {
+    height: 25px;
+    padding: 0 5px
+}
+
+.ivu-page-options-elevator {
+    height: 25px;
+    line-height: 25px
+}
+
+.ivu-page-item-active {
+    background-color: transparent;
+    border-color: #2d8cf0
+}
+
+.ivu-page-item-active a,
+.ivu-page-item-active:hover a {
+    color: #2d8cf0
+}
+
+#add-remark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 1000;
+    .layer {
+        width: 468px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        border: 1px solid #d0d0d0;
+        .layer-top {
+            height: 30px;
+            line-height: 30px;
+            background: #0478d2;
+            span {
+                @include font(14px, #fff);
+                margin-left: 20px;
+                float: left;
+            }
+            i {
+                @include font(16px, #fff);
+                float: right;
+                cursor: pointer;
+                margin-right: 10px;
+                font-weight: bold;
+            }
+        }
+        .txt-box {
+            padding: 20px;
+            background: #fff;
+            textarea {
+                width: 100%;
+                height: 161px;
+                border: 1px solid #d0d0d0;
+                padding: 5px;
+                font-size: 12px;
+            }
+            .add-remark-btn {
+                @include btn(72px, 30px, #f5f5f5);
+                @include font(14px, #3c3c3c);
+                margin: 20px auto 0;
+                border: 1px solid #d0d0d0;
+            }
+        }
+    }
+}
+
+#drop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 1000;
+    .layer {
+        width: 430px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        border: 1px solid #d0d0d0;
+        .layer-top {
+            height: 30px;
+            line-height: 30px;
+            background: #0478d2;
+            span {
+                @include font(14px, #fff);
+                margin-left: 20px;
+                float: left;
+            }
+            i {
+                @include font(16px, #fff);
+                float: right;
+                cursor: pointer;
+                margin-right: 10px;
+                font-weight: bold;
+            }
+        }
+
+        .drop-box {
+            background: #fff;
+            padding: 0 25px;
+            padding-bottom: 25px;
+            .drop-list {
+                @include font(14px, #3c3c3c);
+                line-height: 28px;
+                margin-top: 5px;
+                &>span:first-child {
+                    width: 180px;
+                    text-align: right;
+                }
+            }
+            .drop-input {
+                margin-top: 25px;
+                span {
+                    float: left;
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 14px;
+                    color: #3c3c3c;
+                    &:first-child {
+                        width: 70px;
+                    }
+                    &:last-child {
+                        color: #999999;
+                    }
+                }
+                input {
+                    float: left;
+                    height: 30px;
+                    width: 230px;
+                    border: 1px solid #d1d1d1;
+                    margin: 0 5px;
+                    font-size: 12px;
+                    padding-left: 10px;
+                }
+            }
+            .num-btn {
+                padding-left: 75px;
+                margin-top: 10px;
+                &>div {
+                    @include btn(70px, 30px, #f5f5f5);
+                    @include font(14px, #3c3c3c);
+                    margin-left: 10px;
+                    float: left;
+                    border: 1px solid #d1d1d1;
+                    border-radius: 4px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+            .drop-btn {
+                @include btn(84px, 30px, #f5f5f5);
+                @include font(14px, #3c3c3c);
+                margin: 20px auto 0;
+                border: 1px solid #d1d1d1;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+#drop-true {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 1000;
+    .layer {
+        width: 336px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        border: 1px solid #d0d0d0;
+        .layer-top {
+            height: 30px;
+            line-height: 30px;
+            background: #0478d2;
+            span {
+                @include font(14px, #fff);
+                margin-left: 20px;
+                float: left;
+            }
+            i {
+                @include font(16px, #fff);
+                float: right;
+                cursor: pointer;
+                margin-right: 10px;
+                font-weight: bold;
+            }
+        }
+        .drop-box {
+            background: #fff;
+            padding-bottom: 25px;
+            .drop-list {
+                @include font(14px, #3c3c3c);
+                line-height: 28px;
+                margin-top: 5px;
+                &>span:first-child {
+                    @include font(14px, #3c3c3c);
+                    width: 148px;
+                    text-align: right;
+                }
+                &>span:last-child {
+                    @include font(14px, #3c3c3c);
+                    width: 130px;
+                    margin-left: 5px;
+                    &>span {
+                        color: #0478d2;
+                    }
+                }
+            }
+            &>input {
+                display: block;
+                margin: 15px auto 0;
+                width: 230px;
+                height: 30px;
+                border: 1px solid #d1d1d1;
+                font-size: 14px;
+                padding-left: 10px;
+            }
+            .true-btn {
+                @include btn(230px, 30px, #f5f5f5);
+                @include font(14px, #3c3c3c);
+                margin: 20px auto 0;
+                border: 1px solid #d1d1d1;
+                border-radius: 4px;
+            }
+        }
+    }
+}

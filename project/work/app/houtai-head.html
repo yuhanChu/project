@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>后台头部</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_z7iqhm7i5wc.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" type="text/css" href="css/houtai-head.css">
+</head>
+
+<body>
+    <div id="backstage">
+        <div class="backstage-head">
+            <img src="images/houtai/head-icon.png">
+            <span>项目管理后台</span>
+        </div>
+        <div class="backstage-content">
+            <div class="backstage-content-nav">
+                <template>
+                    <Row>
+                        <Col span="8">
+                        <i-menu :theme="theme2" :open-names="subarr" active-name="1-1" accordion="true">
+                            <Submenu name="1">
+                                <template slot="title">
+                                    合作账户管理
+                                </template>
+                                <Menu-Item name="1-1">账户管理</Menu-Item>
+                                <Menu-Item name="1-2">添加账户</Menu-Item>
+                                <Menu-Item name="1-3">账户持仓统计</Menu-Item>
+                                <Menu-Item name="1-4">释放规则设置</Menu-Item>
+                            </Submenu>
+                            <Submenu name="2">
+                                <template slot="title">
+                                    Token管理
+                                </template>
+                                <Menu-Item name="2-1">数据统计</Menu-Item>
+                                <Menu-Item name="2-2">区块查询</Menu-Item>
+                            </Submenu>
+                            <Submenu name="3">
+                                <template slot="title">
+                                    活动管理
+                                </template>
+                                <Menu-Item name="3-1">用户管理</Menu-Item>
+                                <Menu-Item name="3-2">Token发放</Menu-Item>
+                                <Menu-Item name="3-3">数据统计</Menu-Item>
+                            </Submenu>
+                        </i-menu>
+                        </Col>
+                    </Row>
+                </template>
+            </div>
+            <div class="backstage-main">
+            	<!-- 内容添加 -->
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.min.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#backstage',
+    data: {
+        theme2: 'light',
+        subarr:['1','2','3']
+    }
+});
+</script>
+
+</html>

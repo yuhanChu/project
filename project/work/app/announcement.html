@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>公告管理</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_wwk28b9up.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" href="css/announcement.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="major-title clearfix">公告管理 <a href="javascript:void(0);">&lt;&lt;返回专业管理</a></div>
+        <div class="add-ann" @click="addAnnShow=!addAnnShow">+ 新增公告</div>
+        <div class="ann-main">
+            <div class="ann-list">
+                <div class="ann-list-title clearfix">
+                    <p title="" class="f_left">北京大学建艺专业联合学分在线重磅推出建北京大学建艺专业联合学分在线</p>
+                    <span class="f_left fb">【已发布】</span>
+                    <a href="javascript:;" class="f_right delete"><i class="iconfont icon-delete"></i>删除</a>
+                    <a href="javascript:;" class="f_right editor"><i class="iconfont icon-xiugai"></i>编辑</a>
+                </div>
+                <div class="time">2017-02-15 23:12:52</div>
+                <div class="ann-content">
+                    <p class="hid" @click="showAll($event)">
+                        北京大学建艺专业联合学分在线重磅推出建艺专业线上招生，拥有建筑学、城乡规划、风景园林、艺术学理论、设计学等5个一级学科硕士学位拥有建筑学、城乡规划、风景园林、 艺术学理论、设计学等5个一级学科硕士学位授权点，美术学二级学科硕士学位授权点、艺术硕士（MFA）专业学位授权点，并依托土木工程规划与管理二级博士点招收培养博士研 究生。北京大学建艺专业联合学分在线重磅推出建艺专业线上招生，拥有建筑学、城乡规划、风景园林、艺术学理论、设计学等5个一级学科硕士学位拥有建筑学、城乡规划、风景 园林、艺术学理论、设计学等5个一级学科硕士学位授权点，美术学二级学科硕士学位授权点、艺术硕士（MFA）专业学位授权点，并依托土木工程规划与管理二级博士点招收培养 博士研究生。北京大学建艺专业联合学分在线重磅推出建艺专业线上招生，拥有建筑学、城乡规划、风景园林、艺术学理论、设计学等5个一级学科硕士学位拥有建筑学、城乡规划、 风景园林、艺术学理论、设计学等5个一级学科硕士学位授权点，美术学二级学科硕士学位授权点、艺术硕士（MFA）专业学位授权点，并依托土木工程规划与管理二级博士点招收 培养博士研究生。
+                    </p>
+                </div>
+            </div>
+            <div class="ann-list">
+                <div class="ann-list-title clearfix">
+                    <p title="" class="f_left">北京大学建艺专业联合学分在线重磅推出建北京大学建艺专业联合学分在线</p>
+                    <span class="f_left ed">【编辑中】</span>
+                    <a href="javascript:;" class="f_right delete"><i class="iconfont icon-delete"></i>删除</a>
+                    <a href="javascript:;" class="f_right editor"><i class="iconfont icon-xiugai"></i>编辑</a>
+                </div>
+                <div class="time">2017-02-15 23:12:52</div>
+                <div class="ann-content">
+                    <p class="hid" @click="showAll($event)">
+                        北京大学建艺专业联合学分在线重磅推出建艺专业线上招生，拥有建筑学、城乡规划、风景园林、艺术学理论、设计学等5个一级学科硕士学位拥有建筑学、城乡规划、风景园林、 艺术学理论、设计学等5个一级学科硕士学位授权点，美术学二级学科硕士学位授权点、艺术硕士（MFA）专业学位授权点，并依托土木工程规划与管理二级博士点招收培养博士研 究生。北京大学建艺专业联合学分在线重磅推出建艺专业线上招生，拥有建筑学、城乡规划、风景园林、艺术学理论、设计学等5个一级学科硕士学位拥有建筑学、城乡规划、风景 园林、艺术学理论、设计学等5个一级学科硕士学位授权点，美术学二级学科硕士学位授权点、艺术硕士（MFA）专业学位授权点，并依托土木工程规划与管理二级博士点招收培养 博士研究生。北京大学建艺专业联合学分在线重磅推出建艺专业线上招生，拥有建筑学、城乡规划、风景园林、艺术学理论、设计学等5个一级学科硕士学位拥有建筑学、城乡规划、 风景园林、艺术学理论、设计学等5个一级学科硕士学位授权点，美术学二级学科硕士学位授权点、艺术硕士（MFA）专业学位授权点，并依托土木工程规划与管理二级博士点招收 培养博士研究生。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="add-ann" v-cloak v-show="addAnnShow">
+            <div class="bg"></div>
+            <div class="layer">
+                <i class="iconfont icon-close" @click="addAnnShow=!addAnnShow"></i>
+                <div class="send-obj clearfix">
+                    <span class="f_left">发布对象：</span>
+                    <div class="f_left clearfix">
+                        <template>
+                            <i-select style="width:113px;float:left">
+                                <i-option v-for="item in jieList" :value="item.value">{{ item.label }}</i-option>
+                            </i-select>
+                            <i-select style="width:113px;margin-left:20px;float:left">
+                                <i-option v-for="item in jieList" :value="item.value">{{ item.label }}</i-option>
+                            </i-select>
+                        </template>
+                    </div>
+                </div>
+                <div class="layer-title clearfix">
+                    <span class="f_left">公告标题：</span>
+                    <div class="f_left">
+                        <input type="text" name="annTitle" maxlength="35" v-model="annTitle" @input="num">
+                        <p class="word-num"><span v-text="remnant"></span>/35</p>
+                    </div>
+                </div>
+                <div class="layer-content clearfix">
+                    <span class="f_left">公告正文：</span>
+                    <div class="f_left">
+                        <p class="error">*您输入的内容包含敏感词汇“习近平”，请修改后发布</p>
+                    </div>
+                </div>
+                <div class="layer-yzm clearfix">
+                    <span class="f_left">验证码：</span>
+                    <input type="text" name="yzm">
+                </div>
+                <div class="add-ann-btn clearfix">
+                    <div class="save">保存草稿</div>
+                    <div class="send">发布</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/umeditor/third-party/jquery.min.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+        remnant: '0',
+        annTitle: '',
+        addAnnShow: false,
+        jieList:[],
+        qilist:[]
+    },
+    methods: {
+        showAll: function(e) {
+            console.log(e)
+            var target = $(e.target);
+            target.toggleClass('hid');
+            /*if (!target.hasClass('hid')) {
+                target.addClass('hid');
+            } else {
+                target.removeClass('hid');
+            }*/
+        },
+        num: function() {
+            var txtVal = this.annTitle.length; //desc 是设置v-model的值
+            this.remnant = txtVal;
+        },
+    },
+    mounted: function() {}
+});
+</script>
+
+</html>

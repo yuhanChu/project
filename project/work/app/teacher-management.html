@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>师资管理</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_wwk28b9up.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" href="css/teacher-management.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="major-title clearfix">师资管理 <a href="javascript:void(0);">&lt;&lt;返回专业管理</a></div>
+        <div class="teacer-sx clearfix">
+            <div class="f_left">
+                <template>
+                    <i-select style="width:153px;height: 28px;" clearable @on-change="sxChange">
+                        <i-option v-for="item in tList" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                </template>
+            </div>
+            <div class="zh-add" @click="zhBtn">通过账号添加老师</div>
+            <div class="ks-add" @click="fastBtn">+ 快速添加老师</div>
+            <div class="search">
+                <input type="text" name="search" placeholder="老师姓名">
+                <i class="iconfont icon-search"></i>
+            </div>
+        </div>
+        <div class="teacer-main">
+            <ul class="title-ul">
+                <li class="title-li1">序号</li>
+                <li class="title-li2">老师姓名</li>
+                <li class="title-li3">职称</li>
+                <li class="title-li4">所在学院</li>
+                <li class="title-li5">到期时间</li>
+                <li class="title-li6">操作</li>
+            </ul>
+            <div class="list-content">
+                <ul class="list-ul" v-for="(it,k) in listArr">
+                    <li class="title-li1" v-text="k+1">1</li>
+                    <li class="title-li2">李磊</li>
+                    <li class="title-li3">教授</li>
+                    <li class="title-li4">建筑艺术学院</li>
+                    <li class="title-li5">2018-04-28 14:33:45</li>
+                    <li class="title-li6"><a href="javascript:;" class="no">移除</a></li>
+                </ul>
+            </div>
+            <div class="page clearfix">
+                <span class="f_left">15名老师</span>
+                <div class="f_right">
+                    <template>
+                        <Page :total="100" size="small" show-elevator></Page>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div id="fast-add" v-cloak v-show="fastShow">
+            <div class="bg"></div>
+            <div class="layer">
+                <i class="iconfont icon-close" @click="closeFast"></i>
+                <div class="search">
+                    <input type="text" name="search" placeholder="老师姓名">
+                    <i class="iconfont icon-search"></i>
+                </div>
+                <div class="tearch-list clearfix">
+                    <div class="list" v-for="(it,k) in teccherList" :class="k==1?'cur':''">
+                        <img class="cur-img" src="images/major/cur.png">
+                        <img src="images/major/teacher.png" class="head">
+                        <span>王步高</span>
+                    </div>
+                </div>
+                <div class="fast-btn">添加</div>
+            </div>
+        </div>
+        <div id="zh-add" v-cloak v-show="zhshow">
+            <div class="bg"></div>
+            <div class="layer">
+                <i class="iconfont icon-close" @click="closeZh"></i>
+                <img src="images/major/zh-head.png">
+                <div class="number clearfix">
+                    <span class="f_left">老师账号：</span>
+                    <div class="f_left">
+                        <input type="text" name="num">
+                    </div>
+                </div>
+                <p class="ts">*查无此号，您可以创建新账号</p>
+                <div class="number clearfix">
+                    <span class="f_left">密码：</span>
+                    <div class="f_left">
+                        <input type="text" name="mm">
+                    </div>
+                </div>
+                <div class="number clearfix">
+                    <span class="f_left">老师姓名：</span>
+                    <div class="f_left">
+                        <input type="text" name="tname">
+                    </div>
+                </div>
+                <div class="number clearfix">
+                    <span class="f_left">老师职称：</span>
+                    <div class="f_left">
+                        <template>
+                            <i-select style="width:100%;height: 28px;">
+                                <i-option v-for="item in tList" :value="item.value">{{ item.label }}</i-option>
+                            </i-select>
+                        </template>
+                    </div>
+                </div>
+                <div class="number clearfix">
+                    <span class="f_left">所在院系：</span>
+                    <div class="f_left">
+                        <template>
+                            <i-select style="width:100%;height: 28px;">
+                                <i-option v-for="item in tList" :value="item.value">{{ item.label }}</i-option>
+                            </i-select>
+                        </template>
+                    </div>
+                </div>
+                <div class="number clearfix">
+                    <span class="f_left">签约时间：</span>
+                    <div class="f_left">
+                        <input class="Wdate" type="text" id="d233" onclick="WdatePicker({startDate:'%y-%M-01',readOnly:true})" />
+                        <!-- <template>
+                            <row>
+                                <i-col span="12">
+                                    <Date-picker type="date" :options="options3" placeholder="选择日期" @on-change="qyTime" style="width: 223px" :editable="false"></Date-picker>
+                                </i-col>
+                            </row>
+                        </template> -->
+                    </div>
+                </div>
+                <div class="number clearfix">
+                    <span class="f_left">到期时间：</span>
+                    <div class="f_left">
+                        <input class="Wdate" type="text" id="d234" onclick="WdatePicker({startDate:'%y-%M-01',readOnly:true})" />
+                        <!-- <template>
+                            <row>
+                                <i-col span="12">
+                                    <Date-picker type="date" :options="options4" placeholder="选择日期" style="width: 223px" :editable="false"></Date-picker>
+                                </i-col>
+                            </row>
+                        </template> -->
+                    </div>
+                </div>
+                <div class="add-btn">添加</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript" src="js/wdatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+        tList: [{
+                value: '1',
+                label: '教授'
+            },
+            {
+                value: '2',
+                label: '副教授'
+            },
+            {
+                value: '3',
+                label: '讲师'
+            },
+            {
+                value: '4',
+                label: '助教'
+            },
+        ],
+        listArr: [1, 2, 3],
+        teccherList: [1, 2, 3],
+        fastShow: false,
+        zhshow: false,
+    },
+    methods: {
+        qyTime: function(res) {
+            console.log(res)
+        },
+        fastBtn: function() {
+            this.fastShow = true;
+        },
+        closeFast: function() {
+            this.fastShow = false;
+        },
+        zhBtn: function() {
+            this.zhshow = true;
+        },
+        closeZh: function() {
+            this.zhshow = false;
+        },
+        sxChange: function(res) {
+            console.log(res)
+        }
+    }
+});
+</script>
+
+</html>

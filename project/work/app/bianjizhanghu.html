@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>编辑账户</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_z7iqhm7i5wc.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" type="text/css" href="css/addzhanghu.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="add-head">合作账户管理>>>编辑账户 <a href="javascript:;" class="back">&lt;&lt;返回</a></div>
+        <div class="add-content">
+            <p class="ts">修改账户信息需经过管理员审核</p>
+            <div class="add-main">
+                <div class="list clearfix">
+                    <span class="f_left">手机号：</span>
+                    <input type="text">
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">姓名：</span>
+                    <input type="text">
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">私募方式：</span>
+                    <template>
+                        <i-select style="width:220px;float:left">
+                            <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">私募额度：</span>
+                    <input type="text">
+                    <span class="unit">ETH/RMB</span>
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">私募时ETH价格：</span>
+                    <input type="text">
+                    <span class="unit">RMB</span>
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">私募比例：</span>
+                    <span class="be-unit">1ETH/1RMB：</span>
+                    <input type="text" class="la-input">
+                    <span class="unit">COOC</span>
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">私募数量：</span>
+                    <input type="text" readonly value="123">
+                    <span class="unit">COOC</span>
+                </div>
+                <div class="list clearfix">
+                    <span class="f_left">释放规则：</span>
+                    <template>
+                        <i-select style="width:220px;float:left">
+                            <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                    <div class="set-btn">去设置</div>
+                </div>
+                <p class="inform">描述上边选择的释放规则XXXXXXXXXXX</p>
+                <div class="add-btn">确认修改</div>
+            </div>
+        </div>
+        <!-- 验证中 -->
+        <div id="in-verification" v-cloak v-show="loadingShow">
+        	<div class="layer">验证中，请稍等</div>
+        </div>
+        <!-- 验证成功 -->
+        <div id="successful" v-cloak v-show="successfulShow">
+        	<div class="layer">
+        		<div class="layer-top">
+        			<i class="iconfont icon-close"></i>
+        		</div>
+        		<div class="layer-content">
+        			<p>验证成功，账户创建成功</p>
+        			<div class="successful-btn clearfix">
+        				<div>账户管理</div>
+        				<div>继续创建</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.min.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+        list: [{value:'1',label:'ETH'},{value:'2',label:'RMB'}],
+        loadingShow:false,
+        successfulShow:false,
+    }
+});
+</script>
+
+</html>

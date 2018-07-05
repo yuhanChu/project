@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/report.css">
+    <script src="tools/vue.min.js"></script>
+    <script src="tools/jQuery.js"></script>
+    <script src="js/report.js"></script>
+</head>
+
+<body>
+    <div id="app" class="app sys-teacher">
+        <h_header text="成绩单" title="学分在线"></h_header>
+        <!-- 学生信息 -->
+        <div class="report-info">
+            <div class="photo" style="background-image:url(images/report/img1.png)"></div>
+            <div class="fr">
+                <div class="dl">
+                    <p class="name">HelloKitty</p>
+                    <div class="user-id">
+                        <div class="user-info">
+                            <span class="iconfont icon-shangjiantou"></span>
+                            <p>身份证号：110101**********1234</p>
+                            <p>学习时长：186天</p>
+                            <p>驳回申请时间：2018-4-13 15:14:06</p>
+                        </div>
+                    </div>
+                    <div class="border-theme">未学习</div>
+                </div>
+                <p class="dd course">
+                    课程名称：<span>英语的基础训练课程</span><span>学分学历课程</span><span>混合式教学</span>
+                </p>
+                <p class="dd">
+                    所属院校：<span>中国人民大学 - </span><span>计算机学院 - </span><span>软件工程专业</span>
+                </p>
+                <ul class="report-detail">
+                    <li>
+                        <p>应获学分</p>
+                        <span>2.0</span>
+                    </li>
+                    <li>
+                        <p>综合成绩</p>
+                        <span>2.0</span>
+                    </li>
+                    <!-- <li>
+                        <p>测验综合成绩</p>
+                        <span>2.0</span>
+                    </li> -->
+                    <li>
+                        <p>期末成绩</p>
+                        <span>2.0</span>
+                    </li>
+                    <li>
+                        <p>大作业成绩</p>
+                        <span>2.0</span>
+                    </li>
+                    <li>
+                        <p>学习态度综合成绩</p>
+                        <span>0.0</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-theme complete" @click="showComplete">课程结业</div>
+        </div>
+        
+    </div>
+    <script>
+    /*setTimeout(function() {
+        turnDown({
+            text: "该学生综合成绩已符合申请学分标准，请您选择合理的驳回原因：",
+            pullDownTitle: "请选择驳回原因",
+            pullDownList: {
+                "a":"章节成绩不合格",
+                "b":"学习态度差",
+                "c":"考试涉嫌作弊",
+                "d":"多次旷课",
+                "e":"笔记数严重不足",
+                "other":"其他原因"
+            },
+            placeHolder: '请输入原因',
+            input: "",
+            inputMaxLength: 15,
+            sureText: "确定",
+            cancelText: "取消",
+            sureFn: function(a) {
+                console.log(a)
+            },
+            cancelFn: function(a) {
+                console.log(a)
+            }
+        })
+    }, 200);*/
+    </script>
+</body>
+
+</html>

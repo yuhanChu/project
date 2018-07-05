@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>账户详情</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_z7iqhm7i5wc.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" type="text/css" href="css/zhnghuxiangqing.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="account-details-head">合作账户管理>>>账户管理>>>账户详情  <a href="javascript:;" class="back">&lt;&lt;返回</a></div>
+        <div class="account-details-content">
+            <div class="operation-btn clearfix">
+                <div>账户信息</div>
+                <div>个人信息</div>
+                <div>登录信息</div>
+                <div>交易信息</div>
+                <div>变更历史</div>
+            </div>
+            <div class="account-details-main">
+                <!-- 账户 个人 登录信息 -->
+                <template v-if="cur < 4">
+                    <div class="info-box clearfix">
+                        <div class="info-left">
+                            <div class="info-top clearfix">
+                                <span class="f_left zh">136 0000 0000</span>
+                                <span class="f_right status-zh">正常</span>
+                                <!-- <span class="f_left status-jy">正常</span> -->
+                                <!-- <span class="f_left status-no">正常</span> -->
+                            </div>
+                            <ul class="account-information" v-cloak v-show="cur==1">
+                                <li class="clearfix"><span class="f_left">创建时间</span><span class="f_right">2018-06-06 12:12:12</span></li>
+                                <li class="clearfix"><span class="f_left">EOS主网账号名</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">创建方式</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">绑定时间</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">公钥地址</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">钱包密码</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">提示信息</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">COOC总额</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">COOC可用额</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">COOC锁仓额</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">空投数量</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">已空投数量</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">未空投数量</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">释放状态</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">释放规则</span><span class="f_right"></span></li>
+                                <div class="account-information-btn clearfix">
+                                    <div>编辑</div>
+                                    <div>添加备注</div>
+                                    <div>修改状态</div>
+                                    <div>空投</div>
+                                </div>
+                            </ul>
+                            <ul class="personal-information" v-cloak v-show="cur==2">
+                                <li class="clearfix"><span class="f_left">客户姓名</span><span class="f_right">张三</span></li>
+                                <li class="clearfix"><span class="f_left">身份证号码</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">投资额度</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">私募比例</span><span class="f_right"></span></li>
+                                <li class="clearfix"><span class="f_left">私募额度</span><span class="f_right"></span></li>
+                            </ul>
+                            <ul class="trading-information" v-cloak v-show="cur==3">
+                                <li class="first-li clearfix"><span>登录时间</span><span>登录地址</span><span>ip</span></li>
+                                <li class="clearfix" v-for="it in dataList"><span>2018-6-30 11:08:54</span><span>北京</span><span>124.207.198.42</span></li>
+                                <div class="fy clearfix">
+                                    <span class="f_left">100条数据</span>
+                                    <div class="f_right">
+                                        <template>
+                                            <Page :total="100" size="small"></Page>
+                                        </template>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="info-right">
+                            <div style="padding-right: 25px;">
+                                <div class="info-right-top clearfix">
+                                    <span>备注</span>
+                                    <div>添加备注</div>
+                                </div>
+                            </div>
+                            <div class="info-right-content">
+                                <p class="remark-empty" v-show="remarkEmpty" v-cloak>暂无备注</p>
+                                <div class="remark-box">
+                                    <div class="remark-list" v-for="it in dataList">
+                                        <span class="remark-time">2018-7-2 16:05:11</span>
+                                        <p class="remark-content">
+                                            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                <template v-if="cur==4">
+                    <div class="trading-box">
+                        <div class="sx-box clearfix">
+                            <div class="f_left">
+                                <template>
+                                    <i-select style="width:190px">
+                                        <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                                    </i-select>
+                                </template>
+                            </div>
+                            <div class="f_left">
+                                <input id="d411" class="Wdate" type="text" onclick="WdatePicker({skin:'whyGreen',dateFmt:'yyyy年M月',})" />
+                                <span class="z">至</span>
+                                <input id="d412" class="Wdate" type="text" onclick="WdatePicker({skin:'whyGreen',dateFmt:'yyyy年M月D',})" />
+                            </div>
+                        </div>
+                        <div class="trading-list-box">
+                            <ul class="trading-nav clearfix">
+                                <li class="li1">时间</li>
+                                <li class="li2">交易方式</li>
+                                <li class="li3">交易类型</li>
+                                <li class="li4">交易数量</li>
+                                <li class="li5">转出地址</li>
+                                <li class="li6">转入地址</li>
+                                <li class="li7">交易状态</li>
+                                <li class="li8">账户余额</li>
+                            </ul>
+                            <div class="list-box">
+                                <ul class="list clearfix" v-for="it in dataList">
+                                    <li class="li1">2018-6-30 11:13:11</li>
+                                    <li class="li2">转入</li>
+                                    <li class="li3">空投</li>
+                                    <li class="li4"><span class="succ">+8000000.0000</span></li>
+                                    <li class="li5">wuzhangcheng</li>
+                                    <li class="li6">zhangqingfa</li>
+                                    <li class="li7"><span class="succ">成功</span></li>
+                                    <li class="li8">12000000.0000</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="fy clearfix">
+                            <span class="f_left">50条数据</span>
+                            <template>
+                                <Page :total="100" size="small"></Page>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+                <template v-if="cur==5">
+                    <div class="change-box">
+                        <div class="change-list-box">
+                            <ul class="change-nav clearfix">
+                                <li class="li1">时间</li>
+                                <li class="li2">变更人</li>
+                                <li class="li3">变更数据类型</li>
+                                <li class="li4">原数据</li>
+                                <li class="li5">新数据</li>
+                            </ul>
+                            <div class="list-box">
+                                <ul class="list clearfix" v-for="it in dataList">
+                                    <li class="li1">2018-6-30 11:13:11</li>
+                                    <li class="li2">张三</li>
+                                    <li class="li3">手机号</li>
+                                    <li class="li4">13333333333</li>
+                                    <li class="li5">18888888888</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="fy clearfix">
+                            <span class="f_left">50条数据</span>
+                            <template>
+                                <Page :total="100" size="small"></Page>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+        <!-- 备注弹窗 -->
+        <div id="add-remark" v-show="addRemark" v-cloak>
+            <div class="layer">
+                <div class="layer-top">
+                    <span>备注</span>
+                    <i class="iconfont icon-close"></i>
+                </div>
+                <div class="txt-box">
+                    <textarea></textarea>
+                    <div class="add-remark-btn">确定</div>
+                </div>
+            </div>
+        </div>
+        <!-- 空投弹窗 -->
+        <div id="drop" v-cloak v-show="dropShow">
+            <div class="layer">
+                <div class="layer-top">
+                    <span>空投</span>
+                    <i class="iconfont icon-close"></i>
+                </div>
+                <div class="drop-box">
+                    <div class="drop-list clearfix">
+                        <span class="f_left">EOS主网账号名：</span>
+                        <span class="f_left">mikkle</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">公钥地址：</span>
+                        <span class="f_left">57ed834...a3ce45</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">cooc总额：</span>
+                        <span class="f_left">196000000.0000</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">待空投数量：</span>
+                        <span class="f_left">1600000.0000</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">cooc可用额：</span>
+                        <span class="f_left">1600000.0000</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">cooc锁仓额：</span>
+                        <span class="f_left">16261521.0000</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">释放规则：</span>
+                        <span class="f_left">3+1规则</span>
+                    </div>
+                    <div class="drop-input clearfix">
+                        <span>空投数量：</span>
+                        <input type="text">
+                        <span>（？%）</span>
+                    </div>
+                    <div class="num-btn clearfix">
+                        <div>25%</div>
+                        <div>50%</div>
+                        <div>100%</div>
+                    </div>
+                    <div class="drop-btn">确定空投</div>
+                </div>
+            </div>
+        </div>
+        <!-- 空投确认 -->
+        <div id="drop-true" v-show="dropTrueShow" v-cloak>
+            <div class="layer">
+                <div class="layer-top">
+                    <span>空投</span>
+                    <i class="iconfont icon-close"></i>
+                </div>
+                <div class="drop-box">
+                    <div class="drop-list clearfix">
+                        <span class="f_left">EOS主网账号名：</span>
+                        <span class="f_left">mikkle</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">公钥地址：</span>
+                        <span class="f_left">57ed834...a3ce45</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">cooc总额：</span>
+                        <span class="f_left">196000000.0000</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">待空投数量：</span>
+                        <span class="f_left">1600000.0000</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">cooc可用额：</span>
+                        <span class="f_left">1600000.0000</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">cooc锁仓额：</span>
+                        <span class="f_left">16261521.0000</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">释放规则：</span>
+                        <span class="f_left">3+1规则</span>
+                    </div>
+                    <div class="drop-list clearfix">
+                        <span class="f_left">空投数量：</span>
+                        <span class="f_left">800000.0000<span>(50%)</span></span>
+                    </div>
+                    <input type="text" placeholder="请输入OK">
+                    <div class="true-btn">请再次确认空头信息（<span>5</span>s）</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/wdatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.min.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+        list: [],
+        dataList: ['1', '2', 3, 4],
+        cur: 5,
+        remarkEmpty: false,
+        addRemark: false,
+        dropShow: false,
+        dropTrueShow: false,
+    }
+});
+</script>
+
+</html>

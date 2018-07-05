@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>报名信息</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_wwk28b9up.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" type="text/css" href="css/baomingxinxi.css">
+</head>
+
+<body>
+    <div class="main" id="app">
+        <div class="main-box">
+            <div class="status-box">
+                <p class="status">报名状态：初审通过</p>
+                <p class="status-after">初审通过，等待终审</p>
+                <p class="status">初审通过时间：2018-4-28 16:16:46</p>
+            </div>
+            <div class="info-box clearfix">
+                <div class="info-left">
+                    <img src="./images/major/avater.png">
+                    <p>张壮壮</p>
+                </div>
+                <div class="info-right">
+                    <div class="essential">
+                        <i class="iconfont icon-xiangyoujiantou rotate" @click="open($event)"></i>
+                        <div class="title">基本信息（已完善）</div>
+                        <div class="word clearfix">
+                            <ul>
+                                <li>性别：男</li>
+                                <li>民族：汉</li>
+                                <li>婚否：未婚</li>
+                                <li>出生日期：1999年9月9日</li>
+                                <li>身份证照：</li>
+                            </ul>
+                            <ul>
+                                <li>手机号：13600000000</li>
+                                <li>邮箱：zhangzhuangshi@qq.com</li>
+                                <li>身份证号：110104199909091111</li>
+                                <li>籍贯：中国 北京市 宣武区</li>
+                            </ul>
+                        </div>
+                        <div class="img-box clearfix">
+                            <div><img src="images/major/idcard.png"></div>
+                            <div><img src="images/major/idcard.png"></div>
+                        </div>
+                    </div>
+                    <div class="on-job">
+                        <i class="iconfont icon-xiangyoujiantou rotate" @click="open($event)"></i>
+                        <div class="title">在职证明</div>
+                        <div class="img-box clearfix">
+                            <div><img src="images/major/idcard.png"></div>
+                        </div>
+                    </div>
+                    <div class="on-job">
+                        <i class="iconfont icon-xiangyoujiantou rotate" @click="open($event)"></i>
+                        <div class="title">推荐信（已完善）</div>
+                        <div class="img-box clearfix">
+                            <div><img src="images/major/idcard.png"></div>
+                        </div>
+                    </div>
+                    <div class="educational clearfix">
+                        <i class="iconfont icon-xiangyoujiantou rotate" @click="open($event)"></i>
+                        <div class="title">教育经历 <span class="f_right">北京大学</span></div>
+                        <div class="word clearfix">
+                            <ul>
+                                <li>学校名称：北京大学</li>
+                                <li>学历学位：硕士</li>
+                                <li>专业名称：电气信息类</li>
+                                <li>毕业证书扫描件：</li>
+                            </ul>
+                            <ul>
+                                <li style="visibility: hidden;">站位</li>
+                                <li>入学时间：1999年9月9日</li>
+                                <li>毕业时间：1999年9月9日@qq.com</li>
+                            </ul>
+                        </div>
+                        <div class="img-box clearfix">
+                            <div><img src="images/major/idcard.png"></div>
+                        </div>
+                    </div>
+                    <div class="ielts clearfix">
+                        <i class="iconfont icon-xiangyoujiantou rotate" @click="open($event)"></i>
+                        <div class="title">雅思<span class="f_right">5.5分</span></div>
+                        <div class="word clearfix">
+                            <ul>
+                                <li>考试年份：2000年</li>
+                                <li>考试分数：5.5分</li>
+                                <li>听力分数：5.5分</li>
+                                <li>成绩扫描件：</li>
+                            </ul>
+                            <ul>
+                                <li>阅读分数：4分</li>
+                                <li>口语分数：6分</li>
+                                <li>写作分数：4分</li>
+                            </ul>
+                        </div>
+                        <div class="img-box clearfix">
+                            <div><img src="images/major/idcard.png"></div>
+                        </div>
+                    </div>
+                    <div class="toefl clearfix">
+                        <i class="iconfont icon-xiangyoujiantou rotate" @click="open($event)"></i>
+                        <div class="title">托福<span class="f_right">74分</span></div>
+                        <div class="word clearfix">
+                            <ul>
+                                <li>考试年份：2000年</li>
+                                <li>考试类型：TOEFL iBT 网考</li>
+                                <li>考试分数：74分</li>
+                                <li>成绩扫描件：</li>
+                            </ul>
+                        </div>
+                        <div class="img-box clearfix">
+                            <div><img src="images/major/idcard.png"></div>
+                        </div>
+                    </div>
+                    <div class="other clearfix">
+                        <i class="iconfont icon-xiangyoujiantou rotate" @click="open($event)"></i>
+                        <div class="title">GET<span class="f_right">74分</span></div>
+                        <div class="word clearfix">
+                            <ul>
+                                <li>考试年份：2000年</li>
+                                <li>考试分数：74分</li>
+                                <li>成绩扫描件：</li>
+                            </ul>
+                        </div>
+                        <div class="img-box clearfix">
+                            <div><img src="images/major/idcard.png"></div>
+                        </div>
+                    </div>
+                    <div class="other clearfix">
+                        <i class="iconfont icon-xiangyoujiantou rotate" @click="open($event)"></i>
+                        <div class="title">英语四级<span class="f_right">74分</span></div>
+                        <div class="word clearfix">
+                            <ul>
+                                <li>考试年份：2000年</li>
+                                <li>考试分数：74分</li>
+                                <li>成绩扫描件：</li>
+                            </ul>
+                        </div>
+                        <div class="img-box clearfix">
+                            <div><img src="images/major/idcard.png"></div>
+                        </div>
+                    </div>
+                    <div class="other clearfix">
+                        <i class="iconfont icon-xiangyoujiantou rotate" @click="open($event)"></i>
+                        <div class="title">英语六级<span class="f_right">74分</span></div>
+                        <div class="word clearfix">
+                            <ul>
+                                <li>考试年份：2000年</li>
+                                <li>考试分数：74分</li>
+                                <li>成绩扫描件：</li>
+                            </ul>
+                        </div>
+                        <div class="img-box clearfix">
+                            <div><img src="images/major/idcard.png"></div>
+                        </div>
+                    </div>
+                    <div class="other clearfix">
+                        <i class="iconfont icon-xiangyoujiantou rotate" @click="open($event)"></i>
+                        <div class="title">其他成绩单<span class="f_right">74分</span></div>
+                        <div class="word clearfix">
+                            <ul>
+                                <li>考试名称：名称</li>
+                                <li>考试分数：74分</li>
+                                <li>成绩扫描件：</li>
+                            </ul>
+                        </div>
+                        <div class="img-box clearfix">
+                            <div><img src="images/major/idcard.png"></div>
+                        </div>
+                    </div>
+                    <div class="other clearfix">
+                        <i class="iconfont icon-xiangyoujiantou rotate" @click="open($event)"></i>
+                        <div class="title">获奖证书</div>
+                        <div class="word clearfix">
+                            <ul>
+                                <li>证书名称：名称</li>
+                                <li>考试名次：第一名</li>
+                                <li>成绩扫描件：</li>
+                            </ul>
+                        </div>
+                        <div class="img-box clearfix">
+                            <div><img src="images/major/idcard.png"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript">
+	var app = new Vue({
+		el:'#app',
+		data:{
+
+		},
+		methods:{
+			open:function(e) {
+				var $dom = $(e.currentTarget);
+				if ($dom.hasClass('rotate')) {
+					$dom.siblings('.word').slideUp();
+					$dom.siblings('.img-box').slideUp();
+					$dom.removeClass('rotate');
+				} else {
+					$dom.siblings('.word').slideDown();
+					$dom.siblings('.img-box').slideDown();
+					$dom.addClass('rotate');
+				}
+			}
+		},
+		created:function() {
+
+		},
+		mounted:function() {
+
+		}
+	});
+</script>
+</html>

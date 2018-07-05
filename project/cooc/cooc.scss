@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+@mixin font($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+.partners {
+    width: 100%;
+    padding-top: 75px;
+    background: #fff;
+    .word {
+        animation: mylow 2s;
+        .title {
+            @include font(48px, #333333);
+            text-align: center;
+            font-weight: normal;
+        }
+        &>p {
+            @include font(18px, #333333);
+            text-align: center;
+            margin-top: 8px;
+        }
+    }
+
+    &>ul {
+        overflow: hidden;
+        width: 1047px;
+        margin: 0 auto;
+        margin-top: 35px;
+        animation:mysh 2s;
+        li {
+            float: left;
+            margin-left: 44px;
+            margin-bottom: 63px;
+            img {
+                width: 174px;
+                height: 63px;
+            }
+        }
+        li:nth-child(5n+1) {
+            margin-left: 0;
+        }
+    }
+}
+
+@keyframes mylow {
+    0% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes mysh {
+	0% {
+		opacity: 0;
+		transform:translateY(20%);
+	}
+	100% {
+		opacity:1;
+		transform:translateY(0);
+	}
+
+}

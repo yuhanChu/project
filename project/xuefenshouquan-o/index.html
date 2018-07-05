@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="iview.css">
+	<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_v5ba96f6sc1y8pvi.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+	<div id="app">
+		<div class="title">学生名单<span>（工程应用数学基础）</span></div>
+		<div class="sx-box clearfix">
+			<template>
+				<i-select clearable style="width:200px" @on-change="statusChange">
+					<i-option v-for="item in cityList" :value="item.value" v-text="item.label"></i-option>
+				</i-select>
+			</template>
+			<div class="f_right search">
+				<input type="text" name="">
+				<i class="iconfont icon-search"></i>
+			</div>
+		</div>
+		<!-- 全部 申请学分 未学习 已退费 已学完 -->
+		<template>
+			<div class="list-box">
+				<ul class="ul-nav-six clearfix">
+					<li class="li1">序号</li>
+					<li class="li2">学生姓名</li>
+					<li class="li3">综合成绩</li>
+					<li class="li4">学习状态</li>
+					<li class="li5">驳回申请时间</li>
+					<li class="li6">操作</li>
+				</ul>
+				<ul class="ul-list-six clearfix">
+					<li class="li1">1</li>
+					<li class="li2">王步高</li>
+					<li class="li3">23.00</li>
+					<li class="li4">申请学分驳回</li>
+					<li class="li5">2018-4-12 15:10:06</li>
+					<li class="li6"><a href="javascript:void(0);">详情</a></li>
+				</ul>
+			</div>
+		</template>
+		<!-- 驳回 学习中 已授予学分 -->
+		<template v-if="false">
+			<div class="list-box">
+				<ul class="ul-nav-seven clearfix">
+					<li class="li1">序号</li>
+					<li class="li2">学生姓名</li>
+					<li class="li3">综合成绩</li>
+					<li class="li4">学习状态</li>
+					<li class="li5">驳回原因</li>
+					<li class="li6">驳回申请时间</li>
+					<li class="li7">操作</li>
+				</ul>
+				<ul class="ul-list-seven clearfix">
+					<li class="li1">1</li>
+					<li class="li2">王步高</li>
+					<li class="li3">23.00</li>
+					<li class="li4">申请学分驳回</li>
+					<li class="li5" title="章节成绩不合格">章节成绩不合格</li>
+					<li class="li6">2018-4-12 15:10:06</li>
+					<li class="li7"><a href="javascript:void(0);">详情</a></li>
+				</ul>
+			</div>
+		</template>
+		<template>
+			<Page :total="total" size="small" show-elevator @on-change="pageChange"></Page>
+		</template>
+	</div>
+</body>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+	el: '#app',
+	data: {
+		cityList: [{
+				value: "0",
+				label: '北京市'
+			},
+			{
+				value: "1",
+				label: '上海市'
+			},
+			{
+				value: "2",
+				label: '深圳市'
+			},
+			{
+				value: "3",
+				label: '杭州市'
+			},
+			{
+				label: '南京市',
+				value: "4",
+			},
+			{
+				label: '重庆市',
+				value: "5",
+			}
+		],
+		total: 56,
+	},
+	methods: {
+		statusChange: function(res) {
+			console.log(res)
+		},
+		pageChange: function(res) {
+			console.log(res)
+		}
+	},
+	mounted: function() {
+
+	}
+});
+</script>
+
+</html>

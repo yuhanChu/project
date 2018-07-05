@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>创建专业</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_v5ba96f6sc1y8pvi.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" type="text/css" href="css/creatmajor.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="creat-major-title clearfix">创建专业 <a href="javascript:void(0);">&lt;&lt;返回专业管理</a></div>
+        <div class="creat-major-main">
+            <div class="major-name clearfix">
+                <p class="f_left p-left"><span>*</span>专业名称：</p>
+                <div class="box-right">
+                    <input type="text" name="majorName" placeholder="请填写专业名称" maxlength="30" v-model="majorName" @input="num">
+                    <p class="word-num"><span v-text="remnant">0</span>/30</p>
+                </div>
+            </div>
+            <div class="major-code clearfix">
+                <p class="f_left p-left">专业代码：</p>
+                <div class="box-right">
+                    <input type="text" name="majorCode" placeholder="请填写代码，例如：020301K">
+                </div>
+                <span class="code-ico">
+                	<p class="code-info">
+	                    专业代码就是用来指示大学或其他专
+	                    <br> 科学校的某一种专业的一种数字编号
+                	</p>
+                </span>
+            </div>
+            <div class="major-school clearfix">
+                <p class="f_left p-left"><span>*</span>所在院系：</p>
+                <div class="box-right">
+                    <template>
+                        <i-select style="width:270px;height: 28px;" @on-change="school">
+                            <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                </div>
+                <p class="creat-p">还没有创建学院？<a href="javascript:;" @click="creatShow=!creatShow">现在创建</a></p>
+            </div>
+            <div class="major-type clearfix">
+                <p class="f_left p-left"><span>*</span>学科分类：</p>
+                <div class="box-right">
+                    <template>
+                        <i-select style="width:270px;height: 28px;">
+                            <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                </div>
+            </div>
+            <div class="major-leixing clearfix">
+                <p class="f_left p-left">专业类型：</p>
+                <div class="box-right">
+                    <div class="leixing-list" :class="type==1?'cur':''" @click="typeClick(1)">高等教育</div>
+                    <div class="leixing-list" :class="type==2?'cur':''" @click="typeClick(2)">职业教育</div>
+                </div>
+            </div>
+            <div class="major-xueli clearfix">
+                <p class="f_left p-left">学历层次：</p>
+                <div class="box-right">
+                    <div class="xueli-list" :class="arrangement==1?'cur':''" @click="arrangementClick(1)">大专</div>
+                    <div class="xueli-list" :class="arrangement==2?'cur':''" @click="arrangementClick(2)">学士</div>
+                    <div class="xueli-list" :class="arrangement==3?'cur':''" @click="arrangementClick(3)">硕士</div>
+                    <div class="xueli-list" :class="arrangement==4?'cur':''" @click="arrangementClick(4)">博士</div>
+                </div>
+            </div>
+            <div class="major-year clearfix">
+                <p class="f_left p-left">学制：</p>
+                <div class="box-right">
+                    <input type="text" name="year">
+                </div>
+                <span>月</span>
+            </div>
+            <div class="major-baoming clearfix">
+                <p class="f_left p-left">是否报名：</p>
+                <div class="box-right">
+                    <template>
+                        <Radio-group v-model="baoming" @on-change="rads">
+                            <Radio label="1">
+                                <span>是</span>
+                            </Radio>
+                            <Radio label="2">
+                                <span>否</span>
+                            </Radio>
+                    </template>
+                </div>
+            </div>
+        </div>
+        <div class="major-btn">
+            <a href="javascript:;" class="save">保存草稿</a>
+            <a href="javascript:;" class="sibmit">发布</a>
+        </div>
+        <div id="creat-layer" v-cloak v-show="creatShow">
+            <div class="bg"></div>
+            <div class="layer">
+                <p>创建院系</p>
+                <i class="iconfont icon-close" @click="creatShow=!creatShow"></i>
+                <div class="layer-main">
+                    <div class="clearfix">
+                        <p class="f_left">院系名称：</p>
+                        <input type="text" name="schoolName">
+                    </div>
+                </div>
+                <div class="layer-main">
+                    <div class="clearfix">
+                        <p class="f_left">下设专业：</p>
+                        <template>
+                            <i-select style="width:300px;height: 30px;margin-left: 5px;">
+                                <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                            </i-select>
+                        </template>
+                    </div>
+                </div>
+                <div class="layer-btn">
+                    <div class="true">确定</div>
+                    <div class="cancel">取消</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+        remnant: 0,
+        majorName: '',
+        phone: '',
+        creatShow: false,
+        cityList: [{
+                value: 'beijing',
+                label: '北京市'
+            },
+            {
+                value: 'shanghai',
+                label: '上海市'
+            },
+            {
+                value: 'shenzhen',
+                label: '深圳市'
+            },
+            {
+                value: 'hangzhou',
+                label: '杭州市'
+            },
+            {
+                value: 'nanjing',
+                label: '南京市'
+            },
+            {
+                value: 'chongqing',
+                label: '重庆市'
+            }
+        ],
+        baoming: '',
+        type: '',
+        arrangement: '',
+    },
+    methods: {
+        num: function() {
+            var txtVal = this.majorName.length; //desc 是设置v-model的值
+            this.remnant = txtVal;
+        },
+        rads: function(res) {
+            this.baoming = res;
+        },
+        typeClick: function(t) {
+            this.type = t;
+        },
+        arrangementClick: function(c) {
+            this.arrangement = c;
+        },
+        school: function(res) {
+            console.log(res)
+        }
+    },
+    mounted: function() {}
+});
+</script>
+
+</html>

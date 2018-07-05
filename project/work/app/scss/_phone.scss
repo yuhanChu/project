@@ -1,0 +1,137 @@
+$bgImg:"/static/images/";
+$bg2Img:"../images/";
+$red:"yello";
+#phone {
+    display: none;
+    width: 452px;
+    height: 520px;
+    position: relative;
+    // background: rgba(3,3,8,1);
+    text-align: center;
+}
+
+#phone h1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fefefe;
+    margin-bottom: 37px;
+    padding-top: 20px;
+    margin-top: 0;
+}
+#phone input{
+    width: 386px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    background: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.dropdown-toggle input {
+    margin-top: 0 !important;
+}
+#cc_close {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    background:  url('/static/images/des/cc.png') no-repeat;
+
+}
+.demo-class {
+    background-color: rgba(3,3,8,.7) !important;
+}
+#phone_btn {
+    width: 170px;
+    height: 40px;
+    background: #ff921c;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    margin: 0 auto;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#phone .p {
+    font-size: 12px;
+    color: #fff;
+    margin-top: 22px;
+}
+#phone .time {
+    width: 386px;
+    height: 50px;
+    margin: 0 auto;
+}
+#phone_major {
+    width: 100%;
+}
+.dropdown-menu > li > a {
+    padding: 10px 20px;
+}
+.phone_span {
+    font-size: 14px;
+    color: #ff9639;
+    display: none;
+    margin-left: 33px;
+    text-align: left;
+}
+
+#phone_success {
+    width: 400px;
+    height: 182px;
+    background: #fff;
+    box-sizing: border-box;
+    padding-top: 55px;
+    padding-left: 24px;
+    position: relative;
+    display: none;
+
+}
+#phone_success h1 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #323232;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+#phone_success div {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 25px;
+}
+#phone_success div p {
+    width: 280px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #323232;
+    
+}
+#close_phone_success {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    background: url('/static/images/des/close_success.png') no-repeat;
+    cursor: pointer;
+}
+#cc_use {
+    width: 220px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    background: red;
+    display: none;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.retive {
+    display: none;
+}

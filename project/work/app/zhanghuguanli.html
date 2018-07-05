@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>账号管理</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_z7iqhm7i5wc.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" type="text/css" href="css/zhanghuguanli.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="account-management-head">合作账户管理>>>账户管理</div>
+        <div class="account-management-content">
+            <div class="sx-box clearfix">
+                <div class="add-account">添加账户</div>
+                <template>
+                    <i-select style="width:190px;margin-left:9px;">
+                        <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                    <i-select style="width:190px;margin-left:9px;">
+                        <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                    <i-select style="width:190px;margin-left:9px;">
+                        <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                </template>
+                <div class="search">
+                    <input type="text" placeholder="手机号/主网账号查询">
+                    <i class="iconfont icon-search"></i>
+                </div>
+            </div>
+            <div class="list-main">
+                <ul class="nav-ul clearfix">
+                    <li class="li1">序号</li>
+                    <li class="li2">手机号</li>
+                    <li class="li3">姓名</li>
+                    <li class="li4">账户类型</li>
+                    <li class="li5">EOS主网账号名</li>
+                    <li class="li6">cooc余额</li>
+                    <li class="li7">待空投数量</li>
+                    <li class="li8">空投状态</li>
+                    <li class="li9">释放状态</li>
+                    <li class="li10">账户状态</li>
+                    <li class="li11">释放规则</li>
+                    <li class="li12">操作</li>
+                </ul>
+                <div class="list-box">
+                    <ul class="list-ul clearfix" v-for="(it,key) in dataList">
+                        <li class="li1">1</li>
+                        <li class="li2">13600000000</li>
+                        <li class="li3">张三</li>
+                        <li class="li4">投资人</li>
+                        <li class="li5">mikkle</li>
+                        <li class="li6">12345678901</li>
+                        <li class="li7">12345678901</li>
+                        <li class="li8">待空投</li>
+                        <li class="li9">已全部释放</li>
+                        <li class="li10">正常</li>
+                        <li class="li11">double2规则</li>
+                        <li class="li12"><a href="javascript:;">详情</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fy">
+                <template>
+                    <Page :total="100" size="small"></Page>
+                </template>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.min.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+        list: [],
+        dataList: ['1', '2', 3, 4]
+    }
+});
+</script>
+
+</html>

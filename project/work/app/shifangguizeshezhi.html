@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>释放规则设置</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_z7iqhm7i5wc.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" type="text/css" href="css/shifangguizeshezhi.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="head">合作账户管理>>>释放规则设置 <a href="javascript:;" class="back">&lt;&lt;返回</a></div>
+        <div class="rule-content">
+            <div class="rule-add">新增释放规则</div>
+            <div class="rule-main">
+                <ul class="rule-nav clearfix">
+                    <li class="li1">规则名称</li>
+                    <li class="li2">适用类型</li>
+                    <li class="li3">释放依据</li>
+                    <li class="li4">释放方式</li>
+                    <li class="li5">开始时间</li>
+                    <li class="li6">释放周期单位</li>
+                    <li class="li7">释放周期</li>
+                    <li class="li8">周期释放量</li>
+                    <li class="li9">适用范围</li>
+                    <li class="li10">释放进度</li>
+                    <li class="li11">匹配账户数</li>
+                    <li class="li12">操作</li>
+                </ul>
+                <div class="rule-box">
+                    <ul class="rule-list clearfix" v-for="it in dataList">
+                        <li class="li1">3+1释放</li>
+                        <li class="li2">私募</li>
+                        <li class="li3">账户锁仓总量</li>
+                        <li class="li4">固定比例</li>
+                        <li class="li5">2018-6-30</li>
+                        <li class="li6">日</li>
+                        <li class="li7">32</li>
+                        <li class="li8">2.25%+1.00%</li>
+                        <li class="li9">私募通用</li>
+                        <li class="li10">第3周期</li>
+                        <li class="li11">21</li>
+                        <li class="li12">
+                            <a href="javascript:;">规则</a>
+                            <a href="javascript:;">修改</a>
+                            <a href="javascript:;">停用</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fy">
+                <template>
+                    <Page :total="100" size="small"></Page>
+                </template>
+            </div>
+        </div>
+        <!-- 规则介绍 -->
+        <div id="rule-introduce" v-cloak v-show="introduceShow">
+            <div class="layer">
+                <div class="layer-top">
+                    规则简介
+                    <i class="iconfont icon-close"></i>
+                </div>
+                <div class="rule-word">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.min.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+        list: [{ value: '1', label: 'ETH' }, { value: '2', label: 'RMB' }],
+        dataList: [1, 2, 3, 4, 5],
+        introduceShow:false,
+    }
+});
+</script>
+
+</html>

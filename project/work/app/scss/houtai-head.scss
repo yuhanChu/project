@@ -1,0 +1,199 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0
+}
+
+input,
+textarea {
+    margin-bottom: 0;
+    box-shadow: none;
+    box-sizing: border-box
+}
+
+input[disabled],
+input[readonly],
+select[disabled],
+select[readonly],
+textarea[disabled],
+textarea[readonly] {
+    background: 0 0;
+    cursor: default
+}
+
+p {
+    margin-bottom: 0
+}
+
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none
+}
+
+a:link {
+    text-decoration: none
+}
+
+i {
+    font-style: normal
+}
+
+.f_left {
+    float: left
+}
+
+label {
+    margin-bottom: 0
+}
+
+.f_right {
+    float: right
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    resize: none;
+    box-shadow: none!important
+}
+
+.uneditable-input,
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=number],
+select,
+textarea {
+    margin-bottom: 0!important
+}
+
+button {
+    border: none!important;
+    background: 0 0!important
+}
+
+body {
+    background: #f8f8f8
+}
+
+@mixin font($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+@mixin btn($w, $h, $bg:#ff7669) {
+    width: $w;
+    height: $h;
+    line-height: $h;
+    text-align: center;
+    background-color: $bg;
+    cursor: pointer;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    background: #fbfbfb;
+    position: relative;
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box; // will-change:unset !important;
+    }
+}
+
+.backstage-head {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #0478d2;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    img {
+        margin-left: 13px;
+    }
+    span {
+        @include font(20px, #fff);
+        margin-left: 10px;
+    }
+}
+
+.backstage-content {
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    left: 0;
+    bottom: 0;
+    .backstage-content-nav {
+        width: 110px;
+        height:100%;
+        border-right:1px solid #d0d0d0;
+        background: #f4f4f4;
+        .ivu-menu {
+            width: 100% !important;
+            background: #f4f4f4 !important;
+            .ivu-menu-submenu-title {
+                padding: 0;
+                padding: 16px 0 16px 13px;
+                @include font(12px,#3c3c3c);
+                border-bottom:1px solid #d1d1d1;
+            }
+            .ivu-menu-item {
+                padding: 10px 0 10px 13px !important;
+                @include font(12px,#3c3c3c);
+                border-bottom:1px solid #d1d1d1;
+            }
+        }
+    }
+
+    .backstage-main {
+        position: absolute;
+        top:0;
+        left:110px;
+        right:0;
+        bottom:0;
+        background:#fbfbfb;
+    }
+}
+

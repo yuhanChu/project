@@ -1,0 +1,587 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0
+}
+
+input,
+textarea {
+    margin-bottom: 0;
+    box-shadow: none;
+    box-sizing: border-box
+}
+
+input[disabled],
+// input[readonly],
+select[disabled],
+select[readonly],
+textarea[disabled],
+textarea[readonly] {
+    background: 0 0;
+    cursor: default
+}
+
+p {
+    margin-bottom: 0
+}
+
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none
+}
+
+a:link {
+    text-decoration: none
+}
+
+i {
+    font-style: normal
+}
+
+.f_left {
+    float: left
+}
+
+label {
+    margin-bottom: 0
+}
+
+.f_right {
+    float: right
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    resize: none;
+    box-shadow: none!important
+}
+
+.uneditable-input,
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=number],
+select,
+textarea {
+    margin-bottom: 0!important
+}
+
+button {
+    border: none!important;
+    background: 0 0!important
+}
+
+body {
+    background: #f8f8f8
+}
+
+@mixin font($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+@mixin btn($w, $h, $bg:#ff7669) {
+    width: $w;
+    height: $h;
+    line-height: $h;
+    text-align: center;
+    background-color: $bg;
+    cursor: pointer;
+}
+
+body {
+    background: #f8f8f8
+}
+
+[v-cloak] {
+    display: none;
+}
+
+#app {
+    width: 1090px;
+    background: #fff;
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box; // will-change:unset !important;
+    }
+    .major-title {
+        @include font(16px, #333333);
+        line-height: 20px;
+        padding: 18px 0 16px;
+        border-bottom: 1px solid #e9e9e9;
+        a {
+            @include font(12px, #999999);
+            float: right;
+        }
+    }
+
+    .student-sx {
+        &>div {
+            margin-top: 20px;
+        }
+        .year {
+            margin-right: 20px;
+        }
+        .classes {
+            margin-right: 20px;
+        }
+        .date {
+            margin-right: 20px;
+            &>span {
+                float: left;
+                height: 28px;
+                line-height: 28px;
+                @include font(12px, #666666);
+            }
+            &>div {
+                margin-left: 5px;
+                &>span {
+                    display: inline-block;
+                    height: 28px;
+                    line-height: 28px;
+                    margin: 0 10px;
+                    @include font(12px, #666666);
+                }
+                input {
+                    width: 143px;
+                    height: 28px;
+                    font-size: 12px;
+                    border: 1px solid #e9e9e9;
+                    border-radius: 4px;
+                    padding-left: 10px;
+                }
+            }
+        }
+        .search {
+            position: relative;
+            width: 233px;
+            height: 28px;
+            input {
+                width: 100%;
+                height: 28px;
+                border-radius: 4px;
+                border: 1px solid #e9e9e9;
+                padding-left: 10px;
+                padding-right: 28px;
+            }
+            i {
+                position: absolute;
+                top: 50%;
+                right: 10px;
+                @include font(18px, #815dc7);
+                transform: translateY(-50%);
+                cursor: pointer;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .student-btn {
+        &>div {
+            float: left;
+            margin-top: 20px;
+        }
+        .up-load {
+            width: 78px;
+            height: 28px;
+            margin-right: 20px;
+            border: 1px solid #815dc7;
+            @include font(12px, #815dc7);
+            text-align: center;
+            line-height: 28px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .daoru {
+            @extend .up-load;
+        }
+        .add {
+            @extend .up-load;
+        }
+        .yidong {
+            @extend .up-load;
+        }
+        .ydto {
+            @extend .up-load;
+        }
+        .cancel {
+            @extend .up-load;
+        }
+        .che {
+            height: 28px;
+            line-height: 28px;
+            .ivu-checkbox {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .student-main {
+        margin-top: 20px;
+
+        .title-ul {
+            padding: 0;
+            background: #f4f4f4;
+            height: 30px;
+            line-height: 30px;
+            li {
+                float: left;
+                @include font(12px, #666666);
+                padding-left: 5px;
+            }
+            .li1 {
+                width: 7.4%;
+                padding-left: 19px;
+            }
+            .li2 {
+                width: 7.8%;
+            }
+            .li3 {
+                width: 16.6%;
+            }
+            .li4 {
+                width: 16.3%;
+            }
+            .li5 {
+                width: 14.5%;
+            }
+            .li6 {
+                width: 11.9%;
+            }
+            .li7 {
+                width: 11.7%;
+            }
+            .li8 {
+                width: 13.7%;
+            }
+            .li0 {
+                width: 3.4%;
+            }
+        }
+
+        .list-content {
+            .list-ul {
+                height: 61px;
+                line-height: 61px;
+                border-bottom: 1px solid #e9e9e9;
+                background: #fff;
+                width: 100%;
+                li {
+                    float: left;
+                    padding-left: 5px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center; // justify-content: space-around;
+                    p {
+                        line-height: 20px;
+                        @include font(12px, #666666);
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+                .li0 {
+                    width: 3.4%;
+                    .ivu-checkbox+span {
+                        display: none;
+                    }
+                }
+                .li1 {
+                    width: 7.4%;
+                    padding-left: 19px;
+                }
+                .li2 {
+                    width: 7.8%;
+                }
+                .li3 {
+                    width: 16.6%;
+                }
+                .li4 {
+                    width: 16.3%;
+                }
+                .li5 {
+                    width: 14.5%;
+                }
+                .li6 {
+                    width: 11.9%;
+                }
+                .li7 {
+                    width: 11.7%;
+                }
+                .li8 {
+                    width: 13.7%;
+                    a {
+                        @include font(12px, #815dc7);
+                        margin-right: 10px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .page {
+            margin-top: 20px;
+            text-align: right;
+        }
+    }
+}
+
+.ivu-select-single .ivu-select-selection {
+    height: 28px;
+}
+
+.ivu-select-single .ivu-select-selection .ivu-select-placeholder,
+.ivu-select-single .ivu-select-selection .ivu-select-selected-value {
+    height: 28px;
+    line-height: 28px;
+}
+
+.ivu-page-item {
+    min-width: 25px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.ivu-page-item-jump-next,
+.ivu-page-item-jump-prev,
+.ivu-page-next,
+.ivu-page-prev {
+    min-width: 25px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.ivu-page-options-elevator input {
+    height: 25px;
+    padding: 0 5px;
+}
+
+.ivu-page-options-elevator {
+    height: 25px;
+    line-height: 25px;
+}
+
+.ivu-page-item-active {
+    background-color: transparent;
+    border-color: #2d8cf0
+}
+
+.ivu-page-item-active a,
+.ivu-page-item-active:hover a {
+    color: #815dc7
+}
+
+.ivu-select-selection:hover {
+    border-color: #dddee1;
+}
+
+.ivu-input-icon {
+    height: 28px;
+    line-height: 28px;
+    color: #815dc7;
+}
+
+#add-student {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .bg {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .7);
+    }
+    .layer {
+        width: 358px;
+        background: #fff;
+        padding: 30px 0 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        &>i {
+            position: absolute;
+            top: 8px;
+            right: 20px;
+            @include font(16px, #cecece);
+            cursor: pointer;
+        }
+
+        .name {
+            margin-bottom: 18px;
+            &>span {
+                float: left;
+                height: 28px;
+                line-height: 28px;
+                width: 95px;
+                text-align: right;
+            }
+            input {
+                width: 220px;
+                height: 28px;
+                padding-left: 10px;
+                border: 1px solid #e9e9e9;
+                border-radius: 4px;
+                margin-left: 4px;
+            }
+            &>div {
+                margin-left: 4px;
+            }
+        }
+        .add-btn {
+            @include btn(100px, 28px, #815dc7);
+            border-radius: 4px;
+            @include font(12px, #fff);
+            margin: 0 auto;
+        }
+    }
+}
+
+#moveto {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .bg {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .7);
+    }
+    .layer {
+        width: 358px;
+        background: #fff;
+        padding: 20px 20px 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        &>i {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            @include font(16px, #cecece);
+            cursor: pointer;
+        }
+        .title {
+            @include font(12px, #666666);
+            line-height: 30px;
+            margin: 0;
+        }
+        &>div {
+            margin-top: 20px;
+        }
+        .class-list {
+            height: 28px;
+            border: 1px solid #e9e9e9;
+            line-height: 28px;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+            }
+            &.cur {
+                border-color: #815dc7;
+                color: #815dc7;
+                display: block;
+            }
+        }
+        .move-btn {
+            @include btn(100px, 28px, #815dc7);
+            border-radius: 4px;
+            @include font(12px, #fff);
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    }
+}
+
+#moveall {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    .bg {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .7);
+    }
+    .layer {
+        background: #fff;
+        padding: 40px 45px 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        &>i {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            @include font(16px, #cecece);
+            cursor: pointer;
+        }
+        &>p {
+            @include font(12px, #ff0000);
+            line-height: 20px;
+            margin-top: 5px;
+        }
+        .moveall-btn {
+            @include btn(100px, 28px, #815dc7);
+            border-radius: 4px;
+            @include font(12px, #fff);
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    }
+}

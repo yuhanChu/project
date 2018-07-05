@@ -1,0 +1,132 @@
+// SASS允许使用变量，所有变量以$开头。
+$red:"red";
+div {
+    color: $red;
+}
+
+//如果变量需要镶嵌在字符串之中，就必须需要写在#{}之中。
+$side:"left";
+div {
+    border-#{$side}-color: $red;
+}
+
+//SASS允许在代码中使用算式：
+body {
+    margin: (14px/2);
+    top: 50px + 100px;
+    right: (43/80) * 100%;
+}
+
+//SASS允许选择器嵌套。比如，下面的CSS代码：
+div {
+    h1 {
+        color: $red;
+    }
+}
+
+//属性也可以嵌套 比如 border-color可以写成
+div {
+    border: {
+        color: $red;
+    }
+}
+
+//在嵌套的代码块内，可以使用&引用父元素。比如a:hover伪类，可以写成：
+a {
+    &:hover {
+        color: $red;
+    }
+}
+
+//SASS允许一个选择器，继承另一个选择器。比如，现有class1：
+.class1 {
+    border: 1px solid #ddd;
+}
+
+//class2要继承class1，就要使用@extend命令：
+.class2 {
+    @extend .class1;
+    font-size: 120%;
+}
+
+//使用@mixin命令，定义一个代码块。
+@mixin left {
+    float: left;
+    margin-left: 10px;
+}
+
+//使用@include命令，调用这个mixin。
+div {
+    @include left;
+}
+
+//mixin的强大之处，在于可以指定参数和缺省值。
+@mixin right($val:10px) {
+    float: right;
+    margin-right: $val;
+}
+
+//使用的时候，根据需要加入参数：不加参数的时候 
+section {
+    @include right(20px);
+}
+
+//生成浏览器前缀示例
+@mixin rounded($vert, $horz, $radius: 10px) {
+    border-#{$vert}-#{$horz}-radius: $radius;
+    -moz-border-radius-#{$vert}-#{$horz}: $radius;
+    -webkit-border-#{$vert}-#{$horz}-radius: $radius;
+}
+
+#navbar li {
+    @include rounded(top, left);
+}
+
+#footer {
+    @include rounded(top, left, 5px);
+}
+
+//@import命令，用来插入外部文件。
+//@import "path/filename.scss";
+//如果插入的是.css文件，则等同于css的import命令。
+//@import "foo.css";
+//@if可以用来判断：
+p {
+    @if 1+1==2 {
+        border: 1px solid;
+    }
+    @if 5 < 3 {
+        border: 2px dotted;
+    }
+}
+
+//SASS支持for循环：
+@for $i from 1 to 10 {
+    .border-#{$i} {
+        border: #{$i}px solid blue;
+    }
+}
+
+//sass while 循环
+$i: 6;
+@while $i>0 {
+    .item-#{$i} {
+        width: 2em * $i;
+    }
+    $i: $i - 2;
+}
+
+//each 循环
+@each $member in a,b,c,d {
+    .#{$member} {
+        background-image: url("/image/#{$member}.jpg");
+    }
+}
+
+//自定义函数
+@function double($n) {
+	@return $n * 2;
+}
+#sidebar {
+    width: double(5px);
+}

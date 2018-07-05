@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>证书审批</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_wwk28b9up.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" href="css/zhengshu.css">
+</head>
+
+<body>
+    <div id="app" class="main">
+        <div class="major-title clearfix">证书申请管理<span>（建筑艺术）</span> <a href="javascript:void(0);">&lt;&lt;返回专业管理</a></div>
+        <div class="clearfix sx-box">
+            <template>
+                <i-select style="width:153px;float:left">
+                    <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                </i-select>
+                <i-select style="width:153px;margin-left:20px;float:left">
+                    <i-option v-for="item in list" :value="item.value">{{ item.label }}</i-option>
+                </i-select>
+            </template>
+            <div class="f_right search-box">
+                <input type="text" placeholder="学生姓名">
+                <i class="iconfont icon-search"></i>
+            </div>
+        </div>
+        <div class="main-list" v-cloak v-show="!emptyShow">
+            <ul class="ul-list">
+                <li class="li-1">序号</li>
+                <li class="li-2">学生姓名</li>
+                <li class="li-3">申请证书</li>
+                <li class="li-4">状态</li>
+                <li class="li-5">操作时间</li>
+                <li class="li-6">操作</li>
+            </ul>
+            <div class="list-box">
+                <ul class="ul-list clearfix">
+                    <li class="li-1">1</li>
+                    <li class="li-2">李磊</li>
+                    <li class="li-3">证书一</li>
+                    <li class="li-4">待授予</li>
+                    <li class="li-5">2018-04-28 14:33:45</li>
+                    <li class="li-6">
+                        <div>授予证书</div>
+                        <div>驳回申请</div>
+                        <div>学习详情</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="fy clearfix">
+        	<span class="f_left">32条数据</span>
+            <div class="f_right">
+                <template>
+                    <Page :total="total" size="small" show-elevator @on-change="page"></Page>
+                </template>
+            </div>
+        </div>
+        <div class="empty" v-cloak v-show="emptyShow">
+            <img src="/static/images/major/no_major.jpg">
+            <p>暂时没有数据~</p>
+        </div>
+
+        <div id="bo-back" v-cloak v-show="bBbacShow">
+        	<div class="bg"></div>
+        	<div class="layer">
+        		<i class="iconfont icon-close"></i>
+        		<span>驳回原因：</span>
+        		<textarea></textarea>
+        		<div class="bo-back-btn">
+        			<div class="f_left">确定</div>
+        			<div class="f_right">取消</div>
+        		</div>
+        	</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+        list: [],
+        emptyShow: false,
+        total:10,
+        bBbacShow:false,
+    },
+    methods: {
+    	page:function(res) {
+    		console.log(res)
+    	}
+    },
+    created: function() {
+
+    }
+});
+</script>
+
+</html>

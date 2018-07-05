@@ -1,0 +1,317 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0
+}
+
+input,
+textarea {
+    margin-bottom: 0;
+    box-shadow: none;
+    box-sizing: border-box
+}
+
+input[disabled],
+input[readonly],
+select[disabled],
+select[readonly],
+textarea[disabled],
+textarea[readonly] {
+    background: 0 0;
+    cursor: default
+}
+
+p {
+    margin-bottom: 0
+}
+
+ol,
+ul {
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+a:hover {
+    color: #333;
+    text-decoration: none
+}
+
+a:link {
+    text-decoration: none
+}
+
+i {
+    font-style: normal
+}
+
+.f_left {
+    float: left
+}
+
+label {
+    margin-bottom: 0
+}
+
+.f_right {
+    float: right
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+button,
+input,
+select,
+textarea {
+    outline: 0;
+    resize: none;
+    box-shadow: none!important
+}
+
+.uneditable-input,
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=week],
+input[type=number],
+select,
+textarea {
+    margin-bottom: 0!important
+}
+
+button {
+    border: none!important;
+    background: 0 0!important
+}
+
+body {
+    background: #f8f8f8
+}
+
+@mixin font($size, $color) {
+    font-size: $size;
+    color: $color;
+}
+
+@mixin btn($w, $h, $bg:#ff7669) {
+    width: $w;
+    height: $h;
+    line-height: $h;
+    text-align: center;
+    background-color: $bg;
+    cursor: pointer;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+#app {
+    width: 1170px;
+    margin: 0 auto;
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box; // will-change:unset !important;
+    }
+}
+
+.add-head {
+    padding: 27px 0 30px 20px;
+    @include font(28px, #3c3c3c);
+    background: #ffffff;
+    border-bottom: 1px solid #d1d1d1;
+    position: relative;
+    .back {
+        @include font(14px,#3c3c3c);
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        right:20px;
+    }
+}
+
+
+
+.add-content {
+    background: #fff;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    .ts {
+        @include font(14px, #999999);
+        border-top: 1px solid #d1d1d1;
+        background: #f4f4f4;
+        line-height: 20px;
+        padding: 9px 0;
+        text-align: center;
+    }
+    .add-main {
+        width: 425px;
+        margin: 25px auto 0;
+
+        .list {
+            margin-top: 15px;
+            .f_left {
+                width: 118px;
+                height: 30px;
+                line-height: 30px;
+                text-align: right;
+                @include font(14px, #3c3c3c);
+                margin-right: 4px;
+            }
+            &>input {
+                width: 220px;
+                height: 30px;
+                border: 1px solid #d1d1d1;
+                float: left;
+                padding-left: 10px;
+            }
+            .unit {
+                height: 30px;
+                line-height: 30px;
+                text-align: right;
+                @include font(14px, #3c3c3c);
+                margin-left: 10px;
+                float: left;
+            }
+            .be-unit {
+                height: 30px;
+                line-height: 30px;
+                text-align: right;
+                @include font(14px, #3c3c3c);
+                margin-right: 6px;
+                float: left;
+            }
+            .la-input {
+                height: 30px;
+                border: 1px solid #d1d1d1;
+                float: left;
+                width: 121px;
+            }
+            input[readonly] {
+                background: #f8f8f8;
+            }
+            .set-btn {
+                @include btn(59px, 30px, #f5f5f5);
+                @include font(14px, #3c3c3c);
+                margin-left: 10px;
+                float: left;
+                border: 1px solid #dcdcdc;
+                border-radius: 4px;
+            }
+        }
+
+        .inform {
+            @include font(14px, #999999);
+            line-height: 20px;
+            padding-left: 122px;
+            margin-top: 4px;
+        }
+        .add-btn {
+            @include btn(78px, 30px, #f5f5f5);
+            @include font(14px, #3c3c3c);
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            margin-left: 122px;
+            margin-top: 20px;
+        }
+    }
+}
+
+#in-verification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 1000;
+    .layer {
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        padding: 30px 70px;
+        @include font(14px, #3c3c3c);
+    }
+}
+
+#successful {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    z-index: 1000;
+    .layer {
+        background: #fff;
+        position: absolute;
+        width: 240px;
+        border: 1px solid #d0d0d0;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        .layer-top {
+            height: 30px;
+            line-height: 30px;
+            background: #0478d2;
+            text-align: right;
+            i {
+                @include font(16px, #fff);
+                float: right;
+                cursor: pointer;
+                margin-right: 10px;
+                font-weight: bold;
+            }
+        }
+
+        .layer-content {
+            padding-top: 32px;
+            padding-bottom: 22px;
+            p {
+                text-align: center;
+                @inlcude font(14px, #3c3c3c);
+            }
+            .successful-btn {
+                width: 175px;
+                margin: 24px auto 0;
+                &>div {
+                    @include btn(78px, 30px, #f5f5f5);
+                    @include font(14px, #3c3c3c);
+                    border: 1px solid #dcdcdc;
+                    border-radius: 4px;
+                    float:left;
+                    &:last-child {
+                        float:right;
+                    }
+                }
+            }
+        }
+    }
+}

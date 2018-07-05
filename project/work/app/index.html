@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>专业管理</title>
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_313597_v5ba96f6sc1y8pvi.css">
+    <link rel="stylesheet" type="text/css" href="css/iview.css">
+    <link rel="stylesheet" type="text/css" href="css/major.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="major-title">专业管理</div>
+        <div class="major-sx clearfix">
+            <template>
+                <i-select style="width:153px" v-model="model1">
+                    <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                </i-select>
+            </template>
+            <template>
+                <i-select style="width:153px;margin-left: 20px">
+                    <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                </i-select>
+            </template>
+            <template>
+                <i-select style="width:153px;margin-left: 20px">
+                    <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                </i-select>
+            </template>
+            <a href="javascript:void(0);" class="creat">+ 创建专业</a>
+            <div class="major-search">
+                <input type="text" name="search" placeholder="请输入专业名称/专业代码">
+                <i class="iconfont icon-search"></i>
+            </div>
+        </div>
+        <p class="ts">新建专业后记得去设置专业信息并提交审核~不然无法招生哦~ <i class="iconfont icon-close"></i></p>
+        <div class="major-main">
+            <div class="major-list clearfix" v-for="it in majorList">
+                <div class="major-cover">
+                    <img src="images/major/cover.png">
+                    <span>工学</span>
+                </div>
+                <ul class="ul1">
+                    <li>专业名称：建筑艺术</li>
+                    <li>专业代码：82377729d</li>
+                    <li>专业类型：学术型博士</li>
+                    <li>所在院系：建筑与艺术学院</li>
+                </ul>
+                <ul class="ul2">
+                    <li>费用：-</li>
+                    <li>创建时间：2017-12-19 23:12:43</li>
+                    <li>状态：编辑中</li>
+                </ul>
+                <div class="operation clearfix">
+                    <div>编辑</div>
+                    <div class="not">管理</div>
+                    <div>设置</div>
+                    <div>删除</div>
+                </div>
+            </div>
+        </div>
+        <template>
+            <Page :total="total" size="small" show-elevator @on-change="pageChange"></Page>
+        </template>
+        <div id="set-layer" v-cloak v-show="setShow">
+            <div class="bg"></div>
+            <div class="layer">
+                <i class="iconfont icon-close" @click="setShow=!setShow"></i>
+                <p>请您设置新增的专业届数：</p>
+                <span>新增专业届数</span>
+                <div class="set-main clearfix">
+                    <template>
+                        <i-select style="width:163px;float:left">
+                            <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                    <template>
+                        <i-select style="width:163px;float:right">
+                            <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                        </i-select>
+                    </template>
+                </div>
+                <div class="set-btn">新增</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript" src="js/jq.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+    el: '#app',
+    data: {
+        cityList: [{
+                value: 'beijing',
+                label: '北京市'
+            },
+            {
+                value: 'shanghai',
+                label: '上海市'
+            },
+            {
+                value: 'shenzhen',
+                label: '深圳市'
+            },
+            {
+                value: 'hangzhou',
+                label: '杭州市'
+            },
+            {
+                value: 'nanjing',
+                label: '南京市'
+            },
+            {
+                value: 'chongqing',
+                label: '重庆市'
+            }
+        ],
+        model1:'',
+        majorList: [1, 2, 3],
+        total: 100,
+        setShow:false,
+    },
+    methods: {
+
+        pageChange: function(res) {
+            console.log(res)
+        }
+
+
+    },
+    created: function() {
+        this.model1 = 'beijing'
+        $.post("/api/m/passport/handle", {
+            func: 'login',
+            token: 'shenzhouhao2@163.com',
+            password: '787c8ad9f686d6ae66a053497de9ae15b6b13364',
+        }, function(res) {
+            var oClass = {
+                func: "noteMyList",
+                page: 1,
+                course_id: "",
+                key_words: ""
+            };
+            oClass.course_id = '1266';
+            $.post("/api/course/notes/handle", oClass, function(data) {
+                console.log(data)
+
+            })
+        })
+
+    }
+
+})
+</script>
+
+</html>
